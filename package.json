@@ -2,7 +2,7 @@
     "name": "activity",
     "version": "0.0.1",
     "scripts": {
-      "encrypt:bookmarks": "node ./code/wasm/bin/web.js",
+      "encrypt:bookmarks": "node ./utilities.js -- encrypt bookmarks.html",
       "start": "live-server"
     },
     "repository": {
