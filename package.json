@@ -1,16 +1,18 @@
 {
-    "name": "activity",
-    "version": "0.0.1",
-    "scripts": {
-      "encrypt:bookmarks": "node ./utilities.js -- encrypt bookmarks.html",
-      "start": "live-server"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git://github.com/briancullinan2/activity.git"
-    },
-    "author": "Brian Cullinan",
-    "license": "Unlicense",
-    "readmeFilename": "README.md"
+  "name": "activity",
+  "version": "0.0.1",
+  "scripts": {
+    "encrypt:bookmarks": "node -e \"require('./bookmarks.js').outputBookmarks()\"",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/briancullinan2/activity.git"
+  },
+  "author": "Brian Cullinan",
+  "license": "Unlicense",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "JSONStream": "^1.3.5"
   }
-  
+}
