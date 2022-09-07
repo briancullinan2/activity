@@ -56,10 +56,24 @@ function getHistory() {
 
 function listHistory() {
 	let history = getHistory()
+	// nice side-effect, this will make the listings a little more interesting anyways
+	const EXCLUDED_HISTORY = [
+		/accounts\.google/gi,
+		/auth\//gi,
+		/\/sso\//gi,
+	]
 
+	let filteredHistory = history.filter(entry => EXCLUDED_HISTORY
+			.filter(expr => entry.url.match(expr)).length == 0
+				&& entry.title.trim().length > 0)
+			
 //"start": "2022-09-07T13:19:14.428Z"
 //"start": "2022-09-07T06:44:13.579Z"
-	return JSON.stringify(history.map(entry => {
+	return JSON.stringify(filteredHistory.map(entry => {
+		if(entry.title == 'Startpage Search Results') {
+			let match = (/\?q=([^&]*)/gi).exec(entry.url)
+			entry.title = 'Search: ' + (match ? match[1].replace(/\+/g, ' ') : '')
+		}
 		return { 
 			id: entry.id, 
 			content: entry.title.substring(0, 100) + `  <a target="_blank" href="${entry.url}">link &nearr;</a>`, 
