@@ -14,10 +14,14 @@
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       color: white;
     }
 
+    ul.brainstorms,
+    ul.categories,
     ol.brainstorms,
     ol.categories,
     ol.windows {
@@ -29,6 +33,8 @@
       max-width: 1000px;
     }
 
+    ul.brainstorms>li,
+    ul.categories>li,
     ol.brainstorms>li,
     ol.categories>li,
     ol.windows>li,
@@ -44,6 +50,8 @@
       text-align: left;
     }
 
+    ul.brainstorms>li a,
+    ul.categories>li a,
     ol.brainstorms>li a,
     ol.categories>li a,
     ol.windows>li a,
@@ -55,6 +63,8 @@
       text-align: center;
     }
 
+    ul.brainstorms>li label,
+    ul.categories>li label,
     ol.brainstorms>li label,
     ol.categories>li label,
     ol.windows>li label,
@@ -65,9 +75,11 @@
     }
 
     a.nowButton {
-      display:inline-block;
+      display: inline-block;
     }
 
+    ul.brainstorms>li:hover::after,
+    ul.categories>li:hover::after,
     ol.brainstorms>li:hover::after,
     ol.categories>li:hover::after,
     ol.windows>li.active::after {
@@ -106,11 +118,15 @@
       bottom: -1;
     }
 
+    input:checked+ul.bookmarks,
+    input:checked+ul.brainstorm,
     input:checked+ol.bookmarks,
     input:checked+ol.brainstorm {
       display: block;
     }
 
+    ul.bookmarks,
+    ul.brainstorm,
     ol.bookmarks,
     ol.brainstorm {
       display: none;
@@ -143,13 +159,17 @@
     }
 
     @media all and (max-width: 600px) {
-      ol.categories>li a, 
-      ol.windows>li a, 
+
+      ul.brainstorms>li a,
+      ul.categories>li a,
+      ul.windows>li a,
+      ol.brainstorms>li a,
+      ol.categories>li a,
+      ol.windows>li a,
       a.nowButton {
         min-width: unset;
       }
     }
-
   </style>
 </head>
 
@@ -162,11 +182,15 @@
 
   <h2>Live Development:</h2>
   <ol class="windows"></ol>
-  <div class="livedev"><p>
-    <script>
-      document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
-    </script>
-  </p></div>
+  <div class="livedev">
+    <p>
+      <script>
+        document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
+      </script>
+    </p>
+  </div>
+
+  <p><a class="nowButton" target="_blank" href="https://www.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw">My YouTube Channel</a></p>
 
   <h2>Study Interests:</h2>
   <ol class="categories"></ol>
@@ -177,13 +201,16 @@
   <ol class="brainstorms">
     <li><a href="#brainstorm">
         <label for="brain-brainstorm">
-        Brainstorm brainstorming</label></a></li>
+          Brainstorm brainstorming</label></a></li>
     <li><a href="#chores">
         <label for="brain-chores">
-        Brainstorm chores</label></a></li>
+          Brainstorm chores</label></a></li>
     <li><a href="#Genesis">
-      <label for="brain-Genesis">
-      Genesis</label></a></li>  
+        <label for="brain-Genesis">
+          Genesis</label></a></li>
+    <li><a href="#Genesis">
+        <label for="brain-Genesis: Day 3">
+          Genesis: Day 3</label></a></li>
   </ol>
 
   <input type="radio" id="brain-brainstorm" name="brainstorm" value="0">
@@ -212,7 +239,8 @@
   </ol>
 
   <input type="radio" id="brain-Genesis" name="brainstorm" value="0">
-  <ol class="brainstorm">
+  <ul class="brainstorm">
+    <li>Thinking of things related to the day of creation, on that day.</li>
     <li>Day 1: let there be Light. Read the news and absorb new knowledge all day</li>
     <li>Day 2: created the sky and the sea (Atmosphere / Firmament) - swim and run, meditate, breathing exercises</li>
     <li>Day 3: created the land and plants - garden, plant a tree</li>
@@ -220,9 +248,27 @@
     <li>Day 5: created birds & sea creatures - social networking on fish Fridays</li>
     <li>Day 6: created animals and man - cleanliness is next to godliness, do chores</li>
     <li>Day 7: The Sabbath - rest like God rested, study God's word, search for meaning</li>
-  </ol>
+  </ul>
 
-  <p><a class="nowButton" target="_blank" href="http://go.bubbl.us/cde753/afdb?/Brainwriting">Brainstorm w/ Brian</a></p>
+  <input type="radio" id="brain-Genesis: Day 3" name="brainstorm" value="0">
+  <ul class="brainstorm">
+    <li>What can I do that is related to land and plants on Wednesdays?</li>
+    <li>Plant a tree, adds O2 to the atmosphere, good for reversing global warming</li>
+    <li>Plant some flowers, beautiful</li>
+    <li>Do some landscaping, need to make a flat path to driveway</li>
+    <li>Rake pine needles and leaves, good for compost</li>
+    <li>Start a composting bin</li>
+    <li>Go on a hike with the kids, teach them about plants</li>
+    <li>Photograph a beautiful field or something in nature</li>
+    <li>Re-post my blog entry about the plants in the backyard</li>
+    <li>Bring flowers into the house</li>
+    <li>Plant a vine inside the house</li>
+    <li>Make a stencil of the leaf someone left on my desk</li>
+    <li>What Dreams May Come?</li>
+  </ul>
+
+  <p><a class="nowButton" target="_blank" href="http://go.bubbl.us/cde753/afdb?/Brainwriting">Brainstorm w/ Brian</a>
+  </p>
 
   <h2>Browsing Activity:</h2>
   <p><a class="nowButton" href="javascript:resetTimeline()">Now</a></p>
@@ -240,7 +286,7 @@
     // Configuration for the Timeline
     const options = {
       maxHeight: 400,
-      stack:true,
+      stack: true,
       moment: function (date) {
         return vis.moment(date).utc();
       }
