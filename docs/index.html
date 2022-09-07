@@ -18,7 +18,8 @@
     }
 
     ol.categories>li,
-    ol.windows>li {
+    ol.windows>li,
+    a.nowButton {
       border: 5px solid transparent;
       border-radius: 10px;
       background: navy;
@@ -31,7 +32,8 @@
     }
 
     ol.categories>li a,
-    ol.windows>li a {
+    ol.windows>li a,
+    a.nowButton {
       display: block;
       text-decoration: none;
       color: white;
@@ -40,12 +42,16 @@
     }
 
     ol.categories>li label,
-    ol.windows>li label {
+    ol.windows>li label,
+    a.nowButton {
       display: block;
       cursor: pointer;
       padding: 10px;
     }
 
+    a.nowButton {
+      display:inline-block;
+    }
 
     ol.categories>li:hover::after,
     ol.windows>li.active::after {
@@ -101,14 +107,17 @@
 
   
   <ol class="windows">
-  <li class=""><a href="#Microsoft Teams">
-		<label for="win-Microsoft Teams">Microsoft Teams</a></label>
+  <li class=""><a href="#Location Menu">
+		<label for="win-Location Menu">Location Menu</a></label>
 		</li>
-<li class=""><a href="#Activity Monitor">
-		<label for="win-Activity Monitor">Activity Monitor</a></label>
+<li class=""><a href="#Microsoft Teams">
+		<label for="win-Microsoft Teams">Microsoft Teams</a></label>
 		</li>
 <li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
+		</li>
+<li class=""><a href="#Activity Monitor">
+		<label for="win-Activity Monitor">Activity Monitor</a></label>
 		</li>
 <li class=""><a href="#Brave Browser">
 		<label for="win-Brave Browser">Brave Browser</a></label>
@@ -141,18 +150,12 @@
 <li><a href="#Engineering">
     <label for="cat-Engineering">
     Architecture/Engineering</a></label></li>
-<li><a href="#Education">
-    <label for="cat-Education">
-    Education</a></label></li>
 <li><a href="#History">
     <label for="cat-History">
     History</a></label></li>
 <li><a href="#Medical Science">
     <label for="cat-Medical Science">
     Medical Science</a></label></li>
-<li><a href="#Philosophy">
-    <label for="cat-Philosophy">
-    Philosophy</a></label></li>
 <li><a href="#Physical Science">
     <label for="cat-Physical Science">
     Physical Science</a></label></li>
@@ -174,34 +177,18 @@
 
 <input type="radio" id="cat-Engineering" name="category" value="1" />
 <ol class="bookmarks">
-<li><a href="https://docs.microsoft.com/en-us/ai-builder/flow-sentiment-analysis">Use the sentiment analysis prebuilt model in Power Automate - AI Builder | Microsoft Docs</a></li>
-<li><a href="https://towardsdatascience.com/merging-with-ai-how-to-make-a-brain-computer-interface-to-communicate-with-google-using-keras-and-f9414c540a92?gi=98b0dcbf31f7">Merging with AI: How to Make a Brain-Computer Interface to Communicate with Google using Keras and OpenBCI | by Jag Singh | Towards Data Science</a></li>
-<li><a href="https://news.uchicago.edu/story/how-hackers-could-use-wi-fi-track-you-inside-your-home">How hackers could use Wi-Fi to track you inside your home</a></li>
-<li><a href="https://www.sciencealert.com/wi-fi-signals-can-identify-you-through-walls-and-even-track-your-movements">Wi-Fi Signals Can Identify You Through Walls And Even Track Your Movements : ScienceAlert</a></li>
-<li><a href="https://github.com/espressif/esp-csi">espressif/esp-csi: Applications based on Wi-Fi CSI (Channel state information), such as indoor positioning, human detection</a></li>
-<li><a href="https://github.com/isurunuwanthilaka/wifi-person-detection">isurunuwanthilaka/wifi-person-detection: Person detection with WiFi</a></li>
-<li><a href="https://github.com/geekfeiw/wifiperson">geekfeiw/wifiperson: Code of paper, Person-in-WiFi: Fine-grained Person Perception using WiFi</a></li>
-<li><a href="https://graphviz.org/">Graphviz</a></li>
-<li><a href="https://appsource.microsoft.com/en-us/product/office/wa104379982?tab=overview">Find the right app | Microsoft AppSource</a></li>
-<li><a href="https://towardsdatascience.com/merging-with-ai-how-to-make-a-brain-computer-interface-to-communicate-with-google-using-keras-and-f9414c540a92">Merging with AI: How to Make a Brain-Computer Interface to Communicate with Google using Keras and OpenBCI | by Jag Singh | Towards Data Science</a></li>
 <li><a href="https://www.unicorn-bi.com/product/unicorn-hybrid-black/">Unicorn Hybrid Black | Unicorn Hybrid Black</a></li>
 <li><a href="https://github.com/ThoNohT/NohBoard">ThoNohT/NohBoard: A Keyboard Visualizer</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Education" name="category" value="2" />
-<ol class="bookmarks">
-<li><a href="https://www.pdfdrive.com/">PDF Drive - Search and download PDF files for free.</a></li>
-</ol>
-
-
-<input type="radio" id="cat-History" name="category" value="3" />
+<input type="radio" id="cat-History" name="category" value="2" />
 <ol class="bookmarks">
 <li><a href="https://www.denofgeek.com/culture/real-ufo-history-radio-signals-aliens/">Real UFO History: Einstein, Tesla, Edison, and Marconi on Radio Signals from Aliens | Den of Geek</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Medical Science" name="category" value="4" />
+<input type="radio" id="cat-Medical Science" name="category" value="3" />
 <ol class="bookmarks">
 <li><a href="https://en.wikipedia.org/wiki/Ventromedial_prefrontal_cortex">Ventromedial prefrontal cortex - Wikipedia</a></li>
 <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4145052/">Ventromedial prefrontal cortex is critical for the regulation of amygdala activity in humans</a></li>
@@ -211,37 +198,31 @@
 </ol>
 
 
-<input type="radio" id="cat-Philosophy" name="category" value="5" />
-<ol class="bookmarks">
-<li><a href="https://www.degruyter.com/document/doi/10.1515/9780691184456-005/pdf">Chapter Three. Sympathy for the Rich</a></li>
-</ol>
-
-
-<input type="radio" id="cat-Physical Science" name="category" value="6" />
+<input type="radio" id="cat-Physical Science" name="category" value="4" />
 <ol class="bookmarks">
 <li><a href="https://www.irishtimes.com/news/world/us/nasa-craft-visits-asteroid-which-might-hit-earth-in-150-years-1.3719492">Nasa craft visits asteroid which might hit Earth in 150 years</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Politics" name="category" value="7" />
+<input type="radio" id="cat-Politics" name="category" value="5" />
 <ol class="bookmarks">
-<li><a href="https://www.theatlantic.com/business/archive/2012/02/are-the-rich-completely-undeserving-of-sympathy/253788/">Are the Rich Completely Undeserving of Sympathy? - The Atlantic</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Prometheism">Prometheism - Wikipedia</a></li>
 <li><a href="https://www.azmirror.com/2021/04/19/arizonas-past-with-neo-nazis-is-colliding-with-its-political-present/">Arizona’s past with neo-Nazis is colliding with its political present</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Theology" name="category" value="8" />
+<input type="radio" id="cat-Theology" name="category" value="6" />
 <ol class="bookmarks">
-<li><a href="https://philipmonroe.com/2013/04/14/the-origin-of-the-biblical-counseling-analogy-the-bumped-cup/">The origin of the biblical counseling analogy: the bumped cup | Musings of a Christian Psychologist</a></li>
 <li><a href="https://www.marquette.edu/maqom/watch55.html">The Watchers of Satanail: The Fallen Angels Traditions in 2 (Slavonic) Enoch</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Prince_of_Darkness_(Manichaeism)">Prince of Darkness (Manichaeism) - Wikipedia</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Aaron,_Son_of_the_Devil">Aaron, Son of the Devil - Wikipedia</a></li>
 <li><a href="https://brill.com/view/journals/si/107/2/article-p157_1.xml?language=en">The Death and Life of the Devil’s Son: A Literary Analysis of a Neglected Tradition in: Studia Islamica Volume 107 Issue 2 (2012)</a></li>
 <li><a href="https://en.wikipedia.org/wiki/List_of_death_deities">List of death deities - Wikipedia</a></li>
+<li><a href="https://www.medicaldaily.com/where-god-located-brain-importance-religion-related-thickness-cerebral-cortex-266043">Where Is God Located In the Brain? Importance of Religion Is Related To Thickness Of The Cerebral Cortex</a></li>
 </ol>
 </ol>
 
+  <p><a class="nowButton" href="javascript:resetTimeline()">Now</a></p>
   <div id="visualization"></div>
 
   <script type="text/javascript"
@@ -254,1294 +235,39 @@
     // Create a DataSet (allows two way data-binding)
     const items = new vis.DataSet([
   {
-    "id": 2,
-    "content": "Inbox (15,267) - megamindbrian@gmail.com - Gmail",
-    "start": "2022-09-06T23:44:38.779Z"
+    "id": 26590,
+    "content": "Google Domains",
+    "start": "2022-09-07T15:23:22.201Z"
   },
   {
-    "id": 45,
-    "content": "YouTube",
-    "start": "2022-09-07T04:09:35.333Z"
-  },
-  {
-    "id": 46,
-    "content": "Brian Cullinan - YouTube",
-    "start": "2022-09-07T04:09:35.339Z"
-  },
-  {
-    "id": 49,
-    "content": "Channel content - YouTube Studio",
-    "start": "2022-09-07T04:09:40.169Z"
-  },
-  {
-    "id": 50,
-    "content": "Channel content - YouTube Studio",
-    "start": "2022-09-07T04:09:40.491Z"
-  },
-  {
-    "id": 159,
-    "content": "Inbox (7,204) - bjcullinan@gmail.com - Gmail",
-    "start": "2022-09-07T00:08:05.941Z"
-  },
-  {
-    "id": 1236,
-    "content": "Google",
-    "start": "2022-09-07T05:36:12.804Z"
-  },
-  {
-    "id": 1833,
-    "content": "Inbox (15,267) - megamindbrian@gmail.com - Gmail",
-    "start": "2022-09-06T23:44:03.595Z"
-  },
-  {
-    "id": 4141,
-    "content": "LinkedIn: Log In or Sign Up",
-    "start": "2022-09-06T23:11:51.884Z"
-  },
-  {
-    "id": 6958,
-    "content": "Cloud Computing Services | Microsoft Azure",
-    "start": "2022-09-07T01:00:33.704Z"
-  },
-  {
-    "id": 12277,
-    "content": "Inbox (15,267) - megamindbrian@gmail.com - Gmail",
-    "start": "2022-09-06T23:44:03.595Z"
-  },
-  {
-    "id": 12950,
-    "content": "YouTube",
-    "start": "2022-09-07T04:09:31.141Z"
-  },
-  {
-    "id": 18210,
-    "content": "Gmail",
-    "start": "2022-09-06T23:44:44.924Z"
-  },
-  {
-    "id": 18832,
-    "content": "Inbox (15,267) - megamindbrian@gmail.com - Gmail",
-    "start": "2022-09-06T23:44:03.595Z"
-  },
-  {
-    "id": 18833,
-    "content": "Inbox (15,267) - megamindbrian@gmail.com - Gmail",
-    "start": "2022-09-06T23:44:03.595Z"
-  },
-  {
-    "id": 20801,
-    "content": "Gmail",
-    "start": "2022-09-06T23:44:44.924Z"
-  },
-  {
-    "id": 20802,
-    "content": "Gmail",
-    "start": "2022-09-06T23:44:44.924Z"
-  },
-  {
-    "id": 24732,
-    "content": "Google Calendar - Week of September 4, 2022",
-    "start": "2022-09-07T02:28:22.327Z"
-  },
-  {
-    "id": 24733,
-    "content": "Google Calendar - Week of September 4, 2022",
-    "start": "2022-09-07T02:28:22.327Z"
-  },
-  {
-    "id": 28411,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T05:46:36.590Z"
-  },
-  {
-    "id": 31411,
-    "content": "Workspace — Visual Studio Code",
-    "start": "2022-09-07T00:59:12.111Z"
+    "id": 26591,
+    "content": "Google Domains - My domains",
+    "start": "2022-09-07T15:23:23.310Z"
   },
   {
     "id": 38160,
     "content": "Brian Cullinan's Live Resume",
-    "start": "2022-09-07T06:08:56.302Z"
-  },
-  {
-    "id": 38356,
-    "content": "Child process | Node.js v18.8.0 Documentation",
-    "start": "2022-09-07T03:31:53.764Z"
+    "start": "2022-09-07T16:19:58.048Z"
   },
   {
     "id": 40116,
     "content": "timeline - vis.js - A dynamic, browser based visualization library.",
-    "start": "2022-09-07T05:26:51.668Z"
+    "start": "2022-09-07T16:10:12.137Z"
   },
   {
-    "id": 40119,
-    "content": "Vis Timeline Examples",
-    "start": "2022-09-07T06:39:28.145Z"
-  },
-  {
-    "id": 40125,
-    "content": "vis-timeline",
-    "start": "2022-09-07T05:26:48.228Z"
-  },
-  {
-    "id": 40654,
-    "content": "Home - Microsoft Azure",
-    "start": "2022-09-07T01:00:39.693Z"
-  },
-  {
-    "id": 40658,
-    "content": "Home - Microsoft Azure",
-    "start": "2022-09-07T01:00:38.980Z"
-  },
-  {
-    "id": 40660,
-    "content": "Home - Microsoft Azure",
-    "start": "2022-09-07T01:00:40.085Z"
-  },
-  {
-    "id": 42687,
-    "content": "Google Calendar - Week of September 4, 2022",
-    "start": "2022-09-07T02:28:22.327Z"
-  },
-  {
-    "id": 42688,
-    "content": "Google Calendar - Week of September 4, 2022",
-    "start": "2022-09-07T02:28:23.406Z"
-  },
-  {
-    "id": 44105,
-    "content": "DrawBench Prompts - Google Sheets",
-    "start": "2022-09-07T02:10:32.112Z"
-  },
-  {
-    "id": 44517,
-    "content": "Google Calendar - Tuesday, September 6, 2022, today",
-    "start": "2022-09-07T02:29:13.057Z"
-  },
-  {
-    "id": 44932,
-    "content": "bookmarks.js — activity [GitHub] — Visual Studio Code — GitHub",
-    "start": "2022-09-07T01:34:42.380Z"
-  },
-  {
-    "id": 45037,
-    "content": "Approach - Neuralink",
-    "start": "2022-09-07T02:10:33.958Z"
-  },
-  {
-    "id": 45054,
-    "content": "espressif/esp-csi: Applications based on Wi-Fi CSI (Channel state information), such as indoor posit",
-    "start": "2022-09-07T02:10:27.632Z"
-  },
-  {
-    "id": 45084,
-    "content": "All-in-One EmotiBit Bundle – OpenBCI Online Store",
-    "start": "2022-09-07T04:10:30.676Z"
-  },
-  {
-    "id": 45170,
-    "content": "Brian Cullinan's Live Resume",
-    "start": "2022-09-07T06:40:30.360Z"
-  },
-  {
-    "id": 45215,
-    "content": "Always enable the Chromium strong password generator · Issue #4901 · brave/brave-browser",
-    "start": "2022-09-06T23:43:51.775Z"
-  },
-  {
-    "id": 45239,
-    "content": "Billing Management Console",
-    "start": "2022-09-06T23:43:54.757Z"
-  },
-  {
-    "id": 45269,
-    "content": "LinkedIn Login, Sign in | LinkedIn",
-    "start": "2022-09-06T23:11:53.398Z"
-  },
-  {
-    "id": 45270,
-    "content": "Sign in - Google Accounts",
-    "start": "2022-09-06T23:11:57.581Z"
-  },
-  {
-    "id": 45271,
-    "content": "Sign in - Google Accounts",
-    "start": "2022-09-06T23:11:57.703Z"
-  },
-  {
-    "id": 45272,
-    "content": "https://accounts.google.com/signin/oauth/consent?authuser=1&part=AJi8hAMwy9NKu9JSZLujSQ0lUIlQQ-FxWNm",
-    "start": "2022-09-06T23:11:59.434Z"
-  },
-  {
-    "id": 45273,
-    "content": "LinkedIn Login, Sign in | LinkedIn",
-    "start": "2022-09-06T23:12:01.142Z"
-  },
-  {
-    "id": 45274,
-    "content": "",
-    "start": "2022-09-06T23:12:14.051Z"
-  },
-  {
-    "id": 45275,
-    "content": "",
-    "start": "2022-09-06T23:12:14.051Z"
-  },
-  {
-    "id": 45276,
-    "content": "LinkedIn",
-    "start": "2022-09-06T23:12:16.437Z"
-  },
-  {
-    "id": 45277,
-    "content": "LinkedIn",
-    "start": "2022-09-06T23:12:16.773Z"
-  },
-  {
-    "id": 45278,
-    "content": "LinkedIn",
-    "start": "2022-09-06T23:12:22.829Z"
-  },
-  {
-    "id": 45279,
-    "content": "LinkedIn",
-    "start": "2022-09-06T23:12:43.564Z"
-  },
-  {
-    "id": 45280,
-    "content": "LinkedIn",
-    "start": "2022-09-06T23:12:47.977Z"
-  },
-  {
-    "id": 45281,
-    "content": "LinkedIn",
-    "start": "2022-09-06T23:12:55.822Z"
-  },
-  {
-    "id": 45282,
-    "content": "LinkedIn",
-    "start": "2022-09-06T23:13:00.972Z"
-  },
-  {
-    "id": 45283,
-    "content": "Sign in - Google Accounts",
-    "start": "2022-09-06T23:13:04.149Z"
-  },
-  {
-    "id": 45284,
-    "content": "Sign in - Google Accounts",
-    "start": "2022-09-06T23:13:04.653Z"
-  },
-  {
-    "id": 45285,
-    "content": "Sign in - Google Accounts",
-    "start": "2022-09-06T23:13:04.773Z"
-  },
-  {
-    "id": 45286,
-    "content": "Processing... | LinkedIn",
-    "start": "2022-09-06T23:13:08.715Z"
-  },
-  {
-    "id": 45287,
-    "content": "Processing... | LinkedIn",
-    "start": "2022-09-06T23:13:08.715Z"
-  },
-  {
-    "id": 45288,
-    "content": "Processing... | LinkedIn",
-    "start": "2022-09-06T23:13:08.715Z"
-  },
-  {
-    "id": 45289,
-    "content": "LinkedIn",
-    "start": "2022-09-06T23:13:14.043Z"
-  },
-  {
-    "id": 45290,
-    "content": "LinkedIn",
-    "start": "2022-09-06T23:13:37.707Z"
-  },
-  {
-    "id": 45291,
-    "content": "Feed | LinkedIn",
-    "start": "2022-09-06T23:13:40.252Z"
-  },
-  {
-    "id": 45292,
-    "content": "Brian Cullinan | LinkedIn",
-    "start": "2022-09-06T23:13:42.680Z"
-  },
-  {
-    "id": 45293,
-    "content": "Activate Console",
-    "start": "2022-09-06T23:13:51.190Z"
-  },
-  {
-    "id": 45294,
-    "content": "Activate Console",
-    "start": "2022-09-06T23:13:51.284Z"
-  },
-  {
-    "id": 45295,
-    "content": "Ready to move forward? - bjcullinan@gmail.com - Gmail",
-    "start": "2022-09-06T23:14:39.071Z"
-  },
-  {
-    "id": 45296,
-    "content": "Startpage Search Results",
-    "start": "2022-09-06T23:21:35.872Z"
-  },
-  {
-    "id": 45297,
-    "content": "How to combine folders in macOS using the hidden Merge options and the Ditto command",
-    "start": "2022-09-06T23:21:40.592Z"
-  },
-  {
-    "id": 45298,
-    "content": "Startpage Search Results",
-    "start": "2022-09-06T23:22:07.284Z"
-  },
-  {
-    "id": 45299,
-    "content": "What does lying politicians have in common with rainbow colors? - Junk Charts",
-    "start": "2022-09-06T23:35:04.080Z"
-  },
-  {
-    "id": 45300,
-    "content": "6a00d8341e992c53ef01bb098c03be970d-pi (550×647)",
-    "start": "2022-09-06T23:34:45.618Z"
-  },
-  {
-    "id": 45301,
-    "content": "Prometheism - Wikipedia",
-    "start": "2022-09-06T23:38:17.100Z"
-  },
-  {
-    "id": 45302,
-    "content": "List of Polish people - Wikipedia",
-    "start": "2022-09-06T23:38:57.116Z"
-  },
-  {
-    "id": 45303,
-    "content": "studies_3.pdf",
-    "start": "2022-09-06T23:40:01.704Z"
-  },
-  {
-    "id": 45304,
-    "content": "Opportunity- Information Technology - Engineer Software 2 - megamindbrian@gmail.com - Gmail",
-    "start": "2022-09-06T23:44:10.246Z"
-  },
-  {
-    "id": 45305,
-    "content": "Your Amazon.com order #114-2838586-8380238 has shipped - megamindbrian@gmail.com - Gmail",
-    "start": "2022-09-06T23:44:29.663Z"
-  },
-  {
-    "id": 45306,
-    "content": "Security alert - megamindbrian@gmail.com - Gmail",
-    "start": "2022-09-06T23:44:35.514Z"
-  },
-  {
-    "id": 45307,
-    "content": "Thank you for signing up for AWS Activate Founders - bjcullinan@gmail.com - Gmail",
-    "start": "2022-09-06T23:45:36.943Z"
-  },
-  {
-    "id": 45308,
-    "content": "Brian, welcome to LinkedIn - bjcullinan@gmail.com - Gmail",
-    "start": "2022-09-06T23:45:45.610Z"
-  },
-  {
-    "id": 45309,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T00:21:51.017Z"
-  },
-  {
-    "id": 45310,
-    "content": "Introducing Visual Studio Live Share",
-    "start": "2022-09-07T00:21:54.342Z"
-  },
-  {
-    "id": 45311,
-    "content": "Visual Studio Live Share: Real-Time Code Collaboration Tool",
-    "start": "2022-09-07T00:22:17.599Z"
-  },
-  {
-    "id": 45312,
-    "content": "Visual Studio Live Share: Real-Time Code Collaboration Tool",
-    "start": "2022-09-07T00:22:17.599Z"
-  },
-  {
-    "id": 45313,
-    "content": "https://vscode.dev/liveshare",
-    "start": "2022-09-07T00:22:37.748Z"
-  },
-  {
-    "id": 45314,
-    "content": "Share quickstart - Live Share | Microsoft Docs",
-    "start": "2022-09-07T00:23:37.542Z"
-  },
-  {
-    "id": 45315,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T00:24:13.669Z"
-  },
-  {
-    "id": 45316,
-    "content": "Use Microsoft Live Share to collaborate with Visual Studio Code",
-    "start": "2022-09-07T00:24:18.268Z"
-  },
-  {
-    "id": 45317,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T00:27:20.013Z"
-  },
-  {
-    "id": 45318,
-    "content": "Video Conferencing, Meetings, Calling | Microsoft Teams",
-    "start": "2022-09-07T00:27:22.831Z"
-  },
-  {
-    "id": 45319,
-    "content": "Download Microsoft Teams Desktop and Mobile Apps | Microsoft Teams",
-    "start": "2022-09-07T00:27:27.346Z"
-  },
-  {
-    "id": 45320,
-    "content": "Download Microsoft Teams Desktop and Mobile Apps | Microsoft Teams",
-    "start": "2022-09-07T00:27:30.236Z"
-  },
-  {
-    "id": 45321,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T00:50:32.085Z"
-  },
-  {
-    "id": 45322,
-    "content": "trying to 'npm install', getting node-gyp rebuild and python errors · Issue #2681 · nodejs/node-gyp",
-    "start": "2022-09-07T00:31:32.155Z"
-  },
-  {
-    "id": 45323,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T00:31:59.091Z"
-  },
-  {
-    "id": 45324,
-    "content": "How can I fix the \"zsh: command not found: python\" error? (macOS Monterey 12.3, Python&nbsp;3.10, At",
-    "start": "2022-09-07T00:52:05.777Z"
-  },
-  {
-    "id": 45325,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T00:45:38.790Z"
-  },
-  {
-    "id": 45326,
-    "content": "Called by Dynata?",
-    "start": "2022-09-07T00:45:53.882Z"
-  },
-  {
-    "id": 45327,
-    "content": "World's Largest First Party Data Platform | Dynata",
-    "start": "2022-09-07T00:45:54.181Z"
-  },
-  {
-    "id": 45328,
-    "content": "Connected Data Services| Dynata",
-    "start": "2022-09-07T00:46:14.566Z"
-  },
-  {
-    "id": 45329,
-    "content": "First-Party Data | Data Insights | Dynata",
-    "start": "2022-09-07T00:46:38.553Z"
-  },
-  {
-    "id": 45330,
-    "content": "First-Party Data | Data Insights | Dynata",
-    "start": "2022-09-07T00:46:38.553Z"
-  },
-  {
-    "id": 45331,
-    "content": "Contact - Dynata",
-    "start": "2022-09-07T00:46:41.778Z"
-  },
-  {
-    "id": 45332,
-    "content": "Thank You - Dynata",
-    "start": "2022-09-07T00:47:36.882Z"
-  },
-  {
-    "id": 45333,
-    "content": "Creative Testing - Dynata",
-    "start": "2022-09-07T00:47:49.154Z"
-  },
-  {
-    "id": 45334,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T00:48:02.620Z"
-  },
-  {
-    "id": 45335,
-    "content": "Knowledge Management Software Solution | Dynata",
-    "start": "2022-09-07T00:48:14.074Z"
-  },
-  {
-    "id": 45336,
-    "content": "DYNATA ACQUIRES 0PTIMUS ANALYTICS, STRENGTHENING ADVERTISING SOLUTIONS OFFERINGS",
-    "start": "2022-09-07T00:48:41.375Z"
-  },
-  {
-    "id": 45337,
-    "content": "",
-    "start": "2022-09-07T00:49:00.986Z"
-  },
-  {
-    "id": 45338,
-    "content": "node.js - Getting 'OSError: [Errno 2] No such file or directory:' during `node-gyp` compilation of m",
-    "start": "2022-09-07T00:50:37.245Z"
-  },
-  {
-    "id": 45339,
-    "content": "joquijada/windows-node-js-node-gyp: Help with NodeJS on Windows+Cygwin set up",
-    "start": "2022-09-07T00:50:43.989Z"
-  },
-  {
-    "id": 45340,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T00:52:02.809Z"
-  },
-  {
-    "id": 45341,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T00:55:20.135Z"
-  },
-  {
-    "id": 45342,
-    "content": "Welcome to Python.org",
-    "start": "2022-09-07T00:55:22.809Z"
-  },
-  {
-    "id": 45343,
-    "content": "Download Python | Python.org",
-    "start": "2022-09-07T00:55:25.478Z"
-  },
-  {
-    "id": 45344,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T00:57:17.586Z"
-  },
-  {
-    "id": 45345,
-    "content": "macos - Installer hangs on \"waiting for other installations to finish\" despite no other installation",
-    "start": "2022-09-07T00:57:30.546Z"
-  },
-  {
-    "id": 45346,
-    "content": "Edit",
-    "start": "2022-09-07T00:57:28.905Z"
-  },
-  {
-    "id": 45347,
-    "content": "Working...",
-    "start": "2022-09-07T01:00:37.493Z"
-  },
-  {
-    "id": 45348,
-    "content": "Home - Microsoft Azure",
-    "start": "2022-09-07T01:00:39.093Z"
-  },
-  {
-    "id": 45349,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T01:02:35.942Z"
-  },
-  {
-    "id": 45350,
-    "content": "How do I use the built-in password manager? – Brave Help Center",
-    "start": "2022-09-07T01:02:39.081Z"
-  },
-  {
-    "id": 45351,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T01:18:40.684Z"
-  },
-  {
-    "id": 45352,
-    "content": "The Brogrammer Culture Is Exactly Opposite Of What The Tech World Needs",
-    "start": "2022-09-07T01:19:03.302Z"
-  },
-  {
-    "id": 45353,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T01:20:51.473Z"
-  },
-  {
-    "id": 45354,
-    "content": "Python - package not found although it is installed - Stack Overflow",
-    "start": "2022-09-07T01:20:55.477Z"
-  },
-  {
-    "id": 45355,
-    "content": "python3 - How to make 'python' program command execute Python 3? - Ask Ubuntu",
-    "start": "2022-09-07T01:22:01.287Z"
-  },
-  {
-    "id": 45356,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T01:23:05.605Z"
-  },
-  {
-    "id": 45357,
-    "content": "node.js - Can't find Python executable \"python\" - Stack Overflow",
-    "start": "2022-09-07T01:23:12.501Z"
-  },
-  {
-    "id": 45358,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T01:24:31.614Z"
-  },
-  {
-    "id": 45359,
-    "content": "C++ addons | Node.js v18.8.0 Documentation",
-    "start": "2022-09-07T01:24:36.272Z"
-  },
-  {
-    "id": 45360,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T01:25:39.628Z"
-  },
-  {
-    "id": 45361,
-    "content": "Calling Native C++ DLLs from a Node.js Web App",
-    "start": "2022-09-07T01:25:43.076Z"
-  },
-  {
-    "id": 45362,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T01:30:23.089Z"
-  },
-  {
-    "id": 45363,
-    "content": "node-ffi/node-ffi: Node.js Foreign Function Interface",
-    "start": "2022-09-07T01:37:20.098Z"
-  },
-  {
-    "id": 45364,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T01:31:55.180Z"
-  },
-  {
-    "id": 45365,
-    "content": "How to load a dynamic library that needs another library? · Issue #525 · node-ffi/node-ffi",
-    "start": "2022-09-07T01:32:02.894Z"
-  },
-  {
-    "id": 45366,
-    "content": "How to create js binding to c/c++ library using nodejs FFI",
-    "start": "2022-09-07T02:12:05.893Z"
-  },
-  {
-    "id": 45367,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T01:33:24.015Z"
-  },
-  {
-    "id": 45368,
-    "content": "@josephuspaye/list-open-windows - npm",
-    "start": "2022-09-07T01:33:29.714Z"
-  },
-  {
-    "id": 45369,
-    "content": "JosephusPaye/list-open-windows: List the windows of currently open applications on Windows.",
-    "start": "2022-09-07T01:34:14.484Z"
-  },
-  {
-    "id": 45370,
-    "content": "list-open-windows/src at master · JosephusPaye/list-open-windows",
-    "start": "2022-09-07T01:34:02.381Z"
-  },
-  {
-    "id": 45371,
-    "content": "list-open-windows/list-windows.cpp at master · JosephusPaye/list-open-windows",
-    "start": "2022-09-07T01:33:36.836Z"
-  },
-  {
-    "id": 45372,
-    "content": "list-open-windows/list-windows.js.cpp at master · JosephusPaye/list-open-windows",
-    "start": "2022-09-07T01:33:50.584Z"
-  },
-  {
-    "id": 45373,
-    "content": "list-open-windows/binding.gyp at master · JosephusPaye/list-open-windows",
-    "start": "2022-09-07T01:34:07.182Z"
-  },
-  {
-    "id": 45374,
-    "content": "",
-    "start": "2022-09-07T01:35:06.698Z"
-  },
-  {
-    "id": 45375,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T02:10:25.514Z"
-  },
-  {
-    "id": 45376,
-    "content": "Issues · node-ffi/node-ffi",
-    "start": "2022-09-07T01:36:18.040Z"
-  },
-  {
-    "id": 45377,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T02:10:25.323Z"
-  },
-  {
-    "id": 45378,
-    "content": "npm install does not work on Mac OSX 10.15.5 · Issue #1124 · IdentityModel/oidc-client-js",
-    "start": "2022-09-07T02:10:25.584Z"
-  },
-  {
-    "id": 45379,
-    "content": "javascript - Why can't I install this module using npm? - Stack Overflow",
-    "start": "2022-09-07T01:40:27.637Z"
-  },
-  {
-    "id": 45380,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T02:10:25.425Z"
-  },
-  {
-    "id": 45381,
-    "content": "node-gyp - npm",
-    "start": "2022-09-07T01:40:55.190Z"
-  },
-  {
-    "id": 45382,
-    "content": "nodejs/node-gyp: Node.js native addon build tool",
-    "start": "2022-09-07T02:10:15.660Z"
-  },
-  {
-    "id": 45383,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T02:12:45.946Z"
-  },
-  {
-    "id": 45384,
-    "content": "upgrade - Upgrading Node.js to latest version - Stack Overflow",
-    "start": "2022-09-07T02:12:48.402Z"
-  },
-  {
-    "id": 45385,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T02:20:38.314Z"
-  },
-  {
-    "id": 45386,
-    "content": "2635: Superintelligent AIs - explain xkcd",
-    "start": "2022-09-07T02:20:56.116Z"
-  },
-  {
-    "id": 45387,
-    "content": "World Builders Put Happy Face On Superintelligent AI - IEEE Spectrum",
-    "start": "2022-09-07T02:23:09.089Z"
-  },
-  {
-    "id": 45388,
-    "content": "Google Calendar - Event details",
-    "start": "2022-09-07T02:29:07.655Z"
-  },
-  {
-    "id": 45389,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T02:36:54.452Z"
-  },
-  {
-    "id": 45390,
-    "content": "Opera GX | Gaming Browser | Opera",
-    "start": "2022-09-07T02:44:03.582Z"
-  },
-  {
-    "id": 45391,
-    "content": "'Superintelligence' in Seattle: AI experts do a reality check",
-    "start": "2022-09-07T02:48:35.106Z"
-  },
-  {
-    "id": 45392,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T02:49:13.088Z"
-  },
-  {
-    "id": 45393,
-    "content": "Enable Dark Mode on Brave Browser",
-    "start": "2022-09-07T02:49:17.399Z"
-  },
-  {
-    "id": 45394,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T02:51:30.947Z"
-  },
-  {
-    "id": 45395,
-    "content": "sassman/son-of-grab: Based on apples original showcase of the CG Window API Sons of grab updated for",
-    "start": "2022-09-07T02:51:37.492Z"
-  },
-  {
-    "id": 45396,
-    "content": "son-of-grab/main.m at main · sassman/son-of-grab",
-    "start": "2022-09-07T02:51:40.062Z"
-  },
-  {
-    "id": 45397,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T02:54:45.083Z"
-  },
-  {
-    "id": 45398,
-    "content": "objective c - How to print unsigned char* in NSLog() - Stack Overflow",
-    "start": "2022-09-07T02:54:54.790Z"
-  },
-  {
-    "id": 45399,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T03:31:52.437Z"
-  },
-  {
-    "id": 45400,
-    "content": "After Tesla thought aliens contacted him, he described his 'encounter' to the Red Cross.",
-    "start": "2022-09-07T03:00:58.378Z"
-  },
-  {
-    "id": 45401,
-    "content": "After Tesla thought aliens contacted him, he described his 'encounter' to the Red Cross.",
-    "start": "2022-09-07T03:00:41.600Z"
-  },
-  {
-    "id": 45402,
-    "content": "Real UFO History: Einstein, Tesla, Edison, and Marconi on Radio Signals from Aliens | Den of Geek",
-    "start": "2022-09-07T03:01:08.605Z"
-  },
-  {
-    "id": 45403,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T03:02:42.292Z"
-  },
-  {
-    "id": 45404,
-    "content": "Son of Satan (Lokison) (Earth-616) | Marvel Database | Fandom",
-    "start": "2022-09-07T03:02:48.902Z"
-  },
-  {
-    "id": 45405,
-    "content": "Aaron, Son of the Devil - Wikipedia",
-    "start": "2022-09-07T03:03:12.414Z"
-  },
-  {
-    "id": 45406,
-    "content": "Son of the Devil - Wikipedia",
-    "start": "2022-09-07T03:03:34.411Z"
-  },
-  {
-    "id": 45407,
-    "content": "The Watchers of Satanail: The Fallen Angels Traditions in 2 (Slavonic) Enoch",
-    "start": "2022-09-07T03:04:07.381Z"
-  },
-  {
-    "id": 45408,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T03:04:39.909Z"
-  },
-  {
-    "id": 45409,
-    "content": "Death (personification) - Wikipedia",
-    "start": "2022-09-07T03:05:22.999Z"
-  },
-  {
-    "id": 45410,
-    "content": "Death (personification) - Wikipedia",
-    "start": "2022-09-07T03:05:28.717Z"
-  },
-  {
-    "id": 45411,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T03:05:54.062Z"
-  },
-  {
-    "id": 45412,
-    "content": "Prince of Darkness - Wikipedia",
-    "start": "2022-09-07T03:06:08.706Z"
-  },
-  {
-    "id": 45413,
-    "content": "Prince of Darkness (Satan) - Wikipedia",
-    "start": "2022-09-07T03:09:53.804Z"
-  },
-  {
-    "id": 45414,
-    "content": "Prince of Darkness (Manichaeism) - Wikipedia",
-    "start": "2022-09-07T03:06:46.693Z"
-  },
-  {
-    "id": 45415,
-    "content": "Beelzebub - Wikipedia",
-    "start": "2022-09-07T03:09:50.591Z"
-  },
-  {
-    "id": 45416,
-    "content": "The Death and Life of the Devil’s Son: A Literary Analysis of a Neglected Tradition in: Studia Islam",
-    "start": "2022-09-07T03:11:03.171Z"
-  },
-  {
-    "id": 45417,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T03:11:52.432Z"
-  },
-  {
-    "id": 45418,
-    "content": "The Fall of Satan and the Victory of Christ | Desiring God",
-    "start": "2022-09-07T03:11:51.070Z"
-  },
-  {
-    "id": 45419,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T03:12:07.268Z"
-  },
-  {
-    "id": 45420,
-    "content": "Seven Lies Satan Wants You to Believe",
-    "start": "2022-09-07T03:12:15.269Z"
-  },
-  {
-    "id": 45421,
-    "content": "List of death deities - Wikipedia",
-    "start": "2022-09-07T03:13:59.071Z"
-  },
-  {
-    "id": 45422,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T03:17:48.363Z"
-  },
-  {
-    "id": 45423,
-    "content": "What Part of the Brain Controls Emotions? Fear, Happiness, Anger, Love",
-    "start": "2022-09-07T03:17:51.512Z"
-  },
-  {
-    "id": 45424,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T03:19:07.559Z"
-  },
-  {
-    "id": 45425,
-    "content": "makefile - How does \"make\" app know default target to build if no target is specified? - Stack Overf",
-    "start": "2022-09-07T03:19:14.566Z"
-  },
-  {
-    "id": 45426,
-    "content": "Goals (GNU make)",
-    "start": "2022-09-07T03:19:19.795Z"
-  },
-  {
-    "id": 45427,
-    "content": "Goals (GNU make)",
-    "start": "2022-09-07T03:19:19.795Z"
-  },
-  {
-    "id": 45428,
-    "content": "How to change the default target of `make`? - SysTutorials",
-    "start": "2022-09-07T03:19:35.525Z"
-  },
-  {
-    "id": 45429,
-    "content": "Child process | Node.js v18.8.0 Documentation",
-    "start": "2022-09-07T03:33:12.057Z"
-  },
-  {
-    "id": 45430,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T03:41:27.267Z"
-  },
-  {
-    "id": 45431,
-    "content": "MacOs active window title using C# - Stack Overflow",
-    "start": "2022-09-07T03:41:36.591Z"
-  },
-  {
-    "id": 45432,
-    "content": "Find the frontmost/active window in OS X",
-    "start": "2022-09-07T03:50:34.010Z"
-  },
-  {
-    "id": 45433,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T04:37:11.927Z"
-  },
-  {
-    "id": 45434,
-    "content": "Keylogger for streams | OBS Forums",
-    "start": "2022-09-07T04:37:14.982Z"
-  },
-  {
-    "id": 45435,
-    "content": "Free - NohBoard | OBS Forums",
-    "start": "2022-09-07T04:37:23.904Z"
-  },
-  {
-    "id": 45436,
-    "content": "Releases · ThoNohT/NohBoard",
-    "start": "2022-09-07T04:37:29.984Z"
-  },
-  {
-    "id": 45437,
-    "content": "ThoNohT/NohBoard: A Keyboard Visualizer",
-    "start": "2022-09-07T04:38:12.338Z"
-  },
-  {
-    "id": 45438,
-    "content": "Search · password",
-    "start": "2022-09-07T04:37:50.798Z"
-  },
-  {
-    "id": 45439,
-    "content": "NohBoard/NohBoard at master · ThoNohT/NohBoard",
-    "start": "2022-09-07T04:38:02.682Z"
-  },
-  {
-    "id": 45440,
-    "content": "NohBoard/NohBoard/Hooking at master · ThoNohT/NohBoard",
-    "start": "2022-09-07T04:38:00.108Z"
-  },
-  {
-    "id": 45441,
-    "content": "NohBoard/NohBoard/NohBoard at master · ThoNohT/NohBoard",
-    "start": "2022-09-07T04:38:04.120Z"
-  },
-  {
-    "id": 45442,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T04:47:35.607Z"
-  },
-  {
-    "id": 45443,
-    "content": "Ventromedial prefrontal cortex - Wikipedia",
-    "start": "2022-09-07T04:47:38.803Z"
-  },
-  {
-    "id": 45444,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T04:49:08.409Z"
-  },
-  {
-    "id": 45445,
-    "content": "The role of the ventromedial prefrontal cortex and context in regulating fear learning and extinctio",
-    "start": "2022-09-07T04:49:17.350Z"
-  },
-  {
-    "id": 45446,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T04:50:16.595Z"
-  },
-  {
-    "id": 45447,
-    "content": "About us | PHOENIX CONTACT",
-    "start": "2022-09-07T04:51:14.525Z"
-  },
-  {
-    "id": 45448,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T04:51:24.320Z"
-  },
-  {
-    "id": 45449,
-    "content": "Arizona’s past with neo-Nazis is colliding with its political present",
-    "start": "2022-09-07T04:51:36.310Z"
-  },
-  {
-    "id": 45450,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T04:53:59.179Z"
-  },
-  {
-    "id": 45451,
-    "content": "Nasa craft visits asteroid which might hit Earth in 150 years",
-    "start": "2022-09-07T04:54:04.478Z"
-  },
-  {
-    "id": 45452,
-    "content": "Neo-Nazis, White Supremacists Confront Demonstrators at ASU | Valley Fever | Phoenix | Phoenix New T",
-    "start": "2022-09-07T04:55:49.167Z"
-  },
-  {
-    "id": 45453,
-    "content": "Ventromedial prefrontal cortex is critical for the regulation of amygdala activity in humans - PMC",
-    "start": "2022-09-07T04:56:43.997Z"
-  },
-  {
-    "id": 45454,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T04:57:18.426Z"
-  },
-  {
-    "id": 45455,
-    "content": "Post-traumatic stress disorder: The role of medial prefrontal cortex and amygdala",
-    "start": "2022-09-07T04:57:25.659Z"
-  },
-  {
-    "id": 45456,
-    "content": "Timeline | Standalone Build",
-    "start": "2022-09-07T05:15:37.373Z"
-  },
-  {
-    "id": 45457,
-    "content": "Timeline | interaction | Limit move and zoom",
-    "start": "2022-09-07T05:23:38.028Z"
-  },
-  {
-    "id": 45458,
-    "content": "Timeline | other | Horizontal Scroll Option",
-    "start": "2022-09-07T05:24:25.331Z"
-  },
-  {
-    "id": 45459,
-    "content": "Timeline | other | Loading screen example",
-    "start": "2022-09-07T05:24:45.660Z"
-  },
-  {
-    "id": 45460,
-    "content": "Timeline | styling | Show day scale with calendar week",
-    "start": "2022-09-07T05:25:06.447Z"
-  },
-  {
-    "id": 45461,
-    "content": "Timeline | Basic demo",
-    "start": "2022-09-07T05:26:35.857Z"
-  },
-  {
-    "id": 45462,
-    "content": "timeline - vis.js - A dynamic, browser based visualization library.",
-    "start": "2022-09-07T05:26:51.668Z"
-  },
-  {
-    "id": 45463,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T05:29:06.276Z"
-  },
-  {
-    "id": 45464,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T05:35:37.763Z"
-  },
-  {
-    "id": 45465,
-    "content": "high dynamic rain - Google Search",
-    "start": "2022-09-07T05:36:15.368Z"
-  },
-  {
-    "id": 45466,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T05:42:17.850Z"
-  },
-  {
-    "id": 45467,
-    "content": "sqlite3 - npm",
-    "start": "2022-09-07T05:42:21.844Z"
-  },
-  {
-    "id": 45468,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T05:45:47.304Z"
-  },
-  {
-    "id": 45469,
-    "content": "What do billions of stars have in common with your DNA?",
-    "start": "2022-09-07T05:46:02.011Z"
-  },
-  {
-    "id": 45470,
-    "content": "Scientists Have Finally Sequenced the Complete Human Genome – And Revealed New Genetic Secrets",
-    "start": "2022-09-07T05:46:53.075Z"
-  },
-  {
-    "id": 45471,
-    "content": "better-sqlite3 - npm",
-    "start": "2022-09-07T05:48:31.597Z"
-  },
-  {
-    "id": 45472,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T05:50:19.474Z"
-  },
-  {
-    "id": 45473,
-    "content": "How do I prevent SQLite database locks? - Stack Overflow",
-    "start": "2022-09-07T05:50:23.054Z"
-  },
-  {
-    "id": 45474,
-    "content": "better-sqlite3/api.md at 0c42307437140dbe5217a097739e418a7bd88f01 · WiseLibs/better-sqlite3",
-    "start": "2022-09-07T05:50:58.731Z"
-  },
-  {
-    "id": 45475,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T05:58:00.375Z"
-  },
-  {
-    "id": 45476,
-    "content": "How do I unlock a SQLite database? - Stack Overflow",
-    "start": "2022-09-07T05:58:05.486Z"
-  },
-  {
-    "id": 45477,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T05:58:28.598Z"
-  },
-  {
-    "id": 45478,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T05:58:47.720Z"
-  },
-  {
-    "id": 45479,
-    "content": "javascript - Fastest way to copy a file in Node.js - Stack Overflow",
-    "start": "2022-09-07T05:58:50.166Z"
-  },
-  {
-    "id": 45480,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T06:18:07.382Z"
-  },
-  {
-    "id": 45481,
-    "content": "Timeline | other | Time zone",
-    "start": "2022-09-07T06:31:30.578Z"
-  },
-  {
-    "id": 45482,
-    "content": "Timeline | other | Time zone - JSFiddle - Code Playground",
-    "start": "2022-09-07T06:35:48.676Z"
-  },
-  {
-    "id": 45483,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T06:19:11.238Z"
-  },
-  {
-    "id": 45484,
-    "content": "node.js - How to get the local timezone from the system using nodejs - Stack Overflow",
-    "start": "2022-09-07T06:19:14.428Z"
+    "id": 43800,
+    "content": "Wikipedia:Contents/Portals - Wikipedia",
+    "start": "2022-09-07T15:33:01.678Z"
   },
   {
     "id": 45485,
     "content": "Startpage Search Results",
-    "start": "2022-09-07T06:35:32.036Z"
+    "start": "2022-09-07T16:10:07.097Z"
   },
   {
-    "id": 45486,
-    "content": "Timeline | groups | Vertical Items Hide",
-    "start": "2022-09-07T06:39:35.907Z"
+    "id": 45493,
+    "content": "Wikipedia:Contents/Portals - Wikipedia",
+    "start": "2022-09-07T15:33:01.678Z"
   }
 ])
     // Configuration for the Timeline
@@ -1553,11 +279,16 @@
       }
     }
     // Create a Timeline
-    const now = (new Date).getTime()
     const timeline = new vis.Timeline(container, items, options)
-    timeline.setWindow(
-      new Date(now - 60 * 60 * 5 * 1000),
-      new Date(now + 60 * 60 * 1000))
+
+    function resetTimeline() {
+      const now = (new Date).getTime()
+      timeline.setWindow(
+        new Date(now - 60 * 60 * 5 * 1000),
+        new Date(now + 60 * 60 * 1000))
+    }
+
+    resetTimeline()
 
   </script>
 

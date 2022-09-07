@@ -18,7 +18,8 @@
     }
 
     ol.categories>li,
-    ol.windows>li {
+    ol.windows>li,
+    a.nowButton {
       border: 5px solid transparent;
       border-radius: 10px;
       background: navy;
@@ -31,7 +32,8 @@
     }
 
     ol.categories>li a,
-    ol.windows>li a {
+    ol.windows>li a,
+    a.nowButton {
       display: block;
       text-decoration: none;
       color: white;
@@ -40,12 +42,16 @@
     }
 
     ol.categories>li label,
-    ol.windows>li label {
+    ol.windows>li label,
+    a.nowButton {
       display: block;
       cursor: pointer;
       padding: 10px;
     }
 
+    a.nowButton {
+      display:inline-block;
+    }
 
     ol.categories>li:hover::after,
     ol.windows>li.active::after {
@@ -109,6 +115,7 @@
 
   <ol class="categories"></ol>
 
+  <p><a class="nowButton" href="javascript:resetTimeline()">Now</a></p>
   <div id="visualization"></div>
 
   <script type="text/javascript"
@@ -129,11 +136,16 @@
       }
     }
     // Create a Timeline
-    const now = (new Date).getTime()
     const timeline = new vis.Timeline(container, items, options)
-    timeline.setWindow(
-      new Date(now - 60 * 60 * 5 * 1000),
-      new Date(now + 60 * 60 * 1000))
+
+    function resetTimeline() {
+      const now = (new Date).getTime()
+      timeline.setWindow(
+        new Date(now - 60 * 60 * 5 * 1000),
+        new Date(now + 60 * 60 * 1000))
+    }
+
+    resetTimeline()
 
   </script>
 
