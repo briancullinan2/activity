@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<base href="/" target="_self" />
+<link rel="icon" href="/unknownmap.jpg">
+<title>Brian Cullinan's Live Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="/index.css" />
+<style>
+/* source: https://codepen.io/unnegative/pen/dVwYBq */
+
+ol.categories {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    text-align: center;
+}
+
+ol.categories > li {
+    border: 5px solid transparent;
+    border-radius: 10px;
+    background: navy;
+    position: relative;
+    display: inline-block;
+    background-clip: padding-box;
+    z-index: unset;
+    list-style: none;
+    text-align: left;
+}
+
+ol.categories > li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    min-width: 200px;
+    text-align: center;
+}
+
+ol.categories > li label {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+ol.categories > li:hover::after {
+    content: " ";
+    background: linear-gradient(
+        45deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+    border-image-slice: 1;
+    border-radius: 10px;
+    position: absolute;
+    z-index: -1;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+
+}
+
+/* SPA with no javascript, enjoy */
+input[name*="category"] {
+    opacity: 0;
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    right: -1;
+    bottom: -1;
+}
+
+input:checked + ol.bookmarks {
+    display: block;
+}
+
+ol.bookmarks {
+    display: none;
+}
+
+p.livedev {
+    text-align: center;
+}
+
+
+</style>
+</head>
+
+<body>
+<p class="livedev">
+<script>
+document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
+</script>
+</p>
+
+
+<ol class="categories">
+<li><a href="#CEO">
+        <label for="cat-CEO">
+        CEO</a></label></li>
+<li><a href="#Engineering">
+        <label for="cat-Engineering">
+        Architecture/Engineering</a></label></li>
+<li><a href="#Education">
+        <label for="cat-Education">
+        Education</a></label></li>
+<li><a href="#Philosophy">
+        <label for="cat-Philosophy">
+        Philosophy</a></label></li>
+<li><a href="#Politics">
+        <label for="cat-Politics">
+        Economics/Politics</a></label></li>
+<li><a href="#Theology">
+        <label for="cat-Theology">
+        Theology</a></label></li>
+</ol>
+
+
+
+<input type="radio" id="cat-CEO" name="category" value="0" />
+<ol class="bookmarks">
+<li><a href="https://www.apa.org/news/press/releases/2000/08/presidents">What makes a good president?</a></li>
+</ol>
+    
+
+<input type="radio" id="cat-Engineering" name="category" value="1" />
+<ol class="bookmarks">
+<li><a href="https://docs.microsoft.com/en-us/ai-builder/flow-sentiment-analysis">Use the sentiment analysis prebuilt model in Power Automate - AI Builder | Microsoft Docs</a></li>
+<li><a href="https://towardsdatascience.com/merging-with-ai-how-to-make-a-brain-computer-interface-to-communicate-with-google-using-keras-and-f9414c540a92?gi=98b0dcbf31f7">Merging with AI: How to Make a Brain-Computer Interface to Communicate with Google using Keras and OpenBCI | by Jag Singh | Towards Data Science</a></li>
+<li><a href="https://news.uchicago.edu/story/how-hackers-could-use-wi-fi-track-you-inside-your-home">How hackers could use Wi-Fi to track you inside your home</a></li>
+<li><a href="https://www.sciencealert.com/wi-fi-signals-can-identify-you-through-walls-and-even-track-your-movements">Wi-Fi Signals Can Identify You Through Walls And Even Track Your Movements : ScienceAlert</a></li>
+<li><a href="https://github.com/espressif/esp-csi">espressif/esp-csi: Applications based on Wi-Fi CSI (Channel state information), such as indoor positioning, human detection</a></li>
+<li><a href="https://github.com/isurunuwanthilaka/wifi-person-detection">isurunuwanthilaka/wifi-person-detection: Person detection with WiFi</a></li>
+<li><a href="https://github.com/geekfeiw/wifiperson">geekfeiw/wifiperson: Code of paper, Person-in-WiFi: Fine-grained Person Perception using WiFi</a></li>
+<li><a href="https://graphviz.org/">Graphviz</a></li>
+<li><a href="https://appsource.microsoft.com/en-us/product/office/wa104379982?tab=overview">Find the right app | Microsoft AppSource</a></li>
+<li><a href="https://towardsdatascience.com/merging-with-ai-how-to-make-a-brain-computer-interface-to-communicate-with-google-using-keras-and-f9414c540a92">Merging with AI: How to Make a Brain-Computer Interface to Communicate with Google using Keras and OpenBCI | by Jag Singh | Towards Data Science</a></li>
+<li><a href="https://www.unicorn-bi.com/product/unicorn-hybrid-black/">Unicorn Hybrid Black | Unicorn Hybrid Black</a></li>
+</ol>
+    
+
+<input type="radio" id="cat-Education" name="category" value="2" />
+<ol class="bookmarks">
+<li><a href="https://www.pdfdrive.com/">PDF Drive - Search and download PDF files for free.</a></li>
+</ol>
+    
+
+<input type="radio" id="cat-Philosophy" name="category" value="3" />
+<ol class="bookmarks">
+<li><a href="https://www.degruyter.com/document/doi/10.1515/9780691184456-005/pdf">Chapter Three. Sympathy for the Rich</a></li>
+</ol>
+    
+
+<input type="radio" id="cat-Politics" name="category" value="4" />
+<ol class="bookmarks">
+<li><a href="https://www.theatlantic.com/business/archive/2012/02/are-the-rich-completely-undeserving-of-sympathy/253788/">Are the Rich Completely Undeserving of Sympathy? - The Atlantic</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prometheism">Prometheism - Wikipedia</a></li>
+</ol>
+    
+
+<input type="radio" id="cat-Theology" name="category" value="5" />
+<ol class="bookmarks">
+<li><a href="https://philipmonroe.com/2013/04/14/the-origin-of-the-biblical-counseling-analogy-the-bumped-cup/">The origin of the biblical counseling analogy: the bumped cup | Musings of a Christian Psychologist</a></li>
+</ol>
+    
+
+
+</body>
+</html>
+    

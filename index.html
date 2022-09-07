@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="/" target="_self" />
+<link rel="icon" href="/unknownmap.jpg">
+<title>Brian Cullinan's Live Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="/index.css" />
+<style>
+/* source: https://codepen.io/unnegative/pen/dVwYBq */
+
+ol.categories {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    text-align: center;
+}
+
+ol.categories > li {
+    border: 5px solid transparent;
+    border-radius: 10px;
+    background: navy;
+    position: relative;
+    display: inline-block;
+    background-clip: padding-box;
+    z-index: unset;
+    list-style: none;
+    text-align: left;
+}
+
+ol.categories > li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    min-width: 200px;
+    text-align: center;
+}
+
+ol.categories > li label {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+ol.categories > li:hover::after {
+    content: " ";
+    background: linear-gradient(
+        45deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+    border-image-slice: 1;
+    border-radius: 10px;
+    position: absolute;
+    z-index: -1;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+
+}
+
+/* SPA with no javascript, enjoy */
+input[name*="category"] {
+    opacity: 0;
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    right: -1;
+    bottom: -1;
+}
+
+input:checked + ol.bookmarks {
+    display: block;
+}
+
+ol.bookmarks {
+    display: none;
+}
+
+p.livedev {
+    text-align: center;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<ol class="windows"></ol>
+
+<p class="livedev">
+<script>
+document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
+</script>
+</p>
+
+<ol class="categories"></ol>
+
+</body>
+</html>

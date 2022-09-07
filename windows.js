@@ -1,0 +1,83 @@
+// run window enumerator to get current list of windows to coincide with the live-dev
+
+// TODO: update with master-server or cloud function design, maybe a filteres POST from my IP
+//   and in memory storage until the page is requested by remote clients
+
+// AAAHAAAAHAHAHAHAHAHAHAHHHHHHHHHHH!!!!!!!!!!!!!
+// no worky >:|
+/*
+var ffi = require('ffi')
+var ref = require('ref')
+var int = ref.types.int
+
+var libprime = ffi.Library('./sog.dylib', {
+	'enumWindows': [ int, [] ],
+	'getTitle': [ int, [ int ] ]
+})
+*/
+
+let { spawn, spawnSync } = require('child_process')
+
+function getWindows() {
+	let ps = spawnSync('./sog', [], {
+		stdio: 'pipe'
+	}) // sync since it's native utility?
+	//ps.stdout.on('data', (data) => {
+	//  stdout += data.toString('utf-8')
+	//})
+	/*
+	await new Promise((resolve, reject) => ps.on('close', function (errCode) {
+		if(errCode)
+			return reject()
+		return resolve(stdout)
+	}))
+	*/
+	const IGNORE_PROGRAMS = [
+		'Window Server',
+		'Macs Fan Control',
+		'Control Center',
+		'Spotlight',
+		'Dock',
+	]
+	let windows = ps.stdout.toString('utf-8').trim().split('\n').map(window => window.split(/:\s/g))
+	windows.sort((a, b) => a[0] - b[0])
+	let windowsNames = windows.map(win => win[1])
+	let windowsFiltered = windows
+		.filter((w, i, arr) => windowsNames.indexOf(w[1]) == i && IGNORE_PROGRAMS.indexOf(w[1]) == -1)
+		.map(win => win[1].replace(/\.app$/gi, ''))
+
+	return windowsFiltered
+}
+
+function listWindows() {
+	let windowsFiltered = getWindows()
+	let html = `
+  <ol class="windows">
+  ${bookmarkFolders.map(folder => {
+		let category
+		if (path.dirname(folder) == '.') {
+			category = `<li><a href="#${path.basename(folder)}">
+      <label for="win-${path.basename(folder)}">
+      ${path.basename(folder)}</a></label></li>`
+		} else {
+			category = `<li><a href="#${path.basename(folder)}">
+      <label for="win-${path.basename(folder)}">
+      ${path.basename(path.dirname(folder))}/${path.basename(folder)}</a></label></li>`
+		}
+		return category
+	}).join('\n')}
+  </ol>`
+
+	// TODO: something like show download link, or remotely switch to window like a cheap streaming remote desktop?
+
+	// TODO: something like taking periodic snapshots and show a scrolling list of window states
+
+	// TODO: calendar entries might be a slight vulnerability
+  
+}
+
+module.exports = {
+  getWindows,
+  listWindows,
+
+}
