@@ -18,6 +18,7 @@
       color: white;
     }
 
+    ol.brainstorms,
     ol.categories,
     ol.windows {
       list-style: none;
@@ -28,6 +29,7 @@
       max-width: 1000px;
     }
 
+    ol.brainstorms>li,
     ol.categories>li,
     ol.windows>li,
     a.nowButton {
@@ -42,6 +44,7 @@
       text-align: left;
     }
 
+    ol.brainstorms>li a,
     ol.categories>li a,
     ol.windows>li a,
     a.nowButton {
@@ -52,6 +55,7 @@
       text-align: center;
     }
 
+    ol.brainstorms>li label,
     ol.categories>li label,
     ol.windows>li label,
     a.nowButton {
@@ -64,6 +68,7 @@
       display:inline-block;
     }
 
+    ol.brainstorms>li:hover::after,
     ol.categories>li:hover::after,
     ol.windows>li.active::after {
       content: " ";
@@ -91,7 +96,8 @@
     }
 
     /* SPA with no javascript, enjoy */
-    input[name*="category"] {
+    input[name*="category"],
+    input[name*="brainstorm"] {
       opacity: 0;
       height: 1px;
       width: 1px;
@@ -100,11 +106,13 @@
       bottom: -1;
     }
 
-    input:checked+ol.bookmarks {
+    input:checked+ol.bookmarks,
+    input:checked+ol.brainstorm {
       display: block;
     }
 
-    ol.bookmarks {
+    ol.bookmarks,
+    ol.brainstorm {
       display: none;
     }
 
@@ -165,6 +173,54 @@
 
 
   <h2>Brainstorming Sessions</h2>
+  <!-- design first and then figure out how to format it from calendar, similar to categorical bookmarks -->
+  <ol class="brainstorms">
+    <li><a href="#brainstorm">
+        <label for="brain-brainstorm">
+        Brainstorm brainstorming</label></a></li>
+    <li><a href="#chores">
+        <label for="brain-chores">
+        Brainstorm chores</label></a></li>
+    <li><a href="#Genesis">
+      <label for="brain-Genesis">
+      Genesis</label></a></li>  
+  </ol>
+
+  <input type="radio" id="brain-brainstorm" name="brainstorm" value="0">
+  <ol class="brainstorm">
+    <li>List chores, even the ones already done</li>
+    <li>Brainstorming topics</li>
+    <li>Words that start with the same letter</li>
+    <li>Words that have 2 different meanings</li>
+    <li>Brainstorm lies we tell ourselves</li>
+    <li>Think or list people you care about</li>
+    <li>Names for product versions</li>
+    <li>App ideas</li>
+    <li>Brainstorm problems at work (it's the thought that counts)</li>
+    <li>Planting a garden or landscaping</li>
+    <li>How to make money?</li>
+  </ol>
+
+  <input type="radio" id="brain-chores" name="brainstorm" value="0">
+  <ol class="brainstorm">
+    <li>Mop floor</li>
+    <li>Wash toilet</li>
+    <li>Clean dogs</li>
+    <li>Fold clothes</li>
+    <li>Make tea</li>
+    <li>Wipe down counters</li>
+  </ol>
+
+  <input type="radio" id="brain-Genesis" name="brainstorm" value="0">
+  <ol class="brainstorm">
+    <li>Day 1: let there be Light. Read the news and absorb new knowledge all day</li>
+    <li>Day 2: created the sky and the sea (Atmosphere / Firmament) - swim and run, meditate, breathing exercises</li>
+    <li>Day 3: created the land and plants - garden, plant a tree</li>
+    <li>Day 4: Sun, moon & stars - call grandparents, learn from history written in the stars</li>
+    <li>Day 5: created birds & sea creatures - social networking on fish Fridays</li>
+    <li>Day 6: created animals and man - cleanliness is next to godliness, do chores</li>
+    <li>Day 7: The Sabbath - rest like God rested, study God's word, search for meaning</li>
+  </ol>
 
   <p><a class="nowButton" target="_blank" href="http://go.bubbl.us/cde753/afdb?/Brainwriting">Brainstorm w/ Brian</a></p>
 
