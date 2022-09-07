@@ -1,0 +1,198 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background: rgb(51, 51, 68);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+
+ul.brainstorms,
+ul.categories,
+ol.brainstorms,
+ol.categories,
+ol.windows {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  text-align: center;
+  max-width: 1000px;
+}
+
+ul.brainstorms>li,
+ul.categories>li,
+ol.brainstorms>li,
+ol.categories>li,
+ol.windows>li,
+a.nowButton {
+  border: 5px solid transparent;
+  border-radius: 10px;
+  background: navy;
+  position: relative;
+  display: inline-block;
+  background-clip: padding-box;
+  z-index: unset;
+  list-style: none;
+  text-align: left;
+}
+
+ul.brainstorms>li a,
+ul.categories>li a,
+ol.brainstorms>li a,
+ol.categories>li a,
+ol.windows>li a,
+a.nowButton {
+  display: block;
+  text-decoration: none;
+  color: white;
+  min-width: 200px;
+  text-align: center;
+}
+
+ul.brainstorms>li label,
+ul.categories>li label,
+ol.brainstorms>li label,
+ol.categories>li label,
+ol.windows>li label,
+a.nowButton {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+}
+
+a.nowButton {
+  display: inline-block;
+}
+
+ul.brainstorms>li:hover::after,
+ul.categories>li:hover::after,
+ol.brainstorms>li:hover::after,
+ol.categories>li:hover::after,
+ol.windows>li.active::after {
+  content: " ";
+  background: linear-gradient(45deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 154, 0, 1) 10%,
+      rgba(208, 222, 33, 1) 20%,
+      rgba(79, 220, 74, 1) 30%,
+      rgba(63, 218, 216, 1) 40%,
+      rgba(47, 201, 226, 1) 50%,
+      rgba(28, 127, 238, 1) 60%,
+      rgba(95, 21, 242, 1) 70%,
+      rgba(186, 12, 248, 1) 80%,
+      rgba(251, 7, 217, 1) 90%,
+      rgba(255, 0, 0, 1) 100%);
+  border-image-slice: 1;
+  border-radius: 10px;
+  position: absolute;
+  z-index: -1;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+
+}
+
+/* SPA with no javascript, enjoy */
+input[name*="category"],
+input[name*="brainstorm"] {
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  right: -1;
+  bottom: -1;
+}
+
+input:checked+ul.bookmarks,
+input:checked+ul.brainstorm,
+input:checked+ol.bookmarks,
+input:checked+ol.brainstorm {
+  display: block;
+}
+
+ul.bookmarks,
+ul.brainstorm,
+ol.bookmarks,
+ol.brainstorm {
+  display: none;
+}
+
+div.livedev {
+  position: relative;
+  margin: 0 auto;
+  max-width: 600px;
+  max-height: 460px;
+}
+
+div.livedev p {
+  text-align: center;
+  padding-bottom: 60%;
+}
+
+div.livedev iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.vis-item-content a {
+  text-decoration: none;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.8);
+  display: block;
+}
+
+div.container {
+  width: 21cm;
+  padding: 20mm 16mm;
+  background: rgb(238, 238, 238);
+  box-shadow: rgb(0 0 0 / 50%) 2px 3px 10px;
+  margin: 20px auto;
+  border-radius: 2px;
+  border: 1px solid rgb(51, 51, 51);
+}
+
+div.container.flex {
+  display: flex;
+}
+
+@media all and (max-width: 1000px) {
+  div.container {
+    width: auto;
+    margin: 20px 20px;
+  }
+
+}
+
+@media all and (max-width: 600px) {
+
+  div.container.flex {
+    flex-direction: column;
+  }
+
+
+  ul.brainstorms>li a,
+  ul.categories>li a,
+  ul.windows>li a,
+  ol.brainstorms>li a,
+  ol.categories>li a,
+  ol.windows>li a,
+  a.nowButton {
+    min-width: unset;
+  }
+}

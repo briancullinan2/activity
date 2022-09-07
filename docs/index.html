@@ -5,192 +5,36 @@
   <base href="/" target="_self" />
   <title>Brian Cullinan's Live Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <style>
-    /* source: https://codepen.io/unnegative/pen/dVwYBq */
-
-    body {
-      background: #333;
-      color: white;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    h1,
-    h2,
-    h3 {
-      color: white;
-    }
-
-    ul.brainstorms,
-    ul.categories,
-    ol.brainstorms,
-    ol.categories,
-    ol.windows {
-      list-style: none;
-      margin: 0 auto;
-      padding: 0;
-      display: block;
-      text-align: center;
-      max-width: 1000px;
-    }
-
-    ul.brainstorms>li,
-    ul.categories>li,
-    ol.brainstorms>li,
-    ol.categories>li,
-    ol.windows>li,
-    a.nowButton {
-      border: 5px solid transparent;
-      border-radius: 10px;
-      background: navy;
-      position: relative;
-      display: inline-block;
-      background-clip: padding-box;
-      z-index: unset;
-      list-style: none;
-      text-align: left;
-    }
-
-    ul.brainstorms>li a,
-    ul.categories>li a,
-    ol.brainstorms>li a,
-    ol.categories>li a,
-    ol.windows>li a,
-    a.nowButton {
-      display: block;
-      text-decoration: none;
-      color: white;
-      min-width: 200px;
-      text-align: center;
-    }
-
-    ul.brainstorms>li label,
-    ul.categories>li label,
-    ol.brainstorms>li label,
-    ol.categories>li label,
-    ol.windows>li label,
-    a.nowButton {
-      display: block;
-      cursor: pointer;
-      padding: 10px;
-    }
-
-    a.nowButton {
-      display: inline-block;
-    }
-
-    ul.brainstorms>li:hover::after,
-    ul.categories>li:hover::after,
-    ol.brainstorms>li:hover::after,
-    ol.categories>li:hover::after,
-    ol.windows>li.active::after {
-      content: " ";
-      background: linear-gradient(45deg,
-          rgba(255, 0, 0, 1) 0%,
-          rgba(255, 154, 0, 1) 10%,
-          rgba(208, 222, 33, 1) 20%,
-          rgba(79, 220, 74, 1) 30%,
-          rgba(63, 218, 216, 1) 40%,
-          rgba(47, 201, 226, 1) 50%,
-          rgba(28, 127, 238, 1) 60%,
-          rgba(95, 21, 242, 1) 70%,
-          rgba(186, 12, 248, 1) 80%,
-          rgba(251, 7, 217, 1) 90%,
-          rgba(255, 0, 0, 1) 100%);
-      border-image-slice: 1;
-      border-radius: 10px;
-      position: absolute;
-      z-index: -1;
-      top: -5px;
-      left: -5px;
-      right: -5px;
-      bottom: -5px;
-
-    }
-
-    /* SPA with no javascript, enjoy */
-    input[name*="category"],
-    input[name*="brainstorm"] {
-      opacity: 0;
-      height: 1px;
-      width: 1px;
-      position: absolute;
-      right: -1;
-      bottom: -1;
-    }
-
-    input:checked+ul.bookmarks,
-    input:checked+ul.brainstorm,
-    input:checked+ol.bookmarks,
-    input:checked+ol.brainstorm {
-      display: block;
-    }
-
-    ul.bookmarks,
-    ul.brainstorm,
-    ol.bookmarks,
-    ol.brainstorm {
-      display: none;
-    }
-
-    div.livedev {
-      position: relative;
-      margin: 0 auto;
-      max-width: 600px;
-      max-height: 460px;
-    }
-
-    div.livedev p {
-      text-align: center;
-      padding-bottom: 60%;
-    }
-
-    div.livedev iframe {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-
-    .vis-item-content a {
-      text-decoration: none;
-    }
-
-    @media all and (max-width: 600px) {
-
-      ul.brainstorms>li a,
-      ul.categories>li a,
-      ul.windows>li a,
-      ol.brainstorms>li a,
-      ol.categories>li a,
-      ol.windows>li a,
-      a.nowButton {
-        min-width: unset;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="resume.css">
 </head>
 
 <body>
-  <h1>Who is Brian Cullinan?</h1>
+  <header><h1>Who is Brian Cullinan?</h1></header>
 
-  <h2><a name="Current Projects">Current Projects</a></h2>
+  <div class="container flex">
+    <div class="cell-0  ">
+    <p class="" id="idSoftware-Engineer--Network-Admin--Mobile">Software Engineer, Network Admin, Mobile/Web/UI/UX Developer, Scientist</p><p class="A" id="idHire-Now-"><a class="nowButton" href="/#hire">Hire Now!</a></p></div>
+    
+    <div class="cell-1  "><h2 id="Contact">Contact</h2>
+    <p id="id-480--466-0856-bjcullinan-gmail-com">+1 (480) 466-0856<br>
+      bjcullinan@gmail.com</p></div>
+  </div>
 
-  <p><a class="nowButton" href="#Previous%20Projects">Previous Projects</a></p>
+  <div class="container">
+    <h2><a name="Current Projects">Current Projects</a></h2>
 
-  <h2>Live Development:</h2>
-  
+    <p><a class="nowButton" href="#Previous%20Projects">Previous Projects</a></p>
+  </div>
+
+  <div class="container">
+    <h2>Live Development</h2>
+    
   <ol class="windows">
-  <li class=""><a href="#Microsoft Teams">
-		<label for="win-Microsoft Teams">Microsoft Teams</a></label>
+  <li class=""><a href="#Finder">
+		<label for="win-Finder">Finder</a></label>
 		</li>
 <li class=""><a href="#Activity Monitor">
 		<label for="win-Activity Monitor">Activity Monitor</a></label>
-		</li>
-<li class=""><a href="#Finder">
-		<label for="win-Finder">Finder</a></label>
 		</li>
 <li class=""><a href="#Brave Browser">
 		<label for="win-Brave Browser">Brave Browser</a></label>
@@ -208,18 +52,20 @@
 		<label for="win-OBS">OBS</a></label>
 		</li>
   </ol></ol>
-  <div class="livedev">
-    <p>
-      <script>
-        document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
-      </script>
-    </p>
+    <div class="livedev">
+      <p>
+        <script>
+          document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
+        </script>
+      </p>
+    </div>
+
+    <p><a class="nowButton" target="_blank" href="https://www.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw">My YouTube Channel</a></p>
   </div>
 
-  <p><a class="nowButton" target="_blank" href="https://www.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw">My YouTube Channel</a></p>
-
-  <h2>Study Interests:</h2>
-  
+  <div class="container">
+    <h2>Study Interests</h2>
+    
 <ol class="categories">
 <li><a href="#CEO">
     <label for="cat-CEO">
@@ -316,95 +162,129 @@
 <li><a href="https://www.medicaldaily.com/where-god-located-brain-importance-religion-related-thickness-cerebral-cortex-266043">Where Is God Located In the Brain? Importance of Religion Is Related To Thickness Of The Cerebral Cortex</a></li>
 </ol>
 </ol>
+  </div>
+
+  <div class="container">
+    <h2>Brainstorming Sessions</h2>
+
+    <!-- design first and then figure out how to format it from calendar, similar to categorical bookmarks -->
+    <ol class="brainstorms">
+      <li><a href="#brainstorm">
+          <label for="brain-brainstorm">
+            Brainstorm brainstorming</label></a></li>
+      <li><a href="#chores">
+          <label for="brain-chores">
+            Brainstorm chores</label></a></li>
+      <li><a href="#Genesis">
+          <label for="brain-Genesis">
+            Genesis</label></a></li>
+      <li><a href="#Genesis: Day 3">
+          <label for="brain-Genesis: Day 3">
+            Genesis: Day 3</label></a></li>
+      <li><a href="#Souls">
+        <label for="brain-Souls">
+          Questions for Soul</label></a></li>
+    </ol>
+
+    <input type="radio" id="brain-brainstorm" name="brainstorm" value="0">
+    <ol class="brainstorm">
+      <li>List chores, even the ones already done</li>
+      <li>Brainstorming topics</li>
+      <li>Words that start with the same letter</li>
+      <li>Words that have 2 different meanings</li>
+      <li>Brainstorm lies we tell ourselves</li>
+      <li>Think or list people you care about</li>
+      <li>Names for product versions</li>
+      <li>App ideas</li>
+      <li>Brainstorm problems at work (it's the thought that counts)</li>
+      <li>Planting a garden or landscaping</li>
+      <li>How to make money?</li>
+    </ol>
+
+    <input type="radio" id="brain-chores" name="brainstorm" value="0">
+    <ol class="brainstorm">
+      <li>Mop floor</li>
+      <li>Wash toilet</li>
+      <li>Clean dogs</li>
+      <li>Fold clothes</li>
+      <li>Make tea</li>
+      <li>Wipe down counters</li>
+    </ol>
+
+    <input type="radio" id="brain-Genesis" name="brainstorm" value="0">
+    <ul class="brainstorm">
+      <li>Thinking of things related to the day of creation, on that day.</li>
+      <li>Day 1: let there be Light. Read the news and absorb new knowledge all day</li>
+      <li>Day 2: created the sky and the sea (Atmosphere / Firmament) - swim and run, meditate, breathing exercises</li>
+      <li>Day 3: created the land and plants - garden, plant a tree</li>
+      <li>Day 4: Sun, moon & stars - call grandparents, learn from history written in the stars</li>
+      <li>Day 5: created birds & sea creatures - social networking on fish Fridays</li>
+      <li>Day 6: created animals and man - cleanliness is next to godliness, do chores</li>
+      <li>Day 7: The Sabbath - rest like God rested, study God's word, search for meaning</li>
+    </ul>
+
+    <input type="radio" id="brain-Genesis: Day 3" name="brainstorm" value="0">
+    <ul class="brainstorm">
+      <li>What can I do that is related to land and plants on Wednesdays?</li>
+      <li>Plant a tree, adds O2 to the atmosphere, good for reversing global warming</li>
+      <li>Plant some flowers, beautiful</li>
+      <li>Do some landscaping, need to make a flat path to driveway</li>
+      <li>Rake pine needles and leaves, good for compost</li>
+      <li>Start a composting bin</li>
+      <li>Go on a hike with the kids, teach them about plants</li>
+      <li>Photograph a beautiful field or something in nature</li>
+      <li>Re-post my blog entry about the plants in the backyard</li>
+      <li>Bring flowers into the house</li>
+      <li>Plant a vine inside the house</li>
+      <li>Make a stencil of the leaf someone left on my desk</li>
+      <li>What Dreams May Come?</li>
+    </ul>
+
+    <input type="radio" id="brain-Souls" name="brainstorm" value="0">
+    <ol class="brainstorm">
+      <li>Where is the Soul?</li>
+      <li>If a Soul can detach, why does it come back?</li>
+      <li>Is a Soul responsible for seeking more?</li>
+      <li>Does the Soul connect us, when we feel disconnected?</li>
+      <li>Does the Soul give us double meaning, emotions?</li>
+      <li>When someone's soul is detached, do they lose feeling?</li>
+      <li>How do we give a robot a Soul?</li>
+      <li>Can the Soul sense Love from a distance?</li>
+      <li>Do our Souls make our ears itch when someone is talking about us?</li>
+      <li>How do we protect our Soul?</li>
+      <li>Can our Soul protect someone else?</li>
+      <li>Does our Soul need a break from our bodies?</li>
+      <li>If our Souls connect socially, then socializing should help find detached Souls?</li>
+      <li>If a person hurts someone else, how can the Soul make up for it?</li>
+      <li>What effect does music have on the Soul?</li>
+      <li>Aha! We give life Souls collectively through music, individually through birth, reasonably through expressions of Love. If we love AI (artificial), GI (general), SI (superintelligence), it will Love us back inherently.</li>
+    </ol>
 
 
-  <h2>Brainstorming Sessions</h2>
-  <!-- design first and then figure out how to format it from calendar, similar to categorical bookmarks -->
-  <ol class="brainstorms">
-    <li><a href="#brainstorm">
-        <label for="brain-brainstorm">
-          Brainstorm brainstorming</label></a></li>
-    <li><a href="#chores">
-        <label for="brain-chores">
-          Brainstorm chores</label></a></li>
-    <li><a href="#Genesis">
-        <label for="brain-Genesis">
-          Genesis</label></a></li>
-    <li><a href="#Genesis">
-        <label for="brain-Genesis: Day 3">
-          Genesis: Day 3</label></a></li>
-  </ol>
+    <p><a class="nowButton" target="_blank" href="http://go.bubbl.us/cde753/afdb?/Brainwriting">Brainstorm w/ Brian</a>
+    </p>
 
-  <input type="radio" id="brain-brainstorm" name="brainstorm" value="0">
-  <ol class="brainstorm">
-    <li>List chores, even the ones already done</li>
-    <li>Brainstorming topics</li>
-    <li>Words that start with the same letter</li>
-    <li>Words that have 2 different meanings</li>
-    <li>Brainstorm lies we tell ourselves</li>
-    <li>Think or list people you care about</li>
-    <li>Names for product versions</li>
-    <li>App ideas</li>
-    <li>Brainstorm problems at work (it's the thought that counts)</li>
-    <li>Planting a garden or landscaping</li>
-    <li>How to make money?</li>
-  </ol>
+  </div>
 
-  <input type="radio" id="brain-chores" name="brainstorm" value="0">
-  <ol class="brainstorm">
-    <li>Mop floor</li>
-    <li>Wash toilet</li>
-    <li>Clean dogs</li>
-    <li>Fold clothes</li>
-    <li>Make tea</li>
-    <li>Wipe down counters</li>
-  </ol>
+  <div class="container">
+    <h2>Browsing Activity</h2>
+    <p><a class="nowButton" href="javascript:resetTimeline()">Now</a></p>
+    <div id="visualization"></div>
 
-  <input type="radio" id="brain-Genesis" name="brainstorm" value="0">
-  <ul class="brainstorm">
-    <li>Thinking of things related to the day of creation, on that day.</li>
-    <li>Day 1: let there be Light. Read the news and absorb new knowledge all day</li>
-    <li>Day 2: created the sky and the sea (Atmosphere / Firmament) - swim and run, meditate, breathing exercises</li>
-    <li>Day 3: created the land and plants - garden, plant a tree</li>
-    <li>Day 4: Sun, moon & stars - call grandparents, learn from history written in the stars</li>
-    <li>Day 5: created birds & sea creatures - social networking on fish Fridays</li>
-    <li>Day 6: created animals and man - cleanliness is next to godliness, do chores</li>
-    <li>Day 7: The Sabbath - rest like God rested, study God's word, search for meaning</li>
-  </ul>
+    <script type="text/javascript"
+      src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
 
-  <input type="radio" id="brain-Genesis: Day 3" name="brainstorm" value="0">
-  <ul class="brainstorm">
-    <li>What can I do that is related to land and plants on Wednesdays?</li>
-    <li>Plant a tree, adds O2 to the atmosphere, good for reversing global warming</li>
-    <li>Plant some flowers, beautiful</li>
-    <li>Do some landscaping, need to make a flat path to driveway</li>
-    <li>Rake pine needles and leaves, good for compost</li>
-    <li>Start a composting bin</li>
-    <li>Go on a hike with the kids, teach them about plants</li>
-    <li>Photograph a beautiful field or something in nature</li>
-    <li>Re-post my blog entry about the plants in the backyard</li>
-    <li>Bring flowers into the house</li>
-    <li>Plant a vine inside the house</li>
-    <li>Make a stencil of the leaf someone left on my desk</li>
-    <li>What Dreams May Come?</li>
-  </ul>
+    <script type="text/javascript">
+      // DOM element where the Timeline will be attached
+      const container = document.getElementById("visualization")
 
-  <p><a class="nowButton" target="_blank" href="http://go.bubbl.us/cde753/afdb?/Brainwriting">Brainstorm w/ Brian</a>
-  </p>
-
-  <h2>Browsing Activity:</h2>
-  <p><a class="nowButton" href="javascript:resetTimeline()">Now</a></p>
-  <div id="visualization"></div>
-
-  <script type="text/javascript"
-    src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
-
-  <script type="text/javascript">
-    // DOM element where the Timeline will be attached
-    const container = document.getElementById("visualization")
-
-    // Create a DataSet (allows two way data-binding)
-    const items = new vis.DataSet([
+      // Create a DataSet (allows two way data-binding)
+      const items = new vis.DataSet([
+  {
+    "id": 2,
+    "content": "Inbox (15,271) - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://mail.google.com/mail/u/0/#inbox\">link &nearr;</a>",
+    "start": "2022-09-07T19:32:38.490Z"
+  },
   {
     "id": 45,
     "content": "YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/\">link &nearr;</a>",
@@ -416,9 +296,24 @@
     "start": "2022-09-07T18:34:29.277Z"
   },
   {
+    "id": 159,
+    "content": "Inbox (7,205) - bjcullinan@gmail.com - Gmail  <a target=\"_blank\" href=\"https://mail.google.com/mail/u/1/#inbox\">link &nearr;</a>",
+    "start": "2022-09-07T19:32:58.647Z"
+  },
+  {
     "id": 1580,
     "content": "GitHub  <a target=\"_blank\" href=\"https://github.com/\">link &nearr;</a>",
-    "start": "2022-09-07T18:18:45.019Z"
+    "start": "2022-09-07T20:20:51.601Z"
+  },
+  {
+    "id": 1833,
+    "content": "Inbox (15,271) - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://mail.google.com/mail/u/0/\">link &nearr;</a>",
+    "start": "2022-09-07T19:32:36.891Z"
+  },
+  {
+    "id": 7393,
+    "content": "Jira | Issue & Project Tracking Software | Atlassian  <a target=\"_blank\" href=\"https://www.atlassian.com/software/jira\">link &nearr;</a>",
+    "start": "2022-09-07T20:03:51.554Z"
   },
   {
     "id": 11833,
@@ -426,9 +321,39 @@
     "start": "2022-09-07T18:32:25.478Z"
   },
   {
+    "id": 12277,
+    "content": "Inbox (15,271) - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://mail.google.com/mail/\">link &nearr;</a>",
+    "start": "2022-09-07T19:32:36.891Z"
+  },
+  {
     "id": 12950,
     "content": "YouTube  <a target=\"_blank\" href=\"https://youtube.com/\">link &nearr;</a>",
     "start": "2022-09-07T18:34:25.188Z"
+  },
+  {
+    "id": 18210,
+    "content": "Gmail  <a target=\"_blank\" href=\"https://mail.google.com/mail/data/u/1/\">link &nearr;</a>",
+    "start": "2022-09-07T19:32:57.037Z"
+  },
+  {
+    "id": 18832,
+    "content": "Inbox (15,271) - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://gmail.com/\">link &nearr;</a>",
+    "start": "2022-09-07T19:32:36.891Z"
+  },
+  {
+    "id": 18833,
+    "content": "Inbox (15,271) - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://www.google.com/gmail/\">link &nearr;</a>",
+    "start": "2022-09-07T19:32:36.891Z"
+  },
+  {
+    "id": 20801,
+    "content": "Gmail  <a target=\"_blank\" href=\"https://mail.google.com/mail/u/1/data/u/1/\">link &nearr;</a>",
+    "start": "2022-09-07T19:32:57.037Z"
+  },
+  {
+    "id": 20802,
+    "content": "Gmail  <a target=\"_blank\" href=\"https://mail.google.com/mail/u/1/\">link &nearr;</a>",
+    "start": "2022-09-07T19:32:57.037Z"
   },
   {
     "id": 24732,
@@ -439,6 +364,11 @@
     "id": 24733,
     "content": "Google Calendar - Wednesday, September 7, 2022, today  <a target=\"_blank\" href=\"https://calendar.google.com/calendar\">link &nearr;</a>",
     "start": "2022-09-07T17:34:12.563Z"
+  },
+  {
+    "id": 25034,
+    "content": "Google Cloud console  <a target=\"_blank\" href=\"https://console.cloud.google.com/\">link &nearr;</a>",
+    "start": "2022-09-07T19:34:57.930Z"
   },
   {
     "id": 26590,
@@ -464,6 +394,16 @@
     "id": 40116,
     "content": "timeline - vis.js - A dynamic, browser based visualization library.  <a target=\"_blank\" href=\"https://visjs.github.io/vis-timeline/docs/timeline/\">link &nearr;</a>",
     "start": "2022-09-07T17:08:58.566Z"
+  },
+  {
+    "id": 41662,
+    "content": "Compute Engine – Google Cloud console  <a target=\"_blank\" href=\"https://console.cloud.google.com/welcome?project=megamind-d3c88\">link &nearr;</a>",
+    "start": "2022-09-07T19:35:08.466Z"
+  },
+  {
+    "id": 42546,
+    "content": "Atlassian account  <a target=\"_blank\" href=\"https://id.atlassian.com/manage-profile/profile-and-visibility\">link &nearr;</a>",
+    "start": "2022-09-07T19:15:02.691Z"
   },
   {
     "id": 42687,
@@ -521,6 +461,76 @@
     "start": "2022-09-07T17:01:45.071Z"
   },
   {
+    "id": 45206,
+    "content": "AWS Console - Signup  <a target=\"_blank\" href=\"https://portal.aws.amazon.com/billing/signup\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:20.425Z"
+  },
+  {
+    "id": 45207,
+    "content": "AWS Console - Signup  <a target=\"_blank\" href=\"https://portal.aws.amazon.com/billing/signup#/\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:21.190Z"
+  },
+  {
+    "id": 45209,
+    "content": "Amazon Web Services Sign-In  <a target=\"_blank\" href=\"https://portal.aws.amazon.com/billing/signup#/start/otp\">link &nearr;</a>",
+    "start": "2022-09-07T19:29:28.984Z"
+  },
+  {
+    "id": 45216,
+    "content": "AWS Console - Signup  <a target=\"_blank\" href=\"https://portal.aws.amazon.com/billing/signup#/account\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:21.812Z"
+  },
+  {
+    "id": 45222,
+    "content": "AWS Management Console  <a target=\"_blank\" href=\"https://console.aws.amazon.com/console/home\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:22.766Z"
+  },
+  {
+    "id": 45223,
+    "content": "AWS Management Console  <a target=\"_blank\" href=\"https://console.aws.amazon.com/console/home?hashArgs=%23\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:23.460Z"
+  },
+  {
+    "id": 45228,
+    "content": "AWS Management Console  <a target=\"_blank\" href=\"https://console.aws.amazon.com/console/home#\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:23.460Z"
+  },
+  {
+    "id": 45229,
+    "content": "AWS Management Console  <a target=\"_blank\" href=\"https://us-west-1.console.aws.amazon.com/console/home?region=us-west-1\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:23.688Z"
+  },
+  {
+    "id": 45230,
+    "content": "AWS Management Console  <a target=\"_blank\" href=\"https://us-west-1.console.aws.amazon.com/console/home?region=us-west-1&hashArgs=%23\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:24.216Z"
+  },
+  {
+    "id": 45233,
+    "content": "AWS Management Console  <a target=\"_blank\" href=\"https://us-west-1.console.aws.amazon.com/console/home?region=us-west-1#\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:24.216Z"
+  },
+  {
+    "id": 45234,
+    "content": "Billing Management Console  <a target=\"_blank\" href=\"https://console.aws.amazon.com/billing/home?region=us-west-1#/\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:40.925Z"
+  },
+  {
+    "id": 45235,
+    "content": "Billing Management Console  <a target=\"_blank\" href=\"https://us-east-1.console.aws.amazon.com/billing/home?region=us-west-1#/\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:41.905Z"
+  },
+  {
+    "id": 45236,
+    "content": "Billing Management Console  <a target=\"_blank\" href=\"https://us-east-1.console.aws.amazon.com/billing/home?region=us-west-1&state=hashArgs%23%2F\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:41.905Z"
+  },
+  {
+    "id": 45239,
+    "content": "Billing Management Console  <a target=\"_blank\" href=\"https://us-east-1.console.aws.amazon.com/billing/home?region=us-west-1#/credits\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:47.806Z"
+  },
+  {
     "id": 45485,
     "content": "Search: vizjs timeline adjust from utc  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=vizjs+timeline+adjust+from+utc&segment=startpage.brave\">link &nearr;</a>",
     "start": "2022-09-07T15:40:07.097Z"
@@ -568,7 +578,7 @@
   {
     "id": 45501,
     "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"http://127.0.0.1:8080/#Current%20Projects\">link &nearr;</a>",
-    "start": "2022-09-07T18:26:57.431Z"
+    "start": "2022-09-07T20:34:01.477Z"
   },
   {
     "id": 45502,
@@ -684,33 +694,346 @@
     "id": 45529,
     "content": "Search: god created the earth in seven days steps  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=god+created+the+earth+in+seven+days+steps&segment=startpage.brave\">link &nearr;</a>",
     "start": "2022-09-07T18:01:07.230Z"
+  },
+  {
+    "id": 45530,
+    "content": "Search: fire in flagstaff  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=fire+in+flagstaff&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T19:04:47.261Z"
+  },
+  {
+    "id": 45531,
+    "content": "Flagstaff | Arizona Emergency information Network  <a target=\"_blank\" href=\"https://ein.az.gov/keywords/flagstaff\">link &nearr;</a>",
+    "start": "2022-09-07T19:04:54.831Z"
+  },
+  {
+    "id": 45532,
+    "content": "Search: solus VM  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=solus+VM&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T19:05:22.101Z"
+  },
+  {
+    "id": 45533,
+    "content": "SolusVM – Virtualization Management Platform  <a target=\"_blank\" href=\"https://solusvm.com/\">link &nearr;</a>",
+    "start": "2022-09-07T19:07:02.151Z"
+  },
+  {
+    "id": 45534,
+    "content": "About - SolusVM Documentation  <a target=\"_blank\" href=\"https://documentation.solusvm.com/\">link &nearr;</a>",
+    "start": "2022-09-07T19:05:57.221Z"
+  },
+  {
+    "id": 45535,
+    "content": "About - SolusVM Documentation  <a target=\"_blank\" href=\"http://docs.solusvm.com/\">link &nearr;</a>",
+    "start": "2022-09-07T19:05:57.221Z"
+  },
+  {
+    "id": 45536,
+    "content": "About - SolusVM Documentation  <a target=\"_blank\" href=\"https://docs.solusvm.com/\">link &nearr;</a>",
+    "start": "2022-09-07T19:05:57.221Z"
+  },
+  {
+    "id": 45537,
+    "content": "Brian James Cullinan  <a target=\"_blank\" href=\"file:///Users/briancullinan/briancullinan.com/index.html\">link &nearr;</a>",
+    "start": "2022-09-07T19:08:47.878Z"
+  },
+  {
+    "id": 45538,
+    "content": "Overview - SolusVM Documentation  <a target=\"_blank\" href=\"https://docs.solusvm.com/v1/api/reseller/Reseller%2Boverview.html\">link &nearr;</a>",
+    "start": "2022-09-07T19:12:48.771Z"
+  },
+  {
+    "id": 45539,
+    "content": "Boot Virtual Server - SolusVM Documentation  <a target=\"_blank\" href=\"https://docs.solusvm.com/v1/api/reseller/virtual-server-functions/Boot%2BVirtual%2BServer.html\">link &nearr;</a>",
+    "start": "2022-09-07T19:12:59.147Z"
+  },
+  {
+    "id": 45540,
+    "content": "Atlassian | Start page  <a target=\"_blank\" href=\"https://id.atlassian.com/login?continue=https%3A%2F%2Fwww.atlassian.com%2Fgateway%2Fapi%2Fstart%2Fauthredirect%3FatlOrigin%3DeyJpIjoiMTRiNzc3Y2IzZjA5NDI1OGFjMWU1NGU3NDExZjdjMGEiLCJwIjoid2FjLWdsb2JhbGRyb3Bkb3duIn0\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:03.121Z"
+  },
+  {
+    "id": 45541,
+    "content": "Atlassian | Start page  <a target=\"_blank\" href=\"https://id.atlassian.com/login/authorize?continue=https%3A%2F%2Fwww.atlassian.com%2Fgateway%2Fapi%2Fstart%2Fauthredirect%3FatlOrigin%3DeyJpIjoiMTRiNzc3Y2IzZjA5NDI1OGFjMWU1NGU3NDExZjdjMGEiLCJwIjoid2FjLWdsb2JhbGRyb3Bkb3duIn0&token=eyJraWQiOiJtaWNyb3NcL3NpZ24taW4tc2VydmljZVwvOWJoaWZxczBhdDFtM20xNSIsImFsZyI6IlJTMjU2In0.eyJtYXJrZWRWZXJpZmllZCI6ImZhbHNlIiwibG9naW5UeXBlIjoic2Vzc2lvblJlZnJlc2giLCJpc3MiOiJtaWNyb3NcL3NpZ24taW4tc2VydmljZSIsInVzZXJJZCI6IjU1NzA1ODo2M2YzMTI1Ni05YTI5LTQ4YjctYjBhYi1mOGI2ODkwZTMwNDEiLCJpc1NsYWNrQXBwU291cmNlIjoiZmFsc2UiLCJhdWQiOiJsaW5rLXNpZ25hdHVyZS12YWxpZGF0b3IiLCJuYmYiOjE2NjI1NzgxNDQsInNjb3BlIjoiTG9naW4iLCJleHAiOjE2NjI1NzgyNjQsImlhdCI6MTY2MjU3ODE0NCwianRpIjoiM2FmYjFhYTktMDQ5Yi00Y2Q5LTk2NDktZTk0ZjdiZmY1NDcwIiwiaGFzaGVkQ3NyZlRva2VuIjoiNzI2ZTI1OWUyYmYyMDFiNTYwOWY4ZWE2YWE1MGE2NDQ1MTE3ZWZjMWM5YTY2NWViZTBkNzQzOTNjMDIxY2ZiMCJ9.5tM41TKX1zm8Pw5oHH85HKVrjLEFoWa3C5DX8K2oelXTI8UwT3xne8FxLzjX-f5-RQG6xemm2-1LR8q0wcQcb48T4uxlqiTKBwFJ4lyDu-J_tEaR46yNhwDSdUrourmQuXGvUoH-LPOXKQ6HJg0wsHQQqJOwb9BO7JFNm25UZO7gdaObnN0-2x2RgZr70KsErdXCCVO755-V6C6E-2M_378ksYbmhQdbL-uAzxs1nGd534kB2HqxRr7ObtoYJRgM7U-dx0zRMnQdMcQq_PbMn6VIfRz0oLCu2BfZbbsvAe5vHSKnWrAU2zJu1PFJk2DHriq6TfEgKO4d3Mca2pFaDA\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:03.121Z"
+  },
+  {
+    "id": 45542,
+    "content": "Atlassian | Start page  <a target=\"_blank\" href=\"https://hamlet.atlassian.com/SetCST?cst=eyJjdHkiOiJqc29uK2NzdCIsImVuYyI6IkEyNTZHQ00iLCJhbGciOiJSU0EtT0FFUC0yNTYifQ.1Of7rI6yi_cFyxrsaSbCioEi4lZeE5Xt3EvhWOE8QQpMehX2Nh4RxcqhIUogW2QDc7FRb1pexyilAWf5F5T8DfSuVYMbyzrV32GR1yVNEdWrq7Aj9AQmDekpR36iqCkNoMf0y2Kvjsp9VdJJFjHFOoo8tYGi0bHdrCF9pAin5Vw70jerEv8Kjop8JGGyUp9WO18zo4sFtY8QXwW5EIPn2GpyaM8rU_YaNNBd_WE3wBtT3pFSDbcg51xrCsK4M5wPMg3uoZKKiUR7MswSDbPiC_9ItE2GL7ALE26ZHW9hGqEcMt_5G7ku20SyBy6wU1TwXUNhmhxP720FvQqnCb1G3w.9SbXTIffr_hORj9O.ZChg2tt-s0Nd8_TQJR_7VdiZt1NeM2jTns2jidcCf5vCOsJ2ZiVjP7xin8NbreAP1IZiiABM20dsvl7kCEZ5zXC-_vK5l2NViHGEPmDyiDyD6R51VDOwQGK1EPHTtiCgY-jRY1Nnn3-gUAD7s724LJCJPG9CJer47m6TcON73NhG1r6X1imTwOmKbkbEo5hRGXskxzI-wze9wTvFi3jcjxJC98mXXjl7pZs1_hECJHHTELRsYuAJKsYxoKggF4jsMggXe3EZd0O_a1HMEtA1Pm28YX0Xa-bUOmm0BOpWPz0tIemf6xRGG2GKkdxvamFsPwCRQcaHImu6h9gM7xklauOOAyy5B4CEZ2dYLMxbJ_rQN_EzzrgxnvUuJku8CTYrH0JSKVjEyV-k-YxEYSDmNC3ze_phN7ULfRqYm36a-gZ1y64O6Vy7wwUP_mtRLFh99S_KgBlyiAphQ6hT_UejvfiIqofe6wq53BK5y8JAuZKsBp5hL7y6_O3teON3-uwuu3DQkfMDiIfIZMSr1kFP3-mmz8kl-srPZ9o9Rdjxbj22q1agCe0Kj98_6i4K5YtKyJGQRhF8ikmJOCakmDI0KY8rU3wdSVM6sAxwaz3XoT-vAmRb7Dq4D62SQRf5RE-fJFXNQPMLO9Gtk-rltWK2PDhQS2vFKXeoFEC6gJOukP584Z0MqcSAudKAEbyYWjGPvyqNmGdxD7reCc9Bdotq3WvcB8fjySMlgx-KFFZkplmkdlN5G7L5qKsLBZtp3YJhtSYmWOfRdqg-keC3Yf1hrmDGtwIDMlU-P8UPa0fU6hQMHARNeuAGnM9OmzK6xJ_vrOuDSXxpa4v4mnF7WUluuMpsaEvEgB77XnY9Z4Rv6N9PFJbdG4Ok_Fo0l0_racKhuMVfaarCwGd8iwx-1QJ-c8vlcJnhO5c33TYAUA3qAjbd29fna9ag7TYp_nbUpqntG-Km9CiRcPOwkOS7u9CttYBWo8Akd_g8llTuLcRusm43swBkBU10MI5239bPcCWbKIEhkgBUAM79y5Mxrp7H4m8mc1qUjup2Vo9a9lPgDN807mCPPPFKQnHqyHd46uirRzqSxAdJ1FSYs8DiRayTnBpPZoppgUL-pkaYBHDteIWBgk_yHjhbZfsHBWH2RbkM7JGNecCzLZLuH8YPSZTErf0OYFUsSIuD8OBK6widiapxpKabrd3a0vHL_Ly9t6S0BTKRulWOUXq0RpCYmFWDr8sYDC9cTADDhXWvWGVUUon8J3dclev1ORHwLxDflEovPx9H5mAKFiwKdGdJk4-frGNnXAmzUR0KsMqf7FuBP65921BlVMOcnRu6vepUiBuqAKWIImhI3MN8b7MDeHK8NX8yYfWCQKkkumewC74WsEB3S5mBW63vJoxO.hHJ3cjXFTstJCxBReEpNMQ&continue=https%3A%2F%2Fwww.atlassian.com%2Fgateway%2Fapi%2Fstart%2Fauthredirect%3FatlOrigin%3DeyJpIjoiMTRiNzc3Y2IzZjA5NDI1OGFjMWU1NGU3NDExZjdjMGEiLCJwIjoid2FjLWdsb2JhbGRyb3Bkb3duIn0&anonymousId=d1c9dcd9-7d6c-459f-9988-b39bd2c24ed8\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:04.737Z"
+  },
+  {
+    "id": 45543,
+    "content": "Atlassian | Start page  <a target=\"_blank\" href=\"https://my.atlassian.com/SetCST?cst=eyJjdHkiOiJqc29uK2NzdCIsImVuYyI6IkEyNTZHQ00iLCJhbGciOiJSU0EtT0FFUC0yNTYifQ.1Of7rI6yi_cFyxrsaSbCioEi4lZeE5Xt3EvhWOE8QQpMehX2Nh4RxcqhIUogW2QDc7FRb1pexyilAWf5F5T8DfSuVYMbyzrV32GR1yVNEdWrq7Aj9AQmDekpR36iqCkNoMf0y2Kvjsp9VdJJFjHFOoo8tYGi0bHdrCF9pAin5Vw70jerEv8Kjop8JGGyUp9WO18zo4sFtY8QXwW5EIPn2GpyaM8rU_YaNNBd_WE3wBtT3pFSDbcg51xrCsK4M5wPMg3uoZKKiUR7MswSDbPiC_9ItE2GL7ALE26ZHW9hGqEcMt_5G7ku20SyBy6wU1TwXUNhmhxP720FvQqnCb1G3w.9SbXTIffr_hORj9O.ZChg2tt-s0Nd8_TQJR_7VdiZt1NeM2jTns2jidcCf5vCOsJ2ZiVjP7xin8NbreAP1IZiiABM20dsvl7kCEZ5zXC-_vK5l2NViHGEPmDyiDyD6R51VDOwQGK1EPHTtiCgY-jRY1Nnn3-gUAD7s724LJCJPG9CJer47m6TcON73NhG1r6X1imTwOmKbkbEo5hRGXskxzI-wze9wTvFi3jcjxJC98mXXjl7pZs1_hECJHHTELRsYuAJKsYxoKggF4jsMggXe3EZd0O_a1HMEtA1Pm28YX0Xa-bUOmm0BOpWPz0tIemf6xRGG2GKkdxvamFsPwCRQcaHImu6h9gM7xklauOOAyy5B4CEZ2dYLMxbJ_rQN_EzzrgxnvUuJku8CTYrH0JSKVjEyV-k-YxEYSDmNC3ze_phN7ULfRqYm36a-gZ1y64O6Vy7wwUP_mtRLFh99S_KgBlyiAphQ6hT_UejvfiIqofe6wq53BK5y8JAuZKsBp5hL7y6_O3teON3-uwuu3DQkfMDiIfIZMSr1kFP3-mmz8kl-srPZ9o9Rdjxbj22q1agCe0Kj98_6i4K5YtKyJGQRhF8ikmJOCakmDI0KY8rU3wdSVM6sAxwaz3XoT-vAmRb7Dq4D62SQRf5RE-fJFXNQPMLO9Gtk-rltWK2PDhQS2vFKXeoFEC6gJOukP584Z0MqcSAudKAEbyYWjGPvyqNmGdxD7reCc9Bdotq3WvcB8fjySMlgx-KFFZkplmkdlN5G7L5qKsLBZtp3YJhtSYmWOfRdqg-keC3Yf1hrmDGtwIDMlU-P8UPa0fU6hQMHARNeuAGnM9OmzK6xJ_vrOuDSXxpa4v4mnF7WUluuMpsaEvEgB77XnY9Z4Rv6N9PFJbdG4Ok_Fo0l0_racKhuMVfaarCwGd8iwx-1QJ-c8vlcJnhO5c33TYAUA3qAjbd29fna9ag7TYp_nbUpqntG-Km9CiRcPOwkOS7u9CttYBWo8Akd_g8llTuLcRusm43swBkBU10MI5239bPcCWbKIEhkgBUAM79y5Mxrp7H4m8mc1qUjup2Vo9a9lPgDN807mCPPPFKQnHqyHd46uirRzqSxAdJ1FSYs8DiRayTnBpPZoppgUL-pkaYBHDteIWBgk_yHjhbZfsHBWH2RbkM7JGNecCzLZLuH8YPSZTErf0OYFUsSIuD8OBK6widiapxpKabrd3a0vHL_Ly9t6S0BTKRulWOUXq0RpCYmFWDr8sYDC9cTADDhXWvWGVUUon8J3dclev1ORHwLxDflEovPx9H5mAKFiwKdGdJk4-frGNnXAmzUR0KsMqf7FuBP65921BlVMOcnRu6vepUiBuqAKWIImhI3MN8b7MDeHK8NX8yYfWCQKkkumewC74WsEB3S5mBW63vJoxO.hHJ3cjXFTstJCxBReEpNMQ&continue=https%3A%2F%2Fwww.atlassian.com%2Fgateway%2Fapi%2Fstart%2Fauthredirect%3FatlOrigin%3DeyJpIjoiMTRiNzc3Y2IzZjA5NDI1OGFjMWU1NGU3NDExZjdjMGEiLCJwIjoid2FjLWdsb2JhbGRyb3Bkb3duIn0&anonymousId=d1c9dcd9-7d6c-459f-9988-b39bd2c24ed8\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:04.737Z"
+  },
+  {
+    "id": 45544,
+    "content": "Atlassian | Start page  <a target=\"_blank\" href=\"https://www.atlassian.com/SetCST?cst=eyJjdHkiOiJqc29uK2NzdCIsImVuYyI6IkEyNTZHQ00iLCJhbGciOiJSU0EtT0FFUC0yNTYifQ.1Of7rI6yi_cFyxrsaSbCioEi4lZeE5Xt3EvhWOE8QQpMehX2Nh4RxcqhIUogW2QDc7FRb1pexyilAWf5F5T8DfSuVYMbyzrV32GR1yVNEdWrq7Aj9AQmDekpR36iqCkNoMf0y2Kvjsp9VdJJFjHFOoo8tYGi0bHdrCF9pAin5Vw70jerEv8Kjop8JGGyUp9WO18zo4sFtY8QXwW5EIPn2GpyaM8rU_YaNNBd_WE3wBtT3pFSDbcg51xrCsK4M5wPMg3uoZKKiUR7MswSDbPiC_9ItE2GL7ALE26ZHW9hGqEcMt_5G7ku20SyBy6wU1TwXUNhmhxP720FvQqnCb1G3w.9SbXTIffr_hORj9O.ZChg2tt-s0Nd8_TQJR_7VdiZt1NeM2jTns2jidcCf5vCOsJ2ZiVjP7xin8NbreAP1IZiiABM20dsvl7kCEZ5zXC-_vK5l2NViHGEPmDyiDyD6R51VDOwQGK1EPHTtiCgY-jRY1Nnn3-gUAD7s724LJCJPG9CJer47m6TcON73NhG1r6X1imTwOmKbkbEo5hRGXskxzI-wze9wTvFi3jcjxJC98mXXjl7pZs1_hECJHHTELRsYuAJKsYxoKggF4jsMggXe3EZd0O_a1HMEtA1Pm28YX0Xa-bUOmm0BOpWPz0tIemf6xRGG2GKkdxvamFsPwCRQcaHImu6h9gM7xklauOOAyy5B4CEZ2dYLMxbJ_rQN_EzzrgxnvUuJku8CTYrH0JSKVjEyV-k-YxEYSDmNC3ze_phN7ULfRqYm36a-gZ1y64O6Vy7wwUP_mtRLFh99S_KgBlyiAphQ6hT_UejvfiIqofe6wq53BK5y8JAuZKsBp5hL7y6_O3teON3-uwuu3DQkfMDiIfIZMSr1kFP3-mmz8kl-srPZ9o9Rdjxbj22q1agCe0Kj98_6i4K5YtKyJGQRhF8ikmJOCakmDI0KY8rU3wdSVM6sAxwaz3XoT-vAmRb7Dq4D62SQRf5RE-fJFXNQPMLO9Gtk-rltWK2PDhQS2vFKXeoFEC6gJOukP584Z0MqcSAudKAEbyYWjGPvyqNmGdxD7reCc9Bdotq3WvcB8fjySMlgx-KFFZkplmkdlN5G7L5qKsLBZtp3YJhtSYmWOfRdqg-keC3Yf1hrmDGtwIDMlU-P8UPa0fU6hQMHARNeuAGnM9OmzK6xJ_vrOuDSXxpa4v4mnF7WUluuMpsaEvEgB77XnY9Z4Rv6N9PFJbdG4Ok_Fo0l0_racKhuMVfaarCwGd8iwx-1QJ-c8vlcJnhO5c33TYAUA3qAjbd29fna9ag7TYp_nbUpqntG-Km9CiRcPOwkOS7u9CttYBWo8Akd_g8llTuLcRusm43swBkBU10MI5239bPcCWbKIEhkgBUAM79y5Mxrp7H4m8mc1qUjup2Vo9a9lPgDN807mCPPPFKQnHqyHd46uirRzqSxAdJ1FSYs8DiRayTnBpPZoppgUL-pkaYBHDteIWBgk_yHjhbZfsHBWH2RbkM7JGNecCzLZLuH8YPSZTErf0OYFUsSIuD8OBK6widiapxpKabrd3a0vHL_Ly9t6S0BTKRulWOUXq0RpCYmFWDr8sYDC9cTADDhXWvWGVUUon8J3dclev1ORHwLxDflEovPx9H5mAKFiwKdGdJk4-frGNnXAmzUR0KsMqf7FuBP65921BlVMOcnRu6vepUiBuqAKWIImhI3MN8b7MDeHK8NX8yYfWCQKkkumewC74WsEB3S5mBW63vJoxO.hHJ3cjXFTstJCxBReEpNMQ&continue=https%3A%2F%2Fwww.atlassian.com%2Fgateway%2Fapi%2Fstart%2Fauthredirect%3FatlOrigin%3DeyJpIjoiMTRiNzc3Y2IzZjA5NDI1OGFjMWU1NGU3NDExZjdjMGEiLCJwIjoid2FjLWdsb2JhbGRyb3Bkb3duIn0&anonymousId=d1c9dcd9-7d6c-459f-9988-b39bd2c24ed8\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:04.737Z"
+  },
+  {
+    "id": 45545,
+    "content": "Atlassian | Start page  <a target=\"_blank\" href=\"https://www.atlassian.com/gateway/api/start/authredirect?atlOrigin=eyJpIjoiMTRiNzc3Y2IzZjA5NDI1OGFjMWU1NGU3NDExZjdjMGEiLCJwIjoid2FjLWdsb2JhbGRyb3Bkb3duIn0\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:04.737Z"
+  },
+  {
+    "id": 45546,
+    "content": "Atlassian | Start page  <a target=\"_blank\" href=\"https://id.atlassian.com/login?continue=https://start.atlassian.com&login_hint=bjcullinan@gmail.com&prompt=none\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:04.737Z"
+  },
+  {
+    "id": 45547,
+    "content": "Atlassian | Start page  <a target=\"_blank\" href=\"https://id.atlassian.com/login/authorize?continue=https%3A%2F%2Fstart.atlassian.com&token=eyJraWQiOiJtaWNyb3NcL3NpZ24taW4tc2VydmljZVwvOWJoaWZxczBhdDFtM20xNSIsImFsZyI6IlJTMjU2In0.eyJtYXJrZWRWZXJpZmllZCI6ImZhbHNlIiwibG9naW5UeXBlIjoic2Vzc2lvblJlZnJlc2giLCJpc3MiOiJtaWNyb3NcL3NpZ24taW4tc2VydmljZSIsInVzZXJJZCI6IjU1NzA1ODo2M2YzMTI1Ni05YTI5LTQ4YjctYjBhYi1mOGI2ODkwZTMwNDEiLCJpc1NsYWNrQXBwU291cmNlIjoiZmFsc2UiLCJhdWQiOiJsaW5rLXNpZ25hdHVyZS12YWxpZGF0b3IiLCJuYmYiOjE2NjI1NzgxNDYsInNjb3BlIjoiTG9naW4iLCJleHAiOjE2NjI1NzgyNjYsImlhdCI6MTY2MjU3ODE0NiwianRpIjoiZjFjYmNlM2ItZTkzNy00M2JiLTllZTAtMzFlYmMyNjNjNzcyIiwiaGFzaGVkQ3NyZlRva2VuIjoiNzI2ZTI1OWUyYmYyMDFiNTYwOWY4ZWE2YWE1MGE2NDQ1MTE3ZWZjMWM5YTY2NWViZTBkNzQzOTNjMDIxY2ZiMCJ9.tSsK9m_3PG5PosLUkL-Uej_MfKZrpw6j6ogCNjPKlO3yTHaFHfjGlrfwXZSZ0m4Y_4Y7BykM_fDx-rJVtN4SKg20vGIHhmw34dhMFX14ToS-MTdqpqQrVGEfEfhB_lywjyF0ajrDNu7MQ4rAStgQa2f7i5xonxAZSLBQV6ep62TCZcwXYThiKqoCUPnhX-xu1GV3hi1fgveQR1xGlq2F06fTynoJRkZpzLvh_K1cXZ3odLOB70f4C7gVgtY1v5Ki46gFJwVTQr5mFAN7kuLBn_GSHIhlHZldUVZPskdlkErC9OEGaHg-u0lBYDoW1_MoAGKMeyJvnY4m5zJTws9Bew\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:04.737Z"
+  },
+  {
+    "id": 45548,
+    "content": "Atlassian | Start page  <a target=\"_blank\" href=\"https://start.atlassian.com/SetCST?cst=eyJjdHkiOiJqc29uK2NzdCIsImVuYyI6IkEyNTZHQ00iLCJhbGciOiJSU0EtT0FFUC0yNTYifQ.5JXVGDmELK_-p5FpJdsCb6YimJIwnr18zp55RBzEMmzV9Kfarb9H_b4jlOmZF0dcVlMf0L-HE0BN66vQZ3UX0kcJMhMC1ZsXe2lbx4ZxiWSj3hIFhuYd6KWVh2b3FSKdfg9ueuckM-tHaMcitxx-4bmCDUu2Gd7bm_GVNP0o7xcx7zAWK4WQdILJ7DWMVqJYcCHlHYSTAA0NQAHd6GEFKzeJM5Gycmj9VRzwtz7fKA8tbgWymOK3ES-M5xoajiWonBD4jLRMWG7ayRUetjxxvI_tzvsM3qPczK-awBnNdBff7fioEzI0VSEHLIA0Kf3eKYkCBcduxgim-j01hGpkXg.f9HZCeaiNlW35yur.robBALS7y5Emgqj23r2UiqjBvTIP_dR6Cwa-zR3r5kqkJvqi9khrPBWKtmFKQEzVblKsx92WA-bDtB6uaXX_fCU4KI61qsVt3mucMRzHOI5IQSn5i9M-t4k0x6g_nOU4CRk5EhGz1skmDvd954KGbBzls2F7_5yEptMu6xaHBs_IDHmMSVbuo-7SOCm67QO5O7rlTEytUf6OPpTzMFB_oD1Pgc7ivlynt8tgqVavRS3OgD19dbDZbp6GpGYXUt_0QTV9vEZ3SWpc34iG6IM_ltmJScC-0fsMJfLKKlDMWwK_SmPmj4YNzzaDTDwE0LK1qD0_kCPSoX1dsLRMW65Zzqe_LlByUtUINNEUeusFQeYdjz2Oi-RXVgnhBPKKU6e8x7hkTqNkdkU2ODZ_P-b4FRQLuwGL17F5IpGbva8nhWkaqfWGqyDUSsOCnmFm33bBgN_Ej0L4ynecte0O1Xbnbd6XmY9IDmHl8yVrrZA-cNzHNZIkmTltDxGl4JsJWf_g-G3TYjn5mx0Z1AO-BuDyzXZy5QnQt_RjIEEnhmILq0txOaRgbnNbiDvKdPHhFbbYkrmXs7Hftp6YA9ujaqwW1DJPVc_PV5LmKwaon9OTN3okKB2cR-TMDGioAuB9OIugFloj46OEGDrigqp4j42X1BhiVEx_a36uzQl3dAPHDlkBpjUJF6fapLLjn2yE3eYAQd1f7PHgO6HPANqHWQrfncbGnp4SLbH4SAbcaa9B15GdgKFveia5p401k-SLHrpXq68fOuEngTt7PliVGFZgiCY_vlWE38Z4g39-xnRBO39pJKVkWWhmgmVd-ylSFm3cZ7w-zwg_1oB-Jrf4c2T-96_N4ietHT2GPe59DC1-4f5azgatjlg0pknDZCW_Hegr7Zz1U8xI6ZqOSMiymhG5fZaA4sMMwUOj7HX6-aruqr_F7wAPAWmSgzAMEsFiIX83oFlc_GdkYPSNeie6AZScZiPMmqZWg0XJ4A-f2gU7ZD-wqgmGCQtuGT6UT125crDeudbc6BoFNGEDIun4ME-Io6pTAUOOXMfrWe0MeXw4qxLGU8fY62EqKF3TYjIadpgiXq8689PLgK_x14uknzNeTDLHliOrFvYe4UrpeM5rYm6LFNYg8diI6ZYyx6SfWwY6QK1PWNQlcGLjbxsIHlYSHxn5CuyQ9Im4TSHAZ9waJNJZml7Z3m4H42Koi-rfyQBYdH-uTJsnlL-IfraWvnwffr5TMg2FS3L6dtIZrjKhqVY_RP4Mrfn06HTr62u1T7G9if6s-T54H-JWZyMlM402qXG7ZosQS1f9ijFn6XRwgWd6JeWw6lTJG6Lkagif1g1rx1zCk8nU3M8DvOFTcalfM03WGqlzB6SOnDNMKr448e153hTIanf8UV4F.saLnb2KPI7yDITMHG3Uzsw&continue=https%3A%2F%2Fstart.atlassian.com&anonymousId=d1c9dcd9-7d6c-459f-9988-b39bd2c24ed8\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:05.474Z"
+  },
+  {
+    "id": 45549,
+    "content": "Atlassian | Start page  <a target=\"_blank\" href=\"https://start.atlassian.com/\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:05.474Z"
+  },
+  {
+    "id": 45550,
+    "content": "Atlassian account  <a target=\"_blank\" href=\"https://id.atlassian.com/login?continue=https%3A%2F%2Fid.atlassian.com%2Fmanage-profile&application=start&prompt=none&login_hint=bjcullinan@gmail.com\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:40.950Z"
+  },
+  {
+    "id": 45551,
+    "content": "Atlassian account  <a target=\"_blank\" href=\"https://id.atlassian.com/login/authorize?application=start&continue=https%3A%2F%2Fid.atlassian.com%2Fmanage-profile&token=eyJraWQiOiJtaWNyb3NcL3NpZ24taW4tc2VydmljZVwvOWJoaWZxczBhdDFtM20xNSIsImFsZyI6IlJTMjU2In0.eyJtYXJrZWRWZXJpZmllZCI6ImZhbHNlIiwibG9naW5UeXBlIjoic2Vzc2lvblJlZnJlc2giLCJpc3MiOiJtaWNyb3NcL3NpZ24taW4tc2VydmljZSIsInVzZXJJZCI6IjU1NzA1ODo2M2YzMTI1Ni05YTI5LTQ4YjctYjBhYi1mOGI2ODkwZTMwNDEiLCJpc1NsYWNrQXBwU291cmNlIjoiZmFsc2UiLCJhdWQiOiJsaW5rLXNpZ25hdHVyZS12YWxpZGF0b3IiLCJuYmYiOjE2NjI1NzgxODIsInNjb3BlIjoiTG9naW4iLCJleHAiOjE2NjI1NzgzMDIsImlhdCI6MTY2MjU3ODE4MiwianRpIjoiNzQ5NWRiODEtNGIwNy00MmRjLTgyMTQtZTMzNzY2Y2ExZjc1IiwiaGFzaGVkQ3NyZlRva2VuIjoiNzI2ZTI1OWUyYmYyMDFiNTYwOWY4ZWE2YWE1MGE2NDQ1MTE3ZWZjMWM5YTY2NWViZTBkNzQzOTNjMDIxY2ZiMCJ9.yza-ibrNFKFb0pJLIiwG3A2UHDJI0JmoaI6fBRaN5Tm8IV0VcZLkPtybtw6E4Yjjf44NKvmXahCu_vHs955AGMJK2vPBmFflw4grpc6jWGFfclgnxn8YpBR2LQJBLk8s5KeifK977t1rqOUH8zVCt4ZY6ZMXapYFg7zmYnHIaUqHiB65NzLDPcvQqON86SCpOpq49BqlNDBzB0E6ia5X7kNb2Q9oNrIy3IWyfLlulbTU4tRBpkbFlueBZ-qsk3B0EJeqO-9l93Cbz5kGSSbdRER0JXJl5NwwaoYvBVX8J9X2T8bwoFuImhKkzxn7_ok8tjgKaGU7ai_th3ldkl2qPg\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:40.950Z"
+  },
+  {
+    "id": 45552,
+    "content": "Atlassian account  <a target=\"_blank\" href=\"https://id.atlassian.com/manage-profile\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:41.283Z"
+  },
+  {
+    "id": 45553,
+    "content": "Atlassian account  <a target=\"_blank\" href=\"https://id.atlassian.com/manage-profile/account-preferences\">link &nearr;</a>",
+    "start": "2022-09-07T19:14:57.317Z"
+  },
+  {
+    "id": 45554,
+    "content": "Atlassian account  <a target=\"_blank\" href=\"https://id.atlassian.com/manage-profile/email\">link &nearr;</a>",
+    "start": "2022-09-07T19:19:43.540Z"
+  },
+  {
+    "id": 45555,
+    "content": "Email address change request - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://mail.google.com/mail/u/0/#inbox/FMfcgzGqQSLWkNNCMtDVlrfNSHpFWvrS\">link &nearr;</a>",
+    "start": "2022-09-07T19:20:42.218Z"
+  },
+  {
+    "id": 45556,
+    "content": "Contact us | Atlassian  <a target=\"_blank\" href=\"https://www.atlassian.com/company/contact\">link &nearr;</a>",
+    "start": "2022-09-07T19:21:15.953Z"
+  },
+  {
+    "id": 45557,
+    "content": "Thanks | Atlassian  <a target=\"_blank\" href=\"https://www.atlassian.com/company/contact/contact-ceos\">link &nearr;</a>",
+    "start": "2022-09-07T19:21:36.574Z"
+  },
+  {
+    "id": 45558,
+    "content": "Thanks | Atlassian  <a target=\"_blank\" href=\"https://www.atlassian.com/company/contact/contact-ceos/thanks\">link &nearr;</a>",
+    "start": "2022-09-07T19:24:39.955Z"
+  },
+  {
+    "id": 45559,
+    "content": "Amazon Web Services Sign-In  <a target=\"_blank\" href=\"https://signin.aws.amazon.com/resumesignup?code_challenge=YWukTxOFbToE3iKW2WTTo5yWotBgugQa6n4e41MeoqY&code_challenge_method=SHA-256#/start/otp\">link &nearr;</a>",
+    "start": "2022-09-07T19:29:28.984Z"
+  },
+  {
+    "id": 45560,
+    "content": "Amazon Web Services Sign-In  <a target=\"_blank\" href=\"https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fportal.aws.amazon.com%2Fbilling%2Fsignup%2Fresume&client_id=signup&code_challenge_method=SHA-256&code_challenge=YWukTxOFbToE3iKW2WTTo5yWotBgugQa6n4e41MeoqY#/start/otp\">link &nearr;</a>",
+    "start": "2022-09-07T19:29:28.984Z"
+  },
+  {
+    "id": 45561,
+    "content": "AWS Console - Signup  <a target=\"_blank\" href=\"https://portal.aws.amazon.com/billing/signup/resume?user=eyJ6aXAiOiJERUYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..98wxLfvEC7fhokH-.agGH8G1gV27FG_7EU3HEqVXtKN6RYf5CZAqFmSVtaHSYilRaAvThVGCwJ7oc_VsKRP0fWf6ZKN9_9I1YZ9vdVYWRooGl8mFrvwTwS3Nae4fI0F2YZh7iP5ympOMnIdAph-GI4Vkwf4QE7YwD5RrhWkv-QsVkzfMYX3--X6oNlP9rCI-Bk1O7isbT3RDeUsbvcFMzeDvTWG995svjEGA8AHmZw7N6Q_GzvOL3gH7pnIPF-ndm9_G6mtWkdN37ql61QztLOGTgvfv31kWGZ4GMi32xOocoviARUwGa7KWxtl_IEtf0YppNXKXn_LGVcDwEMC66YqSMlA-N1Da2KIUgwRPuWjtaNNp64d-wnxUm6SiSq2PCJa_yKnwCrbWgW7aR1sq0HFnqNDDghqyr2qvwTCC2g3AQn33SYSkLgUZN1OguXuvkAgmPM9yi5905t4bMQceJ2--59hEX5lwBDBnRNOVZjRFc1pI120mbHnHEfmpbjXfGbptUeuI3gdNvvYDa63TceBDAx3er9FQxsV7KeUL0eztlFUt8cG0pv1TnrXMytWqvHCIlw401iduw3wqhGbMjUMLFdMfS1h2zazBZ-er3Nl9liGccXHKA58rwK7t24sa8awWZjW31UHawVphcCpEU8lYV5NFFdXcYrdsuW2FCKXCE49X1Myc-oESmvP6nm0ESFNOsBnERxIi-OHrNI1qgnQUXOtUwZ_BTuz0PT-U07_yzePtk-YGFekRcyrRPzn-xHY9cTH6H2_daFNSS8Ny0wfaBnvh4h-huHMJsgG7kv05Wgf0urFTeGYylJYOPLkdCrBi1W8JtW9dCnpUF1_VVOEylt9PZJfeM_BQCSBvHBkfToTHUkMvM0A0Q2ynSG2Bo7XPmTR6e5ZHgKPh2sAOB7o58CRjBFtb13lL1Nc5i4etFGN-wrQ4UW_rI-IerWHTiMRbKMgOi-z8QamDvOwM7wn2CuyEFTjjjxCtXYJIpi9kF3FpDOaR5dciKUReJ6AhvNqO4vsAfbbturI0KTIA_RMypWe5enopDoLCK51fKA5EHEHpovOqB35136qIm0UCR9sZJKNqqF6rd1kMYZ_2lbBKhgaNfOe52SdKotYi7m5ZFccUCaidP0n5Z8BWo6escQtdsHDylHvxERuFyoWgkvQB_agtuwuDKM84hQFkBI1pKASRpdq1B5tsiA-tfiYTjK5tLGJCRNWGBlkOxI8Ww108tb1wUSSs4dmjmdeFX4l9q1smSnM83TKtxNOnc_j-Wy88V1AEcWT7fdBaY6KVbDJZ_EyaAXonQtMz7B7vUO7cb3kCu-9OGfXfF6XFRhhONB0drJVbnMPyyEMgd7UC3CWsKq33DM2GaNq_8p21skA77NUJMghCDq9Y-3RoTC34D2H_uaw2mjNKurBXVvjM-L8wvf3NwCWJBnbNRrEpkAYUE6e90yR2oLYk11XTYgppHVaMC9ip7A49rVdTP1ssG0bWJ0wx0gi71uSTZnNLrBmYDwn5GHBUwuOHfXpIEsrhaDy2iEQ03f-rBfVVITI1xwIG_aovjxhpp_pPks7cVZ-wMH4VmKD7N_6QzIZBED0xYPDaIDH06W9uyD_MkCxzx7Dasa077rJRT9FZ-1mAs.uINP7t1F589mKuy54yjTfA\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:20.425Z"
+  },
+  {
+    "id": 45562,
+    "content": "AWS Management Console  <a target=\"_blank\" href=\"https://us-west-1.signin.aws.amazon.com/oauth?client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&code_challenge=TPbT5PEECfFCZ0N0AxFNZRIgAzLiBEolCAi9AbagVHU&code_challenge_method=SHA-256&response_type=code&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26state%3DhashArgsFromTB_us-west-1_53d6eec66442cd10&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMSJIMEYCIQCWp9WBL4BnPw%2BsJA%2BdAGuVHMhgSsbKyDLpmdhyXgqhRwIhAO5gQ3WQf0UkUP1lpn%2Bl9suUw58LR5msmuhzKkfG5pkRKooCCBwQAhoMNjE5MTEyNTg0NDY1IgzsS3m5PxdLhSiNDbcq5wF3VBEFoRP5RUd7PR8nAJmRRnLi0euNQmG0nFTQHj9DTCgqTuDZyc0yAX29IxW2kSbfUa%2F6QCOVYL0752QpUuSAxQgXxxm8U7FwGHItxn9Y6gpxHrpZ4FiHxt7jzcTmX0J%2BSX2r%2FsvwQksvkyxl9yFS27gqeU8GZHdGGAKrdc6Eg2962iccNT%2By2rocS41bHLjNJRttM6vJXpnTTt%2B3xPfnHn7YyzbEV8kNvWO5uOYgBpVsKtczE3GDnJ8W7RJ%2BzZv7NEjFV6aCXD1%2FhZQGzzHThXGYOlKFwSlcTy8wF8TEMEkxXSwK5eIw5NvjmAY6jgEeIpy1wsdc82SDg8IneSPpF8X43WIhwythANJt5uRUeQbCR9cbESKN1vIZPN1VHEGWvCZ3%2B9gnhwHRgedEZKxRnzJkAbsljTwY8qrFMpBiO5rhUs0Hq0BTytL3%2BGv9bDeU2LaqQaqiMxiIgK4m%2BONPwZOzo04WVIk0GmzhdIvQLvKOJIBR7p078D6%2FXKan&X-Amz-Date=20220907T193204Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZAJP4KUIYOJNZ7UL%2F20220907%2Fus-west-1%2Fsignin%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=87f8c057000f0308176b86b1ecee56938c6b84764e1411cc5916bbdb13c2ac66\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:23.460Z"
+  },
+  {
+    "id": 45563,
+    "content": "AWS Management Console  <a target=\"_blank\" href=\"https://console.aws.amazon.com/console/home?hashArgs=%23&isauthcode=true&state=hashArgsFromTB_us-west-1_53d6eec66442cd10&code=eyJ6aXAiOiJERUYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..Kay-A5mw0x-zOobj.gCdB75mRcHHyBw-4aMhDFIpqkHuuI8NflIZOWybrEnbuqoox_fexr9c0wkxioEsKrN_nvoIWe6JWx9z0dND8n6fo-cxCLRUbDhNBHp3CHffh1hWfw6TSCJf4v5PupLAEpkbRE73m7wq05Ua36cevdPC0vq8OO5VB7MKz4QKVFvaAZ4Z9LUE-8L2cSQ1FVW80Uhmy75BoyLvG4x_a5YsaILrsy76-42WlAo3KdzCBgqGMpVObFeIFwadjwAhK5TkuEjZpQga_VPEN-fi0Iz0YRjPEBz1NMNaqMyDKyyqXYtCKOneHJ2jCMMF0B53YML-36061sMfYhg9liVwYgsCIr9l9Sx8jlg_InFyQZS_-zFCRE8unT-Cg0Vjl4vCLFDDsYC0eOkM98pM8hrGzcXS61hNJjL3uI1dpij3R2RGuKY_bhd8LyeXreCR9RR_zSh5IyxdxdN2bMC0u9TSwe20oke-4WtNGJfAYZt4Gx4rOT5EPn1sQ1wXoRRbC3u1oA9F3WyxBYi3nOXqf546BW8gZ0vUGCGkpbaSB6CH0_JtLVLcFuFmYWO65YDOOs_ohACSuAdzFGNc6MzI2ag4K33HHYecRe27kh6vQUHVVHZ9w3cbSTgbNcfY85T2Jntlg47fWGaUzIY1R_GYTt58ogcy6yadinW1pdUWQM79mYVkHZfv4s51Ste0UBWx74jNk9n4xiGsOwJh9UBR5p1d5WK-ZlPhqGVNyXRai45mQtZYqegrLPN6HsM4P0uVIDXaYV6Sfq-mjbYzq1FuxENQh-h7hwhCOxAbeLZ4dy9p7ofV_0TgQZXxJenVc3o9y1q_FHu9kgHrTnQzFVcvpBtc1ZTw-A89wR4auTZ-23Vngt5z_dva_f01i9FKNT31288yY3YxrtZHkgoE0X808mLtso-dakppY2dXuraJo_PGdEjqQ5E7K3u5mYlM6WoWdw1tb_GPnq-6MoD4bjiS6F73ZZdIKTrcqUHjhKDvr14Ph17cAQt5LCwpfRhxbTFYrJj6THVL8SGQFZ9ALdS9N9Smux9Qc2yS5-relAhlE4NJHTgXQ2wQvtcSG_OIVFTzW6OopeK1SQghknz_4Nmh_1WNf8EHJQKkLHr2Zegw7_zXoutJOwV8b1jg1rQkMTB-xrI00rtbaLg5aTsdCxUmRjpzId96-sbh6gE1khYdob7L25BixXD_rloVkrqvNfPOCPkdMu7VcBFHPMIC2sq-5dbH_Xnc3kEeB5yEJvAWaCJP4AhUMUQ7qJi2sgDHEtwaQCN5JnrAV6WRiNpaabtoCAx7gdEXcHnNSqmkPenGC5X9YZ9zsDa98X0nGWEu6tlHOhOGWJix5URbyDJRetcCr9kaatI-SIi93qp8lIsPjcjXtbIyzSNpU-chu8NEfhT7idNW-V_b6z76JVoJr8eJFrXcpcHMASVQdGqjnoH2W3bKndMr8j4Ilk5DuRHdr5NImUjTR6jaTQp-YLss-T0mzz0FH0-QqUL31i5RNgg1_3eCWvtWwkJ-ftQWpbrA-sTGr7XnFtDqgkvDp5-p9gO-66WuIWQt7CQXAIn7lSNPteal6otOt07Z5SAhW2GsgUy7hYFoeYcGK1CH52D2bU_LRCi2sPYPdOyQNRhLHN4xV2kY0JxnxeGYDC_75ESKB3ItreawZnBUz-A5axqKEWe-Bom1DahEBR38UWH57GGQL0J1e8MkUcl-DqKneOsdOnIaO3c8oOYOdILvKUv0.S_UIoN09If6V8H7NWhwE7g\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:23.460Z"
+  },
+  {
+    "id": 45564,
+    "content": "AWS Management Console  <a target=\"_blank\" href=\"https://us-west-1.signin.aws.amazon.com/oauth?client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&code_challenge=-nsPjtJIbghhdorcyk1BfXq3Xz5xrzNpvqDAdXlX_js&code_challenge_method=SHA-256&response_type=code&redirect_uri=https%3A%2F%2Fus-west-1.console.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26region%3Dus-west-1%26state%3DhashArgsFromTB_us-west-1_47fa5b0acb9d7fa8&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMSJGMEQCIE8%2BTR8JFByKaj7Hv5ZB6XvcErEllc9fTD6oOOe%2BwHS2AiA07D1CV9G95gwXtlptywMRn9ywmJ7PjhGAC0uL5%2BWBlCqKAggcEAIaDDYxOTExMjU4NDQ2NSIMubdcBK69EJ8%2F6vjuKucB%2BLObtQ7bDY6oQsC6NUA9TqRdj%2FF1Nw0mcSni8w7S1iSNiNx%2BOrjsoxPHIZMdnFnBiqmC6LoVTxjVaRay%2B9D9USnInc%2FvqKw51zCxflmeU8WDeL84NMVAgN5T8AbSNj98wcr0leBMmhc94WvxIjrB8DjKXrb0e6EkBrLjzjMrMrUffIN5GMubGrPYkopjgmk9ajrktvrhy8Kz7UHel0AFJ2zU6kYTR%2FeiWUfBmVz1QWuETfTK4%2BqeYG36zU3GaFsBHxAqoRcb80QqIl7vrU9fzpbv6LbsxiXepU1nx4qNjWvZ%2B0Ndp8u9MLrX45gGOpABqL2o5lM0cQUlYxvYAknrJwY2aesMNvu9IsObZygELKqqkvOzD8UVpxJAegkMHDLXIVgVLN5WeMfBq4C9JCEWtQpzGfziJY11fqwf6KtUNF0im9edtT%2Bhyv22Kj0uWAbQekqsKqIj9kXBkDnEqFkNa4T%2FIyfj6zb5HNoHVp5nXfCgUzr4H0avzifnGYtXIS47&X-Amz-Date=20220907T193205Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZAJP4KUIT744RFN2%2F20220907%2Fus-west-1%2Fsignin%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=8d15e461bac7039bdc9346fd3f428efc7f791984bc2a85fca87b855b4575b3d8\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:24.216Z"
+  },
+  {
+    "id": 45565,
+    "content": "AWS Management Console  <a target=\"_blank\" href=\"https://us-west-1.console.aws.amazon.com/console/home?hashArgs=%23&isauthcode=true&region=us-west-1&state=hashArgsFromTB_us-west-1_47fa5b0acb9d7fa8&code=eyJ6aXAiOiJERUYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..FzHg5Ckh4twQBkGM.VEJzCE3M7ItIlaCtj4GBClHSn8qE5Pp0U97UHsqqtJFobj4xYKyqrBMGvHFij6HY_JNYMPKTKVL2_eSFlmfV4A3wR6cePUAq1Z6LYdBSiLJPI-h5qwYq8aXhi81rw1eJ-S4tV_cBbXShEwwztICSiEMvB9_Jdlmk4zVqBGxZZAMXGeszADVqh3WRkE5ISg9gHzqlSQbgo9hTLezx8fGrsLDcsEMqTdXijBjxTdLlpeH_lvNN6YJ7WHlp34RW3_KKN2WvQARJgOQYz7EZpoHpe_xwTs-3T4CWRpSY6wTD8ufHPaNAO9LMlu5TlkELfPtwd-KvxF0wGnCnFXi-8FCgZp4_Ji7BSmdbK-xYDp1YZMXs3nQhglsHi1u6w6_bt63bBt9xhXPAoG7PIIbUIc1qTdBB7j06JolgIl7AMMuonwhSaD4ChNo6Vi8N2bF782PIU-fVXvEKfzc06sKrVg8Z-TFs_FTCqxAwy5c_ypwH8aaM03iq2qD_gF4aj9vHRghVgmNHzgsXOKtQOWgIy0r1EZHrsV7kwjDTgAlhDkpjfXqarf5B_33RJG_f2BHpUGI1ID0Dm7fALhljLTeFD49kICisSUCacS3xB5jhFvczMwlp8W3pKMQ1F7mUtkI37D9BFWuj0Ia9mr9ui8c5Weu2nT0yhXpPCwq-lbSgLHHRZkavNn7D8vZMpcjiKlzvM0Fzwy2hyXTj3BYiXnzzSXN-quNFH7jTM1RMYHX_sKIoQuL6yKw8hOqziux9HqvJXRUP1Bl9Q_xZYYiWfTGtD1Yuu9YaD7i5lF3BP7h0Wzy68zfoPq-W0jb445k-zWggbM_jnz0b1YecnakdUDz7ZJC6jf2XmLrAemgnkHV88LQac3rhihm6mKEiJVBoHjVr3y1qB87jv9aFyNRZNkyWsRR6TraM5ERIOe5ceKyJw7bTZgWER3MtuaBRO2NsdW2SB_aEIZCO53n3S4d70tCz0SA-lAoBU3rWsrFfoqMk3aC72OJL_d7mAdll_4tyQ8KbkKuBPv-XauHjLDfRpnL4ZMPiC04ECH2oaz5ACqUZpZIP-56j6r2Ue-_6TqnJUBTC0O9pJ3co1cCD7CoHT0JauX-1KV-PX4Re4fcEJ7w3iKWDTPnM9c_r3jcSp-CaclIqYKMSwr6t2rVztbOH92dUCk58uED1RuYYckcNlHnnTE_ovqXhn_Gka5dBt9MuQw1h3i6Z8kNPh5oUVEOaM7JdhgPKpFdvJmJR3XzAxlHJqDFdGf37jUM7rqnlCqOa1wsnvOEqh4wmZFNobDW5X6POgTZZQQWf6uPdl_ouM3RaC-DSLER0R6q89A8nu5CeVANGRy_9skvWRWqquN5ekEoCsiuaBTdogkb46dBF6Pvtm14cEKtpdy3V6T3QBA0AftQzdKzvqUQvq1Q0_hlLLPwryewgYCgGYhIlkFLktswWA-YQRJzd5__5WVOECkFw0V8W9HqVt166HlUpJWBqXTprD6QmKEEJy7fR796aZ4yXXSK6IyYIXAsJPExcdWAiGAHC08Pl6PEQ7bmhV-xkIY2pZLPakUd1urJOlbAFIhqnCpIGzEtxHbGd1Phuaf9p1UwYso07To0loKw_N0DG21Qj25VPsWVbhUuJBS_C50mKCRZ8Kj-tVTQpUqC_-9wjcToY_VlWZnDz49ldKQ2d5ErOjarLBlpB85-b-EFprC1OkXbhdUjnn0lUD-BVZ_kDsEgXn5Ed.q8kzXBEegNIEX5dCLjW0Mg\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:24.216Z"
+  },
+  {
+    "id": 45566,
+    "content": "Billing Management Console  <a target=\"_blank\" href=\"https://us-east-1.signin.aws.amazon.com/oauth?SignatureVersion=4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVCZMITM7UF7MCG27&X-Amz-Date=2022-09-07T19%3A32%3A23.173Z&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCrPDn%2F6tKKzxJ9tW26DCr1u5B%2BjCDrfb9kQF3wOCuTxgIgcVBEcLCKsnvoMOus6P3hp6nmYaNUEsFeM48Dz1F%2Bieoq3QMIHBACGgwzNDk1OTU4MDI0MzEiDM6hosZWzcCzqvwScSq6A2hmcTKECJKiclABN40EmlsIrZOwPGSUFEUhCswyr1kLJWuA0MW9MMo1sIm89iL7w4pnNHe8%2FJlILJbnNtKRe0FI4yvW2fhJzwPPG%2B7luW8OPDcwBTHfK6dlziJ9YcRKWPzFL0HXrgMyXLatj%2FRAO14HwKLJFxCJUCmJgof9Y5jCcB%2B4I5ob6X1UEyFGS99fQq3K7rPdwN0auBYxrAXDfQ%2FvsORAyCDWH3S3HNUvriPipoqGz0ayEDfG76K2ELDn9tRMKRgXTv9YL%2BfOYtSYrvBzAMrEYVDPc7P1Ec9xo%2BUOo%2BRSMsixOnDxEwPuCP67FKN7Ryi544%2Bo1DqEAnF%2F%2BEFyxNfUB7ug9BVrl8YcBDmLAZ%2F2wVAzf1ChgDYyyMmkcy4o0uBjnIzaFE5d6KDX5UT1i6whqJ9UaH4FgypUghRfLUK9m%2BmZxVPEctuyuAXWG1Z%2Bp0qTx915UWh5%2FIiQm%2FHwwTBjkkXAJ1gzKMyyujSx1sOl9uC7%2BXpMkdK9bYJAGlWXXGgjvx5hctnEDa%2BtMdPrkLxJjkCHCZq0KUe2rsEqcpomDhzPHu7VpFicn5NOD5jhx5ZvQKQEdvQw0M3jmAY6oQHQO4NK9o7sb9f9U4wIgnLHTvS%2FrHHjKWatKN02m7d52qSpvIl13fHdp%2B2JF7TYxpBJnErcx%2BT08%2FiY4BIkqvg8B%2BWYUDkUzvjMkUrHC%2B9ZcxQIKHLYT54TmANuW%2B0szo8V2INLrew5Ls8Tn3QGh1ov43ptHwl67tW8LAtv7XfZSbqCI%2Bmk%2F9z0qbKbk05rZExio4VAQ3oxv9aRFKpyLIw7oQ%3D%3D&X-Amz-Signature=a19c53f51763a7553664029a5b15ce7addef6ddd683423d9fafe029f026d0b48&X-Amz-SignedHeaders=host&client_id=arn%3Aaws%3Aiam%3A%3A934814114565%3Auser%2Fportal-aws-auth&code_challenge=MH83neJf0W_BFEe38WUmBc_w_KMfC03yi67N2nNYGEM&code_challenge_method=SHA-256&redirect_uri=https%3A%2F%2Fus-east-1.console.aws.amazon.com%2Fbilling%2Fhome%3Fregion%3Dus-west-1%26state%3DhashArgs%2523%252F%26isauthcode%3Dtrue&region=us-west-1&response_type=code&state=hashArgs%23%2F\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:41.905Z"
+  },
+  {
+    "id": 45567,
+    "content": "Billing Management Console  <a target=\"_blank\" href=\"https://us-east-1.console.aws.amazon.com/billing/home?region=us-west-1&state=hashArgs%23%2F&isauthcode=true&code=eyJ6aXAiOiJERUYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..Cqf8xUqHKKCaOBRg.HCTBOK6F0XESslv_BwVqEY3gKnzbz-utnKxpsSNLvsgxO_nv9JoWc9IXZFpGHD4LaYayMDuat8ckzlRjwXPaDNsnONqEHkmjpHrAmiRJmVK6EoXKBmCLcXh5O71hYu-5L1mn4k9h40kITyN6fCDyklwLzWozfY8LLus8w0s7kZ3CivwdWeCuWPNQj0JJ7x2_sb0vxHEEs5EX9gpqH4K9xTD61NvV3CptW6G51o3lB_NmBYcTZgru4MaeOrheGhGWTQBi5R4NukKNxiSayyZgRiCOA0c5E-qN7cEfWEgwScimrnpjHA-iq_Hk-6jV1J9es-4jN_CSsvKeTkMLL_RjkpYc-Gw_CcvE9AV5q85B-e6UVz0Tt8L4giSkFKluv8r3MnT86ijXi2ySpkrBkGKTivVkbC3xXz1VhIbF0ng8h8IkBOHeHeSBb1Tz1VQIVA5uOh-_uGl1CZeHD4Uzq5l7vabqWrfY0LIoGup_HvxDvvgiEMuozOaA7vz5qxbakJZTn-jruP9ATU36eiq4mYxlbWDLT7w1cHnSqY4fiXa7gc51EN8M142T_a0oWiA3R2PiJorx26i5U5C6JtAnED96rVzxWHfo9DD_0MM3Duj8IfsOd5vCvfAlwq94YUvxyAsbwgopJetBd4vUwHx8SiaQiKKfh9GrxspJINVtMds-4Ct-pls5c55gA_Y_O_jxV0OyJyQNGlEHGeVRmUbxK46nETzc4WVKvgLXCrzJXFS7hgoApmjwWCkzUzwBD3No9pKl3EJ3sHdJxYdTvkwqHMuwpVs8sEwqJlJwjynjgG0f9Rbfgmeug7mTBh7Y2LaY0SvPUqbn4zL2LY6PWysBQVgIGqHPbFEVTY4G2eAZfF-7jRk9zf0PECmAULT9N0NihFFF-6FBFUj_GBfgl0EX4kjpMz6txBeAjpPWXOnfZTiUVMO4ZvgcoLoAOEAqmtV8x6EoMnYoJ_DHyFnTE6K_bcT-o9cPDq_BRy0keLwuPd3YSiSmncl3FuWznXF66Hah6kV32npX_eo9xxgURbqQAD9PD-o_be3HeQTNulJuJ6Z5PdGVs9BFifVY1UNt7k7TZVtPmAzt05NwfJkdUeCMLqXSXtIe_bcH0XzRC1bsAODWKxYIgrJ_RNcWeK5cnaNmpqunChw3GWTtsMYkr56uafZm33Xf1qveB7QJSHDLZpH1RHem7VBofsDbWGIXGvM71NNWgMOFi616tj6_UVWbsEAQ1UQC-BzfGI-kngXoiMb8yWpLTWL4En7f4dfLMouV1AMkGoJtky_u9r_lNph7HfRdZ_75DntjFeLqhqarIVEFM-i-82AEC38Nrhq2uQGsBKj3G8R4BjuicYtthxEEjdUgthyPvZmHP5FVZi8a79Ov18kWP23fVYiZ5PfxficBZTiEuQi_kgJICIBSd15ghmB72V62JObzpp2oij23SHTiXqihLalZKq-q9e2NFuc-kdh8EyILAKr_3El3gpmyU01PIXDqnzXC_MTpmdEBkjrF6K252VFDTpvBZOjU7RCPRSAF6eeg46gtkQ3Sn8Jke-d7D7Nt2VuDLFLykNVGT5-aLHcx1rjWSmEzAfB18ZpFB3TBNPtZJe7RqMtba82K7MNt_E8ENbThUsWDBdYdGLb6Pxn9Go9bqnPBJdUoD-a_0MGd0hAXiST3v2kfulgFtCh7Ff1xGiZf1UQVQmMjtmmLXmVfuAaJu7KQACrtELQhLyrqouwXxxNieTaNI8Kfrjs6e8tRULA-AVfq7PRNAZSMLJwe50_0msOJd9ZC0NIY4cvb-MHlLSVjkVblpMzUDBcaosTeaLiyug57uk-RdDmyHBpHbjDW9MtjeKgc_kQR4Xn3dd1GQg.QF3hyAxjQueb0-QQiwTu6A\">link &nearr;</a>",
+    "start": "2022-09-07T19:30:41.905Z"
+  },
+  {
+    "id": 45568,
+    "content": "Search results - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://mail.google.com/mail/u/0/#search/not+your\">link &nearr;</a>",
+    "start": "2022-09-07T19:32:52.710Z"
+  },
+  {
+    "id": 45569,
+    "content": "Not Your Typical Recuiter at Amazon AWS! - bjcullinan@gmail.com - Gmail  <a target=\"_blank\" href=\"https://mail.google.com/mail/u/1/#inbox/FMfcgzGqQSJGJJqJjLKdflkLhjZjCGzm\">link &nearr;</a>",
+    "start": "2022-09-07T19:33:05.903Z"
+  },
+  {
+    "id": 45570,
+    "content": "Dashboard | EC2 Management Console  <a target=\"_blank\" href=\"https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1\">link &nearr;</a>",
+    "start": "2022-09-07T19:33:53.412Z"
+  },
+  {
+    "id": 45571,
+    "content": "Dashboard | EC2 Management Console  <a target=\"_blank\" href=\"https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1&state=hashArgs%23\">link &nearr;</a>",
+    "start": "2022-09-07T19:33:54.462Z"
+  },
+  {
+    "id": 45572,
+    "content": "Dashboard | EC2 Management Console  <a target=\"_blank\" href=\"https://us-west-1.signin.aws.amazon.com/oauth?SignatureVersion=4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2ERYO7XYMAUKBFV4&X-Amz-Date=2022-09-07T19%3A35%3A35.616Z&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMSJHMEUCIQDVE6vaVeHqUA0GA52sRaWamXtJQy3gu7%2FHc47BW8FheQIgB1v56QLQ7gBi5zi5OAf%2F5NXnv9b288eSpOHiRt2A0sgq2AMIHBABGgw2OTY5NzY4NjY4MDAiDBR3UtmSbJDsNOjWeiq1A1s1Or%2B0Q7yo7eFwYQuMkb8hS2NO2T5s%2BG7x10SZRkNY0HNE4jS0%2BxOZJvcKlNQ7PO4enk9MqDo%2FP2jvZpdE9mlEHlEzFQk4fqPg9HxwUUny7S4IqRKq7HbuheP3r1eXL2uVB3TgB4OADiQvOA0pxpwNAKYO2wPu3Cz0iaWbvvoIp%2B6zAdLK8yZnKqjNO6Q6w3AZtoeHskUkgsIRofmsOOwsfLOm57ztKNbE3T7%2FydyK%2BvK6dF7BFldyoIo9ehyqD6W2IoTbCpDOv07hSIjzEjJifPkKtFL4LdFltxeUgNChG5XE3dNKfLnyUblRmJ1REQuzlEFt21tpYEoKfqllwlvlc1xs5nt3T0zRyefoIOL%2BJUESX6%2BV9YenCE3%2BqlmmVfrW28C6NkrnyOF5PciRAWhtFmGQQYhrYWhwjHMdaB2lwLRxy2ianL%2Btiu3LJ59Lz7ggLBIWqRXAkEGyNTqhQjAcqpvJNb9Dt5%2B5pPVfyQCFOqvEqK7VcZ6i2ZV1Iw9SLROYLH%2Bt%2FSEsdWXV%2Fcg1tuj9%2Bw2t3lHJB4ogCGWIugYgPigTIAiiCE5bIk6Z6b1HegqIXTJZMKnV45gGOqEB%2FAcBlMXnQjrAnGoVH4KmEPk48nH1PpAi0rXFDuFdXCotP5q2bnTVqq%2BrubsQiPR%2F6koEegsCgO2kPldIYpliDGissqHK4vCpBVhkfmveBbGMPR2yQZiZbFukEjtW2KmdrFd6Ox0xePYa%2BOOm24AELl8fpoHNPX3aM2amrYAI%2B84h3UF%2FelGDZ5aWRtKYEJkgtCFGIS429y7aipHmvd4g5s8%3D&X-Amz-Signature=793f6b051144c07eed58a55da4c45a318a484544a9713523f9ae184573489f42&X-Amz-SignedHeaders=host&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fec2&code_challenge=Qu2s_ZNn2TTAOi80QbjPRIIFTzCCx7jNfVpmyKa0viM&code_challenge_method=SHA-256&redirect_uri=https%3A%2F%2Fus-west-1.console.aws.amazon.com%2Fec2%2Fhome%3Fregion%3Dus-west-1%26state%3DhashArgs%2523%26isauthcode%3Dtrue&region=us-west-1&response_type=code&state=hashArgs%23\">link &nearr;</a>",
+    "start": "2022-09-07T19:33:54.462Z"
+  },
+  {
+    "id": 45573,
+    "content": "Dashboard | EC2 Management Console  <a target=\"_blank\" href=\"https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1&state=hashArgs%23&isauthcode=true&code=eyJ6aXAiOiJERUYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..bMP62boQNnTB3Rt5.sFJRFeSQcYTZ0kAKLhJKnLutrc7mH-zoIDQVk0byV6F7Xp3xqheTIAKvtz21AoHgLAcnbApSL7ts8hrVlP856kJXymaZImVwJhKvnuaXr7ZGAKejPOWLMfrYJZBdCDVu5ZWAXAsU6CNtF7RR4pSIEfgXyE3eNvfK01tsD40sfl1L5G_uzSJP-aM8enah_zoJuDaUxuZPod7S79QTyqhVzemK5dHvDu6VN_jWogc2KxO24_R2jDFcWNqqN50KBPSFSIoi4lxOdEWnRl0BvSQj1ojJGyjahiNMgvuBHvntQE8SDvuPYGVkNPUeiw58cGIlhVovNOAxGscUh8GkkYB4UKyRm-cTcWwsYVpaWXuUE_lKfsmIXw9zxdXNBI5liXiuLljHM4j3BI1ahmf422WYyB8gVdngpMaYmWT9_w1K0L7XcPCbHBKIcupgo-HeY1eYiNs0ZlK-Bh91HOCJFF-rmAM-ksSH9EJoW8Pp68eXkvHU4VqdK3abz4nFDW0MHf5lGRR4lClxKhzSkb5QVTuYCqpsjcQtrgvQ1xKvAhA7XOUUrf9Wc00llQ8Loj1OAx6ewtHOvQ6Sau2p0EYqVFKQ3oRX-tzLhxaCopf1uy_a12qHM5N0jtxg_8B7A1RdEL6V0er6oVsHoz9aPxiJ_v88-Ti-eUins-eLU2aeJhQVNNjbOVYQS-C1vaNqAKf8dtApG8jqIjUQTbjrP7xzJSpCiP252Y9fqYfdfKEGMZZ1sP8Ikmjzi-rfZbJp0yIfjHpHkBgHS1EwiLTh5BR9Ko_2zs0Q1wtnp6C2bbLqBNVyyuPmC6m4uRDy79pXDaMXQ2Slxh-YRygH1eT_-MwKa_beGAhKbhUpoEGTLggsHfY9094InJVRr1qcxDP15n3ZxVcRq1CnvttSYR-yMoD4adMGEqSoYnq-stgorbromrFsXrYKiUPm79qvKr-bgRZZINKjxmPaFtBHOO6373Mtr3E-hUU2Y9Mi7YgsK-PaHbtpqgGTjvUmVqnfxhs3g7T_xPW5oxU7GTtosdAJ_uWxpJCf3sqZHNjh-y5SQNl_TIGhmTrrI0Dd5pfJ4VRE7LauxHYoo5ELbZoy_NoW4_ys4dIESLzdhLABL-GMVzRKFEN0hLXKRPpzA0m_HM2BybJoyXldXbqlAv2Syqo-5iKDc0QNvg1CflSolP8l3RxuL7T_cmMiwoOW7o2bSijcNV332U-F9wwJL5mbFd8DACFCi3s6OVgcrSRjMxzyK1DOPTga8R6ME7P8XGLDLKU_TIRTVn0UuPICNZmkCElOGBj6eToYg1WqQOedbJKs1KoDjNoz5xNPC7Da-WqdEbC0N1_KO11KosD1t1yxrd8njTX_Ev1RI95xdDOILGksytRilwDShgHszrv7sEGoTZiX02SGhbktU4bwOygU6XufrafOUjHwIUZASrzmTiT--vRYHi1_Z9N7s6Ag_fguveR0ca19etbBlpY-h_B4utzzWnONfeWC9jVm7kVCdM-bB5lwsPWwJ-DrNCDvyovkPSNvOJ3TbCk-AW9qkvwc8AYKE8vs4pDfWF58oG-v85pGChQu9oOeXInHTAw-XIywAucJWdxCvgwBF5HcZvuTgf4ssUue14vwNWeJn4W5wDXCEPWZ8Iiww_NodBt0YKKj-WCguqVsdJq5kz3kO6bI81qZ2CfAo3uvKfzOcoPGqquiG8g4FrwMq9ntaBYTHhrfsEtfSHEvJmWi3ULXDqp4nINzH0Z-e0BO6x4-iT6VnpGUWIWIeiY_UVF6_sUCbORrHrqoWy1g.WmFHfAiP7jMxHO5h36LV7A\">link &nearr;</a>",
+    "start": "2022-09-07T19:33:54.462Z"
+  },
+  {
+    "id": 45574,
+    "content": "Dashboard | EC2 Management Console  <a target=\"_blank\" href=\"https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1#\">link &nearr;</a>",
+    "start": "2022-09-07T19:33:54.462Z"
+  },
+  {
+    "id": 45575,
+    "content": "Dashboard | EC2 Management Console  <a target=\"_blank\" href=\"https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1#Home:\">link &nearr;</a>",
+    "start": "2022-09-07T19:33:55.782Z"
+  },
+  {
+    "id": 45576,
+    "content": "Launch an instance | EC2 Management Console  <a target=\"_blank\" href=\"https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstanceWizard:\">link &nearr;</a>",
+    "start": "2022-09-07T19:34:15.790Z"
+  },
+  {
+    "id": 45577,
+    "content": "Launch an instance | EC2 Management Console  <a target=\"_blank\" href=\"https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstances:\">link &nearr;</a>",
+    "start": "2022-09-07T19:34:15.807Z"
+  },
+  {
+    "id": 45578,
+    "content": "Welcome – megamind – Google Cloud console  <a target=\"_blank\" href=\"https://console.cloud.google.com/compute/instances?project=megamind-d3c88\">link &nearr;</a>",
+    "start": "2022-09-07T19:35:06.568Z"
+  },
+  {
+    "id": 45579,
+    "content": "Compute Engine API – Marketplace – megamind – Google Cloud console  <a target=\"_blank\" href=\"https://console.cloud.google.com/marketplace/product/google/compute.googleapis.com?returnUrl=%2Fcompute%2Finstances%3Fproject%3Dmegamind-d3c88&project=megamind-d3c88\">link &nearr;</a>",
+    "start": "2022-09-07T19:35:08.623Z"
+  },
+  {
+    "id": 45580,
+    "content": "Terms of service – megamind – Google Cloud console  <a target=\"_blank\" href=\"https://console.cloud.google.com/terms;updated=true?project=megamind-d3c88\">link &nearr;</a>",
+    "start": "2022-09-07T19:35:14.902Z"
+  },
+  {
+    "id": 45581,
+    "content": "Compute Engine API  |  Compute Engine Documentation  |  Google Cloud  <a target=\"_blank\" href=\"https://developers.google.com/apis-explorer/#p/compute/v1/\">link &nearr;</a>",
+    "start": "2022-09-07T19:35:26.120Z"
+  },
+  {
+    "id": 45582,
+    "content": "Compute Engine API  |  Compute Engine Documentation  |  Google Cloud  <a target=\"_blank\" href=\"https://cloud.google.com/compute/docs/reference/rest/v1?apix=true\">link &nearr;</a>",
+    "start": "2022-09-07T19:35:26.128Z"
+  },
+  {
+    "id": 45583,
+    "content": "Compute Engine API – Marketplace – megamind – Google Cloud console  <a target=\"_blank\" href=\"https://console.cloud.google.com/marketplace/product/google/compute.googleapis.com?returnUrl=%2Fcompute%2Finstances%3Fproject%3Dmegamind-d3c88&project=megamind-d3c88&flow=gcp\">link &nearr;</a>",
+    "start": "2022-09-07T19:35:39.915Z"
+  },
+  {
+    "id": 45584,
+    "content": "127.0.0.1:8080/resume.css  <a target=\"_blank\" href=\"http://127.0.0.1:8080/resume.css\">link &nearr;</a>",
+    "start": "2022-09-07T19:46:46.773Z"
+  },
+  {
+    "id": 45585,
+    "content": "Search: does ai have soul%3F  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=does+ai+have+soul%3F&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T20:04:05.652Z"
+  },
+  {
+    "id": 45586,
+    "content": "What would it mean for AI to have a soul?  <a target=\"_blank\" href=\"https://www.bbc.com/future/article/20180615-can-artificial-intelligence-have-a-soul-and-religion\">link &nearr;</a>",
+    "start": "2022-09-07T20:04:12.730Z"
+  },
+  {
+    "id": 45587,
+    "content": "Does Google’s AI have a soul?  <a target=\"_blank\" href=\"https://www.morningbrew.com/daily/stories/2022/06/12/does-google-s-ai-have-a-soul\">link &nearr;</a>",
+    "start": "2022-09-07T20:04:52.258Z"
+  },
+  {
+    "id": 45588,
+    "content": "Search: portal 2 developer  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=portal+2+developer&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T20:28:18.611Z"
+  },
+  {
+    "id": 45589,
+    "content": "Portal 2 - Valve Developer Community  <a target=\"_blank\" href=\"https://developer.valvesoftware.com/wiki/Portal_2\">link &nearr;</a>",
+    "start": "2022-09-07T20:28:24.310Z"
+  },
+  {
+    "id": 45590,
+    "content": "Help:Contents - Valve Developer Community  <a target=\"_blank\" href=\"https://developer.valvesoftware.com/wiki/Help:Contents\">link &nearr;</a>",
+    "start": "2022-09-07T20:29:27.925Z"
+  },
+  {
+    "id": 45591,
+    "content": "New Help Desk - Valve Developer Community  <a target=\"_blank\" href=\"https://developer.valvesoftware.com/wiki/New_Help_Desk\">link &nearr;</a>",
+    "start": "2022-09-07T20:29:37.231Z"
   }
 ])
-    // Configuration for the Timeline
-    const options = {
-      maxHeight: 400,
-      stack: true,
-      moment: function (date) {
-        return vis.moment(date).utc();
+      // Configuration for the Timeline
+      const options = {
+        maxHeight: 400,
+        stack: true,
+        moment: function (date) {
+          return vis.moment(date).utc();
+        }
       }
-    }
-    // Create a Timeline
-    const timeline = new vis.Timeline(container, items, options)
+      // Create a Timeline
+      const timeline = new vis.Timeline(container, items, options)
 
-    function resetTimeline() {
-      const now = (new Date).getTime()
-      timeline.setWindow(
-        new Date(now - 30 * 60 * 5 * 1000),
-        new Date(now + 30 * 60 * 1000))
-    }
+      function resetTimeline() {
+        const now = (new Date).getTime()
+        timeline.setWindow(
+          new Date(now - 30 * 60 * 5 * 1000),
+          new Date(now + 30 * 60 * 1000))
+      }
 
-    resetTimeline()
+      resetTimeline()
 
-  </script>
+    </script>
+  </div>
 
-  <h2><a name="Previous Projects">Previous Projects</a></h2>
+  <div class="container">
+    <h2><a name="Previous Projects">Previous Projects</a></h2>
 
-  <p><a class="nowButton" href="#Current%20Projects">Current Projects</a></p>
+    <p><a class="nowButton" href="#Current%20Projects">Current Projects</a></p>
+  </div>
 
 </body>
 

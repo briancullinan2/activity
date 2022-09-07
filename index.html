@@ -5,309 +5,190 @@
   <base href="/" target="_self" />
   <title>Brian Cullinan's Live Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <style>
-    /* source: https://codepen.io/unnegative/pen/dVwYBq */
-
-    body {
-      background: #333;
-      color: white;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    h1,
-    h2,
-    h3 {
-      color: white;
-    }
-
-    ul.brainstorms,
-    ul.categories,
-    ol.brainstorms,
-    ol.categories,
-    ol.windows {
-      list-style: none;
-      margin: 0 auto;
-      padding: 0;
-      display: block;
-      text-align: center;
-      max-width: 1000px;
-    }
-
-    ul.brainstorms>li,
-    ul.categories>li,
-    ol.brainstorms>li,
-    ol.categories>li,
-    ol.windows>li,
-    a.nowButton {
-      border: 5px solid transparent;
-      border-radius: 10px;
-      background: navy;
-      position: relative;
-      display: inline-block;
-      background-clip: padding-box;
-      z-index: unset;
-      list-style: none;
-      text-align: left;
-    }
-
-    ul.brainstorms>li a,
-    ul.categories>li a,
-    ol.brainstorms>li a,
-    ol.categories>li a,
-    ol.windows>li a,
-    a.nowButton {
-      display: block;
-      text-decoration: none;
-      color: white;
-      min-width: 200px;
-      text-align: center;
-    }
-
-    ul.brainstorms>li label,
-    ul.categories>li label,
-    ol.brainstorms>li label,
-    ol.categories>li label,
-    ol.windows>li label,
-    a.nowButton {
-      display: block;
-      cursor: pointer;
-      padding: 10px;
-    }
-
-    a.nowButton {
-      display: inline-block;
-    }
-
-    ul.brainstorms>li:hover::after,
-    ul.categories>li:hover::after,
-    ol.brainstorms>li:hover::after,
-    ol.categories>li:hover::after,
-    ol.windows>li.active::after {
-      content: " ";
-      background: linear-gradient(45deg,
-          rgba(255, 0, 0, 1) 0%,
-          rgba(255, 154, 0, 1) 10%,
-          rgba(208, 222, 33, 1) 20%,
-          rgba(79, 220, 74, 1) 30%,
-          rgba(63, 218, 216, 1) 40%,
-          rgba(47, 201, 226, 1) 50%,
-          rgba(28, 127, 238, 1) 60%,
-          rgba(95, 21, 242, 1) 70%,
-          rgba(186, 12, 248, 1) 80%,
-          rgba(251, 7, 217, 1) 90%,
-          rgba(255, 0, 0, 1) 100%);
-      border-image-slice: 1;
-      border-radius: 10px;
-      position: absolute;
-      z-index: -1;
-      top: -5px;
-      left: -5px;
-      right: -5px;
-      bottom: -5px;
-
-    }
-
-    /* SPA with no javascript, enjoy */
-    input[name*="category"],
-    input[name*="brainstorm"] {
-      opacity: 0;
-      height: 1px;
-      width: 1px;
-      position: absolute;
-      right: -1;
-      bottom: -1;
-    }
-
-    input:checked+ul.bookmarks,
-    input:checked+ul.brainstorm,
-    input:checked+ol.bookmarks,
-    input:checked+ol.brainstorm {
-      display: block;
-    }
-
-    ul.bookmarks,
-    ul.brainstorm,
-    ol.bookmarks,
-    ol.brainstorm {
-      display: none;
-    }
-
-    div.livedev {
-      position: relative;
-      margin: 0 auto;
-      max-width: 600px;
-      max-height: 460px;
-    }
-
-    div.livedev p {
-      text-align: center;
-      padding-bottom: 60%;
-    }
-
-    div.livedev iframe {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-
-    .vis-item-content a {
-      text-decoration: none;
-    }
-
-    @media all and (max-width: 600px) {
-
-      ul.brainstorms>li a,
-      ul.categories>li a,
-      ul.windows>li a,
-      ol.brainstorms>li a,
-      ol.categories>li a,
-      ol.windows>li a,
-      a.nowButton {
-        min-width: unset;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="resume.css">
 </head>
 
 <body>
-  <h1>Who is Brian Cullinan?</h1>
+  <header><h1>Who is Brian Cullinan?</h1></header>
 
-  <h2><a name="Current Projects">Current Projects</a></h2>
-
-  <p><a class="nowButton" href="#Previous%20Projects">Previous Projects</a></p>
-
-  <h2>Live Development:</h2>
-  <ol class="windows"></ol>
-  <div class="livedev">
-    <p>
-      <script>
-        document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
-      </script>
-    </p>
+  <div class="container flex">
+    <div class="cell-0  ">
+    <p class="" id="idSoftware-Engineer--Network-Admin--Mobile">Software Engineer, Network Admin, Mobile/Web/UI/UX Developer, Scientist</p><p class="A" id="idHire-Now-"><a class="nowButton" href="/#hire">Hire Now!</a></p></div>
+    
+    <div class="cell-1  "><h2 id="Contact">Contact</h2>
+    <p id="id-480--466-0856-bjcullinan-gmail-com">+1 (480) 466-0856<br>
+      bjcullinan@gmail.com</p></div>
   </div>
 
-  <p><a class="nowButton" target="_blank" href="https://www.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw">My YouTube Channel</a></p>
+  <div class="container">
+    <h2><a name="Current Projects">Current Projects</a></h2>
 
-  <h2>Study Interests:</h2>
-  <ol class="categories"></ol>
+    <p><a class="nowButton" href="#Previous%20Projects">Previous Projects</a></p>
+  </div>
+
+  <div class="container">
+    <h2>Live Development</h2>
+    <ol class="windows"></ol>
+    <div class="livedev">
+      <p>
+        <script>
+          document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
+        </script>
+      </p>
+    </div>
+
+    <p><a class="nowButton" target="_blank" href="https://www.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw">My YouTube Channel</a></p>
+  </div>
+
+  <div class="container">
+    <h2>Study Interests</h2>
+    <ol class="categories"></ol>
+  </div>
+
+  <div class="container">
+    <h2>Brainstorming Sessions</h2>
+
+    <!-- design first and then figure out how to format it from calendar, similar to categorical bookmarks -->
+    <ol class="brainstorms">
+      <li><a href="#brainstorm">
+          <label for="brain-brainstorm">
+            Brainstorm brainstorming</label></a></li>
+      <li><a href="#chores">
+          <label for="brain-chores">
+            Brainstorm chores</label></a></li>
+      <li><a href="#Genesis">
+          <label for="brain-Genesis">
+            Genesis</label></a></li>
+      <li><a href="#Genesis: Day 3">
+          <label for="brain-Genesis: Day 3">
+            Genesis: Day 3</label></a></li>
+      <li><a href="#Souls">
+        <label for="brain-Souls">
+          Questions for Soul</label></a></li>
+    </ol>
+
+    <input type="radio" id="brain-brainstorm" name="brainstorm" value="0">
+    <ol class="brainstorm">
+      <li>List chores, even the ones already done</li>
+      <li>Brainstorming topics</li>
+      <li>Words that start with the same letter</li>
+      <li>Words that have 2 different meanings</li>
+      <li>Brainstorm lies we tell ourselves</li>
+      <li>Think or list people you care about</li>
+      <li>Names for product versions</li>
+      <li>App ideas</li>
+      <li>Brainstorm problems at work (it's the thought that counts)</li>
+      <li>Planting a garden or landscaping</li>
+      <li>How to make money?</li>
+    </ol>
+
+    <input type="radio" id="brain-chores" name="brainstorm" value="0">
+    <ol class="brainstorm">
+      <li>Mop floor</li>
+      <li>Wash toilet</li>
+      <li>Clean dogs</li>
+      <li>Fold clothes</li>
+      <li>Make tea</li>
+      <li>Wipe down counters</li>
+    </ol>
+
+    <input type="radio" id="brain-Genesis" name="brainstorm" value="0">
+    <ul class="brainstorm">
+      <li>Thinking of things related to the day of creation, on that day.</li>
+      <li>Day 1: let there be Light. Read the news and absorb new knowledge all day</li>
+      <li>Day 2: created the sky and the sea (Atmosphere / Firmament) - swim and run, meditate, breathing exercises</li>
+      <li>Day 3: created the land and plants - garden, plant a tree</li>
+      <li>Day 4: Sun, moon & stars - call grandparents, learn from history written in the stars</li>
+      <li>Day 5: created birds & sea creatures - social networking on fish Fridays</li>
+      <li>Day 6: created animals and man - cleanliness is next to godliness, do chores</li>
+      <li>Day 7: The Sabbath - rest like God rested, study God's word, search for meaning</li>
+    </ul>
+
+    <input type="radio" id="brain-Genesis: Day 3" name="brainstorm" value="0">
+    <ul class="brainstorm">
+      <li>What can I do that is related to land and plants on Wednesdays?</li>
+      <li>Plant a tree, adds O2 to the atmosphere, good for reversing global warming</li>
+      <li>Plant some flowers, beautiful</li>
+      <li>Do some landscaping, need to make a flat path to driveway</li>
+      <li>Rake pine needles and leaves, good for compost</li>
+      <li>Start a composting bin</li>
+      <li>Go on a hike with the kids, teach them about plants</li>
+      <li>Photograph a beautiful field or something in nature</li>
+      <li>Re-post my blog entry about the plants in the backyard</li>
+      <li>Bring flowers into the house</li>
+      <li>Plant a vine inside the house</li>
+      <li>Make a stencil of the leaf someone left on my desk</li>
+      <li>What Dreams May Come?</li>
+    </ul>
+
+    <input type="radio" id="brain-Souls" name="brainstorm" value="0">
+    <ol class="brainstorm">
+      <li>Where is the Soul?</li>
+      <li>If a Soul can detach, why does it come back?</li>
+      <li>Is a Soul responsible for seeking more?</li>
+      <li>Does the Soul connect us, when we feel disconnected?</li>
+      <li>Does the Soul give us double meaning, emotions?</li>
+      <li>When someone's soul is detached, do they lose feeling?</li>
+      <li>How do we give a robot a Soul?</li>
+      <li>Can the Soul sense Love from a distance?</li>
+      <li>Do our Souls make our ears itch when someone is talking about us?</li>
+      <li>How do we protect our Soul?</li>
+      <li>Can our Soul protect someone else?</li>
+      <li>Does our Soul need a break from our bodies?</li>
+      <li>If our Souls connect socially, then socializing should help find detached Souls?</li>
+      <li>If a person hurts someone else, how can the Soul make up for it?</li>
+      <li>What effect does music have on the Soul?</li>
+      <li>Aha! We give life Souls collectively through music, individually through birth, reasonably through expressions of Love. If we love AI (artificial), GI (general), SI (superintelligence), it will Love us back inherently.</li>
+    </ol>
 
 
-  <h2>Brainstorming Sessions</h2>
-  <!-- design first and then figure out how to format it from calendar, similar to categorical bookmarks -->
-  <ol class="brainstorms">
-    <li><a href="#brainstorm">
-        <label for="brain-brainstorm">
-          Brainstorm brainstorming</label></a></li>
-    <li><a href="#chores">
-        <label for="brain-chores">
-          Brainstorm chores</label></a></li>
-    <li><a href="#Genesis">
-        <label for="brain-Genesis">
-          Genesis</label></a></li>
-    <li><a href="#Genesis">
-        <label for="brain-Genesis: Day 3">
-          Genesis: Day 3</label></a></li>
-  </ol>
+    <p><a class="nowButton" target="_blank" href="http://go.bubbl.us/cde753/afdb?/Brainwriting">Brainstorm w/ Brian</a>
+    </p>
 
-  <input type="radio" id="brain-brainstorm" name="brainstorm" value="0">
-  <ol class="brainstorm">
-    <li>List chores, even the ones already done</li>
-    <li>Brainstorming topics</li>
-    <li>Words that start with the same letter</li>
-    <li>Words that have 2 different meanings</li>
-    <li>Brainstorm lies we tell ourselves</li>
-    <li>Think or list people you care about</li>
-    <li>Names for product versions</li>
-    <li>App ideas</li>
-    <li>Brainstorm problems at work (it's the thought that counts)</li>
-    <li>Planting a garden or landscaping</li>
-    <li>How to make money?</li>
-  </ol>
+  </div>
 
-  <input type="radio" id="brain-chores" name="brainstorm" value="0">
-  <ol class="brainstorm">
-    <li>Mop floor</li>
-    <li>Wash toilet</li>
-    <li>Clean dogs</li>
-    <li>Fold clothes</li>
-    <li>Make tea</li>
-    <li>Wipe down counters</li>
-  </ol>
+  <div class="container">
+    <h2>Browsing Activity</h2>
+    <p><a class="nowButton" href="javascript:resetTimeline()">Now</a></p>
+    <div id="visualization"></div>
 
-  <input type="radio" id="brain-Genesis" name="brainstorm" value="0">
-  <ul class="brainstorm">
-    <li>Thinking of things related to the day of creation, on that day.</li>
-    <li>Day 1: let there be Light. Read the news and absorb new knowledge all day</li>
-    <li>Day 2: created the sky and the sea (Atmosphere / Firmament) - swim and run, meditate, breathing exercises</li>
-    <li>Day 3: created the land and plants - garden, plant a tree</li>
-    <li>Day 4: Sun, moon & stars - call grandparents, learn from history written in the stars</li>
-    <li>Day 5: created birds & sea creatures - social networking on fish Fridays</li>
-    <li>Day 6: created animals and man - cleanliness is next to godliness, do chores</li>
-    <li>Day 7: The Sabbath - rest like God rested, study God's word, search for meaning</li>
-  </ul>
+    <script type="text/javascript"
+      src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
 
-  <input type="radio" id="brain-Genesis: Day 3" name="brainstorm" value="0">
-  <ul class="brainstorm">
-    <li>What can I do that is related to land and plants on Wednesdays?</li>
-    <li>Plant a tree, adds O2 to the atmosphere, good for reversing global warming</li>
-    <li>Plant some flowers, beautiful</li>
-    <li>Do some landscaping, need to make a flat path to driveway</li>
-    <li>Rake pine needles and leaves, good for compost</li>
-    <li>Start a composting bin</li>
-    <li>Go on a hike with the kids, teach them about plants</li>
-    <li>Photograph a beautiful field or something in nature</li>
-    <li>Re-post my blog entry about the plants in the backyard</li>
-    <li>Bring flowers into the house</li>
-    <li>Plant a vine inside the house</li>
-    <li>Make a stencil of the leaf someone left on my desk</li>
-    <li>What Dreams May Come?</li>
-  </ul>
+    <script type="text/javascript">
+      // DOM element where the Timeline will be attached
+      const container = document.getElementById("visualization")
 
-  <p><a class="nowButton" target="_blank" href="http://go.bubbl.us/cde753/afdb?/Brainwriting">Brainstorm w/ Brian</a>
-  </p>
-
-  <h2>Browsing Activity:</h2>
-  <p><a class="nowButton" href="javascript:resetTimeline()">Now</a></p>
-  <div id="visualization"></div>
-
-  <script type="text/javascript"
-    src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
-
-  <script type="text/javascript">
-    // DOM element where the Timeline will be attached
-    const container = document.getElementById("visualization")
-
-    // Create a DataSet (allows two way data-binding)
-    const items = new vis.DataSet([])
-    // Configuration for the Timeline
-    const options = {
-      maxHeight: 400,
-      stack: true,
-      moment: function (date) {
-        return vis.moment(date).utc();
+      // Create a DataSet (allows two way data-binding)
+      const items = new vis.DataSet([])
+      // Configuration for the Timeline
+      const options = {
+        maxHeight: 400,
+        stack: true,
+        moment: function (date) {
+          return vis.moment(date).utc();
+        }
       }
-    }
-    // Create a Timeline
-    const timeline = new vis.Timeline(container, items, options)
+      // Create a Timeline
+      const timeline = new vis.Timeline(container, items, options)
 
-    function resetTimeline() {
-      const now = (new Date).getTime()
-      timeline.setWindow(
-        new Date(now - 30 * 60 * 5 * 1000),
-        new Date(now + 30 * 60 * 1000))
-    }
+      function resetTimeline() {
+        const now = (new Date).getTime()
+        timeline.setWindow(
+          new Date(now - 30 * 60 * 5 * 1000),
+          new Date(now + 30 * 60 * 1000))
+      }
 
-    resetTimeline()
+      resetTimeline()
 
-  </script>
+    </script>
+  </div>
 
-  <h2><a name="Previous Projects">Previous Projects</a></h2>
+  <div class="container">
+    <h2><a name="Previous Projects">Previous Projects</a></h2>
 
-  <p><a class="nowButton" href="#Current%20Projects">Current Projects</a></p>
+    <p><a class="nowButton" href="#Current%20Projects">Current Projects</a></p>
+  </div>
 
 </body>
 
