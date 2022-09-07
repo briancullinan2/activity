@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +9,7 @@
 <style>
 /* source: https://codepen.io/unnegative/pen/dVwYBq */
 
-ol.categories {
+ol.categories, ol.windows {
     list-style: none;
     margin: 0 auto;
     padding: 0;
@@ -18,7 +17,7 @@ ol.categories {
     text-align: center;
 }
 
-ol.categories > li {
+ol.categories > li, ol.windows > li {
     border: 5px solid transparent;
     border-radius: 10px;
     background: navy;
@@ -30,7 +29,7 @@ ol.categories > li {
     text-align: left;
 }
 
-ol.categories > li a {
+ol.categories > li a, ol.windows > li a {
     display: block;
     text-decoration: none;
     color: white;
@@ -38,14 +37,15 @@ ol.categories > li a {
     text-align: center;
 }
 
-ol.categories > li label {
+ol.categories > li label, ol.windows > li label {
     display: block;
     cursor: pointer;
     padding: 10px;
 }
 
 
-ol.categories > li:hover::after {
+ol.categories > li:hover::after, 
+ol.windows > li.active::after {
     content: " ";
     background: linear-gradient(
         45deg,
@@ -99,32 +99,64 @@ p.livedev {
 </head>
 
 <body>
+
+
+  <ol class="windows">
+  <li class=""><a href="#Activity Monitor">
+		<label for="win-Activity Monitor">Activity Monitor</a></label>
+		</li>
+<li class=""><a href="#Finder">
+		<label for="win-Finder">Finder</a></label>
+		</li>
+<li class=""><a href="#Microsoft Teams">
+		<label for="win-Microsoft Teams">Microsoft Teams</a></label>
+		</li>
+<li class=""><a href="#Brave Browser">
+		<label for="win-Brave Browser">Brave Browser</a></label>
+		</li>
+<li class="active"><a href="#Terminal">
+		<label for="win-Terminal">Terminal</a></label>
+		</li>
+<li class=""><a href="#Visual Studio Code">
+		<label for="win-Visual Studio Code">Visual Studio Code</a></label>
+		</li>
+<li class=""><a href="#OBS">
+		<label for="win-OBS">OBS</a></label>
+		</li>
+<li class=""><a href="#Sourcetree">
+		<label for="win-Sourcetree">Sourcetree</a></label>
+		</li>
+  </ol><ol class="windows"></ol>
+
 <p class="livedev">
 <script>
-document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
+document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
 </script>
 </p>
 
 
 <ol class="categories">
 <li><a href="#CEO">
-        <label for="cat-CEO">
-        CEO</a></label></li>
+    <label for="cat-CEO">
+    CEO</a></label></li>
 <li><a href="#Engineering">
-        <label for="cat-Engineering">
-        Architecture/Engineering</a></label></li>
+    <label for="cat-Engineering">
+    Architecture/Engineering</a></label></li>
 <li><a href="#Education">
-        <label for="cat-Education">
-        Education</a></label></li>
+    <label for="cat-Education">
+    Education</a></label></li>
+<li><a href="#History">
+    <label for="cat-History">
+    History</a></label></li>
 <li><a href="#Philosophy">
-        <label for="cat-Philosophy">
-        Philosophy</a></label></li>
+    <label for="cat-Philosophy">
+    Philosophy</a></label></li>
 <li><a href="#Politics">
-        <label for="cat-Politics">
-        Economics/Politics</a></label></li>
+    <label for="cat-Politics">
+    Economics/Politics</a></label></li>
 <li><a href="#Theology">
-        <label for="cat-Theology">
-        Theology</a></label></li>
+    <label for="cat-Theology">
+    Theology</a></label></li>
 </ol>
 
 
@@ -133,7 +165,7 @@ document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding
 <ol class="bookmarks">
 <li><a href="https://www.apa.org/news/press/releases/2000/08/presidents">What makes a good president?</a></li>
 </ol>
-    
+
 
 <input type="radio" id="cat-Engineering" name="category" value="1" />
 <ol class="bookmarks">
@@ -149,34 +181,43 @@ document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding
 <li><a href="https://towardsdatascience.com/merging-with-ai-how-to-make-a-brain-computer-interface-to-communicate-with-google-using-keras-and-f9414c540a92">Merging with AI: How to Make a Brain-Computer Interface to Communicate with Google using Keras and OpenBCI | by Jag Singh | Towards Data Science</a></li>
 <li><a href="https://www.unicorn-bi.com/product/unicorn-hybrid-black/">Unicorn Hybrid Black | Unicorn Hybrid Black</a></li>
 </ol>
-    
+
 
 <input type="radio" id="cat-Education" name="category" value="2" />
 <ol class="bookmarks">
 <li><a href="https://www.pdfdrive.com/">PDF Drive - Search and download PDF files for free.</a></li>
 </ol>
-    
 
-<input type="radio" id="cat-Philosophy" name="category" value="3" />
+
+<input type="radio" id="cat-History" name="category" value="3" />
+<ol class="bookmarks">
+<li><a href="https://www.denofgeek.com/culture/real-ufo-history-radio-signals-aliens/">Real UFO History: Einstein, Tesla, Edison, and Marconi on Radio Signals from Aliens | Den of Geek</a></li>
+</ol>
+
+
+<input type="radio" id="cat-Philosophy" name="category" value="4" />
 <ol class="bookmarks">
 <li><a href="https://www.degruyter.com/document/doi/10.1515/9780691184456-005/pdf">Chapter Three. Sympathy for the Rich</a></li>
 </ol>
-    
 
-<input type="radio" id="cat-Politics" name="category" value="4" />
+
+<input type="radio" id="cat-Politics" name="category" value="5" />
 <ol class="bookmarks">
 <li><a href="https://www.theatlantic.com/business/archive/2012/02/are-the-rich-completely-undeserving-of-sympathy/253788/">Are the Rich Completely Undeserving of Sympathy? - The Atlantic</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Prometheism">Prometheism - Wikipedia</a></li>
 </ol>
-    
 
-<input type="radio" id="cat-Theology" name="category" value="5" />
+
+<input type="radio" id="cat-Theology" name="category" value="6" />
 <ol class="bookmarks">
 <li><a href="https://philipmonroe.com/2013/04/14/the-origin-of-the-biblical-counseling-analogy-the-bumped-cup/">The origin of the biblical counseling analogy: the bumped cup | Musings of a Christian Psychologist</a></li>
+<li><a href="https://www.marquette.edu/maqom/watch55.html">The Watchers of Satanail: The Fallen Angels Traditions in 2 (Slavonic) Enoch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prince_of_Darkness_(Manichaeism)">Prince of Darkness (Manichaeism) - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Aaron,_Son_of_the_Devil">Aaron, Son of the Devil - Wikipedia</a></li>
+<li><a href="https://brill.com/view/journals/si/107/2/article-p157_1.xml?language=en">The Death and Life of the Devil’s Son: A Literary Analysis of a Neglected Tradition in: Studia Islamica Volume 107 Issue 2 (2012)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_death_deities">List of death deities - Wikipedia</a></li>
 </ol>
-    
-
+<ol class="categories"></ol>
 
 </body>
 </html>
-    

@@ -45,7 +45,11 @@ function getWindows() {
 	let windowsFiltered = windows
 		.filter((w, i, arr) => windowsNames.indexOf(w[1]) == i && IGNORE_PROGRAMS.indexOf(w[1]) == -1)
 		.map(win => win[1].replace(/\.app$/gi, ''))
-
+	if(windowsFiltered.length > 0) {
+		windowsFiltered[0] = '*' + windowsFiltered[0]
+	}
+	windowsFiltered.sort((a, b) => (a.startsWith('*') ? a.substring(1) : a).localeCompare(
+		- (b.startsWith('*') ? b.substring(1) : b), 'en', {sensitivity: 'base'}))
 	return windowsFiltered
 }
 
@@ -53,17 +57,14 @@ function listWindows() {
 	let windowsFiltered = getWindows()
 	let html = `
   <ol class="windows">
-  ${bookmarkFolders.map(folder => {
+  ${windowsFiltered.map(window => {
 		let category
-		if (path.dirname(folder) == '.') {
-			category = `<li><a href="#${path.basename(folder)}">
-      <label for="win-${path.basename(folder)}">
-      ${path.basename(folder)}</a></label></li>`
-		} else {
-			category = `<li><a href="#${path.basename(folder)}">
-      <label for="win-${path.basename(folder)}">
-      ${path.basename(path.dirname(folder))}/${path.basename(folder)}</a></label></li>`
-		}
+		let active = window.startsWith('*')
+		if(active) 
+			window = window.substring(1)
+		category = `<li class="${active ? 'active' : ''}"><a href="#${window}">
+		<label for="win-${window}">${window}</a></label>
+		</li>`
 		return category
 	}).join('\n')}
   </ol>`
@@ -73,7 +74,7 @@ function listWindows() {
 	// TODO: something like taking periodic snapshots and show a scrolling list of window states
 
 	// TODO: calendar entries might be a slight vulnerability
-  
+  return html
 }
 
 module.exports = {

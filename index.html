@@ -9,7 +9,7 @@
 <style>
 /* source: https://codepen.io/unnegative/pen/dVwYBq */
 
-ol.categories {
+ol.categories, ol.windows {
     list-style: none;
     margin: 0 auto;
     padding: 0;
@@ -17,7 +17,7 @@ ol.categories {
     text-align: center;
 }
 
-ol.categories > li {
+ol.categories > li, ol.windows > li {
     border: 5px solid transparent;
     border-radius: 10px;
     background: navy;
@@ -29,7 +29,7 @@ ol.categories > li {
     text-align: left;
 }
 
-ol.categories > li a {
+ol.categories > li a, ol.windows > li a {
     display: block;
     text-decoration: none;
     color: white;
@@ -37,14 +37,15 @@ ol.categories > li a {
     text-align: center;
 }
 
-ol.categories > li label {
+ol.categories > li label, ol.windows > li label {
     display: block;
     cursor: pointer;
     padding: 10px;
 }
 
 
-ol.categories > li:hover::after {
+ol.categories > li:hover::after, 
+ol.windows > li.active::after {
     content: " ";
     background: linear-gradient(
         45deg,
