@@ -10,6 +10,7 @@
 
     body {
       background: #333;
+      color: white;
     }
 
     ol.categories,
@@ -124,6 +125,10 @@
       right: 0;
     }
 
+    .vis-item-content a {
+      text-decoration: none;
+    }
+
     @media all and (max-width: 600px) {
       ol.categories>li a, 
       ol.windows>li a, 
@@ -154,10 +159,10 @@
 <li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
 		</li>
-<li class=""><a href="#Brave Browser">
+<li class="active"><a href="#Brave Browser">
 		<label for="win-Brave Browser">Brave Browser</a></label>
 		</li>
-<li class="active"><a href="#Terminal">
+<li class=""><a href="#Terminal">
 		<label for="win-Terminal">Terminal</a></label>
 		</li>
 <li class=""><a href="#Visual Studio Code">
@@ -295,198 +300,233 @@
     const items = new vis.DataSet([
   {
     "id": 26590,
-    "content": "Google Domains",
-    "start": "2022-09-07T15:23:22.201Z"
+    "content": "Google Domains  <a target=\"_blank\" href=\"https://domains.google.com/registrar\">link &nearr;</a>",
+    "start": "2022-09-07T14:53:22.201Z"
   },
   {
     "id": 26591,
-    "content": "Google Domains - My domains",
-    "start": "2022-09-07T15:23:23.310Z"
+    "content": "Google Domains - My domains  <a target=\"_blank\" href=\"https://domains.google.com/registrar/\">link &nearr;</a>",
+    "start": "2022-09-07T14:53:23.310Z"
   },
   {
     "id": 28411,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T16:48:33.483Z"
+    "content": "Startpage Search Results  <a target=\"_blank\" href=\"https://www.startpage.com/sp/search\">link &nearr;</a>",
+    "start": "2022-09-07T17:06:49.650Z"
   },
   {
     "id": 38160,
-    "content": "Brian Cullinan's Live Resume",
-    "start": "2022-09-07T17:01:48.360Z"
+    "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"http://127.0.0.1:8080/\">link &nearr;</a>",
+    "start": "2022-09-07T16:31:48.360Z"
   },
   {
     "id": 40116,
-    "content": "timeline - vis.js - A dynamic, browser based visualization library.",
-    "start": "2022-09-07T16:10:12.137Z"
+    "content": "timeline - vis.js - A dynamic, browser based visualization library.  <a target=\"_blank\" href=\"https://visjs.github.io/vis-timeline/docs/timeline/\">link &nearr;</a>",
+    "start": "2022-09-07T15:40:12.137Z"
   },
   {
     "id": 43368,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T16:20:59.187Z"
+    "content": "Startpage Search Results  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=remote+workers+monitoring&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T15:50:59.187Z"
   },
   {
     "id": 43800,
-    "content": "Wikipedia:Contents/Portals - Wikipedia",
-    "start": "2022-09-07T15:33:01.678Z"
+    "content": "Wikipedia:Contents/Portals - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Wikipedia:Contents/Portals\">link &nearr;</a>",
+    "start": "2022-09-07T15:03:01.678Z"
+  },
+  {
+    "id": 44684,
+    "content": "briancullinan2 (Brian Cullinan)  <a target=\"_blank\" href=\"https://github.com/briancullinan2\">link &nearr;</a>",
+    "start": "2022-09-07T17:01:38.605Z"
+  },
+  {
+    "id": 44836,
+    "content": "briancullinan2/activity: A resume / poll style list of what I am currently working on.  <a target=\"_blank\" href=\"https://github.com/briancullinan2/activity\">link &nearr;</a>",
+    "start": "2022-09-07T17:01:45.071Z"
   },
   {
     "id": 45485,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T16:10:07.097Z"
+    "content": "Startpage Search Results  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=vizjs+timeline+adjust+from+utc&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T15:40:07.097Z"
+  },
+  {
+    "id": 45489,
+    "content": "Actions · briancullinan2/activity  <a target=\"_blank\" href=\"https://github.com/briancullinan2/activity/actions\">link &nearr;</a>",
+    "start": "2022-09-07T17:01:52.586Z"
   },
   {
     "id": 45493,
-    "content": "Wikipedia:Contents/Portals - Wikipedia",
-    "start": "2022-09-07T15:33:01.678Z"
+    "content": "Wikipedia:Contents/Portals - Wikipedia  <a target=\"_blank\" href=\"https://en.m.wikipedia.org/wiki/Wikipedia:Contents/Portals\">link &nearr;</a>",
+    "start": "2022-09-07T15:03:01.678Z"
   },
   {
     "id": 45494,
-    "content": "Here are all the ways your boss can legally monitor you",
-    "start": "2022-09-07T16:21:03.699Z"
+    "content": "Here are all the ways your boss can legally monitor you  <a target=\"_blank\" href=\"https://www.washingtonpost.com/technology/2021/08/20/work-from-home-computer-monitoring/\">link &nearr;</a>",
+    "start": "2022-09-07T15:51:03.699Z"
   },
   {
     "id": 45495,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T16:29:36.551Z"
+    "content": "Startpage Search Results  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=interleaved+learning+techinique&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T15:59:36.551Z"
   },
   {
     "id": 45496,
-    "content": "Interleaving: How Mixed Practice Can Boost Learning – Effectiviology",
-    "start": "2022-09-07T16:29:42.414Z"
+    "content": "Interleaving: How Mixed Practice Can Boost Learning – Effectiviology  <a target=\"_blank\" href=\"https://effectiviology.com/interleaving/\">link &nearr;</a>",
+    "start": "2022-09-07T17:08:35.001Z"
   },
   {
     "id": 45497,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T16:48:29.652Z"
+    "content": "Startpage Search Results  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=best+looking+resume&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T16:18:29.652Z"
   },
   {
     "id": 45498,
-    "content": "",
-    "start": "2022-09-07T16:48:53.164Z"
+    "content": "  <a target=\"_blank\" href=\"https://us-browse.startpage.com/av/anon-image?piurl=https%3A%2F%2Fblog.hubspot.com%2Fhs-fs%2Fhubfs%2FGoogle%2520Drive%2520Integration%2F17%2520Best%2520Resume%2520Templates%2520That%2520Will%2520Help%2520You%2520Stand%2520Out-3.png%3Fwidth%3D500%26name%3D17%2520Best%2520Resume%2520Templates%2520That%2520Will%2520Help%2520You%2520Stand%2520Out-3.png&sp=1662567614T95933198f015cd4884cf4afd71d93d484e87784bb3e47e4070aaae9dfbec3140\">link &nearr;</a>",
+    "start": "2022-09-07T16:18:53.164Z"
   },
   {
     "id": 45499,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T16:55:54.558Z"
+    "content": "Startpage Search Results  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=steam+never+remembers+password+between+upgrades&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T16:25:54.558Z"
   },
   {
     "id": 45500,
-    "content": "Brian Cullinan's Live Resume",
-    "start": "2022-09-07T17:26:53.726Z"
+    "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"http://127.0.0.1:8080/#Previous%20Projects\">link &nearr;</a>",
+    "start": "2022-09-07T17:08:30.035Z"
   },
   {
     "id": 45501,
-    "content": "Brian Cullinan's Live Resume",
-    "start": "2022-09-07T17:03:22.005Z"
+    "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"http://127.0.0.1:8080/#Current%20Projects\">link &nearr;</a>",
+    "start": "2022-09-07T16:33:22.005Z"
   },
   {
     "id": 45502,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T17:04:57.092Z"
+    "content": "Startpage Search Results  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=brainstorming+app&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T16:34:57.092Z"
   },
   {
     "id": 45503,
-    "content": "10 Free Brainstorming Apps and Tools to Spark Innovation | Wrike",
-    "start": "2022-09-07T17:05:04.787Z"
+    "content": "10 Free Brainstorming Apps and Tools to Spark Innovation | Wrike  <a target=\"_blank\" href=\"https://www.wrike.com/blog/13-free-brainstorming-apps-tools-spark-innovation/\">link &nearr;</a>",
+    "start": "2022-09-07T16:35:04.787Z"
   },
   {
     "id": 45504,
-    "content": "Bubbl.us - ...",
-    "start": "2022-09-07T17:07:21.344Z"
+    "content": "Bubbl.us - ...  <a target=\"_blank\" href=\"https://bubbl.us/\">link &nearr;</a>",
+    "start": "2022-09-07T16:37:21.344Z"
   },
   {
     "id": 45505,
-    "content": "Bubbl.us - Brainstorming Made Simple!",
-    "start": "2022-09-07T17:05:19.018Z"
+    "content": "Bubbl.us - Brainstorming Made Simple!  <a target=\"_blank\" href=\"https://bubbl.us/sign-in\">link &nearr;</a>",
+    "start": "2022-09-07T16:35:19.018Z"
   },
   {
     "id": 45506,
-    "content": "Sign in - Google Accounts",
-    "start": "2022-09-07T17:05:35.981Z"
+    "content": "Sign in - Google Accounts  <a target=\"_blank\" href=\"https://accounts.google.com/o/oauth2/auth?client_id=1903095270.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fbubbl.us%2Fv3%2Fsys%2Fopauth%2Fsso%2Fgoogle%2Foauth2callback&response_type=code&scope=email\">link &nearr;</a>",
+    "start": "2022-09-07T16:35:35.981Z"
   },
   {
     "id": 45507,
-    "content": "Sign in - Google Accounts",
-    "start": "2022-09-07T17:05:36.110Z"
+    "content": "Sign in - Google Accounts  <a target=\"_blank\" href=\"https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=1903095270.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fbubbl.us%2Fv3%2Fsys%2Fopauth%2Fsso%2Fgoogle%2Foauth2callback&response_type=code&scope=email&flowName=GeneralOAuthFlow\">link &nearr;</a>",
+    "start": "2022-09-07T16:35:36.110Z"
   },
   {
     "id": 45508,
-    "content": "",
-    "start": "2022-09-07T17:05:40.830Z"
+    "content": "  <a target=\"_blank\" href=\"https://accounts.google.com/signin/oauth/consent?authuser=0&part=AJi8hAO5pG15-kdkkIf1BpZ4jYQi2CTws574kSwejywDRc_k-jLcLDjbwLpDs4Qf60yi0YBFNOMfdL7CKq2jxmiVZny9G0hdANGam3rR4hodjl6MazXCQivZc8qPGK3Cq7gDa1AUFJObpCeq-0Dyvvs-oIFHvEG_vOgvNc7X3LZCwgdA9C2ZC1Gq0r1fNqfGJxqQUb9YfwVxyu-0AKR5JZxx5-a7LG8RZRB2ORiADQQqdU-7gPRMi1yefU4xMKGOSt6xL7SrBCwQgyspbllVEs7P5Ng7-mqPDO4AXDDpgV6AY6Kh75MGQ4WGqtniVVnZAlgLT-lnJCqWGvAR8sijKlB_2usTDMDLUrbLlM1EXI4hdua4wbhzDq97uDCXzjIcBr5hJ4mLR3QBO37Xq47fW0wY84-CY-cXtQ&as=S838895447%3A1662568637297117&client_id=1903095270.apps.googleusercontent.com&pli=1&rapt=AEjHL4MAhMxa4znhBM9AE75oJrmEO-ySCQ2Nus5KjzMplWG0V_9HUFTAy0wLAi8_h8f0wecY8Pghjl7RTKO5n8XI-7z14y3gGQ#\">link &nearr;</a>",
+    "start": "2022-09-07T16:35:40.830Z"
   },
   {
     "id": 45509,
-    "content": "",
-    "start": "2022-09-07T17:05:40.830Z"
+    "content": "  <a target=\"_blank\" href=\"https://bubbl.us/v3/sys/opauth/sso/google/oauth2callback?code=4%2F0AdQt8qg9502jfbQK741Dukb-c-L8LtfK7-ZbuCTSHU5DuAiCBHQMAyc6JTMvnzmpfXD8UA&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent\">link &nearr;</a>",
+    "start": "2022-09-07T16:35:40.830Z"
   },
   {
     "id": 45510,
-    "content": "",
-    "start": "2022-09-07T17:05:40.830Z"
+    "content": "  <a target=\"_blank\" href=\"https://bubbl.us/v3/sys/opauth/sso/callback.php\">link &nearr;</a>",
+    "start": "2022-09-07T16:35:40.830Z"
   },
   {
     "id": 45511,
-    "content": "Bubbl.us - Mind Maps",
-    "start": "2022-09-07T17:05:41.450Z"
+    "content": "Bubbl.us - Mind Maps  <a target=\"_blank\" href=\"https://bubbl.us/mindmaps\">link &nearr;</a>",
+    "start": "2022-09-07T16:35:41.450Z"
   },
   {
     "id": 45512,
-    "content": "Bubbl.us - Brainwriting",
-    "start": "2022-09-07T17:06:46.276Z"
+    "content": "Bubbl.us - Brainwriting  <a target=\"_blank\" href=\"https://bubbl.us/13494099\">link &nearr;</a>",
+    "start": "2022-09-07T16:36:46.276Z"
   },
   {
     "id": 45513,
-    "content": "Bubbl.us - Brainwriting",
-    "start": "2022-09-07T17:06:38.435Z"
+    "content": "Bubbl.us - Brainwriting  <a target=\"_blank\" href=\"https://bubbl.us/help/realtime-collaboration\">link &nearr;</a>",
+    "start": "2022-09-07T16:36:38.435Z"
   },
   {
     "id": 45514,
-    "content": "Mind Mapping Online - Bubbl.us - Brainwriting",
-    "start": "2022-09-07T17:07:18.252Z"
+    "content": "Mind Mapping Online - Bubbl.us - Brainwriting  <a target=\"_blank\" href=\"http://go.bubbl.us/cde753/afdb?/Brainwriting\">link &nearr;</a>",
+    "start": "2022-09-07T16:37:18.252Z"
   },
   {
     "id": 45515,
-    "content": "Mind Mapping Online - Bubbl.us - Brainwriting",
-    "start": "2022-09-07T17:07:18.252Z"
+    "content": "Mind Mapping Online - Bubbl.us - Brainwriting  <a target=\"_blank\" href=\"https://bubbl.us/NzI0NjI4My81MDM2MDE0L2U4ZDMzZGRjYmQxMTEwMjgzZDU5MDBjNWNkNDY3ODBk@X?s=13494099&utm_source=shared-link&utm_medium=link&sh=afdb\">link &nearr;</a>",
+    "start": "2022-09-07T16:37:18.252Z"
   },
   {
     "id": 45516,
-    "content": "Bubbl.us - ...",
-    "start": "2022-09-07T17:07:22.201Z"
+    "content": "Bubbl.us - ...  <a target=\"_blank\" href=\"https://bubbl.us/NzI0NjI4My81MDM2MDE0L2U4ZDMzZGRjYmQxMTEwMjgzZDU5MDBjNWNkNDY3ODBk@X\">link &nearr;</a>",
+    "start": "2022-09-07T16:37:22.201Z"
   },
   {
     "id": 45517,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T17:09:48.690Z"
+    "content": "Startpage Search Results  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=css+media+query&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T16:39:48.690Z"
   },
   {
     "id": 45518,
-    "content": "CSS @media Rule",
-    "start": "2022-09-07T17:10:07.667Z"
+    "content": "CSS @media Rule  <a target=\"_blank\" href=\"https://www.w3schools.com/cssref/css3_pr_mediaquery.asp\">link &nearr;</a>",
+    "start": "2022-09-07T16:40:07.667Z"
   },
   {
     "id": 45519,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T17:18:29.784Z"
+    "content": "Startpage Search Results  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=can%27t+play+portal+2+on+macos+anymore&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T16:48:29.784Z"
   },
   {
     "id": 45520,
-    "content": "Running Portal 2 (32 bit) on a new MacBook (64 bit) : macgaming",
-    "start": "2022-09-07T17:18:36.966Z"
+    "content": "Running Portal 2 (32 bit) on a new MacBook (64 bit) : macgaming  <a target=\"_blank\" href=\"https://www.reddit.com/r/macgaming/comments/m0cvz1/running_portal_2_32_bit_on_a_new_macbook_64_bit/\">link &nearr;</a>",
+    "start": "2022-09-07T16:48:36.966Z"
   },
   {
     "id": 45521,
-    "content": "Startpage Search Results",
-    "start": "2022-09-07T17:21:41.135Z"
+    "content": "Startpage Search Results  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=how+to+run+portal+2+on+macos&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T16:51:41.135Z"
   },
   {
     "id": 45522,
-    "content": "Portal 2 on Mac – Run it On Mac",
-    "start": "2022-09-07T17:22:10.364Z"
+    "content": "Portal 2 on Mac – Run it On Mac  <a target=\"_blank\" href=\"https://www.runitonmac.com/portal-2/\">link &nearr;</a>",
+    "start": "2022-09-07T16:52:10.364Z"
   },
   {
     "id": 45523,
-    "content": "MacOS Catalina: Will Portal 2 be updated to 64 bit? :: Portal 2 General Discussions",
-    "start": "2022-09-07T17:23:46.044Z"
+    "content": "MacOS Catalina: Will Portal 2 be updated to 64 bit? :: Portal 2 General Discussions  <a target=\"_blank\" href=\"https://steamcommunity.com/app/620/discussions/0/1628539187759516650/\">link &nearr;</a>",
+    "start": "2022-09-07T16:53:46.044Z"
+  },
+  {
+    "id": 45524,
+    "content": "Startpage Search Results  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=box+arrow+link+icon&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-07T17:06:25.515Z"
+  },
+  {
+    "id": 45525,
+    "content": "Box arrow up-right · Bootstrap Icons  <a target=\"_blank\" href=\"https://icons.getbootstrap.com/icons/box-arrow-up-right/\">link &nearr;</a>",
+    "start": "2022-09-07T17:06:28.394Z"
+  },
+  {
+    "id": 45526,
+    "content": "Is the symbol for 'external link' available in Unicode? If so, how do I get in on my Mac? - Quora  <a target=\"_blank\" href=\"https://www.quora.com/Is-the-symbol-for-external-link-available-in-Unicode-If-so-how-do-I-get-in-on-my-Mac\">link &nearr;</a>",
+    "start": "2022-09-07T17:06:54.040Z"
+  },
+  {
+    "id": 45527,
+    "content": "HTML Arrow Symbols, Entities and Codes — Toptal Designers  <a target=\"_blank\" href=\"https://www.toptal.com/designers/htmlarrows/arrows/\">link &nearr;</a>",
+    "start": "2022-09-07T17:07:07.674Z"
   }
 ])
     // Configuration for the Timeline
@@ -503,8 +543,8 @@
     function resetTimeline() {
       const now = (new Date).getTime()
       timeline.setWindow(
-        new Date(now - 60 * 60 * 5 * 1000),
-        new Date(now + 60 * 60 * 1000))
+        new Date(now - 30 * 60 * 5 * 1000),
+        new Date(now + 30 * 60 * 1000))
     }
 
     resetTimeline()
