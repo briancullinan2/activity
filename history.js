@@ -1,0 +1,72 @@
+// TODO: show browsing history
+
+// TODO: train a model based on sections to categorically sort new history based on content from bookmarks
+const fs = require('fs')
+const path = require('path')
+const sqlite3 = require('better-sqlite3');
+
+const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
+
+const BASE_DATE = new Date(1601, 0, 1, 0, 0, 0, 0).getTime()
+const TIME_ZONE = (new Date).getTimezoneOffset()
+
+function findHistoryFile() {
+	let workingPaths = []
+	let settingsPath
+
+	if (os.platform == 'win32') {
+		settingsPath = path.join(HOMEPATH, 'AppData\/LocalStorage')
+	} else {
+		if (os.platform == 'darwin') {
+			settingsPath = path.join(HOMEPATH, 'Library\/Application\ Support')
+		} else {
+			settingsPath = path.join(HOMEPATH, '.config')
+		}
+	}
+
+	workingPaths.push(path.join(settingsPath, 'BraveSoftware\/Brave-Browser\/Default\/History'))
+	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/Default/History'))
+
+	for (let i = 0; i < workingPaths.length; i++) {
+		if (fs.existsSync(workingPaths[i])) {
+			return workingPaths[i]
+		}
+	}
+}
+
+function getHistory() {
+	const HISTORY_FILE = findHistoryFile()
+	if(fs.existsSync(HISTORY_FILE + '.backup')) {
+		fs.unlinkSync(HISTORY_FILE + '.backup')
+	}
+	fs.copyFileSync(HISTORY_FILE, HISTORY_FILE + '.backup')
+	const db = new sqlite3(HISTORY_FILE + '.backup', {
+		readonly: true,
+		fileMustExist: true,
+	})
+	const today = Math.floor(Date.now() / 60 / 60 / 48) * 60 * 60 * 48
+	// reverse of chromeDtToDate
+	const todayOffset = (today - BASE_DATE) * 1000
+
+	const results = db.prepare('SELECT * FROM urls WHERE last_visit_time > ?').all(todayOffset)
+	return results
+}
+
+function listHistory() {
+	let history = getHistory()
+
+//"start": "2022-09-07T13:19:14.428Z"
+//"start": "2022-09-07T06:44:13.579Z"
+	return JSON.stringify(history.map(entry => {
+		return { 
+			id: entry.id, 
+			content: entry.title.substring(0, 100), 
+			start: new Date((entry.last_visit_time / 1000 + BASE_DATE - TIME_ZONE * 60 * 1000))
+		}
+	}), null, 2)
+}
+
+module.exports = {
+	getHistory,
+	listHistory,
+}

@@ -5,6 +5,10 @@
 
 // AAAHAAAAHAHAHAHAHAHAHAHHHHHHHHHHH!!!!!!!!!!!!!
 // no worky >:|
+// this is the kind of crap the government should sponsor for open-source, 
+//   get this working so the eco-system can expand and use WebAssembly and napi 
+//   interchangably, could do away with Electron completely if we had solid native window bindings
+
 /*
 var ffi = require('ffi')
 var ref = require('ref')

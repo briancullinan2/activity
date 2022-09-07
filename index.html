@@ -1,114 +1,142 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<base href="/" target="_self" />
-<link rel="icon" href="/unknownmap.jpg">
-<title>Brian Cullinan's Live Resume</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<link rel="stylesheet" href="/index.css" />
-<style>
-/* source: https://codepen.io/unnegative/pen/dVwYBq */
+  <base href="/" target="_self" />
+  <title>Brian Cullinan's Live Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>
+    /* source: https://codepen.io/unnegative/pen/dVwYBq */
 
-ol.categories, ol.windows {
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    display: block;
-    text-align: center;
-}
+    ol.categories,
+    ol.windows {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      display: block;
+      text-align: center;
+    }
 
-ol.categories > li, ol.windows > li {
-    border: 5px solid transparent;
-    border-radius: 10px;
-    background: navy;
-    position: relative;
-    display: inline-block;
-    background-clip: padding-box;
-    z-index: unset;
-    list-style: none;
-    text-align: left;
-}
+    ol.categories>li,
+    ol.windows>li {
+      border: 5px solid transparent;
+      border-radius: 10px;
+      background: navy;
+      position: relative;
+      display: inline-block;
+      background-clip: padding-box;
+      z-index: unset;
+      list-style: none;
+      text-align: left;
+    }
 
-ol.categories > li a, ol.windows > li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    min-width: 200px;
-    text-align: center;
-}
+    ol.categories>li a,
+    ol.windows>li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      min-width: 200px;
+      text-align: center;
+    }
 
-ol.categories > li label, ol.windows > li label {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-}
-
-
-ol.categories > li:hover::after, 
-ol.windows > li.active::after {
-    content: " ";
-    background: linear-gradient(
-        45deg,
-        rgba(255, 0, 0, 1) 0%,
-        rgba(255, 154, 0, 1) 10%,
-        rgba(208, 222, 33, 1) 20%,
-        rgba(79, 220, 74, 1) 30%,
-        rgba(63, 218, 216, 1) 40%,
-        rgba(47, 201, 226, 1) 50%,
-        rgba(28, 127, 238, 1) 60%,
-        rgba(95, 21, 242, 1) 70%,
-        rgba(186, 12, 248, 1) 80%,
-        rgba(251, 7, 217, 1) 90%,
-        rgba(255, 0, 0, 1) 100%
-    );
-    border-image-slice: 1;
-    border-radius: 10px;
-    position: absolute;
-    z-index: -1;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-
-}
-
-/* SPA with no javascript, enjoy */
-input[name*="category"] {
-    opacity: 0;
-    height: 1px;
-    width: 1px;
-    position: absolute;
-    right: -1;
-    bottom: -1;
-}
-
-input:checked + ol.bookmarks {
-    display: block;
-}
-
-ol.bookmarks {
-    display: none;
-}
-
-p.livedev {
-    text-align: center;
-}
+    ol.categories>li label,
+    ol.windows>li label {
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+    }
 
 
-</style>
+    ol.categories>li:hover::after,
+    ol.windows>li.active::after {
+      content: " ";
+      background: linear-gradient(45deg,
+          rgba(255, 0, 0, 1) 0%,
+          rgba(255, 154, 0, 1) 10%,
+          rgba(208, 222, 33, 1) 20%,
+          rgba(79, 220, 74, 1) 30%,
+          rgba(63, 218, 216, 1) 40%,
+          rgba(47, 201, 226, 1) 50%,
+          rgba(28, 127, 238, 1) 60%,
+          rgba(95, 21, 242, 1) 70%,
+          rgba(186, 12, 248, 1) 80%,
+          rgba(251, 7, 217, 1) 90%,
+          rgba(255, 0, 0, 1) 100%);
+      border-image-slice: 1;
+      border-radius: 10px;
+      position: absolute;
+      z-index: -1;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+
+    }
+
+    /* SPA with no javascript, enjoy */
+    input[name*="category"] {
+      opacity: 0;
+      height: 1px;
+      width: 1px;
+      position: absolute;
+      right: -1;
+      bottom: -1;
+    }
+
+    input:checked+ol.bookmarks {
+      display: block;
+    }
+
+    ol.bookmarks {
+      display: none;
+    }
+
+    p.livedev {
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
 
-<ol class="windows"></ol>
+  <ol class="windows"></ol>
 
-<p class="livedev">
-<script>
-document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
-</script>
-</p>
+  <p class="livedev">
+    <script>
+      document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
+    </script>
+  </p>
 
-<ol class="categories"></ol>
+  <ol class="categories"></ol>
+
+  <div id="visualization"></div>
+
+  <script type="text/javascript"
+    src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
+
+  <script type="text/javascript">
+    // DOM element where the Timeline will be attached
+    const container = document.getElementById("visualization")
+
+    // Create a DataSet (allows two way data-binding)
+    const items = new vis.DataSet([])
+    // Configuration for the Timeline
+    const options = {
+      maxHeight: 400,
+      stack:true,
+      moment: function (date) {
+        return vis.moment(date).utc();
+      }
+    }
+    // Create a Timeline
+    const now = (new Date).getTime()
+    const timeline = new vis.Timeline(container, items, options)
+    timeline.setWindow(
+      new Date(now - 60 * 60 * 5 * 1000),
+      new Date(now + 60 * 60 * 1000))
+
+  </script>
 
 </body>
+
 </html>
