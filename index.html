@@ -102,13 +102,19 @@
       display: none;
     }
 
-    p.livedev {
-      text-align: center;
-      padding-bottom: 60%;
+    div.livedev {
       position: relative;
+      margin: 0 auto;
+      max-width: 600px;
+      max-height: 460px;
     }
 
-    p.livedev iframe {
+    div.livedev p {
+      text-align: center;
+      padding-bottom: 60%;
+    }
+
+    div.livedev iframe {
       height: 100%;
       width: 100%;
       position: absolute;
@@ -138,11 +144,11 @@
 
   <h2>Live Development:</h2>
   <ol class="windows"></ol>
-  <p class="livedev">
+  <div class="livedev"><p>
     <script>
       document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
     </script>
-  </p>
+  </p></div>
 
   <h2>Study Interests:</h2>
   <ol class="categories"></ol>
