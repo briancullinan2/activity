@@ -8,6 +8,10 @@
   <style>
     /* source: https://codepen.io/unnegative/pen/dVwYBq */
 
+    body {
+      background: #333;
+    }
+
     ol.categories,
     ol.windows {
       list-style: none;
@@ -15,6 +19,7 @@
       padding: 0;
       display: block;
       text-align: center;
+      max-width: 1000px;
     }
 
     ol.categories>li,
@@ -99,22 +104,55 @@
 
     p.livedev {
       text-align: center;
+      padding-bottom: 60%;
+      position: relative;
     }
+
+    p.livedev iframe {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    @media all and (max-width: 600px) {
+      ol.categories>li a, 
+      ol.windows>li a, 
+      a.nowButton {
+        min-width: unset;
+      }
+    }
+
   </style>
 </head>
 
 <body>
+  <h1>Who is Brian Cullinan?</h1>
 
+  <h2><a name="Current Projects">Current Projects</a></h2>
+
+  <p><a class="nowButton" href="#Previous%20Projects">Previous Projects</a></p>
+
+  <h2>Live Development:</h2>
   <ol class="windows"></ol>
-
   <p class="livedev">
     <script>
       document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
     </script>
   </p>
 
+  <h2>Study Interests:</h2>
   <ol class="categories"></ol>
 
+
+  <h2>Brainstorming Sessions</h2>
+
+  <p><a class="nowButton" target="_blank" href="http://go.bubbl.us/cde753/afdb?/Brainwriting">Brainstorm w/ Brian</a></p>
+
+  <h2>Browsing Activity:</h2>
   <p><a class="nowButton" href="javascript:resetTimeline()">Now</a></p>
   <div id="visualization"></div>
 
@@ -148,6 +186,10 @@
     resetTimeline()
 
   </script>
+
+  <h2><a name="Previous Projects">Previous Projects</a></h2>
+
+  <p><a class="nowButton" href="#Current%20Projects">Current Projects</a></p>
 
 </body>
 

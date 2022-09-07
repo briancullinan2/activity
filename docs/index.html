@@ -8,6 +8,10 @@
   <style>
     /* source: https://codepen.io/unnegative/pen/dVwYBq */
 
+    body {
+      background: #333;
+    }
+
     ol.categories,
     ol.windows {
       list-style: none;
@@ -15,6 +19,7 @@
       padding: 0;
       display: block;
       text-align: center;
+      max-width: 1000px;
     }
 
     ol.categories>li,
@@ -99,18 +104,42 @@
 
     p.livedev {
       text-align: center;
+      padding-bottom: 60%;
+      position: relative;
     }
+
+    p.livedev iframe {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    @media all and (max-width: 600px) {
+      ol.categories>li a, 
+      ol.windows>li a, 
+      a.nowButton {
+        min-width: unset;
+      }
+    }
+
   </style>
 </head>
 
 <body>
+  <h1>Who is Brian Cullinan?</h1>
 
+  <h2><a name="Current Projects">Current Projects</a></h2>
+
+  <p><a class="nowButton" href="#Previous%20Projects">Previous Projects</a></p>
+
+  <h2>Live Development:</h2>
   
   <ol class="windows">
-  <li class=""><a href="#Location Menu">
-		<label for="win-Location Menu">Location Menu</a></label>
-		</li>
-<li class=""><a href="#Microsoft Teams">
+  <li class=""><a href="#Microsoft Teams">
 		<label for="win-Microsoft Teams">Microsoft Teams</a></label>
 		</li>
 <li class=""><a href="#Finder">
@@ -128,20 +157,23 @@
 <li class=""><a href="#Visual Studio Code">
 		<label for="win-Visual Studio Code">Visual Studio Code</a></label>
 		</li>
-<li class=""><a href="#OBS">
-		<label for="win-OBS">OBS</a></label>
+<li class=""><a href="#Steam">
+		<label for="win-Steam">Steam</a></label>
 		</li>
 <li class=""><a href="#Sourcetree">
 		<label for="win-Sourcetree">Sourcetree</a></label>
 		</li>
+<li class=""><a href="#OBS">
+		<label for="win-OBS">OBS</a></label>
+		</li>
   </ol></ol>
-
   <p class="livedev">
     <script>
       document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=\${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
     </script>
   </p>
 
+  <h2>Study Interests:</h2>
   
 <ol class="categories">
 <li><a href="#CEO">
@@ -150,9 +182,15 @@
 <li><a href="#Engineering">
     <label for="cat-Engineering">
     Architecture/Engineering</a></label></li>
+<li><a href="#08 Interleaving">
+    <label for="cat-08 Interleaving">
+    Education/08 Interleaving</a></label></li>
 <li><a href="#History">
     <label for="cat-History">
     History</a></label></li>
+<li><a href="#Legal">
+    <label for="cat-Legal">
+    Law/Legal</a></label></li>
 <li><a href="#Medical Science">
     <label for="cat-Medical Science">
     Medical Science</a></label></li>
@@ -182,13 +220,25 @@
 </ol>
 
 
-<input type="radio" id="cat-History" name="category" value="2" />
+<input type="radio" id="cat-08 Interleaving" name="category" value="2" />
+<ol class="bookmarks">
+<li><a href="https://effectiviology.com/interleaving/">Interleaving: How Mixed Practice Can Boost Learning – Effectiviology</a></li>
+</ol>
+
+
+<input type="radio" id="cat-History" name="category" value="3" />
 <ol class="bookmarks">
 <li><a href="https://www.denofgeek.com/culture/real-ufo-history-radio-signals-aliens/">Real UFO History: Einstein, Tesla, Edison, and Marconi on Radio Signals from Aliens | Den of Geek</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Medical Science" name="category" value="3" />
+<input type="radio" id="cat-Legal" name="category" value="4" />
+<ol class="bookmarks">
+<li><a href="https://www.washingtonpost.com/technology/2021/08/20/work-from-home-computer-monitoring/">Here are all the ways your boss can legally monitor you</a></li>
+</ol>
+
+
+<input type="radio" id="cat-Medical Science" name="category" value="5" />
 <ol class="bookmarks">
 <li><a href="https://en.wikipedia.org/wiki/Ventromedial_prefrontal_cortex">Ventromedial prefrontal cortex - Wikipedia</a></li>
 <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4145052/">Ventromedial prefrontal cortex is critical for the regulation of amygdala activity in humans</a></li>
@@ -198,20 +248,20 @@
 </ol>
 
 
-<input type="radio" id="cat-Physical Science" name="category" value="4" />
+<input type="radio" id="cat-Physical Science" name="category" value="6" />
 <ol class="bookmarks">
 <li><a href="https://www.irishtimes.com/news/world/us/nasa-craft-visits-asteroid-which-might-hit-earth-in-150-years-1.3719492">Nasa craft visits asteroid which might hit Earth in 150 years</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Politics" name="category" value="5" />
+<input type="radio" id="cat-Politics" name="category" value="7" />
 <ol class="bookmarks">
 <li><a href="https://en.wikipedia.org/wiki/Prometheism">Prometheism - Wikipedia</a></li>
 <li><a href="https://www.azmirror.com/2021/04/19/arizonas-past-with-neo-nazis-is-colliding-with-its-political-present/">Arizona’s past with neo-Nazis is colliding with its political present</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Theology" name="category" value="6" />
+<input type="radio" id="cat-Theology" name="category" value="8" />
 <ol class="bookmarks">
 <li><a href="https://www.marquette.edu/maqom/watch55.html">The Watchers of Satanail: The Fallen Angels Traditions in 2 (Slavonic) Enoch</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Prince_of_Darkness_(Manichaeism)">Prince of Darkness (Manichaeism) - Wikipedia</a></li>
@@ -222,6 +272,12 @@
 </ol>
 </ol>
 
+
+  <h2>Brainstorming Sessions</h2>
+
+  <p><a class="nowButton" target="_blank" href="http://go.bubbl.us/cde753/afdb?/Brainwriting">Brainstorm w/ Brian</a></p>
+
+  <h2>Browsing Activity:</h2>
   <p><a class="nowButton" href="javascript:resetTimeline()">Now</a></p>
   <div id="visualization"></div>
 
@@ -245,14 +301,24 @@
     "start": "2022-09-07T15:23:23.310Z"
   },
   {
+    "id": 28411,
+    "content": "Startpage Search Results",
+    "start": "2022-09-07T16:48:33.483Z"
+  },
+  {
     "id": 38160,
     "content": "Brian Cullinan's Live Resume",
-    "start": "2022-09-07T16:19:58.048Z"
+    "start": "2022-09-07T17:01:48.360Z"
   },
   {
     "id": 40116,
     "content": "timeline - vis.js - A dynamic, browser based visualization library.",
     "start": "2022-09-07T16:10:12.137Z"
+  },
+  {
+    "id": 43368,
+    "content": "Startpage Search Results",
+    "start": "2022-09-07T16:20:59.187Z"
   },
   {
     "id": 43800,
@@ -268,6 +334,131 @@
     "id": 45493,
     "content": "Wikipedia:Contents/Portals - Wikipedia",
     "start": "2022-09-07T15:33:01.678Z"
+  },
+  {
+    "id": 45494,
+    "content": "Here are all the ways your boss can legally monitor you",
+    "start": "2022-09-07T16:21:03.699Z"
+  },
+  {
+    "id": 45495,
+    "content": "Startpage Search Results",
+    "start": "2022-09-07T16:29:36.551Z"
+  },
+  {
+    "id": 45496,
+    "content": "Interleaving: How Mixed Practice Can Boost Learning – Effectiviology",
+    "start": "2022-09-07T16:29:42.414Z"
+  },
+  {
+    "id": 45497,
+    "content": "Startpage Search Results",
+    "start": "2022-09-07T16:48:29.652Z"
+  },
+  {
+    "id": 45498,
+    "content": "",
+    "start": "2022-09-07T16:48:53.164Z"
+  },
+  {
+    "id": 45499,
+    "content": "Startpage Search Results",
+    "start": "2022-09-07T16:55:54.558Z"
+  },
+  {
+    "id": 45500,
+    "content": "Brian Cullinan's Live Resume",
+    "start": "2022-09-07T17:14:37.628Z"
+  },
+  {
+    "id": 45501,
+    "content": "Brian Cullinan's Live Resume",
+    "start": "2022-09-07T17:03:22.005Z"
+  },
+  {
+    "id": 45502,
+    "content": "Startpage Search Results",
+    "start": "2022-09-07T17:04:57.092Z"
+  },
+  {
+    "id": 45503,
+    "content": "10 Free Brainstorming Apps and Tools to Spark Innovation | Wrike",
+    "start": "2022-09-07T17:05:04.787Z"
+  },
+  {
+    "id": 45504,
+    "content": "Bubbl.us - ...",
+    "start": "2022-09-07T17:07:21.344Z"
+  },
+  {
+    "id": 45505,
+    "content": "Bubbl.us - Brainstorming Made Simple!",
+    "start": "2022-09-07T17:05:19.018Z"
+  },
+  {
+    "id": 45506,
+    "content": "Sign in - Google Accounts",
+    "start": "2022-09-07T17:05:35.981Z"
+  },
+  {
+    "id": 45507,
+    "content": "Sign in - Google Accounts",
+    "start": "2022-09-07T17:05:36.110Z"
+  },
+  {
+    "id": 45508,
+    "content": "",
+    "start": "2022-09-07T17:05:40.830Z"
+  },
+  {
+    "id": 45509,
+    "content": "",
+    "start": "2022-09-07T17:05:40.830Z"
+  },
+  {
+    "id": 45510,
+    "content": "",
+    "start": "2022-09-07T17:05:40.830Z"
+  },
+  {
+    "id": 45511,
+    "content": "Bubbl.us - Mind Maps",
+    "start": "2022-09-07T17:05:41.450Z"
+  },
+  {
+    "id": 45512,
+    "content": "Bubbl.us - Brainwriting",
+    "start": "2022-09-07T17:06:46.276Z"
+  },
+  {
+    "id": 45513,
+    "content": "Bubbl.us - Brainwriting",
+    "start": "2022-09-07T17:06:38.435Z"
+  },
+  {
+    "id": 45514,
+    "content": "Mind Mapping Online - Bubbl.us - Brainwriting",
+    "start": "2022-09-07T17:07:18.252Z"
+  },
+  {
+    "id": 45515,
+    "content": "Mind Mapping Online - Bubbl.us - Brainwriting",
+    "start": "2022-09-07T17:07:18.252Z"
+  },
+  {
+    "id": 45516,
+    "content": "Bubbl.us - ...",
+    "start": "2022-09-07T17:07:22.201Z"
+  },
+  {
+    "id": 45517,
+    "content": "Startpage Search Results",
+    "start": "2022-09-07T17:09:48.690Z"
+  },
+  {
+    "id": 45518,
+    "content": "CSS @media Rule",
+    "start": "2022-09-07T17:10:07.667Z"
   }
 ])
     // Configuration for the Timeline
@@ -291,6 +482,10 @@
     resetTimeline()
 
   </script>
+
+  <h2><a name="Previous Projects">Previous Projects</a></h2>
+
+  <p><a class="nowButton" href="#Current%20Projects">Current Projects</a></p>
 
 </body>
 

@@ -5,6 +5,8 @@ const fs = require('fs')
 const path = require('path')
 const sqlite3 = require('better-sqlite3');
 
+// TODO: import from History database or from export
+
 const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
 
 const BASE_DATE = new Date(1601, 0, 1, 0, 0, 0, 0).getTime()
