@@ -35,7 +35,7 @@ ol.windows>li,
 a.nowButton {
   border: 5px solid transparent;
   border-radius: 10px;
-  background: navy;
+  background: #226;
   position: relative;
   display: inline-block;
   background-clip: padding-box;
@@ -164,7 +164,9 @@ div.container {
   box-shadow: rgb(0 0 0 / 50%) 2px 3px 10px;
   margin: 20px auto;
   border-radius: 2px;
-  border: 1px solid #444;
+  border: 1px solid #666;
+  position: relative;
+  z-index: 1;
 }
 
 div.container.flex {

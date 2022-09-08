@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "generate": "node --napi-modules -e \"require('./index.js').renderIndex()\"",
-    "generate:history": "node -e \"require('./history.js').getHistory()\"",
+    "generate:projects": "node -e \"require('./projects.js').projectHeatmap()\"",
     "encrypt:bookmarks": "node -e \"require('./bookmarks.js').encryptBookmarks()\"",
     "start": "live-server ./docs",
     "build": "node-gyp rebuild"
@@ -17,8 +17,10 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "better-sqlite3": "^7.6.2",
+    "d3-node": "^2.2.3",
     "JSONStream": "^1.3.5",
     "live-server": "^1.2.2",
+    "moment": "^2.29.4",
     "node-addon-api": "^5.0.0",
     "node-gyp": "^9.1.0"
   }
