@@ -104,10 +104,12 @@ function listProjects() {
     if (!fs.existsSync(PROJECT_DIRS[name])) {
       return ''
     }
-    return `
-<h3>${name}</h3>
-${projectHeatmap(PROJECT_DIRS[name])}
-`
+    let svgOutput = path.join(__dirname, '/docs/' + name + '.svg')
+    if(!fs.existsSync(svgOutput)) {
+      let svgData = projectHeatmap(PROJECT_DIRS[name])
+      fs.writeFileSync(svgOutput, svgData)
+    }
+    return `<h3>${name}</h3><img src="${name}.svg"`
   }).join('\n')
 }
 
