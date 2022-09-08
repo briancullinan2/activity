@@ -3,7 +3,7 @@ const fs = require('fs')
 const { listBookmarks } = require('./bookmarks.js')
 const { listWindows } = require('./windows.js')
 const { listHistory } = require('./history.js')
-const { projectHeatmap } = require('./projects.js')
+const { listProjects } = require('./projects.js')
 
 const INDEX = fs.readFileSync('./index.html').toString('utf-8')
 
@@ -13,7 +13,7 @@ function renderIndex() {
 	let bodyTag = index.match(/<ol class="heatmaps"[\n\r.^>]*?>/i)
 	let offset = bodyTag.index
 	index = index.substring(0, offset)
-		+ projectHeatmap() + index.substring(offset + bodyTag[0].length, index.length)
+		+ listProjects() + index.substring(offset + bodyTag[0].length, index.length)
 
 	bodyTag = index.match(/<ol class="categories"[\n\r.^>]*?>/i)
 	offset = bodyTag.index
