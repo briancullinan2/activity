@@ -181,6 +181,10 @@ div.container.timeline p {
   padding-bottom: 60%;
 }
 
+div.container.projects svg {
+  max-width: 100%;
+}
+
 #visualization {
   position: absolute !important;
   bottom: 20px;

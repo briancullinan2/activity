@@ -3,7 +3,7 @@ var D3Node = require('d3-node');
 function d3Heatmap(data) {
 	var d3n = new D3Node();
 	var d3 = d3n.d3;
-	var margin = { top: 20, right: 50, bottom: 20, left: 20 };
+	var margin = { top: 20, right: 20, bottom: 20, left: 20 };
 
 	// input vars for getter setters
 	// TODO: turn these in to options
@@ -13,9 +13,9 @@ function d3Heatmap(data) {
 		colourRangeStart = '#2222FF',
 		colourRangeEnd = '#222266',
 		width = 950,
-		height = years.length * 150,
+		height = years.length * 160,
 		dayLength = 60 * 60 * 24,
-		sizeByYear = (height - margin.top - margin.bottom) / years.length,
+		sizeByYear = (height - margin.top - margin.bottom), // / years.length,
 		sizeByDay = d3.min([
 			// divide by 8, 7 days in a week and 1 row for label
 			sizeByYear / 8,
@@ -38,6 +38,7 @@ function d3Heatmap(data) {
 		.map(data)
 
 	var svg = d3n.createSVG(width, height)
+		.attr('viewBox', '0 0 ' + width + ' ' + height)
 		.attr('class', 'chart')
 		.append('g')
 		.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');

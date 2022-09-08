@@ -4,11 +4,12 @@
 // TODO: list open windows and update using master-server design.
 const path = require('path')
 const fs = require('fs')
-const {spawnSync} = require('child_process')
+const { spawnSync } = require('child_process')
 const d3Heatmap = require('./heatmap.js')
 
 function workingEvents(path) {
   const WRITING_RATE = 100 // words per minute
+  const CURRENT_YEAR = (new Date).getFullYear()
 
   // TODO: use a combination of git commands to detect when work is done
   let datesOut = spawnSync('git', ['log', '--pretty=format:\'%ci\'', '--author="megamindbrian"'], {
@@ -17,7 +18,7 @@ function workingEvents(path) {
     shell: true,
   })
   let fileDates = datesOut.stdout.toString('utf-8').trim().split('\n')
-  if(!fileDates || fileDates.length == 0 || fileDates[0].length == 0) {
+  if (!fileDates || fileDates.length == 0 || fileDates[0].length == 0) {
     return []
   }
   console.log(fileDates.length, ' commits in ', path)
@@ -30,12 +31,18 @@ function workingEvents(path) {
       stdio: 'pipe'
     }) */
     // simple word count from commit diffs
+    let parsedDate = new Date(fileDates[revision - 1])
+    if (parsedDate.getFullYear() != CURRENT_YEAR) {
+      revision++
+      continue
+    }
+
     let filesOut = spawnSync('git', ['diff', `HEAD~${revision}..HEAD~${revision + 1}`], {
       stdio: 'pipe',
       cwd: path,
       shell: true,
     })
-    if(filesOut.stderr.toString('utf-8').includes('fatal: log')
+    if (filesOut.stderr.toString('utf-8').includes('fatal: log')
       || filesOut.stderr.toString('utf-8').includes('unknown revision')) {
       break
     }
@@ -47,8 +54,8 @@ function workingEvents(path) {
       let date = new Date(fileDate.stdout.toString('utf-8').trim())
       console.log(date)
     } */
-    let day = Math.floor(new Date(fileDates[revision-1]).getTime() / 1000 / 60 / 60) * 1000 * 60 * 60
-    if(typeof workingHours[day] == 'undefined') {
+    let day = Math.floor(parsedDate.getTime() / 1000 / 60 / 60) * 1000 * 60 * 60
+    if (typeof workingHours[day] == 'undefined') {
       workingHours[day] = 0
     }
     workingHours[day] += fileList.length / WRITING_RATE / 60
@@ -58,7 +65,7 @@ function workingEvents(path) {
 
   return Object.keys(workingHours).map((key, i) => {
     let hours = workingHours[key]
-    if(hours > 3) {
+    if (hours > 3) {
       hours = 3
     }
     let start = parseInt(key)
@@ -74,7 +81,7 @@ function workingEvents(path) {
 
 function projectHeatmap(path) {
   let events = workingEvents(path)
-  if(events.length == 0) {
+  if (events.length == 0) {
     return ''
   }
   let heatmap = d3Heatmap(events)
@@ -87,14 +94,14 @@ const PROJECT_DIRS = {
   'Quake3e': path.join(__dirname, '/../Quake3e'), // i guess it doesn't really matter if history is recorded correctly
   'Elastic Game Server': path.join(__dirname, '/../elastic-game-server'),
   'Morpheus Consulting': path.join(__dirname, '/../morpheus'),
+  'Planet Quake': path.join(__dirname, '/../planet_quake'),
   'Study Sauce': '/Volumes/External-Bakup/Personal/Projects/studysauce3',
-
 }
 
 
 function listProjects() {
   return Object.keys(PROJECT_DIRS).map(name => {
-    if(!fs.existsSync(PROJECT_DIRS[name])) {
+    if (!fs.existsSync(PROJECT_DIRS[name])) {
       return ''
     }
     return `
