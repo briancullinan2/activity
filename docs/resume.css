@@ -171,6 +171,28 @@ div.container.flex {
   display: flex;
 }
 
+div.container.timeline {
+  position: relative;
+}
+
+div.container.timeline p {
+  padding-bottom: 60%;
+}
+
+#visualization {
+  position: absolute !important;
+  bottom: 20px;
+  left: 20px;
+  top: 220px;
+  right: 20px;
+  height: auto;
+  width: auto;
+}
+
+.vis-timeline {
+  height: 100% !important;
+}
+
 @media all and (max-width: 1000px) {
   div.container {
     width: auto;
@@ -180,6 +202,9 @@ div.container.flex {
 }
 
 @media all and (max-width: 600px) {
+  div.container {
+    padding: 30px 20px;
+  }
 
   div.container.flex {
     flex-direction: column;

@@ -61,6 +61,7 @@ function listHistory() {
 		/accounts\.google/gi,
 		/auth\//gi,
 		/\/sso\//gi,
+		/mail\.google/gi, // not quite ready for people to read my emails
 	]
 
 	let filteredHistory = history.filter(entry => EXCLUDED_HISTORY

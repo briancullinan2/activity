@@ -16,7 +16,7 @@
   <div class="container flex">
     <div class="cell-0  ">
       <p class="" id="idSoftware-Engineer--Network-Admin--Mobile">Software Engineer, Network Admin, Mobile/Web/UI/UX
-        Developer, Scientist</p>
+        Developer, Computer Scientist</p>
       <p class="A" id="idHire-Now-"><a class="nowButton" href="/#hire">Hire Now!</a></p>
     </div>
 
@@ -173,7 +173,7 @@
 
   </div>
 
-  <div class="container">
+  <div class="container timeline">
     <h2>Browsing Activity</h2>
     <p><a class="nowButton" href="javascript:resetTimeline()">Now</a></p>
     <div id="visualization"></div>
@@ -189,10 +189,10 @@
       const items = new vis.DataSet([])
       // Configuration for the Timeline
       const options = {
-        maxHeight: 400,
+        maxHeight: '100%',
         stack: true,
         moment: function (date) {
-          return vis.moment(date).utc();
+          return vis.moment(date);
         }
       }
       // Create a Timeline
@@ -201,8 +201,8 @@
       function resetTimeline() {
         const now = (new Date).getTime()
         timeline.setWindow(
-          new Date(now - 30 * 60 * 5 * 1000),
-          new Date(now + 30 * 60 * 1000))
+          new Date(now - 60 * 60 * 1000),
+          new Date(now + 60 * 60 * 1000))
       }
 
       resetTimeline()
