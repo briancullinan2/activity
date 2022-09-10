@@ -23,7 +23,7 @@ var libprime = ffi.Library('./sog.dylib', {
 let { spawn, spawnSync } = require('child_process')
 
 function getWindows() {
-	let ps = spawnSync('./sog', [], {
+	let ps = spawnSync(path.resolve('./sog'), [], {
 		stdio: 'pipe'
 	}) // sync since it's native utility?
 	//ps.stdout.on('data', (data) => {
@@ -44,6 +44,10 @@ function getWindows() {
 		'Dock',
 	]
 	let windows = ps.stdout.toString('utf-8').trim().split('\n').map(window => window.split(/:\s/g))
+	if(!windows || windows.length == 0 || windows[0][0].length == 0) {
+		return []
+	}
+
 	windows.sort((a, b) => a[0] - b[0])
 	let windowsNames = windows.map(win => win[1])
 	let windowsFiltered = windows
