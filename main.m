@@ -12,7 +12,7 @@ __attribute__((visibility("default")))
 int enumWindows()
 {
 	CGWindowListOption listOptions = kCGWindowListOptionAll;
-	listOptions |= kCGWindowListOptionOnScreenOnly;
+	//listOptions |= kCGWindowListOptionOnScreenOnly;
 	listOptions |= kCGWindowListExcludeDesktopElements;
 
 	// Ask the window server for the list of windows.
