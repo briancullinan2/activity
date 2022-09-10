@@ -5,6 +5,7 @@
     "generate": "node --napi-modules -e \"require('./index.js').renderIndex()\"",
     "generate:projects": "node -e \"require('./projects.js').projectHeatmap()\"",
     "encrypt:bookmarks": "node -e \"require('./bookmarks.js').encryptBookmarks()\"",
+    "update": "npm run generate && git add -A && git commit -m \"auto-update\" && git push",
     "start": "live-server ./docs",
     "build": "node-gyp rebuild"
   },
