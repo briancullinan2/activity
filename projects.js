@@ -109,7 +109,7 @@ function listProjects() {
       let svgData = projectHeatmap(PROJECT_DIRS[name])
       fs.writeFileSync(svgOutput, svgData)
     }
-    return `<h3>${name}</h3><img src="${name}.svg"`
+    return `<h3>${name}</h3><img src="${name}.svg" />`
   }).join('\n')
 }
 

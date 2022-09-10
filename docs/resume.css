@@ -247,7 +247,8 @@ div.container.projects img {
   ol.brainstorms>li a,
   ol.categories>li a,
   ol.windows>li a,
-  a.nowButton {
+  a.nowButton,
+  label[for="federal"] {
     min-width: unset;
   }
 }
