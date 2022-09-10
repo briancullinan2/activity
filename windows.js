@@ -25,7 +25,8 @@ let { spawn, spawnSync } = require('child_process')
 function getWindows() {
 	let ps = spawnSync(path.resolve('./sog'), [], {
 		stdio: 'pipe',
-		uid: 501
+		uid: 501,
+		gid: 20
 	}) // sync since it's native utility?
 	//ps.stdout.on('data', (data) => {
 	//  stdout += data.toString('utf-8')
