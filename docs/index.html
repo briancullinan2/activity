@@ -78,7 +78,10 @@
     <h2>Live Development</h2>
     
   <ol class="windows">
-  <li class=""><a href="#Finder">
+  <li class=""><a href="#loginwindow">
+		<label for="win-loginwindow">loginwindow</a></label>
+		</li>
+<li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
 		</li>
 <li class=""><a href="#Code">
@@ -87,11 +90,11 @@
 <li class="active"><a href="#Brave Browser">
 		<label for="win-Brave Browser">Brave Browser</a></label>
 		</li>
-<li class=""><a href="#OBS">
-		<label for="win-OBS">OBS</a></label>
-		</li>
 <li class=""><a href="#Terminal">
 		<label for="win-Terminal">Terminal</a></label>
+		</li>
+<li class=""><a href="#OBS">
+		<label for="win-OBS">OBS</a></label>
 		</li>
 <li class=""><a href="#Sourcetree">
 		<label for="win-Sourcetree">Sourcetree</a></label>
@@ -213,7 +216,6 @@
 
 <input type="radio" id="cat-History" name="category" value="6" />
 <ol class="bookmarks">
-<li><a href="https://engineering.fb.com/2019/01/22/ai-research/laser-multilingual-sentence-embeddings/">LASER natural language processing toolkit - Engineering at Meta</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Military_history_of_Jewish_Americans">Military history of Jewish Americans - Wikipedia</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Stanislaw_Ulam">Stanislaw Ulam - Wikipedia</a></li>
 <li><a href="https://www.vox.com/2015/6/23/8832311/war-casualties-600-years">600 years of war and peace, in one amazing chart - Vox</a></li>
@@ -239,6 +241,7 @@
 <li><a href="https://www.healthline.com/health/cracking-knuckles">Cracking Knuckles: Causes, Side Effects, and Tips to Stop</a></li>
 <li><a href="https://www.healthline.com/health/cracking-knuckles#what-causes-the-pop">Cracking Knuckles: Causes, Side Effects, and Tips to Stop</a></li>
 <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6396610/">Prevalence and patterns of peripheral neuropathy in patients of rheumatoid arthritis</a></li>
+<li><a href="https://www.webmd.com/rheumatoid-arthritis/ra-foods">Rheumatoid Arthritis Diet: Inflammation-Fighting Foods</a></li>
 </ol>
 
 
@@ -302,8 +305,6 @@
 
 <input type="radio" id="cat-Theology" name="category" value="16" />
 <ol class="bookmarks">
-<li><a href="https://islamqa.info/en/answers/23415/praying-for-jinn-companion-to-become-muslim">Praying for Jinn Companion to Become Muslim - Islam Question & Answer</a></li>
-<li><a href="https://reasonsforhopejesus.com/ask-god/">Is it OK to ask God questions? » Reasons for Hope* Jesus</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Paul_Bunyan">Paul Bunyan - Wikipedia</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Sam_Ziwa">Sam Ziwa - Wikipedia</a></li>
 <li><a href="https://en.wikipedia.org/wiki/World_of_Light">World of Light - Wikipedia</a></li>
@@ -601,29 +602,39 @@
       // Create a DataSet (allows two way data-binding)
       const items = new vis.DataSet([
   {
-    "id": 449,
-    "content": "Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/u/0/\">link &nearr;</a>",
-    "start": "2022-09-15T21:37:25.705Z"
+    "id": 45,
+    "content": "YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/\">link &nearr;</a>",
+    "start": "2022-09-16T04:05:17.406Z"
   },
   {
-    "id": 14861,
-    "content": "Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/\">link &nearr;</a>",
-    "start": "2022-09-15T21:37:25.272Z"
+    "id": 46,
+    "content": "Brian Cullinan - YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw\">link &nearr;</a>",
+    "start": "2022-09-16T04:05:17.424Z"
   },
   {
-    "id": 14863,
-    "content": "Untitled document - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/u/0/create?usp=docs_home&ths=true\">link &nearr;</a>",
-    "start": "2022-09-15T21:37:28.264Z"
+    "id": 49,
+    "content": "Channel content - YouTube Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw/videos\">link &nearr;</a>",
+    "start": "2022-09-16T04:05:23.589Z"
+  },
+  {
+    "id": 50,
+    "content": "Channel content - YouTube Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D\">link &nearr;</a>",
+    "start": "2022-09-16T04:05:23.915Z"
+  },
+  {
+    "id": 12950,
+    "content": "YouTube  <a target=\"_blank\" href=\"https://youtube.com/\">link &nearr;</a>",
+    "start": "2022-09-16T04:05:11.907Z"
   },
   {
     "id": 28411,
     "content": "Search:   <a target=\"_blank\" href=\"https://www.startpage.com/sp/search\">link &nearr;</a>",
-    "start": "2022-09-16T02:54:55.525Z"
+    "start": "2022-09-16T03:48:22.441Z"
   },
   {
-    "id": 31360,
-    "content": "Create a New Repository  <a target=\"_blank\" href=\"https://github.com/new\">link &nearr;</a>",
-    "start": "2022-09-15T21:01:17.120Z"
+    "id": 36518,
+    "content": "Channel content - YouTube Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw/videos/live?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D\">link &nearr;</a>",
+    "start": "2022-09-16T04:05:25.985Z"
   },
   {
     "id": 36972,
@@ -643,37 +654,27 @@
   {
     "id": 38160,
     "content": "Study Sauce  <a target=\"_blank\" href=\"http://127.0.0.1:8080/\">link &nearr;</a>",
-    "start": "2022-09-15T23:37:03.724Z"
+    "start": "2022-09-16T04:02:08.999Z"
   },
   {
-    "id": 40502,
-    "content": "Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/u/0/?usp=direct_url\">link &nearr;</a>",
-    "start": "2022-09-15T21:37:25.272Z"
+    "id": 43177,
+    "content": "Google Takeout  <a target=\"_blank\" href=\"https://takeout.google.com/\">link &nearr;</a>",
+    "start": "2022-09-16T03:59:44.476Z"
   },
   {
     "id": 44517,
     "content": "Google Calendar - Thursday, September 15, 2022, today  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/day\">link &nearr;</a>",
-    "start": "2022-09-16T03:37:25.837Z"
-  },
-  {
-    "id": 44622,
-    "content": "Google Calendar - Week of September 11, 2022  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/week\">link &nearr;</a>",
-    "start": "2022-09-15T21:00:48.959Z"
-  },
-  {
-    "id": 44684,
-    "content": "briancullinan2 (Brian Cullinan)  <a target=\"_blank\" href=\"https://github.com/briancullinan2\">link &nearr;</a>",
-    "start": "2022-09-15T21:01:15.547Z"
-  },
-  {
-    "id": 45487,
-    "content": "Your Repositories  <a target=\"_blank\" href=\"https://github.com/briancullinan2?tab=repositories\">link &nearr;</a>",
-    "start": "2022-09-15T21:01:16.993Z"
+    "start": "2022-09-16T03:59:13.871Z"
   },
   {
     "id": 45488,
     "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"https://briancullinan.com/\">link &nearr;</a>",
     "start": "2022-09-15T21:41:15.262Z"
+  },
+  {
+    "id": 45947,
+    "content": "Manage your exports  <a target=\"_blank\" href=\"https://takeout.google.com/settings/takeout/downloads\">link &nearr;</a>",
+    "start": "2022-09-16T04:00:33.900Z"
   },
   {
     "id": 46152,
@@ -726,94 +727,9 @@
     "start": "2022-09-15T21:41:21.503Z"
   },
   {
-    "id": 47441,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/MnRlb2F0azR1bzkyb2IwZ2kyNnBiZjZoMG0gbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
-    "start": "2022-09-15T20:39:35.003Z"
-  },
-  {
     "id": 47442,
     "content": "Google Calendar - Friday, September 16, 2022  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/day/2022/9/16\">link &nearr;</a>",
-    "start": "2022-09-16T00:02:56.982Z"
-  },
-  {
-    "id": 47443,
-    "content": "Search: nodejs request data  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=nodejs+request+data&segment=startpage.brave\">link &nearr;</a>",
-    "start": "2022-09-15T20:43:53.315Z"
-  },
-  {
-    "id": 47444,
-    "content": "How to process POST data in Node.js? - Stack Overflow  <a target=\"_blank\" href=\"https://stackoverflow.com/questions/4295782/how-to-process-post-data-in-node-js\">link &nearr;</a>",
-    "start": "2022-09-15T20:44:03.775Z"
-  },
-  {
-    "id": 47445,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/MjI2NWlmc285aHR2YjhxMWQ5aWRlcjZwNmUgcnFxaHEzbWU3Z2dnNDdjaGFmaG1lbzZtM3NAZw\">link &nearr;</a>",
-    "start": "2022-09-15T20:45:27.757Z"
-  },
-  {
-    "id": 47446,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/MmdlY2ZsbnN2NXNzMWJidTNlcTQwOGNkamwgbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
-    "start": "2022-09-15T20:56:17.499Z"
-  },
-  {
-    "id": 47447,
-    "content": "Search: native american corn recipe  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=native+american+corn+recipe&segment=startpage.brave\">link &nearr;</a>",
-    "start": "2022-09-15T20:57:18.476Z"
-  },
-  {
-    "id": 47448,
-    "content": "Native American Corn Recipes  <a target=\"_blank\" href=\"https://educationpossible.com/historical-cooking-native-american-corn-recipes/\">link &nearr;</a>",
-    "start": "2022-09-15T20:57:26.381Z"
-  },
-  {
-    "id": 47449,
-    "content": "Search: descent  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=descent&segment=startpage.brave\">link &nearr;</a>",
-    "start": "2022-09-15T21:01:59.260Z"
-  },
-  {
-    "id": 47450,
-    "content": "briancullinan2/timeline: As close as possible recording of my thoughts and descent into madness. Not  <a target=\"_blank\" href=\"https://github.com/briancullinan2/timeline\">link &nearr;</a>",
-    "start": "2022-09-15T21:02:32.048Z"
-  },
-  {
-    "id": 47451,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/NzRwOWcwMDFzazFxcXQ5aG00b2x2ZDE2ODYgbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
-    "start": "2022-09-15T21:12:04.213Z"
-  },
-  {
-    "id": 47452,
-    "content": "Search: does god want us to feel guilty  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=does+god+want+us+to+feel+guilty&segment=startpage.brave\">link &nearr;</a>",
-    "start": "2022-09-15T21:14:49.203Z"
-  },
-  {
-    "id": 47453,
-    "content": "What does the Bible say about guilt? | GotQuestions.org  <a target=\"_blank\" href=\"https://www.gotquestions.org/Bible-guilt.html\">link &nearr;</a>",
-    "start": "2022-09-15T21:14:59.417Z"
-  },
-  {
-    "id": 47454,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/MGh0aGNtMjhvM2tkMzZiMDJkbDFzdmljbHIgbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
-    "start": "2022-09-15T21:19:59.355Z"
-  },
-  {
-    "id": 47455,
-    "content": "Common Spirit Health  <a target=\"_blank\" href=\"https://login.dignityhealth.org/oauth2/aus32qsj5x26YmQN11t7/v1/authorize?client_id=0oak1ra5c0UKK4Run1t7&redirect_uri=https%3A%2F%2Fapp.secondopinion.barrowneuro.org%2Flogin%2Fcallback&response_type=code&scope=openid%20profile%20email&nonce=ea197b0a221e253d1c8b036ced3baf2322UE9tFOW&state=ffa9892a1b2c1f83ac70714c672632a55aEffCeZ5&code_challenge=kOGAO2tHZOHfwWr-uulxZAdH-FvJcF_Ws4VTVdQ1tPo&code_challenge_method=S256&brand=BNI&display_env=prod\">link &nearr;</a>",
-    "start": "2022-09-15T21:35:54.975Z"
-  },
-  {
-    "id": 47456,
-    "content": "Second Opinion Request Portal  <a target=\"_blank\" href=\"https://login.dignityhealth.org/oauth2/aus32qsj5x26YmQN11t7/v1/authorize?client_id=0oak1ra5c0UKK4Run1t7&redirect_uri=https%3A%2F%2Fapp.secondopinion.barrowneuro.org%2Flogin%2Fcallback&response_type=code&scope=openid%20profile%20email&nonce=ea197b0a221e253d1c8b036ced3baf2322UE9tFOW&state=ffa9892a1b2c1f83ac70714c672632a55aEffCeZ5&code_challenge=kOGAO2tHZOHfwWr-uulxZAdH-FvJcF_Ws4VTVdQ1tPo&code_challenge_method=S256&brand=BNI&display_env=prod&sessionToken=20111I4SZkH3NSYr6X3hFFpDDqldW59_92RP2ngDVWC7Aa60f2Rb4ch\">link &nearr;</a>",
-    "start": "2022-09-15T21:36:00.748Z"
-  },
-  {
-    "id": 47457,
-    "content": "Second Opinion Request Portal  <a target=\"_blank\" href=\"https://app.secondopinion.barrowneuro.org/login/callback?code=AYI5OubbbtRfL7mavv5IbbQA5engXg1Pzpl1Z-6eiM0&state=ffa9892a1b2c1f83ac70714c672632a55aEffCeZ5\">link &nearr;</a>",
-    "start": "2022-09-15T21:36:00.748Z"
-  },
-  {
-    "id": 47458,
-    "content": "Untitled document - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1re9SEfRKkC-wns1Kuwed7vf65ld6GwhvFkMqVmOeUNA/edit\">link &nearr;</a>",
-    "start": "2022-09-15T21:37:32.596Z"
+    "start": "2022-09-16T03:59:26.186Z"
   },
   {
     "id": 47459,
@@ -853,7 +769,7 @@
   {
     "id": 47466,
     "content": "Google Calendar - Saturday, September 17, 2022  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/day/2022/9/17\">link &nearr;</a>",
-    "start": "2022-09-16T00:02:53.360Z"
+    "start": "2022-09-16T03:41:20.967Z"
   },
   {
     "id": 47467,
@@ -1109,6 +1025,106 @@
     "id": 47517,
     "content": "Prevalence and patterns of peripheral neuropathy in patients of rheumatoid arthritis  <a target=\"_blank\" href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6396610/\">link &nearr;</a>",
     "start": "2022-09-16T03:36:48.862Z"
+  },
+  {
+    "id": 47518,
+    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/MmE0a3RybG01bXJoMWwwMG82MTY2YWo5anQgcnFxaHEzbWU3Z2dnNDdjaGFmaG1lbzZtM3NAZw\">link &nearr;</a>",
+    "start": "2022-09-16T03:39:46.636Z"
+  },
+  {
+    "id": 47519,
+    "content": "Search: red sweaty hands rheumatoid arthritis  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=red+sweaty+hands+rheumatoid+arthritis&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-16T03:38:43.267Z"
+  },
+  {
+    "id": 47520,
+    "content": "Search: diet to prevent rheumatoid arthritis  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=diet+to+prevent+rheumatoid+arthritis&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-16T03:40:57.307Z"
+  },
+  {
+    "id": 47521,
+    "content": "Rheumatoid Arthritis Diet: Inflammation-Fighting Foods  <a target=\"_blank\" href=\"https://www.webmd.com/rheumatoid-arthritis/ra-foods\">link &nearr;</a>",
+    "start": "2022-09-16T03:41:01.623Z"
+  },
+  {
+    "id": 47522,
+    "content": "Google Calendar - Sunday, September 18, 2022  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/day/2022/9/18\">link &nearr;</a>",
+    "start": "2022-09-16T03:45:12.476Z"
+  },
+  {
+    "id": 47523,
+    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/MjAxN2Z2bWh1dGFsMDVpMHZqcWtmODU5OWsgbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
+    "start": "2022-09-16T03:44:50.703Z"
+  },
+  {
+    "id": 47524,
+    "content": "Search: andrew lee norther arizona university  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=andrew+lee+norther+arizona+university&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-16T03:47:15.779Z"
+  },
+  {
+    "id": 47525,
+    "content": "LinkedIn  <a target=\"_blank\" href=\"https://www.linkedin.com/in/andrewleeofficial\">link &nearr;</a>",
+    "start": "2022-09-16T03:47:20.051Z"
+  },
+  {
+    "id": 47526,
+    "content": "(10) Andrew Lee | LinkedIn  <a target=\"_blank\" href=\"https://www.linkedin.com/in/andrewleeofficial/\">link &nearr;</a>",
+    "start": "2022-09-16T03:47:20.862Z"
+  },
+  {
+    "id": 47527,
+    "content": "LinkedIn  <a target=\"_blank\" href=\"https://www.linkedin.com/in/andrew-s-dennis\">link &nearr;</a>",
+    "start": "2022-09-16T03:47:54.308Z"
+  },
+  {
+    "id": 47528,
+    "content": "(10) Andrew Dennis | LinkedIn  <a target=\"_blank\" href=\"https://www.linkedin.com/in/andrew-s-dennis/\">link &nearr;</a>",
+    "start": "2022-09-16T03:47:55.252Z"
+  },
+  {
+    "id": 47529,
+    "content": "Andrew H Lee, Ph.D.  <a target=\"_blank\" href=\"https://www.midwestern.edu/academics/our-faculty/andrew-h-lee-phd\">link &nearr;</a>",
+    "start": "2022-09-16T03:47:59.648Z"
+  },
+  {
+    "id": 47530,
+    "content": "NAU Directory  <a target=\"_blank\" href=\"https://directory.nau.edu/departments?id=10213\">link &nearr;</a>",
+    "start": "2022-09-16T03:48:06.271Z"
+  },
+  {
+    "id": 47531,
+    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/MTZkbG1tOThrdDZpazQ5bGdycDFsN2hlcjIgcnFxaHEzbWU3Z2dnNDdjaGFmaG1lbzZtM3NAZw\">link &nearr;</a>",
+    "start": "2022-09-16T03:51:11.215Z"
+  },
+  {
+    "id": 47532,
+    "content": "Sign in - Google Accounts  <a target=\"_blank\" href=\"https://takeout.google.com/takeout/download?j=23609973-6f95-42f1-9870-d856f2b1ed17&i=0&user=105769853215962698980\">link &nearr;</a>",
+    "start": "2022-09-16T04:00:46.595Z"
+  },
+  {
+    "id": 47537,
+    "content": "Manage your exports  <a target=\"_blank\" href=\"https://takeout.google.com/accounts/SetOSID?authuser=0&continue=https%3A%2F%2Faccounts.youtube.com%2Faccounts%2FSetSID%3Fssdc%3D1%26sidt%3DALWU2cueijn0QTElnOvMmWeNkl4Qmdyrtrox5q%252BcxhUBWEC5Y%252BoyQj1R5twDB1mlFzzov%252BqpEaUIwwf6FH8TatU8xuvaUz04AascDs5sJBIm5tZsQJjLZyMC4mat3zunOfAFtt%252F%252FFe9SvWSPu7aJp1CPvARHla6Zy0VXRaEDdJRpUdhUsqyFohZ%252B8ojw8eaWM%252FATpK4vQb1X2plJZNgJFheXQyI1SvQz9804vdpI21MTDcFQo6iOFerh1%252BO%252B5ZnVHSYeaCOftrqvEmtUiwu8UVm1F1qZjB1bKjAX%252FycVnwYEkPv9qGoJskUT5OPq2YjRqqIJ7TRukXRGJtNgDdTt%252B%252BTgM9iu8SuObv%252FIW1A3BY3j5%252FaELoY8PnjbXFrtvFi%252FT0kRxR%252BELhdWziQ9ekOCQ%252FSuM%252F6HVhZW%252Bob0KpC0LOOWdKmvFneZaLBE4m%252F00oJW90VwrZFcEL8U9%252BjhQ960uIxcfFavzzSjhm9nsnB4InXGgv6kKJqvS1MRZVbRVYtKUlMAlnTXljvqUa1wSkjyOir8%252B81lQScLm3M3OsBY2MDvTDDhEK4XGRlixxwnCCFG21p%252FZGATjKW4teDE3VZSY64NGYRGMRIu3MmDE4LcRpk%252FgWQugXOAAGKzX1R48J8HI58m9DiQ0Yk5%26continue%3Dhttps%253A%252F%252Ftakeout.google.com%252Ftakeout%252Fdownload%253Fj%253D23609973-6f95-42f1-9870-d856f2b1ed17%2526i%253D0%2526user%253D105769853215962698980%2526rapt%253DAEjHL4PzXA_xXDhuXVr6mT_0NCAk_BgTOp9WKJYtV13HW-bzo4uFrNXucVVXJoM_q_ibh8B6AyEmLIsZ0JFLSOqPtnBX620MyQ%26tcc%3D1&osidt=ALWU2csDNB__mruTD9kTh19mDluKTLx9skFf6Ka0FF9Oaub5pBXLhjPThP71bVL42AulRlB2UYPM9JuEfbabf1-xTA6HpsNO7ukfupYeiRvNcMm-tLFR-k8AD50Zus0ID5TGeBQOkFuz9ObefLy-lRI0J4tBjVlAA8n4Qah607xEcR4c8fcklksskpW6TTOb3_mJL4DH6tLAqHdoqo1l42wn2HVivYb5PA&tcc=1\">link &nearr;</a>",
+    "start": "2022-09-16T04:00:52.132Z"
+  },
+  {
+    "id": 47538,
+    "content": "Manage your exports  <a target=\"_blank\" href=\"https://accounts.youtube.com/accounts/SetSID?ssdc=1&sidt=ALWU2cueijn0QTElnOvMmWeNkl4Qmdyrtrox5q%2BcxhUBWEC5Y%2BoyQj1R5twDB1mlFzzov%2BqpEaUIwwf6FH8TatU8xuvaUz04AascDs5sJBIm5tZsQJjLZyMC4mat3zunOfAFtt//Fe9SvWSPu7aJp1CPvARHla6Zy0VXRaEDdJRpUdhUsqyFohZ%2B8ojw8eaWM/ATpK4vQb1X2plJZNgJFheXQyI1SvQz9804vdpI21MTDcFQo6iOFerh1%2BO%2B5ZnVHSYeaCOftrqvEmtUiwu8UVm1F1qZjB1bKjAX/ycVnwYEkPv9qGoJskUT5OPq2YjRqqIJ7TRukXRGJtNgDdTt%2B%2BTgM9iu8SuObv/IW1A3BY3j5/aELoY8PnjbXFrtvFi/T0kRxR%2BELhdWziQ9ekOCQ/SuM/6HVhZW%2Bob0KpC0LOOWdKmvFneZaLBE4m/00oJW90VwrZFcEL8U9%2BjhQ960uIxcfFavzzSjhm9nsnB4InXGgv6kKJqvS1MRZVbRVYtKUlMAlnTXljvqUa1wSkjyOir8%2B81lQScLm3M3OsBY2MDvTDDhEK4XGRlixxwnCCFG21p/ZGATjKW4teDE3VZSY64NGYRGMRIu3MmDE4LcRpk/gWQugXOAAGKzX1R48J8HI58m9DiQ0Yk5&continue=https://takeout.google.com/takeout/download?j%3D23609973-6f95-42f1-9870-d856f2b1ed17%26i%3D0%26user%3D105769853215962698980%26rapt%3DAEjHL4PzXA_xXDhuXVr6mT_0NCAk_BgTOp9WKJYtV13HW-bzo4uFrNXucVVXJoM_q_ibh8B6AyEmLIsZ0JFLSOqPtnBX620MyQ&tcc=1\">link &nearr;</a>",
+    "start": "2022-09-16T04:00:52.132Z"
+  },
+  {
+    "id": 47539,
+    "content": "Manage your exports  <a target=\"_blank\" href=\"https://takeout.google.com/takeout/download?j=23609973-6f95-42f1-9870-d856f2b1ed17&i=0&user=105769853215962698980&rapt=AEjHL4PzXA_xXDhuXVr6mT_0NCAk_BgTOp9WKJYtV13HW-bzo4uFrNXucVVXJoM_q_ibh8B6AyEmLIsZ0JFLSOqPtnBX620MyQ\">link &nearr;</a>",
+    "start": "2022-09-16T04:00:52.132Z"
+  },
+  {
+    "id": 47540,
+    "content": "Manage your exports  <a target=\"_blank\" href=\"https://takeout.google.com/settings/takeout/downloads?user=105769853215962698980&rapt=AEjHL4PzXA_xXDhuXVr6mT_0NCAk_BgTOp9WKJYtV13HW-bzo4uFrNXucVVXJoM_q_ibh8B6AyEmLIsZ0JFLSOqPtnBX620MyQ#i=0&j=23609973-6f95-42f1-9870-d856f2b1ed17\">link &nearr;</a>",
+    "start": "2022-09-16T04:00:53.019Z"
+  },
+  {
+    "id": 47541,
+    "content": "Manage your exports  <a target=\"_blank\" href=\"https://takeout.google.com/settings/takeout/downloads?user=105769853215962698980&rapt=AEjHL4PzXA_xXDhuXVr6mT_0NCAk_BgTOp9WKJYtV13HW-bzo4uFrNXucVVXJoM_q_ibh8B6AyEmLIsZ0JFLSOqPtnBX620MyQ\">link &nearr;</a>",
+    "start": "2022-09-16T04:00:53.049Z"
   }
 ])
       // Configuration for the Timeline
