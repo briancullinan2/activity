@@ -96,9 +96,6 @@
   <li class=""><a href="#loginwindow">
 		<label for="win-loginwindow">loginwindow</a></label>
 		</li>
-<li class=""><a href="#Location Menu">
-		<label for="win-Location Menu">Location Menu</a></label>
-		</li>
 <li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
 		</li>
@@ -134,9 +131,6 @@
     <h2>Study Interests</h2>
     
 <ol class="categories">
-<li><a href="#Engineering">
-    <label for="cat-Engineering">
-    Architecture/Engineering</a></label></li>
 <li><a href="#Nutrition">
     <label for="cat-Nutrition">
     Health/Nutrition</a></label></li>
@@ -159,13 +153,7 @@
 
 
 
-<input type="radio" id="cat-Engineering" name="category" value="0" />
-<ol class="bookmarks">
-<li><a href="https://developer.chrome.com/blog/background-sync/">Introducing Background Sync</a></li>
-</ol>
-
-
-<input type="radio" id="cat-Nutrition" name="category" value="1" />
+<input type="radio" id="cat-Nutrition" name="category" value="0" />
 <ol class="bookmarks">
 <li><a href="https://health.clevelandclinic.org/vagus-nerve-stimulation/">5 Ways To Stimulate Your Vagus Nerve – Cleveland Clinic</a></li>
 <li><a href="https://www.medicalmedium.com/blog/amazing-radishes">Amazing Radishes</a></li>
@@ -174,7 +162,7 @@
 </ol>
 
 
-<input type="radio" id="cat-Medical Science" name="category" value="2" />
+<input type="radio" id="cat-Medical Science" name="category" value="1" />
 <ol class="bookmarks">
 <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4150749/">Herpes virus entry mediator (HVEM) modulates proliferation and activation of regulatory T cells following HSV-1 infection</a></li>
 <li><a href="https://www.cdc.gov/healthypets/diseases/index.html">Diseases That Can Spread Between Animals and People | Healthy Pets, Healthy People | CDC</a></li>
@@ -182,30 +170,26 @@
 </ol>
 
 
-<input type="radio" id="cat-Psychology" name="category" value="3" />
+<input type="radio" id="cat-Psychology" name="category" value="2" />
 <ol class="bookmarks">
-<li><a href="https://lifehopeandtruth.com/bible/10-commandments/the-ten-commandments/10-commandments-list/">10 Commandments List</a></li>
 <li><a href="https://thenichollsgroup.com/">The Nicholls Group</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Politics" name="category" value="4" />
+<input type="radio" id="cat-Politics" name="category" value="3" />
 <ol class="bookmarks">
 <li><a href="https://en.wikipedia.org/wiki/Political_geography_of_Nineteen_Eighty-Four#/media/File:1984_fictitious_world_map_v2_quad.svg">1984 fictitious world map v2 quad - Political geography of Nineteen Eighty-Four - Wikipedia</a></li>
 </ol>
 
 
-<input type="radio" id="cat-New Testament" name="category" value="5" />
+<input type="radio" id="cat-New Testament" name="category" value="4" />
 <ol class="bookmarks">
 <li><a href="https://lifehopeandtruth.com/bible/10-commandments/adultery-seventh-commandment/">Seventh Commandment: You Shall Not Commit Adultery</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Theology" name="category" value="6" />
+<input type="radio" id="cat-Theology" name="category" value="5" />
 <ol class="bookmarks">
-<li><a href="https://angelicpedia.com/list-fallen-angels/">List of Fallen Angels - Angelicpedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/List_of_demons_in_the_Ars_Goetia">List of demons in the Ars Goetia - Wikipedia</a></li>
-<li><a href="https://abn.churchofjesuschrist.org/study/manual/old-testament-student-manual-genesis-2-samuel/enrichment-section-e-the-problem-of-large-numbers-in-the-old-testament?lang=eng&adobe_mc_ref=https://www.churchofjesuschrist.org/study/manual/old-testament-student-manual-genesis-2-samuel/enrichment-section-e-the-problem-of-large-numbers-in-the-old-testament?lang=eng&adobe_mc_sdid=SDID=2739B19F2FF76288-36FB90AAD8926797|MCORGID=66C5485451E56AAE0A490D45%40AdobeOrg|TS=1663730079">Enrichment Section E: The Problem of Large Numbers in the Old Testament</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Category:Fallen_angels">Category:Fallen angels - Wikipedia</a></li>
 </ol>
 </ol>
@@ -576,158 +560,7 @@
       const container = document.getElementById("visualization")
 
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([
-  {
-    "id": 28411,
-    "content": "Search:   <a target=\"_blank\" href=\"https://www.startpage.com/sp/search\">link &nearr;</a>",
-    "start": "2022-09-21T23:10:51.090Z"
-  },
-  {
-    "id": 43660,
-    "content": "10 Commandments List  <a target=\"_blank\" href=\"https://lifehopeandtruth.com/bible/10-commandments/the-ten-commandments/10-commandments-list/\">link &nearr;</a>",
-    "start": "2022-09-22T01:22:21.453Z"
-  },
-  {
-    "id": 44120,
-    "content": "Search: 10 commandments  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=10+commandments&segment=startpage.brave\">link &nearr;</a>",
-    "start": "2022-09-22T01:22:17.465Z"
-  },
-  {
-    "id": 44517,
-    "content": "Google Calendar - Wednesday, September 21, 2022, today  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/day\">link &nearr;</a>",
-    "start": "2022-09-22T01:42:49.548Z"
-  },
-  {
-    "id": 48039,
-    "content": "Sbspk - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1al6KX7IcslIpNpCyQ3LyGljdNDRMoCAgDNsFVzY7vg4/edit\">link &nearr;</a>",
-    "start": "2022-09-22T01:57:43.847Z"
-  },
-  {
-    "id": 48163,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/MzVrNW9uamVuYzVrZjBwOWY5bWVkYWs2NG8gbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
-    "start": "2022-09-21T19:30:44.964Z"
-  },
-  {
-    "id": 48164,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/MmNwODhna2szbmIyaGI1OW1lamNwZzF0cHMgcnFxaHEzbWU3Z2dnNDdjaGFmaG1lbzZtM3NAZw\">link &nearr;</a>",
-    "start": "2022-09-21T19:49:51.613Z"
-  },
-  {
-    "id": 48165,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/NXUzbXZoYzN2YWlrZjljZm40a25ybnVndjEgbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
-    "start": "2022-09-21T19:57:16.261Z"
-  },
-  {
-    "id": 48166,
-    "content": "Search: spread herpes to animals  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=spread+herpes+to+animals&segment=startpage.brave\">link &nearr;</a>",
-    "start": "2022-09-21T22:28:28.350Z"
-  },
-  {
-    "id": 48167,
-    "content": "Diseases That Can Spread Between Animals and People | Healthy Pets, Healthy People | CDC  <a target=\"_blank\" href=\"https://www.cdc.gov/healthypets/diseases/index.html\">link &nearr;</a>",
-    "start": "2022-09-21T22:28:44.692Z"
-  },
-  {
-    "id": 48168,
-    "content": "Can humans pass viruses to animals? | BBC Science Focus Magazine  <a target=\"_blank\" href=\"https://www.sciencefocus.com/nature/can-humans-pass-viruses-to-animals/\">link &nearr;</a>",
-    "start": "2022-09-21T22:29:51.650Z"
-  },
-  {
-    "id": 48169,
-    "content": "Transmission of SARS-CoV-2 from humans to animals and potential host adaptation  <a target=\"_blank\" href=\"https://www.nature.com/articles/s41467-022-30698-6\">link &nearr;</a>",
-    "start": "2022-09-21T22:31:08.964Z"
-  },
-  {
-    "id": 48170,
-    "content": "Transmission of SARS-CoV-2 from humans to animals and potential host adaptation  <a target=\"_blank\" href=\"https://idp.nature.com/authorize?response_type=cookie&client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41467-022-30698-6\">link &nearr;</a>",
-    "start": "2022-09-21T22:31:08.964Z"
-  },
-  {
-    "id": 48171,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/MGo5Y3BjY2Z0bnR0Nm5lcnNkMTE5bHBsdm4gbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
-    "start": "2022-09-21T23:02:55.676Z"
-  },
-  {
-    "id": 48172,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/M2E3bGd2a2I4dGtpNGVpbG84MmhscW9icTcgbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
-    "start": "2022-09-21T23:05:56.819Z"
-  },
-  {
-    "id": 48173,
-    "content": "What is the purpose of the thousand-year reign of Christ? | GotQuestions.org  <a target=\"_blank\" href=\"https://www.gotquestions.org/thousand-year-reign-Christ.html\">link &nearr;</a>",
-    "start": "2022-09-21T23:07:01.746Z"
-  },
-  {
-    "id": 48174,
-    "content": "Category:Fallen angels - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Category:Fallen_angels\">link &nearr;</a>",
-    "start": "2022-09-21T23:07:57.729Z"
-  },
-  {
-    "id": 48175,
-    "content": "User talk:24.156.2.102 - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/User_talk:24.156.2.102\">link &nearr;</a>",
-    "start": "2022-09-21T23:08:21.652Z"
-  },
-  {
-    "id": 48176,
-    "content": "Search: nichols group  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=nichols+group&segment=startpage.brave\">link &nearr;</a>",
-    "start": "2022-09-21T23:10:43.922Z"
-  },
-  {
-    "id": 48177,
-    "content": "The Nicholls Group  <a target=\"_blank\" href=\"https://thenichollsgroup.com/\">link &nearr;</a>",
-    "start": "2022-09-21T23:10:56.120Z"
-  },
-  {
-    "id": 48178,
-    "content": "User:FlightTime - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/User:FlightTime\">link &nearr;</a>",
-    "start": "2022-09-21T23:12:35.595Z"
-  },
-  {
-    "id": 48179,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/NmNvMDZ1amxuZnZuaTEzMDBobnA4MGRtbnIgbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
-    "start": "2022-09-21T23:31:41.417Z"
-  },
-  {
-    "id": 48180,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/NGVwczJsM3M0ZXVrYXMyc3VlZzY0aXIzcTMgbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
-    "start": "2022-09-21T23:40:28.202Z"
-  },
-  {
-    "id": 48181,
-    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/Nzc2NzFmdmM1MW5namlyMHRjNmo2OTVzdWsgbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
-    "start": "2022-09-22T00:42:23.594Z"
-  },
-  {
-    "id": 48182,
-    "content": "Search: carrots for eye health  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=carrots+for+eye+health&segment=startpage.brave\">link &nearr;</a>",
-    "start": "2022-09-22T01:12:39.337Z"
-  },
-  {
-    "id": 48183,
-    "content": "Carrots & Eye Health: Myth or Fact?  <a target=\"_blank\" href=\"https://healthcare.utah.edu/healthfeed/postings/2020/02/carrots-eye-health-myth.php\">link &nearr;</a>",
-    "start": "2022-09-22T01:12:45.309Z"
-  },
-  {
-    "id": 48184,
-    "content": "Search: manager at ulta  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=manager+at+ulta&segment=startpage.brave\">link &nearr;</a>",
-    "start": "2022-09-22T01:42:34.307Z"
-  },
-  {
-    "id": 48185,
-    "content": "Working as a Manager at Ulta: 153 Reviews | Indeed.com  <a target=\"_blank\" href=\"https://www.indeed.com/cmp/Ulta/reviews?fcountry=ALL&fjobtitle=Manager\">link &nearr;</a>",
-    "start": "2022-09-22T01:42:39.287Z"
-  },
-  {
-    "id": 48186,
-    "content": "General Manager Salaries in the United States for Ulta | Indeed.com  <a target=\"_blank\" href=\"https://www.indeed.com/cmp/Ulta/salaries/General-Manager\">link &nearr;</a>",
-    "start": "2022-09-22T01:45:56.786Z"
-  },
-  {
-    "id": 48187,
-    "content": "General Manager Salaries in Flagstaff for Ulta | Indeed.com  <a target=\"_blank\" href=\"https://www.indeed.com/cmp/Ulta/salaries/General-Manager/Flagstaff-AZ\">link &nearr;</a>",
-    "start": "2022-09-22T01:46:02.863Z"
-  }
-])
+      const items = new vis.DataSet([])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
