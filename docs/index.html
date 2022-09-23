@@ -93,10 +93,7 @@
     <h2>Live Development</h2>
     
   <ol class="windows">
-  <li class=""><a href="#loginwindow">
-		<label for="win-loginwindow">loginwindow</a></label>
-		</li>
-<li class=""><a href="#Finder">
+  <li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
 		</li>
 <li class=""><a href="#Code">
@@ -503,7 +500,48 @@
       const container = document.getElementById("visualization")
 
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
+      const items = new vis.DataSet([
+  {
+    "id": 42688,
+    "content": "Google Calendar - Friday, September 23, 2022, today  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r\">link &nearr;</a>",
+    "start": "2022-09-23T17:21:07.000Z"
+  },
+  {
+    "id": 43753,
+    "content": "The Orb - Little Fluffy Clouds [Ft.] Rickie Lee Jones [HD Video] - YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=CdMs7eqMvNg\">link &nearr;</a>",
+    "start": "2022-09-23T17:31:24.657Z"
+  },
+  {
+    "id": 47310,
+    "content": "Muse - Madness (Lyric Video) - YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=Mq9zhpBweDk\">link &nearr;</a>",
+    "start": "2022-09-23T17:31:24.660Z"
+  },
+  {
+    "id": 48188,
+    "content": "Google Calendar - Search  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/search?q=shit\">link &nearr;</a>",
+    "start": "2022-09-23T17:35:39.768Z"
+  },
+  {
+    "id": 48189,
+    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/NzF0djg2MGhuN2xwc2Ezb3FoZTBzMDZoZDggcDQ2ODVmNmF0OGNjY3Rlbm9jamxxZ25xc3NAZw\">link &nearr;</a>",
+    "start": "2022-09-23T17:19:15.796Z"
+  },
+  {
+    "id": 48190,
+    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/M3FrOHZzcWQzdTBnY29xdmE3cjk4cmI1bmggbWVnYW1pbmRicmlhbkBt\">link &nearr;</a>",
+    "start": "2022-09-23T17:19:43.712Z"
+  },
+  {
+    "id": 48191,
+    "content": "Google Calendar - Event details  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/eventedit/NDE5dWZhcHNmbDhkbHNwbmRuOTE1am1qMG8gcnFxaHEzbWU3Z2dnNDdjaGFmaG1lbzZtM3NAZw\">link &nearr;</a>",
+    "start": "2022-09-23T17:35:31.415Z"
+  },
+  {
+    "id": 48192,
+    "content": "American Pie - YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=ngDJIjbAvz4\">link &nearr;</a>",
+    "start": "2022-09-23T17:36:05.536Z"
+  }
+])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
