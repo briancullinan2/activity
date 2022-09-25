@@ -96,6 +96,9 @@
   <li class=""><a href="#loginwindow">
 		<label for="win-loginwindow">loginwindow</a></label>
 		</li>
+<li class=""><a href="#Location Menu">
+		<label for="win-Location Menu">Location Menu</a></label>
+		</li>
 <li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
 		</li>
@@ -134,12 +137,6 @@
 <li><a href="#Engineering">
     <label for="cat-Engineering">
     Architecture/Engineering</a></label></li>
-<li><a href="#Physical Science">
-    <label for="cat-Physical Science">
-    Physical Science</a></label></li>
-<li><a href="#Theology">
-    <label for="cat-Theology">
-    Theology</a></label></li>
 </ol>
 
 
@@ -151,19 +148,6 @@
 <li><a href="https://www.darpa.mil/news-events/2015-01-13">Counting Photons…How Low Can You Go?</a></li>
 <li><a href="https://www.darpa.mil/news-events/2022-03-02">New Cognitive Science Tool to Shed Light on Mental Health</a></li>
 <li><a href="https://www.praise.com/blog/bright-ones-magnetism-of-god">The Magnetism of God – Praise.com</a></li>
-</ol>
-
-
-<input type="radio" id="cat-Physical Science" name="category" value="1" />
-<ol class="bookmarks">
-<li><a href="https://public.nrao.edu/ask/how-do-astronomers-measure-the-size-of-the-universe/">How Do Astronomers Measure the Size of the Universe? – National Radio Astronomy Observatory</a></li>
-</ol>
-
-
-<input type="radio" id="cat-Theology" name="category" value="2" />
-<ol class="bookmarks">
-<li><a href="https://www.focusonthefamily.com/family-qa/the-origin-of-god/">The Origin of God - Focus on the Family</a></li>
-<li><a href="https://www.biblestudytools.com/bible-study/topical-studies/where-did-god-come-from.html">Where Did God Come From? How Did He Come into Existence?</a></li>
 </ol>
 </ol>
   </div>
@@ -533,48 +517,7 @@
       const container = document.getElementById("visualization")
 
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([
-  {
-    "id": 18832,
-    "content": "Inbox (15,305) - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://gmail.com/\">link &nearr;</a>",
-    "start": "2022-09-25T01:44:37.328Z"
-  },
-  {
-    "id": 18833,
-    "content": "Inbox (15,305) - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://www.google.com/gmail/\">link &nearr;</a>",
-    "start": "2022-09-25T01:44:37.328Z"
-  },
-  {
-    "id": 43753,
-    "content": "The Orb - Little Fluffy Clouds [Ft.] Rickie Lee Jones [HD Video] - YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=CdMs7eqMvNg\">link &nearr;</a>",
-    "start": "2022-09-25T01:32:18.665Z"
-  },
-  {
-    "id": 46015,
-    "content": "Search: fluffy clouds orb  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=fluffy+clouds+orb&segment=startpage.brave\">link &nearr;</a>",
-    "start": "2022-09-25T01:32:13.753Z"
-  },
-  {
-    "id": 47991,
-    "content": "I Heard It Through The Grapevine - YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=jCfUxn2VMT8\">link &nearr;</a>",
-    "start": "2022-09-25T00:45:03.589Z"
-  },
-  {
-    "id": 48057,
-    "content": "All She Wants To Do Is Dance - YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=wFBHBSPvZbw\">link &nearr;</a>",
-    "start": "2022-09-25T00:32:13.940Z"
-  },
-  {
-    "id": 48259,
-    "content": "Slow Ride - YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=T4287tw_dwk\">link &nearr;</a>",
-    "start": "2022-09-25T00:36:46.077Z"
-  },
-  {
-    "id": 48260,
-    "content": "BEST OF BOB MARLEY JAMS - YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=7GWyskvmxQA\">link &nearr;</a>",
-    "start": "2022-09-25T01:32:06.258Z"
-  }
-])
+      const items = new vis.DataSet([])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
