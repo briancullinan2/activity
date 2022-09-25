@@ -96,9 +96,6 @@
   <li class=""><a href="#loginwindow">
 		<label for="win-loginwindow">loginwindow</a></label>
 		</li>
-<li class=""><a href="#Location Menu">
-		<label for="win-Location Menu">Location Menu</a></label>
-		</li>
 <li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
 		</li>
@@ -137,6 +134,9 @@
 <li><a href="#Engineering">
     <label for="cat-Engineering">
     Architecture/Engineering</a></label></li>
+<li><a href="#Politics">
+    <label for="cat-Politics">
+    Economics/Politics</a></label></li>
 </ol>
 
 
@@ -148,6 +148,13 @@
 <li><a href="https://www.darpa.mil/news-events/2015-01-13">Counting Photons…How Low Can You Go?</a></li>
 <li><a href="https://www.darpa.mil/news-events/2022-03-02">New Cognitive Science Tool to Shed Light on Mental Health</a></li>
 <li><a href="https://www.praise.com/blog/bright-ones-magnetism-of-god">The Magnetism of God – Praise.com</a></li>
+<li><a href="https://conwaylife.com/wiki/Conway's_Game_of_Life">Conway's Game of Life - LifeWiki</a></li>
+</ol>
+
+
+<input type="radio" id="cat-Politics" name="category" value="1" />
+<ol class="bookmarks">
+<li><a href="https://www.countyoffice.org/flagstaff-arizona-fbi-office-flagstaff-az-f9b/">Flagstaff Arizona FBI Office - Flagstaff, AZ (Address, Phone, and Fax)</a></li>
 </ol>
 </ol>
   </div>
@@ -517,7 +524,18 @@
       const container = document.getElementById("visualization")
 
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
+      const items = new vis.DataSet([
+  {
+    "id": 48262,
+    "content": "Flagstaff Arizona FBI Office - Flagstaff, AZ (Address, Phone, and Fax)  <a target=\"_blank\" href=\"https://www.countyoffice.org/flagstaff-arizona-fbi-office-flagstaff-az-f9b/\">link &nearr;</a>",
+    "start": "2022-09-25T18:08:15.915Z"
+  },
+  {
+    "id": 48263,
+    "content": "Conway's Game of Life - LifeWiki  <a target=\"_blank\" href=\"https://conwaylife.com/wiki/Conway's_Game_of_Life\">link &nearr;</a>",
+    "start": "2022-09-25T18:08:15.917Z"
+  }
+])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
