@@ -98,8 +98,8 @@
     <h2>Live Development</h2>
     
   <ol class="windows">
-  <li class=""><a href="#loginwindow">
-		<label for="win-loginwindow">loginwindow</a></label>
+  <li class=""><a href="#Location Menu">
+		<label for="win-Location Menu">Location Menu</a></label>
 		</li>
 <li class=""><a href="#Activity Monitor">
 		<label for="win-Activity Monitor">Activity Monitor</a></label>
@@ -107,8 +107,14 @@
 <li class=""><a href="#Disk Utility">
 		<label for="win-Disk Utility">Disk Utility</a></label>
 		</li>
-<li class="active"><a href="#Brave Browser">
+<li class=""><a href="#Brave Browser">
 		<label for="win-Brave Browser">Brave Browser</a></label>
+		</li>
+<li class=""><a href="#Finder">
+		<label for="win-Finder">Finder</a></label>
+		</li>
+<li class="active"><a href="#Installer">
+		<label for="win-Installer">Installer</a></label>
 		</li>
 <li class=""><a href="#Opera">
 		<label for="win-Opera">Opera</a></label>
@@ -139,16 +145,27 @@
     <h2>Study Interests</h2>
     
 <ol class="categories">
-<li><a href="#Engineering">
-    <label for="cat-Engineering">
-    Architecture/Engineering</a></label></li>
+<li><a href="#Legal">
+    <label for="cat-Legal">
+    Law/Legal</a></label></li>
+<li><a href="#Movies">
+    <label for="cat-Movies">
+    Movies</a></label></li>
 </ol>
 
 
 
-<input type="radio" id="cat-Engineering" name="category" value="0" />
+<input type="radio" id="cat-Legal" name="category" value="0" />
 <ol class="bookmarks">
-<li><a href="https://www.amazon.com/gp/product/B0971BBYSN/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&th=1">Amazon.com: TP-Link AC750 WiFi Extender (RE220), Covers Up to 1200 Sq.ft and 20 Devices, Up to 750Mbps Dual Band WiFi Range Extender, WiFi Booster to Extend Range of WiFi Internet Connection : Everything Else</a></li>
+<li><a href="https://dmv.ny.gov/registration/power-attorney-vehicle-transactions">New York DMV | Power of Attorney for Vehicle Transactions</a></li>
+</ol>
+
+
+<input type="radio" id="cat-Movies" name="category" value="1" />
+<ol class="bookmarks">
+<li><a href="https://en.m.wikipedia.org/wiki/Flight_of_the_Navigator">Flight of the Navigator - Wikipedia</a></li>
+<li><a href="https://en.m.wikipedia.org/wiki/Time_Bandits">Time Bandits - Wikipedia</a></li>
+<li><a href="https://en.m.wikipedia.org/wiki/The_Circle_(2017_film)">The Circle (2017 film) - Wikipedia</a></li>
 </ol>
 </ol>
   </div>
@@ -522,7 +539,33 @@
       const container = document.getElementById("visualization")
 
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
+      const items = new vis.DataSet([
+  {
+    "id": 43177,
+    "content": "Google Takeout  <a target=\"_blank\" href=\"https://takeout.google.com/\">link &nearr;</a>",
+    "start": "2022-09-30T23:06:33.787Z"
+  },
+  {
+    "id": 45947,
+    "content": "Manage your exports  <a target=\"_blank\" href=\"https://takeout.google.com/settings/takeout/downloads\">link &nearr;</a>",
+    "start": "2022-09-30T23:07:14.622Z"
+  },
+  {
+    "id": 49549,
+    "content": "New York DMV | Power of Attorney for Vehicle Transactions  <a target=\"_blank\" href=\"https://dmv.ny.gov/registration/power-attorney-vehicle-transactions\">link &nearr;</a>",
+    "start": "2022-09-30T22:12:54.359Z"
+  },
+  {
+    "id": 49550,
+    "content": "Search: why does whatsapp make 3 copies of contacts  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=why+does+whatsapp+make+3+copies+of+contacts&segment=startpage.brave\">link &nearr;</a>",
+    "start": "2022-09-30T23:08:44.080Z"
+  },
+  {
+    "id": 49551,
+    "content": "Duplicate contacts after whatsapp installation - Android Forums at AndroidCentral.com  <a target=\"_blank\" href=\"https://forums.androidcentral.com/android-apps/849344-duplicate-contacts-after-whatsapp-installation.html\">link &nearr;</a>",
+    "start": "2022-09-30T23:08:47.470Z"
+  }
+])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
