@@ -107,14 +107,14 @@
 <li class=""><a href="#Disk Utility">
 		<label for="win-Disk Utility">Disk Utility</a></label>
 		</li>
+<li class=""><a href="#Installer">
+		<label for="win-Installer">Installer</a></label>
+		</li>
 <li class=""><a href="#Brave Browser">
 		<label for="win-Brave Browser">Brave Browser</a></label>
 		</li>
-<li class=""><a href="#Finder">
+<li class="active"><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
-		</li>
-<li class="active"><a href="#Installer">
-		<label for="win-Installer">Installer</a></label>
 		</li>
 <li class=""><a href="#Opera">
 		<label for="win-Opera">Opera</a></label>
@@ -145,27 +145,54 @@
     <h2>Study Interests</h2>
     
 <ol class="categories">
+<li><a href="#Quake 3">
+    <label for="cat-Quake 3">
+    Computer Science/Quake 3</a></label></li>
 <li><a href="#Legal">
     <label for="cat-Legal">
     Law/Legal</a></label></li>
 <li><a href="#Movies">
     <label for="cat-Movies">
     Movies</a></label></li>
+<li><a href="#Physical Science">
+    <label for="cat-Physical Science">
+    Physical Science</a></label></li>
+<li><a href="#Psychology">
+    <label for="cat-Psychology">
+    Psychology</a></label></li>
 </ol>
 
 
 
-<input type="radio" id="cat-Legal" name="category" value="0" />
+<input type="radio" id="cat-Quake 3" name="category" value="0" />
+<ol class="bookmarks">
+<li><a href="https://www.rockpapershotgun.com/quake-goes-brutalist-in-a-new-map-pack-thats-all-about-concrete">Quake goes Brutalist in a new map pack that's all about concrete | Rock Paper Shotgun</a></li>
+</ol>
+
+
+<input type="radio" id="cat-Legal" name="category" value="1" />
 <ol class="bookmarks">
 <li><a href="https://dmv.ny.gov/registration/power-attorney-vehicle-transactions">New York DMV | Power of Attorney for Vehicle Transactions</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Movies" name="category" value="1" />
+<input type="radio" id="cat-Movies" name="category" value="2" />
 <ol class="bookmarks">
 <li><a href="https://en.m.wikipedia.org/wiki/Flight_of_the_Navigator">Flight of the Navigator - Wikipedia</a></li>
 <li><a href="https://en.m.wikipedia.org/wiki/Time_Bandits">Time Bandits - Wikipedia</a></li>
 <li><a href="https://en.m.wikipedia.org/wiki/The_Circle_(2017_film)">The Circle (2017 film) - Wikipedia</a></li>
+</ol>
+
+
+<input type="radio" id="cat-Physical Science" name="category" value="3" />
+<ol class="bookmarks">
+<li><a href="https://en.m.wikipedia.org/wiki/Geomagnetic_reversal">Geomagnetic reversal - Wikipedia</a></li>
+</ol>
+
+
+<input type="radio" id="cat-Psychology" name="category" value="4" />
+<ol class="bookmarks">
+<li><a href="https://bigthink.com/neuropsych/great-brain-rewiring-after-age-40/">The brain undergoes a great "rewiring" after age 40 - Big Think</a></li>
 </ol>
 </ol>
   </div>
@@ -539,43 +566,7 @@
       const container = document.getElementById("visualization")
 
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([
-  {
-    "id": 1236,
-    "content": "Google  <a target=\"_blank\" href=\"https://www.google.com/\">link &nearr;</a>",
-    "start": "2022-10-01T01:54:12.968Z"
-  },
-  {
-    "id": 43177,
-    "content": "Google Takeout  <a target=\"_blank\" href=\"https://takeout.google.com/\">link &nearr;</a>",
-    "start": "2022-09-30T23:06:33.787Z"
-  },
-  {
-    "id": 45947,
-    "content": "Manage your exports  <a target=\"_blank\" href=\"https://takeout.google.com/settings/takeout/downloads\">link &nearr;</a>",
-    "start": "2022-09-30T23:07:14.622Z"
-  },
-  {
-    "id": 49356,
-    "content": "CenturyLink Modem Configuration  <a target=\"_blank\" href=\"http://192.168.0.1/\">link &nearr;</a>",
-    "start": "2022-10-01T01:54:08.389Z"
-  },
-  {
-    "id": 49549,
-    "content": "New York DMV | Power of Attorney for Vehicle Transactions  <a target=\"_blank\" href=\"https://dmv.ny.gov/registration/power-attorney-vehicle-transactions\">link &nearr;</a>",
-    "start": "2022-09-30T22:12:54.359Z"
-  },
-  {
-    "id": 49550,
-    "content": "Search: why does whatsapp make 3 copies of contacts  <a target=\"_blank\" href=\"https://www.startpage.com/do/search?q=why+does+whatsapp+make+3+copies+of+contacts&segment=startpage.brave\">link &nearr;</a>",
-    "start": "2022-09-30T23:08:44.080Z"
-  },
-  {
-    "id": 49551,
-    "content": "Duplicate contacts after whatsapp installation - Android Forums at AndroidCentral.com  <a target=\"_blank\" href=\"https://forums.androidcentral.com/android-apps/849344-duplicate-contacts-after-whatsapp-installation.html\">link &nearr;</a>",
-    "start": "2022-09-30T23:08:47.470Z"
-  }
-])
+      const items = new vis.DataSet([])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
