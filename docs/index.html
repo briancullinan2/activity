@@ -98,10 +98,7 @@
     <h2>Live Development</h2>
     
   <ol class="windows">
-  <li class=""><a href="#loginwindow">
-		<label for="win-loginwindow">loginwindow</a></label>
-		</li>
-<li class=""><a href="#Activity Monitor">
+  <li class=""><a href="#Activity Monitor">
 		<label for="win-Activity Monitor">Activity Monitor</a></label>
 		</li>
 <li class=""><a href="#Disk Utility">
@@ -110,11 +107,11 @@
 <li class=""><a href="#Installer">
 		<label for="win-Installer">Installer</a></label>
 		</li>
-<li class=""><a href="#Brave Browser">
-		<label for="win-Brave Browser">Brave Browser</a></label>
-		</li>
-<li class="active"><a href="#Finder">
+<li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
+		</li>
+<li class="active"><a href="#Brave Browser">
+		<label for="win-Brave Browser">Brave Browser</a></label>
 		</li>
 <li class=""><a href="#Opera">
 		<label for="win-Opera">Opera</a></label>
@@ -566,7 +563,48 @@
       const container = document.getElementById("visualization")
 
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
+      const items = new vis.DataSet([
+  {
+    "id": 49565,
+    "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/\">link &nearr;</a>",
+    "start": "2022-10-01T20:58:37.902Z"
+  },
+  {
+    "id": 49567,
+    "content": "Timeline  <a target=\"_blank\" href=\"http://timeline.google.com/\">link &nearr;</a>",
+    "start": "2022-10-01T20:58:37.902Z"
+  },
+  {
+    "id": 49569,
+    "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?pli=1&rapt=AEjHL4PlbF4JhIldMxc3_2WJVO_gzKs5lkcplGzg7iYkxYHMU_EMrVJ2sWdpU1x-YMtDNfoLNRi8Bm4AvAebpVJzNdztlQ9LrQ\">link &nearr;</a>",
+    "start": "2022-10-01T20:58:38.444Z"
+  },
+  {
+    "id": 49570,
+    "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?pli=1&rapt=AEjHL4PlbF4JhIldMxc3_2WJVO_gzKs5lkcplGzg7iYkxYHMU_EMrVJ2sWdpU1x-YMtDNfoLNRi8Bm4AvAebpVJzNdztlQ9LrQ&pb\">link &nearr;</a>",
+    "start": "2022-10-01T20:58:38.740Z"
+  },
+  {
+    "id": 49571,
+    "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?pli=1&rapt=AEjHL4PlbF4JhIldMxc3_2WJVO_gzKs5lkcplGzg7iYkxYHMU_EMrVJ2sWdpU1x-YMtDNfoLNRi8Bm4AvAebpVJzNdztlQ9LrQ&pb=!1m2!3m1!1s2010\">link &nearr;</a>",
+    "start": "2022-10-01T20:58:57.520Z"
+  },
+  {
+    "id": 49572,
+    "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?pli=1&rapt=AEjHL4PlbF4JhIldMxc3_2WJVO_gzKs5lkcplGzg7iYkxYHMU_EMrVJ2sWdpU1x-YMtDNfoLNRi8Bm4AvAebpVJzNdztlQ9LrQ&pb=!1m2!3m1!1s1999\">link &nearr;</a>",
+    "start": "2022-10-01T20:59:07.403Z"
+  },
+  {
+    "id": 49573,
+    "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?pli=1&rapt=AEjHL4PlbF4JhIldMxc3_2WJVO_gzKs5lkcplGzg7iYkxYHMU_EMrVJ2sWdpU1x-YMtDNfoLNRi8Bm4AvAebpVJzNdztlQ9LrQ&pb=!1m2!2m1!1s1999-10\">link &nearr;</a>",
+    "start": "2022-10-01T20:59:11.284Z"
+  },
+  {
+    "id": 49574,
+    "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?pli=1&rapt=AEjHL4PlbF4JhIldMxc3_2WJVO_gzKs5lkcplGzg7iYkxYHMU_EMrVJ2sWdpU1x-YMtDNfoLNRi8Bm4AvAebpVJzNdztlQ9LrQ&pb=!1m2!1m1!1s1999-10-15\">link &nearr;</a>",
+    "start": "2022-10-01T20:59:17.567Z"
+  }
+])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
