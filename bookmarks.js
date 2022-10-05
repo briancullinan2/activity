@@ -1,8 +1,6 @@
 
 const fs = require('fs')
 const path = require('path')
-const JSONStream = require('JSONStream')
-const { Readable } = require('stream')
 const { decryptFile, chromeDtToDate } = require('./utilities.js')
 
 // TODO: import from bookmarks.html or from database, copy code from jupyter_ops
