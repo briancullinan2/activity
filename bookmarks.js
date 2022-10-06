@@ -65,8 +65,8 @@ function recursiveGroup(root, obj, book) {
 
 function parseBookmarks() {
 	let decryptedBookmarks = decryptBookmarks()
-	console.log(decryptedBookmarks)
 	let root = JSON.parse(decryptedBookmarks).roots.bookmark_bar.children
+	console.log(root)
 	let bookmarks = root.reduce(recursiveGroup.bind(null, ''), {})
 
 	// from this verified structure, list newest additions
