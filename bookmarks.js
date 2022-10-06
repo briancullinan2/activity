@@ -83,7 +83,6 @@ function parseBookmarks() {
 		}
 		return list
 	}, [])
-	console.log(flattened)
 
 	return flattened
 }
