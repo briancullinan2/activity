@@ -65,6 +65,7 @@ function recursiveGroup(root, obj, book) {
 
 function parseBookmarks() {
 	let decryptedBookmarks = decryptBookmarks()
+	console.log(decryptBookmarks)
 	let root = JSON.parse(decryptedBookmarks).roots.bookmark_bar.children
 	let bookmarks = root.reduce(recursiveGroup.bind(null, ''), {})
 
