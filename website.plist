@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>website</string>
+	<key>UserName</key>
+	<string>briancullinan</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>sh</string>
+		<string>-i</string>
+		<string>-c</string>
+		<string>cd /Users/briancullinan/activity &amp;&amp; /usr/local/bin/node -e "require('./index.js').renderIndex()" &amp;&amp; git add -A &amp;&amp; git commit -m \"auto-update\" &amp;&amp; git push</string>
+	</array>
+	<key>StartInterval</key>
+	<integer>3600</integer>
+	<key>WatchPaths</key>
+	<array>
+		<string>/Users/briancullinan/activity/docs/index.html</string>
+	</array>
+</dict>
+</plist>
