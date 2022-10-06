@@ -13,5 +13,27 @@ A resume / poll style list of what I am currently working on.
 
 5) better blog interface and cleaning up thoughts and design
 
+## Build:
+
+```
+make
+```
+
+
+## Install:
+
+```
+launchctl load /Library/LaunchAgents/website.plist
+```
+
+```
+sudo launchctl bootstrap gui/<uid> /Library/LaunchAgents/website.plist
+```
+
+```
+launchctl start website
+```
+
+
 
 
