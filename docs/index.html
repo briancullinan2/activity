@@ -117,26 +117,23 @@
 <li class=""><a href="#Keyboard Setup Assistant">
 		<label for="win-Keyboard Setup Assistant">Keyboard Setup Assistant</a></label>
 		</li>
+<li class=""><a href="#Finder">
+		<label for="win-Finder">Finder</a></label>
+		</li>
 <li class=""><a href="#Code">
 		<label for="win-Code">Code</a></label>
 		</li>
-<li class=""><a href="#Google Chrome">
+<li class="active"><a href="#Google Chrome">
 		<label for="win-Google Chrome">Google Chrome</a></label>
-		</li>
-<li class="active"><a href="#Finder">
-		<label for="win-Finder">Finder</a></label>
-		</li>
-<li class=""><a href="#OBS Studio">
-		<label for="win-OBS Studio">OBS Studio</a></label>
 		</li>
 <li class=""><a href="#Terminal">
 		<label for="win-Terminal">Terminal</a></label>
 		</li>
-<li class=""><a href="#TextEdit">
-		<label for="win-TextEdit">TextEdit</a></label>
-		</li>
 <li class=""><a href="#Steam">
 		<label for="win-Steam">Steam</a></label>
+		</li>
+<li class=""><a href="#OBS Studio">
+		<label for="win-OBS Studio">OBS Studio</a></label>
 		</li>
 <li class=""><a href="#universalAccessAuthWarn">
 		<label for="win-universalAccessAuthWarn">universalAccessAuthWarn</a></label>
@@ -551,7 +548,13 @@
       const container = document.getElementById("visualization")
 
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
+      const items = new vis.DataSet([
+  {
+    "id": 9167,
+    "content": "Bookmarks to PDF  <a target=\"_blank\" href=\"http://127.0.0.1:8080/\">link &nearr;</a>",
+    "start": "2022-10-07T16:49:15.968Z"
+  }
+])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
