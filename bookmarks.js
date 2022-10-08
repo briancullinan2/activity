@@ -67,9 +67,9 @@ function parseBookmarks() {
 	let decryptedBookmarks = JSON.parse(decryptBookmarks()).roots
 	let root = decryptedBookmarks.bookmark_bar.children
 	console.log(decryptedBookmarks)
-	if(root.length == 0) {
-		root = decryptedBookmarks.other.children
-	}
+	//if(root.length == 0) {
+	root = root.concat(decryptedBookmarks.other.children)
+	//}
 	let bookmarks = root.reduce(recursiveGroup.bind(null, ''), {})
 
 	// from this verified structure, list newest additions
