@@ -75,7 +75,7 @@ function parseBookmarks() {
 
 		return list
 	}).bind(null, ''), [])
-	console.log(bookmarks)
+	//console.log(bookmarks)
 
 	return bookmarks
 }
