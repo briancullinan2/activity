@@ -69,7 +69,6 @@ function parseBookmarks() {
 
 		return list
 	}).bind(null, ''), [])
-	//console.log(bookmarks)
 
 	return bookmarks
 }
