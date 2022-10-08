@@ -124,6 +124,23 @@ input:checked+ol.brainstorm {
   display: block;
 }
 
+ol.bookmarks li,
+ul.bookmarks li {
+  padding: 5px;
+}
+
+ol.bookmarks a,
+ul.bookmarks a {
+  color: white;
+  text-decoration: none;
+}
+
+ol.bookmarks a:hover,
+ul.bookmarks a:hover {
+  text-decoration: underline;
+}
+
+
 input[name="federal"]:checked ~ * label[for="federal"] {
   color: #226;
   background-color: white;

@@ -48,6 +48,9 @@ function decryptBookmarks() {
 function recursiveGroup(root, obj, book) {
 	if (typeof book.children != 'undefined') {
 		let groupName = book.name
+		if(groupName == 'Hinduism') {
+			console.log(book.name)
+		}
 		let recursiveFunc = recursiveGroup.bind(null, (root.includes('Other Bookmarks') ? '' 
 				: (root && root.length > 0 ? (root + '/') : '')) + book.name)
 		let children = book.children.reduce(recursiveFunc, {})
