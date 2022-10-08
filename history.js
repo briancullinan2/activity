@@ -46,7 +46,7 @@ function getHistory() {
 		readonly: true,
 		fileMustExist: true,
 	})
-	const today = Math.floor(Date.now() / 60 / 60 / 24 / 3) * 60 * 60 * 24 * 3
+	const today = Math.floor(Date.now() / 60 / 60 / 24 / 4) * 60 * 60 * 24 * 4
 	// reverse of chromeDtToDate
 	const todayOffset = (today - BASE_DATE) * 1000
 
