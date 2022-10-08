@@ -87,12 +87,14 @@
       <br />
       <br />
       <a class="nowButton" target="_blank"
-        href="https://calendar.google.com/calendar/u/0?cid=NWM2MjU1YTg5OTYxN2QwNGJhNDU5M2VmNjRlYjRlMDNkNzRiYWE3NGY2ZDMyYTQ1ZTAxMzdiYTJhYmZlMGE0NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t">General Orders</a>
+        href="https://calendar.google.com/calendar/u/0?cid=NWM2MjU1YTg5OTYxN2QwNGJhNDU5M2VmNjRlYjRlMDNkNzRiYWE3NGY2ZDMyYTQ1ZTAxMzdiYTJhYmZlMGE0NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t">General
+        Orders</a>
       <br />
       <br />
       <a class="nowButton" target="_blank"
-        href="https://calendar.google.com/calendar/u/0?cid=NDkxNGY4ODI3MWM5NDA2ZDQ2MzZkNTEyNTA5YTQwOTE3MDc5YTgwODk3YTlmZTA5YTE3NDE0ZDA4MTU0NWE0Y0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">Robot Training</a>
-        
+        href="https://calendar.google.com/calendar/u/0?cid=NDkxNGY4ODI3MWM5NDA2ZDQ2MzZkNTEyNTA5YTQwOTE3MDc5YTgwODk3YTlmZTA5YTE3NDE0ZDA4MTU0NWE0Y0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">Robot
+        Training</a>
+
     </div>
   </div>
 
@@ -498,6 +500,10 @@
         stack: true,
         moment: function (date) {
           return vis.moment(date);
+        },
+        rollingMode: {
+          follow: true,
+          offset: 0.5
         }
       }
       // Create a Timeline
