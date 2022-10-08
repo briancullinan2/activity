@@ -45,26 +45,6 @@ function decryptBookmarks() {
 	return decryptedBookmarks
 }
 
-/*
-function recursiveGroup(root, obj, book) {
-	if (typeof book.children != 'undefined') {
-		let groupName = book.name
-		let recursiveFunc = recursiveGroup.bind(null, (root.includes('Other Bookmarks') ? '' 
-				: (root && root.length > 0 ? (root + '/') : '')) + book.name)
-		let children = book.children.reduce(recursiveFunc, obj)
-		if (typeof obj[groupName] == 'undefined') {
-			obj[groupName] = {}
-		}
-		Object.assign(obj[groupName], children)
-	} else {
-		book.folder = root
-		book.time_usec = parseInt(book.date_added + ''),
-			book.date = chromeDtToDate(book.time_usec)
-		obj[book.guid] = book
-	}
-	return obj
-}
-*/
 
 function parseBookmarks() {
 	let decryptedBookmarks = JSON.parse(decryptBookmarks()).roots
@@ -73,16 +53,28 @@ function parseBookmarks() {
 	//if(root.length == 0) {
 	root = root.concat(decryptedBookmarks.other.children)
 	//}
-	let bookmarks = root.reduce((function recursiveGroup(root, obj, book) {
-		if(typeof book.children == 'undefined')
-		console.log(book)
-		return obj
-	}).bind(null, ''), {})
 
 	// from this verified structure, list newest additions
-	let flattened = Object.values(bookmarks).flat(1)
-	console.log(flattened)
-	return flattened
+	let bookmarks = root.reduce((function recursiveGroup(root, list, book) {
+		let folder = root.includes('Other Bookmarks')
+			? ''
+			: (root && root.length > 0
+				? (root + '/')
+				: '')
+
+		if (typeof book.children != 'undefined') {
+			for (let i = 0; i < book.children.length; i++) {
+				book.children[i].folder = folder
+				book.children[i].time_usec = parseInt(book.children[i].date_added + '')
+				book.children[i].date = chromeDtToDate(book.children[i].time_usec)
+				list.push(book.children[i])
+			}
+		}
+
+		return list
+	}).bind(null, ''), [])
+
+	return bookmarks
 }
 
 // TODO: make an html page out of categories
