@@ -56,11 +56,7 @@ function parseBookmarks() {
 
 	// from this verified structure, list newest additions
 	let bookmarks = root.reduce((function recursiveGroup(root, list, book) {
-		let folder = root.includes('Other Bookmarks')
-			? ''
-			: (root && root.length > 0
-				? (root + '/')
-				: '')
+		let folder = root
 
 		if (typeof book.children != 'undefined') {
 			for (let i = 0; i < book.children.length; i++) {
