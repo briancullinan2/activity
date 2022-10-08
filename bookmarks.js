@@ -69,12 +69,14 @@ function parseBookmarks() {
 				book.children[i].date = chromeDtToDate(book.children[i].time_usec)
 				list.push(book.children[i])
 			}
+		} else {
+			console.log(book)
 		}
 
 		return list
 	}).bind(null, ''), [])
 	console.log(bookmarks)
-	
+
 	return bookmarks
 }
 
