@@ -48,7 +48,8 @@ function decryptBookmarks() {
 function recursiveGroup(root, obj, book) {
 	if (typeof book.children != 'undefined') {
 		let groupName = book.name
-		let recursiveFunc = recursiveGroup.bind(null, (root.includes('Other Bookmarks') ? '' : (root + '/')) + book.name)
+		let recursiveFunc = recursiveGroup.bind(null, (root.includes('Other Bookmarks') ? '' 
+				: (root && root.length > 0 ? (root + '/') : '')) + book.name)
 		let children = book.children.reduce(recursiveFunc, {})
 		if (typeof obj[groupName] == 'undefined') {
 			obj[groupName] = {}
@@ -66,7 +67,7 @@ function recursiveGroup(root, obj, book) {
 function parseBookmarks() {
 	let decryptedBookmarks = JSON.parse(decryptBookmarks()).roots
 	let root = decryptedBookmarks.bookmark_bar.children
-	console.log(decryptedBookmarks)
+	//console.log(decryptedBookmarks)
 	//if(root.length == 0) {
 	root = root.concat(decryptedBookmarks.other.children)
 	//}
