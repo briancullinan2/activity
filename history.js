@@ -10,7 +10,7 @@ const sqlite3 = require('better-sqlite3');
 const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
 
 const BASE_DATE_STR = "1601-01-01T00:00:00+0000";
-const BASE_DATE = new Date(Date.parse(BASE_DATE_STR)).getTime()
+const BASE_DATE = new Date(Date.parse(BASE_DATE_STR))
 const TIME_ZONE = (new Date).getTimezoneOffset()
 
 function findHistoryFile() {
@@ -49,8 +49,8 @@ function getHistory() {
 	})
 
 	// reverse of chromeDtToDate
-	const todayOffset = (Date.now() - BASE_DATE) * 1000
-	console.log(new Date(1601, 0, 1, 0, 0, 0, 0))
+	const todayOffset = (Date.now() - BASE_DATE.getTime()) * 1000
+	console.log(BASE_DATE)
 	const results = db.prepare('SELECT * FROM urls WHERE last_visit_time > ?').all(todayOffset)
 	//console.log(results)
 	return results
@@ -80,7 +80,7 @@ function listHistory() {
 		return { 
 			id: entry.id, 
 			content: entry.title.substring(0, 100) + `  <a target="_blank" href="${entry.url}">link &nearr;</a>`, 
-			start: new Date((entry.last_visit_time / 1000 + BASE_DATE - TIME_ZONE * 60 * 1000))
+			start: new Date((entry.last_visit_time / 1000 + BASE_DATE.getTime() - TIME_ZONE * 60 * 1000))
 		}
 	}), null, 2)
 }
