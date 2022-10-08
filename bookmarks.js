@@ -45,19 +45,17 @@ function decryptBookmarks() {
 	return decryptedBookmarks
 }
 
+/*
 function recursiveGroup(root, obj, book) {
 	if (typeof book.children != 'undefined') {
 		let groupName = book.name
 		let recursiveFunc = recursiveGroup.bind(null, (root.includes('Other Bookmarks') ? '' 
 				: (root && root.length > 0 ? (root + '/') : '')) + book.name)
-		let children = book.children.reduce(recursiveFunc, {})
+		let children = book.children.reduce(recursiveFunc, obj)
 		if (typeof obj[groupName] == 'undefined') {
 			obj[groupName] = {}
 		}
 		Object.assign(obj[groupName], children)
-		if(groupName == 'Hinduism') {
-			console.log(obj[groupName])
-		}
 	} else {
 		book.folder = root
 		book.time_usec = parseInt(book.date_added + ''),
@@ -66,6 +64,7 @@ function recursiveGroup(root, obj, book) {
 	}
 	return obj
 }
+*/
 
 function parseBookmarks() {
 	let decryptedBookmarks = JSON.parse(decryptBookmarks()).roots
@@ -74,21 +73,14 @@ function parseBookmarks() {
 	//if(root.length == 0) {
 	root = root.concat(decryptedBookmarks.other.children)
 	//}
-	let bookmarks = root.reduce(recursiveGroup.bind(null, ''), {})
+	let bookmarks = root.reduce((function recursiveGroup(root, obj, book) {
+		console.log(book)
+		return obj
+	}).bind(null, ''), {})
 
 	// from this verified structure, list newest additions
-	let flattened = Object.values(bookmarks).reduce(function flatten(list, obj) {
-		if (typeof obj.folder != 'undefined') {
-			list.push(obj)
-		} else {
-			let children = Object.values(obj).reduce(flatten, [])
-			for (let i = 0; i < children.length; i++) {
-				list.push(children[i])
-			}
-		}
-		return list
-	}, [])
-
+	let flattened = Object.values(bookmarks).flat(1)
+	console.log(flattened)
 	return flattened
 }
 
