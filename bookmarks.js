@@ -76,7 +76,10 @@ function parseBookmarks() {
 				list.push(book.children[i])
 			}
 		} else {
-			console.log(book)
+			book.folder = folder
+			book.time_usec = parseInt(book.date_added + '')
+			book.date = chromeDtToDate(book.time_usec)
+			list.push(book)
 		}
 
 		return list
