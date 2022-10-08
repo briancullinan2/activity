@@ -772,78 +772,7 @@
       const container = document.getElementById("visualization")
 
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([
-  {
-    "id": 9150,
-    "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"https://briancullinan.com/\">link &nearr;</a>",
-    "start": "2022-10-08T20:41:00.319Z"
-  },
-  {
-    "id": 9167,
-    "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"http://127.0.0.1:8080/\">link &nearr;</a>",
-    "start": "2022-10-08T20:41:27.275Z"
-  },
-  {
-    "id": 9428,
-    "content": "Google Calendar - Search  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/search?q=brainstorm&pli=1\">link &nearr;</a>",
-    "start": "2022-10-08T17:20:29.620Z"
-  },
-  {
-    "id": 10953,
-    "content": "Google Calendar - Search  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/search?q=brainstorm&pli=1&autorel=1\">link &nearr;</a>",
-    "start": "2022-10-08T17:20:28.766Z"
-  },
-  {
-    "id": 10954,
-    "content": "unix timestamp - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=unix+timestamp&oq=unix+timestamp&aqs=chrome..69i57.2958j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2022-10-08T20:45:02.455Z"
-  },
-  {
-    "id": 10955,
-    "content": "Unix Time Stamp - Epoch Converter  <a target=\"_blank\" href=\"https://www.unixtimestamp.com/\">link &nearr;</a>",
-    "start": "2022-10-08T20:45:03.753Z"
-  },
-  {
-    "id": 10956,
-    "content": "google history file last_visit_time - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=google+history+file+last_visit_time&oq=google+history+file+last_visit_time&aqs=chrome..69i57j69i64.9262j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2022-10-08T21:13:51.553Z"
-  },
-  {
-    "id": 10957,
-    "content": "Chrome history- datetime format  <a target=\"_blank\" href=\"https://groups.google.com/a/chromium.org/g/chromium-discuss/c/YPMscYNqZFk\">link &nearr;</a>",
-    "start": "2022-10-08T20:50:38.789Z"
-  },
-  {
-    "id": 10958,
-    "content": "edwards demming - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=edwards+demming&oq=edwards+demming&aqs=chrome..69i57.2442j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2022-10-08T20:56:10.265Z"
-  },
-  {
-    "id": 10959,
-    "content": "W. Edwards Deming - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/W._Edwards_Deming\">link &nearr;</a>",
-    "start": "2022-10-08T20:56:12.068Z"
-  },
-  {
-    "id": 10960,
-    "content": "the elves and the shoemaker - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=the+elves+and+the+shoemaker&oq=the+elves+and+the+shoemaker&aqs=chrome..69i57j69i64.4080j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2022-10-08T20:58:02.918Z"
-  },
-  {
-    "id": 10961,
-    "content": "The Elves and the Shoemaker - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/The_Elves_and_the_Shoemaker\">link &nearr;</a>",
-    "start": "2022-10-08T20:58:05.294Z"
-  },
-  {
-    "id": 10962,
-    "content": "google history file last_visit_time 1601 - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=google+history+file+last_visit_time+1601&sxsrf=ALiCzsaw10sPr3kK00stfRXQ7uBRX4zjQA%3A1665260534312&ei=9ttBY9TbEvCkkPIPxYCO4A8&ved=0ahUKEwjUruz0utH6AhVwEkQIHUWAA_wQ4dUDCA4&uact=5&oq=google+history+file+last_visit_time+1601&gs_lcp=Cgdnd3Mtd2l6EAMyBwghEKABEAoyBwghEKABEAoyBwghEKABEAoyBwghEKABEAo6CggAEEcQ1gQQsAM6BQghEKsCOggIIRAeEBYQHToFCCEQoAFKBAhBGABKBAhGGABQ6gVY4hNglxZoAnABeACAAfIBiAGwB5IBBTAuNS4xmAEAoAEByAEIwAEB&sclient=gws-wiz\">link &nearr;</a>",
-    "start": "2022-10-08T21:13:57.574Z"
-  },
-  {
-    "id": 10963,
-    "content": "sqlite - What is the format of Chrome's timestamps? - Stack Overflow  <a target=\"_blank\" href=\"https://stackoverflow.com/questions/20458406/what-is-the-format-of-chromes-timestamps\">link &nearr;</a>",
-    "start": "2022-10-08T21:13:59.483Z"
-  }
-])
+      const items = new vis.DataSet([])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
