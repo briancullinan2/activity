@@ -116,14 +116,14 @@
   <li class=""><a href="#Google Drive">
 		<label for="win-Google Drive">Google Drive</a></label>
 		</li>
+<li class=""><a href="#Finder">
+		<label for="win-Finder">Finder</a></label>
+		</li>
 <li class=""><a href="#Google Chrome">
 		<label for="win-Google Chrome">Google Chrome</a></label>
 		</li>
 <li class=""><a href="#Code">
 		<label for="win-Code">Code</a></label>
-		</li>
-<li class=""><a href="#Finder">
-		<label for="win-Finder">Finder</a></label>
 		</li>
 <li class="active"><a href="#Terminal">
 		<label for="win-Terminal">Terminal</a></label>
@@ -813,7 +813,7 @@
   {
     "id": 9167,
     "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"http://127.0.0.1:8080/\">link &nearr;</a>",
-    "start": "2022-10-08T14:01:44.365Z"
+    "start": "2022-10-08T14:02:36.763Z"
   },
   {
     "id": 9251,
@@ -1521,8 +1521,7 @@
         maxHeight: '100%',
         stack: true,
         moment: function (date) {
-          debugger
-          return vis.moment(date);
+          return vis.moment(date + timezone * 1000);
         },
         rollingMode: {
           follow: true,

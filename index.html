@@ -499,8 +499,7 @@
         maxHeight: '100%',
         stack: true,
         moment: function (date) {
-          debugger
-          return vis.moment(date);
+          return vis.moment(date + timezone * 1000);
         },
         rollingMode: {
           follow: true,
