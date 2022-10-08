@@ -52,7 +52,7 @@ function getHistory() {
 	const todayOffset = (BASE_DATE + today) * 1000
 
 	const results = db.prepare('SELECT * FROM urls WHERE last_visit_time > ?').all(todayOffset)
-	console.log(results)
+	//console.log(results)
 	return results
 }
 
