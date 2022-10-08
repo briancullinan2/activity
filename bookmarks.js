@@ -48,9 +48,6 @@ function decryptBookmarks() {
 function recursiveGroup(root, obj, book) {
 	if (typeof book.children != 'undefined') {
 		let groupName = book.name
-		if(groupName == 'Hinduism') {
-			console.log(book.children)
-		}
 		let recursiveFunc = recursiveGroup.bind(null, (root.includes('Other Bookmarks') ? '' 
 				: (root && root.length > 0 ? (root + '/') : '')) + book.name)
 		let children = book.children.reduce(recursiveFunc, {})
@@ -95,7 +92,7 @@ function parseBookmarks() {
 // TODO: make an html page out of categories
 function listBookmarks() {
 	let bookmarks = parseBookmarks()
-	let recentlyAdded = bookmarks.filter(book => book.date.getTime() > Date.now() - 96 * 60 * 60 * 1000)
+	let recentlyAdded = bookmarks.filter(book => book.date.getTime() > Date.now() - 4000 * 60 * 60 * 1000)
 	let bookmarkFolders = recentlyAdded.map(book => book.folder).filter((f, i, arr) => arr.indexOf(f) == i)
 	// TODO: a little bit of read-time estimation it looks like a factor of images + words / reading speed
 	// SOURCE: https://www.startpage.com/do/search?q=how+long+does+it+take+to+read+an+article+github
