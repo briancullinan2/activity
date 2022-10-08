@@ -11,7 +11,7 @@ const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPRO
 
 const BASE_DATE_STR = "1601-01-01T00:00:00+0000";
 const BASE_DATE = new Date(Date.parse(BASE_DATE_STR))
-const TIME_ZONE = (new Date).getTimezoneOffset()
+const TIME_ZONE = (new Date).getTimezoneOffset() * 1000
 
 function findHistoryFile() {
 	let workingPaths = []
@@ -79,7 +79,7 @@ function listHistory() {
 		return { 
 			id: entry.id, 
 			content: entry.title.substring(0, 100) + `  <a target="_blank" href="${entry.url}">link &nearr;</a>`, 
-			start: new Date((entry.last_visit_time / 1000 + BASE_DATE.getTime() - TIME_ZONE * 60 * 1000))
+			start: new Date((entry.last_visit_time / 1000 + BASE_DATE.getTime() + TIME_ZONE))
 		}
 	}), null, 2)
 }
