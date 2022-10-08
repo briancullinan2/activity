@@ -49,7 +49,7 @@ function getHistory() {
 	})
 
 	// reverse of chromeDtToDate
-	const todayOffset = (Date.now() - BASE_DATE.getTime()) * 1000 - (60 * 60 * 2 * 24 * 1000000)
+	const todayOffset = (Date.now() - BASE_DATE.getTime()) * 1000 - (60 * 60 * 3 * 24 * 1000000)
 	const results = db.prepare('SELECT * FROM urls WHERE last_visit_time > ?').all(todayOffset)
 	console.log(results)
 	return results
