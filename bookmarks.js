@@ -58,7 +58,7 @@ function parseBookmarks() {
 	let bookmarks = root.reduce((function recursiveGroup(root, list, book) {
 		let folder = root
 		if(book.type == 'folder') {
-			folder += '/' + book.name
+			folder += (folder && folder.length > 0 ? '/' : '') + book.name
 			book.children.forEach(recursiveGroup.bind(null, folder, list))
 		} else {
 			book.folder = folder
