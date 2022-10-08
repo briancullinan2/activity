@@ -54,10 +54,10 @@ function recursiveGroup(root, obj, book) {
 		if (typeof obj[groupName] == 'undefined') {
 			obj[groupName] = {}
 		}
-		if(groupName == 'Hinduism') {
-			console.log(children)
-		}
 		Object.assign(obj[groupName], children)
+		if(groupName == 'Hinduism') {
+			console.log(obj[groupName])
+		}
 	} else {
 		book.folder = root
 		book.time_usec = parseInt(book.date_added + ''),
