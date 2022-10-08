@@ -119,11 +119,11 @@
 <li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
 		</li>
-<li class=""><a href="#Code">
-		<label for="win-Code">Code</a></label>
-		</li>
 <li class=""><a href="#Google Chrome">
 		<label for="win-Google Chrome">Google Chrome</a></label>
+		</li>
+<li class=""><a href="#Code">
+		<label for="win-Code">Code</a></label>
 		</li>
 <li class="active"><a href="#Terminal">
 		<label for="win-Terminal">Terminal</a></label>
@@ -772,7 +772,7 @@
     <script type="text/javascript">
       // DOM element where the Timeline will be attached
       const container = document.getElementById("visualization")
-
+      const timezone = (new Date()).getTimezoneOffset()
       // Create a DataSet (allows two way data-binding)
       const items = new vis.DataSet([
   {
@@ -813,7 +813,7 @@
   {
     "id": 9167,
     "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"http://127.0.0.1:8080/\">link &nearr;</a>",
-    "start": "2022-10-08T13:54:16.115Z"
+    "start": "2022-10-08T13:59:33.076Z"
   },
   {
     "id": 9251,
@@ -849,26 +849,6 @@
     "id": 9302,
     "content": "Brian Cullinan's Blog  <a target=\"_blank\" href=\"file:///Volumes/briancullinan/blog.briancullinan.com/article/miscommunication-is-key.html\">link &nearr;</a>",
     "start": "2022-10-06T14:26:37.676Z"
-  },
-  {
-    "id": 9303,
-    "content": "base url - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=base+url&oq=base+url&aqs=chrome..69i57.1346j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2022-10-06T14:00:44.573Z"
-  },
-  {
-    "id": 9304,
-    "content": "Understand Default URL Pattern  <a target=\"_blank\" href=\"https://www.contentstack.com/docs/developers/create-content-types/understand-default-url-pattern/#:~:text=Base%20URL%3A%20The%20consistent%20part,%2C%20%2Fseo%2Fblog%2Fnew_post\">link &nearr;</a>",
-    "start": "2022-10-06T14:00:43.814Z"
-  },
-  {
-    "id": 9305,
-    "content": "base url html - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=base+url+html&sxsrf=ALiCzsagElV6V0Xtgimu1bmHtA-Z5j2R1g%3A1665090018502&ei=4kE_Y96ZHrqw0PEPvY-CgA8&ved=0ahUKEwjeksnYv8z6AhU6GDQIHb2HAPAQ4dUDCA4&uact=5&oq=base+url+html&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgYIABAeEBYyBggAEB4QFjIGCAAQHhAWMgYIABAeEBYyCAgAEB4QFhAKMggIABAeEBYQCjIGCAAQHhAWMgYIABAeEBYyBggAEB4QFjoKCAAQRxDWBBCwAzoHCAAQsAMQQzoECAAQQ0oECEEYAEoECEYYAFDHA1ieCGD4CWgBcAF4AIAB6gKIAbkIkgEHMC4zLjEuMZgBAKABAcgBCsABAQ&sclient=gws-wiz\">link &nearr;</a>",
-    "start": "2022-10-06T14:00:47.648Z"
-  },
-  {
-    "id": 9306,
-    "content": "HTML base tag  <a target=\"_blank\" href=\"https://www.w3schools.com/tags/tag_base.asp\">link &nearr;</a>",
-    "start": "2022-10-06T14:00:48.656Z"
   },
   {
     "id": 9307,
@@ -1529,6 +1509,16 @@
     "id": 10973,
     "content": "Timeline | interaction | rolling mode Option  <a target=\"_blank\" href=\"https://visjs.github.io/vis-timeline/examples/timeline/interaction/rollingMode.html\">link &nearr;</a>",
     "start": "2022-10-08T13:58:23.706Z"
+  },
+  {
+    "id": 10974,
+    "content": "javascript timezone offset - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=javascript+timezone+offset&oq=javascript+timezone+offset&aqs=chrome..69i57j69i60.4161j0j4&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-10-08T14:00:56.954Z"
+  },
+  {
+    "id": 10975,
+    "content": "Date.prototype.getTimezoneOffset() - JavaScript | MDN  <a target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset\">link &nearr;</a>",
+    "start": "2022-10-08T14:00:58.842Z"
   }
 ])
       // Configuration for the Timeline
@@ -1536,7 +1526,7 @@
         maxHeight: '100%',
         stack: true,
         moment: function (date) {
-          return vis.moment(date);
+          return vis.moment(date + timezone);
         },
         rollingMode: {
           follow: true,

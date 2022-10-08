@@ -491,7 +491,7 @@
     <script type="text/javascript">
       // DOM element where the Timeline will be attached
       const container = document.getElementById("visualization")
-
+      const timezone = (new Date()).getTimezoneOffset()
       // Create a DataSet (allows two way data-binding)
       const items = new vis.DataSet([])
       // Configuration for the Timeline
@@ -499,7 +499,7 @@
         maxHeight: '100%',
         stack: true,
         moment: function (date) {
-          return vis.moment(date);
+          return vis.moment(date + timezone);
         },
         rollingMode: {
           follow: true,
