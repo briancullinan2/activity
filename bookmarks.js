@@ -57,18 +57,9 @@ function parseBookmarks() {
 	// from this verified structure, list newest additions
 	let bookmarks = root.reduce((function recursiveGroup(root, list, book) {
 		let folder = root
-
-		if (typeof book.children != 'undefined') {
-			for (let i = 0; i < book.children.length; i++) {
-				if(book.children[i].type == 'folder') {
-					book.children[i].children.forEach(recursiveGroup.bind(null, folder + '/' + book.children[i].name, list))
-					continue
-				}
-				book.children[i].folder = folder
-				book.children[i].time_usec = parseInt(book.children[i].date_added + '')
-				book.children[i].date = chromeDtToDate(book.children[i].time_usec)
-				list.push(book.children[i])
-			}
+		if(book.type == 'folder') {
+			folder += book.name
+			book.children.forEach(recursiveGroup.bind(null, folder, list))
 		} else {
 			book.folder = folder
 			book.time_usec = parseInt(book.date_added + '')
