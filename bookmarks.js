@@ -74,6 +74,7 @@ function parseBookmarks() {
 	root = root.concat(decryptedBookmarks.other.children)
 	//}
 	let bookmarks = root.reduce((function recursiveGroup(root, obj, book) {
+		if(typeof book.children == 'undefined')
 		console.log(book)
 		return obj
 	}).bind(null, ''), {})
