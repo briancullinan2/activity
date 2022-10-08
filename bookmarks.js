@@ -65,7 +65,7 @@ function parseBookmarks() {
 		if (typeof book.children != 'undefined') {
 			for (let i = 0; i < book.children.length; i++) {
 				if(book.children[i].type == 'folder') {
-					book.children[i].children.forEach(recursiveGroup.bind(null, folder + '/' + book.name, list))
+					book.children[i].children.forEach(recursiveGroup.bind(null, folder + '/' + book.children[i].name, list))
 					continue
 				}
 				book.children[i].folder = folder
