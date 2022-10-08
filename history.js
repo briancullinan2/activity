@@ -9,7 +9,8 @@ const sqlite3 = require('better-sqlite3');
 
 const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
 
-const BASE_DATE = new Date(1601, 0, 0, 0, 0, 0, 0).getTime() // - 60 * 30 * 1000
+const BASE_DATE = new Date(1601, 0, 1, 0, 0, 0, 0).getTime() // - 60 * 30 * 1000
+const UNIX_EPOCH = new Date(1970, 0, 1, 0, 0, 0, 0).getTime() // - 60 * 30 * 1000
 const TIME_ZONE = (new Date).getTimezoneOffset()
 
 function findHistoryFile() {
@@ -46,7 +47,7 @@ function getHistory() {
 		readonly: true,
 		fileMustExist: true,
 	})
-	const today = Math.floor(Date.now() / 60 / 60 / 24 / 4) * 60 * 60 * 24 * 1
+	const today = Math.floor(Date.now() / 60 / 60 / 24 / 4) * 60 * 60 * 24 * 4
 	// reverse of chromeDtToDate
 	console.log((today - BASE_DATE))
 	const todayOffset = (today - BASE_DATE) * 1000
