@@ -62,10 +62,14 @@ function parseBookmarks() {
 			? ''
 			: (root && root.length > 0
 				? (root + '/')
-				: '')
+				: '') + book.name
 
 		if (typeof book.children != 'undefined') {
 			for (let i = 0; i < book.children.length; i++) {
+				if(book.children[i].type == 'folder') {
+					book.children[i].children.forEach(recursiveGroup.bind(null, folder, list))
+					continue
+				}
 				book.children[i].folder = folder
 				book.children[i].time_usec = parseInt(book.children[i].date_added + '')
 				book.children[i].date = chromeDtToDate(book.children[i].time_usec)
