@@ -49,7 +49,7 @@ function recursiveGroup(root, obj, book) {
 	if (typeof book.children != 'undefined') {
 		let groupName = book.name
 		if(groupName == 'Hinduism') {
-			console.log(book.name)
+			console.log(book.children)
 		}
 		let recursiveFunc = recursiveGroup.bind(null, (root.includes('Other Bookmarks') ? '' 
 				: (root && root.length > 0 ? (root + '/') : '')) + book.name)
