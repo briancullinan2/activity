@@ -54,6 +54,9 @@ function recursiveGroup(root, obj, book) {
 		if (typeof obj[groupName] == 'undefined') {
 			obj[groupName] = {}
 		}
+		if(groupName == 'Hinduism') {
+			console.log(children)
+		}
 		Object.assign(obj[groupName], children)
 	} else {
 		book.folder = root
@@ -92,7 +95,7 @@ function parseBookmarks() {
 // TODO: make an html page out of categories
 function listBookmarks() {
 	let bookmarks = parseBookmarks()
-	let recentlyAdded = bookmarks.filter(book => book.date.getTime() > Date.now() - 4000 * 60 * 60 * 1000)
+	let recentlyAdded = bookmarks.filter(book => book.date.getTime() > Date.now() - 96 * 60 * 60 * 1000)
 	let bookmarkFolders = recentlyAdded.map(book => book.folder).filter((f, i, arr) => arr.indexOf(f) == i)
 	// TODO: a little bit of read-time estimation it looks like a factor of images + words / reading speed
 	// SOURCE: https://www.startpage.com/do/search?q=how+long+does+it+take+to+read+an+article+github
