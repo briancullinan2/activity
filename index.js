@@ -25,10 +25,10 @@ function renderIndex() {
 	index = index.substring(0, offset)
 		+ listWindows() + index.substring(offset + bodyTag[0].length, index.length)
 
-	bodyTag = index.match(/vis.DataSet\(\[\]\)/i)
+	bodyTag = index.match(/items = new vis.DataSet\(\[\]\)/i)
 	offset = bodyTag.index
 	index = index.substring(0, offset)
-		+ `vis.DataSet(${listHistory()})` + index.substring(offset + bodyTag[0].length, index.length)
+		+ `items = new vis.DataSet(${listHistory()})` + index.substring(offset + bodyTag[0].length, index.length)
 
 	fs.writeFileSync(path.join(__dirname, 'docs/index.html'), index)
 }
