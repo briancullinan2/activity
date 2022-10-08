@@ -9,8 +9,8 @@ const sqlite3 = require('better-sqlite3');
 
 const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
 
-const BASE_DATE = new Date(1601, 0, 1, 0, 0, 0, 0).getTime() // - 60 * 30 * 1000
-const UNIX_EPOCH = new Date(1970, 0, 1, 0, 0, 0, 0).getTime() // - 60 * 30 * 1000
+const BASE_DATE = new Date(1601, 0, 0, 0, 0, 0, 0).getTime() // - 60 * 30 * 1000
+const UNIX_EPOCH = new Date(1970, 0, 0, 0, 0, 0, 0).getTime() // - 60 * 30 * 1000
 const TIME_ZONE = (new Date).getTimezoneOffset()
 
 function findHistoryFile() {
