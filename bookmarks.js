@@ -54,6 +54,8 @@ function parseBookmarks() {
 	root = root.concat(decryptedBookmarks.other.children)
 	//}
 
+	console.log(decryptedBookmarks)
+
 	// from this verified structure, list newest additions
 	let bookmarks = root.reduce((function recursiveGroup(root, list, book) {
 		let folder = root.includes('Other Bookmarks')
