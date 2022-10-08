@@ -46,11 +46,11 @@ function getHistory() {
 		readonly: true,
 		fileMustExist: true,
 	})
-	const today = Math.floor(Date.now() / 60 / 60 / 4000) * 60 * 60 * 4000
+	const today = Math.floor(Date.now() / 60 / 60 / 96) * 60 * 60
 	// reverse of chromeDtToDate
 	const todayOffset = (today - BASE_DATE) * 1000
 
-	const results = db.prepare('SELECT * FROM urls').all()
+	const results = db.prepare('SELECT * FROM urls WHERE last_visit_time > ?').all(todayOffset)
 	console.log(results)
 	return results
 }
