@@ -5,7 +5,7 @@ let util = require('util');
 
 let calendarList = [], lastCalendar;
 
-function filterCalendar(options) {
+async function filterCalendar(options) {
 	let rexexp = new RegExp(options.calendarId, 'ig');
 	let matches = calendarList
 		.filter(c => c.id == options.calendarId);
@@ -20,10 +20,10 @@ function filterCalendar(options) {
 			+ ' - ' + matches[0].id);
 	}
 	options.calendarId = matches[0].id;
-	return Promise.resolve(options);
+	return options
 }
 
-function correctCalendarId(options) {
+async function correctCalendarId(options) {
 	if (typeof options.calendarId === 'undefined' || options.calendarId === 'primary') {
 		return Promise.resolve(Object.assign(options, {
 			calendarId: 'primary'
@@ -32,16 +32,16 @@ function correctCalendarId(options) {
 	if (calendarList.length > 0) {
 		return filterCalendar(options);
 	}
-	return (calendarList.length == 0
-		? authorize()
-			.then(calendar => util.promisify(calendar.calendarList.list.bind(calendar))())
-		: Promise.resolve(calendarList))
-		.then(r => {
-			calendarList = (r.data || {}).items || [];
-			return filterCalendar(options);
-		})
-		.catch(e => console.log(e))
-};
+	let r
+	if(calendarList.length == 0) {
+		let calendar = authorize()
+		r = util.promisify(calendar.calendarList.list.bind(calendar))()
+	} else {
+		r = calendarList
+	}
+	calendarList = (r.data || {}).items || []
+	return await filterCalendar(options)
+}
 
 // TODO: definitely share brainstorming sessions
 
