@@ -33,19 +33,13 @@ function receiveCode(code, oauth2Client, tokenPath) {
 		})
 }
 
-async function cliFallback(up, authUrl, oauth2Client, tokenPath) {
-	if (up.message.includes('ECONNREFUSED')
-		|| up.message.includes('find module')) {
-		console.log('can\'t authenticate with selenium, waiting for user input.');
-		console.log('Authorize this app by visiting this url:', authUrl);
-		const interface = readline.createInterface(process.stdin, process.stdout);
-		const code = await new Promise(resolve => interface.question(
-			'Enter the code from that page here: ', resolve))
-		interface.close();
-		return receiveCode(code, oauth2Client, tokenPath)
-	} else {
-		throw up;
-	}
+async function cliFallback(authUrl, oauth2Client, tokenPath) {
+	console.log('Authorize this app by visiting this url:', authUrl);
+	const interface = readline.createInterface(process.stdin, process.stdout);
+	const code = await new Promise(resolve => interface.question(
+		'Enter the code from that page here: ', resolve))
+	interface.close();
+	return receiveCode(code, oauth2Client, tokenPath)
 }
 
 async function renewToken(oauth2Client, scopes, tokenPath) {
@@ -53,7 +47,7 @@ async function renewToken(oauth2Client, scopes, tokenPath) {
 		access_type: 'offline',
 		scope: scopes
 	})
-	return cliFallback(up, authUrl, oauth2Client, tokenPath)
+	return cliFallback(authUrl, oauth2Client, tokenPath)
 }
 
 async function authorize(scopes = SCOPES) {
@@ -71,8 +65,7 @@ async function authorize(scopes = SCOPES) {
 		return oauth2Client
 	} catch (up) {
 		// if the token file isn't found start a new auth
-		if (up.message == 'invalid_token'
-			|| up.code === 'ENOENT') {
+		if (up.message == 'invalid_token' || up.code === 'ENOENT') {
 			return renewToken(oauth2Client, scopes, tokenPath);
 		} else {
 			throw up;

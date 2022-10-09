@@ -4,10 +4,11 @@ const { listBookmarks } = require('./bookmarks.js')
 const { listWindows } = require('./windows.js')
 const { listHistory } = require('./history.js')
 const { listProjects } = require('./projects.js')
+const { listCalendar } = require('./calendar.js')
 
 const INDEX = fs.readFileSync('./index.html').toString('utf-8')
 
-function renderIndex() {
+async function renderIndex() {
 	let index = INDEX
 
 	let bodyTag = index.match(/<ol class="heatmaps"[\n\r.^>]*?>/i)
@@ -30,6 +31,11 @@ function renderIndex() {
 	index = index.substring(0, offset)
 		+ `items = new vis.DataSet(${listHistory()})` + index.substring(offset + bodyTag[0].length, index.length)
 
+	bodyTag = index.match(/items2 = new vis.DataSet\(\[\]\)/i)
+	offset = bodyTag.index
+	index = index.substring(0, offset)
+		+ `items2 = new vis.DataSet(${await listCalendar()})` + index.substring(offset + bodyTag[0].length, index.length)
+	
 	fs.writeFileSync(path.join(__dirname, 'docs/index.html'), index)
 }
 

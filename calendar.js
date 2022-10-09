@@ -1,7 +1,9 @@
 
 // TODO: share some thoughts from calendar recordings, maybe a color/emotion or a new calendar for software ideas
-let assert = require('assert');
-let util = require('util');
+const assert = require('assert');
+const util = require('util');
+const {google} = require('googleapis');
+const {authorize} = require('./authorize.js')
 
 let calendarList = [], lastCalendar;
 
@@ -23,6 +25,8 @@ async function filterCalendar(options) {
 	return options
 }
 
+let calendar
+
 async function correctCalendarId(options) {
 	if (typeof options.calendarId === 'undefined' || options.calendarId === 'primary') {
 		return Promise.resolve(Object.assign(options, {
@@ -34,7 +38,10 @@ async function correctCalendarId(options) {
 	}
 	let r
 	if(calendarList.length == 0) {
-		let calendar = authorize()
+		if(!calendar) {
+			let client = authorize()
+			calendar = google.calendar({version: 'v3', auth: client})
+		}
 		r = util.promisify(calendar.calendarList.list.bind(calendar))()
 	} else {
 		r = calendarList
@@ -43,28 +50,41 @@ async function correctCalendarId(options) {
 	return await filterCalendar(options)
 }
 
-// TODO: definitely share brainstorming sessions
 
-function searchCalendar(search, calendar) {
-	if (calendar) {
-		options.calendarId = calendar;
+async function searchCalendar(search, calendarId) {
+	const options = {}
+	if (calendarId) {
+		options.calendarId = calendarId;
 	}
-	let total = 0;
-	return getOauthClient(options)
-		.then(() => correctCalendarId(options))
-		.then(() => importer.runAllPromises(search.split('|').map(term => resolve => {
-			return listEvents({
-				auth: options.auth,
-				calendarId: options.calendarId,
-				q: term
-			}).then(r => {
-				console.log(term);
-				console.log(r.map(e => e.event.summary).slice(0, 10));
-				return resolve(r);
-			})
-		})))
+	if(!options.auth) {
+		options.auth = await authorize(options.scopes)
+	}
+	calendar = google.calendar({version: 'v3', auth: options.auth})
+	await correctCalendarId(options)
+	let searchTerms = search.split('|')
+	let events = []
+	for(let i = 0; i < searchTerms.length; i++) {
+		let r = await listEvents({
+			auth: options.auth,
+			calendarId: options.calendarId,
+			q: searchTerms[i]
+		})
+		console.log(term)
+		console.log(r.map(e => e.event.summary).slice(0, 10))
+		events.push.apply(events, r)
+	}
+	return events
 }
 // TODO: scan events from .ical calendar export type
 
 
+async function listCalendar() {
+	let events = await searchCalendar('brainstorm', 'primary')
+	console.log(events)
+}
+
+module.exports = {
+	searchCalendar,
+	listCalendar
+}
 
