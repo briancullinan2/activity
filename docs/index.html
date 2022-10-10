@@ -688,11 +688,6 @@
     "start": "2022-10-09T21:32:03.833Z"
   },
   {
-    "id": 9130,
-    "content": "briancullinan2 (Brian Cullinan)  <a target=\"_blank\" href=\"https://github.com/briancullinan2\">link &nearr;</a>",
-    "start": "2022-10-08T01:24:42.379Z"
-  },
-  {
     "id": 9150,
     "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"https://briancullinan.com/\">link &nearr;</a>",
     "start": "2022-10-09T18:04:50.170Z"
@@ -700,7 +695,7 @@
   {
     "id": 9167,
     "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"http://127.0.0.1:8080/\">link &nearr;</a>",
-    "start": "2022-10-10T01:22:48.337Z"
+    "start": "2022-10-10T01:24:13.930Z"
   },
   {
     "id": 9168,
@@ -728,11 +723,6 @@
     "start": "2022-10-09T01:31:10.146Z"
   },
   {
-    "id": 9272,
-    "content": "Authentic Systems Bank-rolled by Ease-of-Use - Google Maps  <a target=\"_blank\" href=\"https://www.google.com/maps/place/Authentic+Systems+Bank-rolled+by+Ease-of-Use/@35.0986941,-111.6979558,15z/data=!4m5!3m4!1s0x0:0x50ab719b3a449219!8m2!3d35.0986941!4d-111.6979558\">link &nearr;</a>",
-    "start": "2022-10-08T01:26:36.834Z"
-  },
-  {
     "id": 9394,
     "content": "timeline - vis.js - A dynamic, browser based visualization library.  <a target=\"_blank\" href=\"https://visjs.github.io/vis-timeline/docs/timeline/\">link &nearr;</a>",
     "start": "2022-10-08T21:04:45.303Z"
@@ -743,29 +733,9 @@
     "start": "2022-10-09T03:05:41.934Z"
   },
   {
-    "id": 9427,
-    "content": "Actions · briancullinan2/activity  <a target=\"_blank\" href=\"https://github.com/briancullinan2/activity/actions\">link &nearr;</a>",
-    "start": "2022-10-08T01:24:42.153Z"
-  },
-  {
     "id": 9428,
     "content": "Google Calendar - Search  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/search?q=brainstorm&pli=1\">link &nearr;</a>",
     "start": "2022-10-08T16:59:11.620Z"
-  },
-  {
-    "id": 9429,
-    "content": "Authentic Systems Bank-rolled by Ease-of-Use - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=Authentic+Systems+Bank-rolled+by+Ease-of-Use&oq=authen&aqs=chrome.0.69i59l2j69i57j69i65l3j69i60l2.5618j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2022-10-08T01:25:42.087Z"
-  },
-  {
-    "id": 9430,
-    "content": "Authentic Systems Bank-rolled by Ease-of-Use - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=Authentic+Systems+Bank-rolled+by+Ease-of-Use&oq=authen&aqs=chrome.0.69i59l2j69i57j69i65l3j69i60l2.5618j0j7&sourceid=chrome&ie=UTF-8#lrd=0x872d9bec10063d31:0x50ab719b3a449219,1,,,\">link &nearr;</a>",
-    "start": "2022-10-08T01:25:40.193Z"
-  },
-  {
-    "id": 9431,
-    "content": "Authentic Systems Bank-rolled by Ease-of-Use - Google Maps  <a target=\"_blank\" href=\"https://www.google.com/maps/place/Authentic+Systems+Bank-rolled+by+Ease-of-Use/@35.0986941,-111.6979558,15z/data=!4m2!3m1!1s0x0:0x50ab719b3a449219?sa=X&ved=2ahUKEwii-Zedu8_6AhUoKUQIHWLpC4UQ_BJ6BAh6EB8\">link &nearr;</a>",
-    "start": "2022-10-08T01:26:33.568Z"
   },
   {
     "id": 9432,
@@ -1130,7 +1100,7 @@
   {
     "id": 11034,
     "content": "Google Calendar - Sunday, October 9, 2022, today  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r\">link &nearr;</a>",
-    "start": "2022-10-10T01:12:59.655Z"
+    "start": "2022-10-10T01:28:03.429Z"
   },
   {
     "id": 11035,
@@ -3171,8 +3141,13 @@
       }
 
       resetTimeline()
-
     </script>
+  </div>
+  
+  
+  <div class="container timeline">
+    <h2>Daily Activity</h2>
+    <p><a class="nowButton" href="javascript:resetTimeline2()">Now</a></p>
 
     <div id="visualization2"></div>
 
@@ -3219,6 +3194,11 @@
       // create visualization
       const container2 = document.getElementById('visualization2');
       const options2 = {
+        maxHeight: '100%',
+        stack: true,
+        moment: function (date) {
+          return vis.moment(date);
+        },
         groupOrder: 'content'  // groupOrder can be a property name or a sorting function
       };
 
@@ -3227,6 +3207,14 @@
       timeline2.setGroups(groups);
       timeline2.setItems(items);
 
+      function resetTimeline2() {
+        const now = (new Date).getTime()
+        timeline.setWindow(
+          new Date(now - 60 * 60 * 1000),
+          new Date(now + 60 * 60 * 1000))
+      }
+
+      resetTimeline2()
     </script>
   </div>
 

@@ -517,8 +517,13 @@
       }
 
       resetTimeline()
-
     </script>
+  </div>
+  
+  
+  <div class="container timeline">
+    <h2>Daily Activity</h2>
+    <p><a class="nowButton" href="javascript:resetTimeline2()">Now</a></p>
 
     <div id="visualization2"></div>
 
@@ -532,6 +537,11 @@
       // create visualization
       const container2 = document.getElementById('visualization2');
       const options2 = {
+        maxHeight: '100%',
+        stack: true,
+        moment: function (date) {
+          return vis.moment(date);
+        },
         groupOrder: 'content'  // groupOrder can be a property name or a sorting function
       };
 
@@ -540,6 +550,14 @@
       timeline2.setGroups(groups);
       timeline2.setItems(items);
 
+      function resetTimeline2() {
+        const now = (new Date).getTime()
+        timeline.setWindow(
+          new Date(now - 60 * 60 * 1000),
+          new Date(now + 60 * 60 * 1000))
+      }
+
+      resetTimeline2()
     </script>
   </div>
 

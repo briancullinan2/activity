@@ -226,7 +226,8 @@ div.container.projects img {
   max-width: 100%;
 }
 
-#visualization {
+#visualization,
+#visualization2 {
   position: absolute !important;
   bottom: 20px;
   left: 20px;
