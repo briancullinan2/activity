@@ -75,13 +75,16 @@ async function searchCalendar(search, calendarId) {
 	}
 	return events
 }
-// TODO: scan events from .ical calendar export type
 
 
 async function listCalendar() {
-	let events = await searchCalendar('brainstorm', 'primary')
-	console.log(events)
+	//let events = await searchCalendar('brainstorm', 'primary')
+	//console.log(events)
+	// TODO: scan events from .ical calendar export type, instead of relying on Google calendar services
+	
 }
+
+
 
 module.exports = {
 	searchCalendar,
