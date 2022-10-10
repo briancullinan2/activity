@@ -700,7 +700,7 @@
   {
     "id": 9167,
     "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"http://127.0.0.1:8080/\">link &nearr;</a>",
-    "start": "2022-10-09T01:22:32.104Z"
+    "start": "2022-10-10T01:20:57.221Z"
   },
   {
     "id": 9168,
@@ -3181,10 +3181,43 @@
 
       // create a data set with groups
       const names = ['John', 'Alston', 'Lee', 'Grant'];
-      const groups = new vis.DataSet([object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object])
+      const groups = new vis.DataSet([
+  {
+    "id": 0,
+    "content": "Diet"
+  },
+  {
+    "id": 1,
+    "content": "Emotions"
+  },
+  {
+    "id": 2,
+    "content": "General"
+  },
+  {
+    "id": 3,
+    "content": "Iga"
+  },
+  {
+    "id": 4,
+    "content": "megamindbrian@gmail.com"
+  },
+  {
+    "id": 5,
+    "content": "Predictions"
+  },
+  {
+    "id": 6,
+    "content": "Revelation"
+  },
+  {
+    "id": 7,
+    "content": "Robot do"
+  }
+])
 
       // create a dataset with items
-      const items2 = new vis.DataSet()
+      const items2 = new vis.DataSet([])
       for (const i = 0; i < itemCount; i++) {
         const start = now.clone().add(Math.random() * 200, 'hours');
         const group = Math.floor(Math.random() * groupCount);

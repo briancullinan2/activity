@@ -71,7 +71,7 @@ function listHistory() {
 			
 //"start": "2022-09-07T13:19:14.428Z"
 //"start": "2022-09-07T06:44:13.579Z"
-	return JSON.stringify(filteredHistory.map(entry => {
+	return filteredHistory.map(entry => {
 		if(entry.title == 'Startpage Search Results') {
 			let match = (/\?q=([^&]*)/gi).exec(entry.url)
 			entry.title = 'Search: ' + (match ? match[1].replace(/\+/g, ' ') : '')
@@ -81,7 +81,7 @@ function listHistory() {
 			content: entry.title.substring(0, 100) + `  <a target="_blank" href="${entry.url}">link &nearr;</a>`, 
 			start: new Date((entry.last_visit_time / 1000 + BASE_DATE.getTime() + TIME_ZONE))
 		}
-	}), null, 2)
+	})
 }
 
 module.exports = {
