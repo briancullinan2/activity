@@ -540,7 +540,7 @@
         maxHeight: '100%',
         stack: true,
         moment: function (date) {
-          return vis.moment(date);
+          return vis.moment(date)
         },
         groupOrder: 'content'  // groupOrder can be a property name or a sorting function
       };
@@ -548,7 +548,7 @@
       const timeline2 = new vis.Timeline(container2);
       timeline2.setOptions(options2);
       timeline2.setGroups(groups);
-      timeline2.setItems(items);
+      timeline2.setItems(items2);
 
       function resetTimeline2() {
         const now = (new Date).getTime()

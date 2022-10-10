@@ -8,6 +8,13 @@ const { google } = require('googleapis');
 const { authorize } = require('./authorize.js')
 
 let calendarList = [], lastCalendar;
+const CALENDAR_NAMES = [
+	'Diet', 'Emotions', 'General', 'Iga', 'megamindbrian@gmail.com',
+	'Predictions', 'Revelation', 'Robot do'
+]
+const PUBLIC_CALENDARS = [
+	'Diet', 'General', 'Revelation', 'Robot do'
+]
 
 const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
 
@@ -94,24 +101,105 @@ async function listCalendar() {
 		.map(dir => path.join(HOMEPATH, 'Downloads', dir, 'Calendar'))
 	takeouts.sort((a, b) => fs.statSync(b).mtime - fs.statSync(a).mtime)
 
-	const calendarList = [
-		'Diet', 'Emotions', 'General', 'Iga', 'megamindbrian@gmail.com',
-		'Predictions', 'Revelation', 'Robot do'
-	].reduce((obj, key) => {
+	const calendarList = CALENDAR_NAMES.reduce((obj, key) => {
 		obj[key] = []
 		return obj
 	}, {})
 
-
+	let eventId = 1
 	//
 	console.log(takeouts)
 
-	Object.keys(calendarList).forEach(k => {
+	Object.keys(calendarList).forEach((k, id) => {
 		if (!fs.existsSync(path.join(takeouts[0], k + '.ics'))) {
 			return
 		}
-		let calendar = fs.readFileSync(path.join(takeouts[0], k + '.ics')).toString('utf-8')
-		console.log(calendar)
+		let calendarLines = fs.readFileSync(path.join(takeouts[0], k + '.ics'))
+			.toString('utf-8').split('\n')
+
+
+		let startLine = 0
+		let currentEvent = {}
+		let insideSummary = false
+		let insideDescription = false
+
+		calendarLines.forEach((line, i) => {
+			if (line.startsWith('BEGIN:VEVENT')) {
+				startLine = i
+				currentEvent = {}
+			} else
+				if (line.startsWith('END:VEVENT')) {
+					if (!currentEvent.start) {
+						console.log(calendarLines.slice(startLine, i))
+						debugger
+					}
+					if (PUBLIC_CALENDARS.includes(k)) {
+						calendarList[k].push({
+							id: ++eventId,
+							group: id,
+							content: (currentEvent.summary || '')
+								.replace(/\\n/g, '\n')
+								.replace(/\\,/g, ',')
+								+ '<br />' + (currentEvent.description || '')
+								.replace(/\\n/g, '\n')
+								.replace(/\\,/g, ',')
+								,
+							start: currentEvent.start,
+							type: 'box'
+						})
+					} else {
+						calendarList[k].push({
+							id: ++eventId,
+							group: id,
+							content: k,
+							start: currentEvent.start,
+							type: 'box'
+						})
+					}
+				} else
+					if (line.startsWith('DTSTART:')) {
+						let dateString = line.substr('DTSTART:'.length)
+						currentEvent.start = new Date(
+							dateString.substr(0, 4),
+							dateString.substr(4, 2),
+							dateString.substr(6, 2),
+							dateString.substr(9, 2),
+							dateString.substr(11, 2),
+							dateString.substr(13, 2))
+					} else
+						if (line.startsWith('DTSTART;')) {
+							let dateString = line.substr(line.indexOf(':') + 1)
+							currentEvent.start = new Date(
+								dateString.substr(0, 4),
+								dateString.substr(4, 2),
+								dateString.substr(6, 2))
+						} else
+							if (line.startsWith('DTEND:')) {
+								//currentEvent.start = new Date(line.substr('DTEND:'.length))
+							} else
+								if (line.startsWith('SUMMARY:')) {
+									if (PUBLIC_CALENDARS.includes(k)) {
+										currentEvent.summary = line.substr('SUMMARY:'.length)
+									}
+								} else
+									if (line.startsWith('DESCRIPTION:')) {
+										if (PUBLIC_CALENDARS.includes(k)) {
+											currentEvent.description = line.substr('DESCRIPTION:'.length)
+										}
+									} else
+										if (line.startsWith('TRANSP:') || line.startsWith('LAST-MODIFIED:')
+											|| line.match(/^[A-Z\-]+\:/)) {
+											insideDescription = false
+											insideSummary = false
+										} else
+											if (insideDescription) {
+												currentEvent.description += line
+											} else
+												if (insideSummary) {
+													currentEvent.summary += line
+												}
+		})
+
 	})
 
 	return calendarList
