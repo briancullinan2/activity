@@ -241,6 +241,19 @@ div.container.projects img {
   height: 100% !important;
 }
 
+.container .vis-item .vis-item-content {
+  white-space: normal;
+}
+
+.vis-item.vis-box {
+  max-width: 250px;
+}
+
+.container .vis-time-axis .vis-text,
+.container .vis-labelset .vis-label {
+  color:white;
+}
+
 @media all and (max-width: 1000px) {
   div.container {
     width: auto;

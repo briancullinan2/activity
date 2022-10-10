@@ -9,7 +9,7 @@ const { authorize } = require('./authorize.js')
 
 let calendarList = [], lastCalendar;
 const CALENDAR_NAMES = [
-	'Diet', 'Emotions', 'General', 'Iga', 'megamindbrian@gmail.com',
+	'Diet', 'Emotions', 'General', 'Iga',
 	'Predictions', 'Revelation', 'Robot do'
 ]
 const PUBLIC_CALENDARS = [
@@ -161,7 +161,7 @@ async function listCalendar() {
 						let dateString = line.substr('DTSTART:'.length)
 						currentEvent.start = new Date(
 							dateString.substr(0, 4),
-							dateString.substr(4, 2),
+							parseInt(dateString.substr(4, 2)) - 1,
 							dateString.substr(6, 2),
 							dateString.substr(9, 2),
 							dateString.substr(11, 2),
@@ -171,7 +171,7 @@ async function listCalendar() {
 							let dateString = line.substr(line.indexOf(':') + 1)
 							currentEvent.start = new Date(
 								dateString.substr(0, 4),
-								dateString.substr(4, 2),
+								parseInt(dateString.substr(4, 2)) - 1,
 								dateString.substr(6, 2))
 						} else
 							if (line.startsWith('DTEND:')) {
@@ -179,11 +179,13 @@ async function listCalendar() {
 							} else
 								if (line.startsWith('SUMMARY:')) {
 									if (PUBLIC_CALENDARS.includes(k)) {
+										insideSummary = true
 										currentEvent.summary = line.substr('SUMMARY:'.length)
 									}
 								} else
 									if (line.startsWith('DESCRIPTION:')) {
 										if (PUBLIC_CALENDARS.includes(k)) {
+											insideDescription = true
 											currentEvent.description = line.substr('DESCRIPTION:'.length)
 										}
 									} else
