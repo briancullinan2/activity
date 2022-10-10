@@ -4,8 +4,8 @@ const fs = require('fs')
 const path = require('path')
 const assert = require('assert');
 const util = require('util');
-const {google} = require('googleapis');
-const {authorize} = require('./authorize.js')
+const { google } = require('googleapis');
+const { authorize } = require('./authorize.js')
 
 let calendarList = [], lastCalendar;
 
@@ -41,10 +41,10 @@ async function correctCalendarId(options) {
 		return filterCalendar(options);
 	}
 	let r
-	if(calendarList.length == 0) {
-		if(!calendar) {
+	if (calendarList.length == 0) {
+		if (!calendar) {
 			let client = authorize()
-			calendar = google.calendar({version: 'v3', auth: client})
+			calendar = google.calendar({ version: 'v3', auth: client })
 		}
 		r = util.promisify(calendar.calendarList.list.bind(calendar))()
 	} else {
@@ -60,14 +60,14 @@ async function searchCalendar(search, calendarId) {
 	if (calendarId) {
 		options.calendarId = calendarId;
 	}
-	if(!options.auth) {
+	if (!options.auth) {
 		options.auth = await authorize(options.scopes)
 	}
-	calendar = google.calendar({version: 'v3', auth: options.auth})
+	calendar = google.calendar({ version: 'v3', auth: options.auth })
 	await correctCalendarId(options)
 	let searchTerms = search.split('|')
 	let events = []
-	for(let i = 0; i < searchTerms.length; i++) {
+	for (let i = 0; i < searchTerms.length; i++) {
 		let r = await listEvents({
 			auth: options.auth,
 			calendarId: options.calendarId,
@@ -86,10 +86,12 @@ async function listCalendar() {
 	//console.log(events)
 	// TODO: scan events from .ical calendar export type, instead of relying on Google calendar services
 	// find latest takeout items
-	const takeouts = fs.readdirSync(HOMEPATH).filter(dir => {
-		return dir && dir.startsWith('Takeout')
-			&& fs.existsSync(path.join(HOMEPATH, dir, 'Calendar/General.ics'))
-	}).map(dir => path.join(HOMEPATH, dir, 'Calendar'))
+	const takeouts = fs.readdirSync(path.join(HOMEPATH, 'Downloads'))
+		.filter(dir => {
+			return dir && dir.startsWith('Takeout')
+				&& fs.existsSync(path.join(HOMEPATH, 'Downloads', dir, 'Calendar/General.ics'))
+		})
+		.map(dir => path.join(HOMEPATH, 'Downloads', dir, 'Calendar'))
 	takeouts.sort((a, b) => fs.statSync(b).mtime - fs.statSync(a).mtime)
 
 	const calendarList = [
@@ -99,6 +101,18 @@ async function listCalendar() {
 		obj[key] = []
 		return obj
 	}, {})
+
+
+	//
+	console.log(takeouts)
+
+	Object.keys(calendarList).forEach(k => {
+		if (!fs.existsSync(path.join(takeouts[0], k + '.ics'))) {
+			return
+		}
+		let calendar = fs.readFileSync(path.join(takeouts[0], k + '.ics')).toString('utf-8')
+		console.log(calendar)
+	})
 
 	return calendarList
 }
