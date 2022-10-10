@@ -524,15 +524,10 @@
 
     <script type="text/javascript">
       const now = moment().minutes(0).seconds(0).milliseconds(0);
-      const groupCount = 3;
-      const itemCount = 20;
 
       // create a data set with groups
       const names = ['John', 'Alston', 'Lee', 'Grant'];
-      const groups = new vis.DataSet();
-      for (const g = 0; g < groupCount; g++) {
-        groups.add({ id: g, content: names[g] });
-      }
+      const groups = new vis.DataSet([])
 
       // create a dataset with items
       const items2 = new vis.DataSet([])

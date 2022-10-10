@@ -31,10 +31,23 @@ async function renderIndex() {
 	index = index.substring(0, offset)
 		+ `items = new vis.DataSet(${listHistory()})` + index.substring(offset + bodyTag[0].length, index.length)
 
+
+
+	let calendarEntries = await listCalendar()
+	let groups = Object.keys(calendarEntries).map((k, i) => {
+		return { id: i, content: k }
+	})
+	let listAllEvents = Object.values(calendarEntries).flat(1)
+
+	bodyTag = index.match(/groups = new vis.DataSet\(\[\]\)/i)
+	offset = bodyTag.index
+	index = index.substring(0, offset)
+		+ `groups = new vis.DataSet(${groups})` + index.substring(offset + bodyTag[0].length, index.length)
+
 	bodyTag = index.match(/items2 = new vis.DataSet\(\[\]\)/i)
 	offset = bodyTag.index
 	index = index.substring(0, offset)
-		+ `items2 = new vis.DataSet(${await listCalendar()})` + index.substring(offset + bodyTag[0].length, index.length)
+		+ `items2 = new vis.DataSet(${listAllEvents})` + index.substring(offset + bodyTag[0].length, index.length)
 	
 	fs.writeFileSync(path.join(__dirname, 'docs/index.html'), index)
 }

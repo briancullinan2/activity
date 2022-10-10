@@ -1,11 +1,15 @@
 
 // TODO: share some thoughts from calendar recordings, maybe a color/emotion or a new calendar for software ideas
+const fs = require('fs')
+const path = require('path')
 const assert = require('assert');
 const util = require('util');
 const {google} = require('googleapis');
 const {authorize} = require('./authorize.js')
 
 let calendarList = [], lastCalendar;
+
+const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
 
 async function filterCalendar(options) {
 	let rexexp = new RegExp(options.calendarId, 'ig');
@@ -81,7 +85,22 @@ async function listCalendar() {
 	//let events = await searchCalendar('brainstorm', 'primary')
 	//console.log(events)
 	// TODO: scan events from .ical calendar export type, instead of relying on Google calendar services
-	
+	// find latest takeout items
+	const takeouts = fs.readdirSync(HOMEPATH).filter(dir => {
+		return dir && dir.startsWith('Takeout')
+			&& fs.existsSync(path.join(HOMEPATH, dir, 'Calendar/General.ics'))
+	}).map(dir => path.join(HOMEPATH, dir, 'Calendar'))
+	takeouts.sort((a, b) => fs.statSync(b).mtime - fs.statSync(a).mtime)
+
+	const calendarList = [
+		'Diet', 'Emotions', 'General', 'Iga', 'megamindbrian@gmail.com',
+		'Predictions', 'Revelation', 'Robot do'
+	].reduce((obj, key) => {
+		obj[key] = []
+		return obj
+	}, {})
+
+	return calendarList
 }
 
 
