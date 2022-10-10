@@ -523,26 +523,11 @@
     <div id="visualization2"></div>
 
     <script type="text/javascript">
-      const now = moment().minutes(0).seconds(0).milliseconds(0);
-
       // create a data set with groups
-      const names = ['John', 'Alston', 'Lee', 'Grant'];
       const groups = new vis.DataSet([])
 
       // create a dataset with items
       const items2 = new vis.DataSet([])
-      for (const i = 0; i < itemCount; i++) {
-        const start = now.clone().add(Math.random() * 200, 'hours');
-        const group = Math.floor(Math.random() * groupCount);
-        items2.add({
-          id: i,
-          group: group,
-          content: 'item ' + i +
-            ' <span style="color:#97B0F8;">(' + names[group] + ')</span>',
-          start: start,
-          type: 'box'
-        });
-      }
 
       // create visualization
       const container2 = document.getElementById('visualization2');
