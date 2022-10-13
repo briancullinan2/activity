@@ -6,6 +6,8 @@
 	<string>website</string>
 	<key>UserName</key>
 	<string>briancullinan</string>
+	<key>RunAtLoad</key>
+	<true/>
 	<key>ProgramArguments</key>
 	<array>
 		<string>sh</string>
