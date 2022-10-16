@@ -21,7 +21,7 @@ function findBookmarksFile() {
 		}
 	}
 
-	workingPaths.push(path.join(settingsPath, 'BraveSoftware\/Brave-Browser\/Default\/Bookmarks'))
+	//workingPaths.push(path.join(settingsPath, 'BraveSoftware\/Brave-Browser\/Default\/Bookmarks'))
 	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/Default/Bookmarks'))
 
 	for (let i = 0; i < workingPaths.length; i++) {

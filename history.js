@@ -27,7 +27,7 @@ function findHistoryFile() {
 		}
 	}
 
-	workingPaths.push(path.join(settingsPath, 'BraveSoftware\/Brave-Browser\/Default\/History'))
+	//workingPaths.push(path.join(settingsPath, 'BraveSoftware\/Brave-Browser\/Default\/History'))
 	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/Default/History'))
 
 	for (let i = 0; i < workingPaths.length; i++) {
