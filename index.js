@@ -38,7 +38,7 @@ async function renderIndex() {
 		return { id: i, content: k }
 	})
 	let listAllEvents = Object.values(calendarEntries)
-		.map(arr => arr.slice(0, 100)).flat(1)
+		.map(arr => arr.slice(0, 20)).flat(1)
 
 	bodyTag = index.match(/groups = new vis.DataSet\(\[\]\)/i)
 	offset = bodyTag.index
