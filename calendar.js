@@ -124,6 +124,7 @@ async function listCalendar() {
 			.toString('utf-8').split('\n')
 		let k = CALENDAR_NAMES.filter(ical => path.basename(fname).startsWith(ical)
 				&& path.basename(fname).endsWith('.ics'))[0]
+		console.log(k + ' - ' + fname)
 
 
 		let startLine = 0
