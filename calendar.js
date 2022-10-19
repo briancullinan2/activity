@@ -96,7 +96,7 @@ async function listCalendar() {
 	const takeouts = fs.readdirSync(path.join(HOMEPATH, 'Downloads'))
 		.filter(dir => {
 			return dir && dir.startsWith('Takeout')
-				&& fs.existsSync(path.join(HOMEPATH, 'Downloads', dir, 'Calendar/General.ics'))
+				&& fs.existsSync(path.join(HOMEPATH, 'Downloads', dir, 'Calendar')) // /General.ics
 		})
 		.map(dir => path.join(HOMEPATH, 'Downloads', dir, 'Calendar'))
 	takeouts.sort((a, b) => fs.statSync(b).mtime - fs.statSync(a).mtime)
@@ -108,14 +108,22 @@ async function listCalendar() {
 
 	let eventId = 1
 	//
-	console.log(takeouts)
+	console.log(takeouts[0])
+	let calendarFiles = fs.readdirSync(takeouts[0])
+		.filter(fname => {
+			return CALENDAR_NAMES.filter(ical => fname.startsWith(ical)
+				&& fname.endsWith('.ics')).length > 0
+		})
+    .map(fname => path.join(takeouts[0], fname))
 
-	Object.keys(calendarList).forEach((k, id) => {
-		if (!fs.existsSync(path.join(takeouts[0], k + '.ics'))) {
+	calendarFiles.forEach((fname, id) => {
+		if (!fs.existsSync(fname)) {
 			return
 		}
-		let calendarLines = fs.readFileSync(path.join(takeouts[0], k + '.ics'))
+		let calendarLines = fs.readFileSync(fname)
 			.toString('utf-8').split('\n')
+		let k = CALENDAR_NAMES.filter(ical => path.basename(fname).startsWith(ical)
+				&& path.basename(fname).endsWith('.ics'))[0]
 
 
 		let startLine = 0
@@ -141,9 +149,9 @@ async function listCalendar() {
 								.replace(/\\n/g, '\n')
 								.replace(/\\,/g, ',')
 								+ '<br />' + (currentEvent.description || '')
-								.replace(/\\n/g, '\n')
-								.replace(/\\,/g, ',')
-								,
+									.replace(/\\n/g, '\n')
+									.replace(/\\,/g, ',')
+							,
 							start: currentEvent.start,
 							type: 'box'
 						})
