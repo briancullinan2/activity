@@ -175,6 +175,10 @@ async function listCalendar() {
 							dateString.substr(9, 2),
 							dateString.substr(11, 2),
 							dateString.substr(13, 2))
+						if(k == 'Diet') {
+              console.log(currentEvent.start)
+            }
+						
 					} else
 						if (line.startsWith('DTSTART;')) {
 							let dateString = line.substr(line.indexOf(':') + 1)
