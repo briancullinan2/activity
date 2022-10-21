@@ -125,10 +125,7 @@
     <h2>Live Development</h2>
     
   <ol class="windows">
-  <li class=""><a href="#loginwindow">
-		<label for="win-loginwindow">loginwindow</a></label>
-		</li>
-<li class=""><a href="#Activity Monitor">
+  <li class=""><a href="#Activity Monitor">
 		<label for="win-Activity Monitor">Activity Monitor</a></label>
 		</li>
 <li class=""><a href="#Fork">
@@ -172,6 +169,9 @@
     <h2>Study Interests</h2>
     
 <ol class="categories">
+<li><a href="#Books">
+    <label for="cat-Books">
+    Books</a></label></li>
 <li><a href="#Machine learning">
     <label for="cat-Machine learning">
     AI/Machine learning</a></label></li>
@@ -209,13 +209,19 @@
 
 
 
-<input type="radio" id="cat-Machine learning" name="category" value="0" />
+<input type="radio" id="cat-Books" name="category" value="0" />
+<ol class="bookmarks">
+<li><a href="https://en.wikipedia.org/wiki/List_of_works_by_Stanis%C5%82aw_Lem_and_their_adaptations#Individual_works">List of works by Stanisław Lem and their adaptations - Wikipedia</a></li>
+</ol>
+
+
+<input type="radio" id="cat-Machine learning" name="category" value="1" />
 <ol class="bookmarks">
 <li><a href="https://docs.google.com/spreadsheets/d/1y7nAbmR4FREi6npB1u-Bo3GFdwdOPYJc617rBOxIRHY/edit#gid=0">DrawBench Prompts - Google Sheets</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Engineering" name="category" value="1" />
+<input type="radio" id="cat-Engineering" name="category" value="2" />
 <ol class="bookmarks">
 <li><a href="https://www.newscientist.com/article/2279937-google-has-mapped-a-piece-of-human-brain-in-the-most-detail-ever/">Google has mapped a piece of human brain in the most detail ever | New Scientist</a></li>
 <li><a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose">CMU-Perceptual-Computing-Lab/openpose: OpenPose: Real-time multi-person keypoint detection library for body, face, hands, and foot estimation</a></li>
@@ -229,14 +235,14 @@
 </ol>
 
 
-<input type="radio" id="cat-Gaming" name="category" value="2" />
+<input type="radio" id="cat-Gaming" name="category" value="3" />
 <ol class="bookmarks">
 <li><a href="https://transvoxel.org/">The Transvoxel Algorithm for Voxel Terrain</a></li>
 <li><a href="https://c4engine.com/">C4 Engine</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Medical Science" name="category" value="3" />
+<input type="radio" id="cat-Medical Science" name="category" value="4" />
 <ol class="bookmarks">
 <li><a href="https://www.medicalnewstoday.com/articles/323000">Sexual function: Electrode stimulation helps women orgasm</a></li>
 <li><a href="https://www.wired.com/2014/11/fantastically-wrong-wilhelm-reich/">Fantastically Wrong: Why Is the Sky Blue? It's Packed With Sexy Energy, of Course | WIRED</a></li>
@@ -246,39 +252,39 @@
 </ol>
 
 
-<input type="radio" id="cat-Movies" name="category" value="4" />
+<input type="radio" id="cat-Movies" name="category" value="5" />
 <ol class="bookmarks">
 <li><a href="https://www.imdb.com/title/tt0096332/">The Unbearable Lightness of Being (1988) - IMDb</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Philosophy" name="category" value="5" />
+<input type="radio" id="cat-Philosophy" name="category" value="6" />
 <ol class="bookmarks">
 <li><a href="https://en.wikipedia.org/wiki/Epictetus">Epictetus - Wikipedia</a></li>
 <li><a href="https://theblissfulmind.com/not-doing-enough/">How To Handle The Fear of Not Doing Enough - The Blissful Mind</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Physical Science" name="category" value="6" />
+<input type="radio" id="cat-Physical Science" name="category" value="7" />
 <ol class="bookmarks">
 <li><a href="https://www.superiorwaterconditioners.com/magnetic-water-conditioner/">Magnetic Water Conditioner | Superior Water Conditioners</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Quasi-dimensional" name="category" value="7" />
+<input type="radio" id="cat-Quasi-dimensional" name="category" value="8" />
 <ol class="bookmarks">
 <li><a href="https://en.wikipedia.org/wiki/Orgone">Orgone - Wikipedia</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Electroejaculation">Electroejaculation - Wikipedia</a></li>
 </ol>
 
 
-<input type="radio" id="cat-New Testament" name="category" value="8" />
+<input type="radio" id="cat-New Testament" name="category" value="9" />
 <ol class="bookmarks">
 <li><a href="https://en.wikipedia.org/wiki/Last_Adam">Last Adam - Wikipedia</a></li>
 </ol>
 
 
-<input type="radio" id="cat-Old Testament" name="category" value="9" />
+<input type="radio" id="cat-Old Testament" name="category" value="10" />
 <ol class="bookmarks">
 <li><a href="https://en.wikipedia.org/wiki/Sariel">Sariel - Wikipedia</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Origen">Origen - Wikipedia</a></li>
@@ -287,7 +293,7 @@
 </ol>
 
 
-<input type="radio" id="cat-Theology" name="category" value="10" />
+<input type="radio" id="cat-Theology" name="category" value="11" />
 <ol class="bookmarks">
 <li><a href="https://en.wikipedia.org/wiki/Raguel_(angel)">Raguel (angel) - Wikipedia</a></li>
 </ol>
@@ -675,6 +681,16 @@
     "start": "2022-10-19T21:22:15.368Z"
   },
   {
+    "id": 9130,
+    "content": "briancullinan2 (Brian Cullinan)  <a target=\"_blank\" href=\"https://github.com/briancullinan2\">link &nearr;</a>",
+    "start": "2022-10-21T18:33:53.190Z"
+  },
+  {
+    "id": 9131,
+    "content": "Your Repositories  <a target=\"_blank\" href=\"https://github.com/briancullinan2?tab=repositories\">link &nearr;</a>",
+    "start": "2022-10-21T18:30:11.670Z"
+  },
+  {
     "id": 9150,
     "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"https://briancullinan.com/\">link &nearr;</a>",
     "start": "2022-10-20T18:09:37.724Z"
@@ -691,8 +707,8 @@
   },
   {
     "id": 9169,
-    "content": "Inbox (7,817) - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://www.google.com/gmail/\">link &nearr;</a>",
-    "start": "2022-10-20T23:51:55.947Z"
+    "content": "Inbox (7,818) - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://www.google.com/gmail/\">link &nearr;</a>",
+    "start": "2022-10-21T18:23:28.889Z"
   },
   {
     "id": 9200,
@@ -735,6 +751,11 @@
     "start": "2022-10-19T21:29:45.180Z"
   },
   {
+    "id": 9426,
+    "content": "briancullinan2/activity: A resume / poll style list of what I am currently working on.  <a target=\"_blank\" href=\"https://github.com/briancullinan2/activity\">link &nearr;</a>",
+    "start": "2022-10-21T18:30:14.135Z"
+  },
+  {
     "id": 11034,
     "content": "Google Calendar - 4 days, starting Thursday, October 20, 2022  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r\">link &nearr;</a>",
     "start": "2022-10-21T04:18:37.379Z"
@@ -745,11 +766,6 @@
     "start": "2022-10-21T11:32:37.989Z"
   },
   {
-    "id": 11421,
-    "content": "Google Calendar - General settings  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/settings\">link &nearr;</a>",
-    "start": "2022-10-19T18:35:19.281Z"
-  },
-  {
     "id": 11756,
     "content": "Channel content - YouTube Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw/videos\">link &nearr;</a>",
     "start": "2022-10-20T18:08:25.662Z"
@@ -758,6 +774,11 @@
     "id": 11757,
     "content": "Channel content - YouTube Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D\">link &nearr;</a>",
     "start": "2022-10-20T18:08:25.781Z"
+  },
+  {
+    "id": 11814,
+    "content": "Commits · briancullinan2/activity  <a target=\"_blank\" href=\"https://github.com/briancullinan2/activity/commits/main\">link &nearr;</a>",
+    "start": "2022-10-21T18:33:52.963Z"
   },
   {
     "id": 11822,
@@ -772,22 +793,12 @@
   {
     "id": 12440,
     "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?hl=en&authuser=0&ei=nTRLY4DpKeCekPIP96CO4Ac%3A31&ved=1t%3A17706&pli=1&pb=%211m2%211m1%211s2001-06-22\">link &nearr;</a>",
-    "start": "2022-10-21T17:03:23.282Z"
+    "start": "2022-10-21T18:03:27.402Z"
   },
   {
     "id": 12461,
     "content": "Channel content - YouTube Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw/videos/live?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D\">link &nearr;</a>",
     "start": "2022-10-20T18:25:35.856Z"
-  },
-  {
-    "id": 12776,
-    "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?hl=en&authuser=0&ei=nTRLY4DpKeCekPIP96CO4Ac%3A31&ved=1t%3A17706&pli=1&pb=%211m2%211m1%211s2001-06-22&rapt=AEjHL4PtKGVxH53Mi9tPWaBDVUp2AIWXZ9F_4D6JOUWFixWqaZ0t6UC6_ztC6MviJr-8ZCROsdb2ZilKUKmrVjJBHiUXMorn0Q\">link &nearr;</a>",
-    "start": "2022-10-19T18:15:53.608Z"
-  },
-  {
-    "id": 12777,
-    "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?hl=en&authuser=0&ei=nTRLY4DpKeCekPIP96CO4Ac%3A31&ved=1t%3A17706&pli=1&pb=!1m2!1m1!1s2001-06-22&rapt=AEjHL4PtKGVxH53Mi9tPWaBDVUp2AIWXZ9F_4D6JOUWFixWqaZ0t6UC6_ztC6MviJr-8ZCROsdb2ZilKUKmrVjJBHiUXMorn0Q\">link &nearr;</a>",
-    "start": "2022-10-19T18:15:53.831Z"
   },
   {
     "id": 12778,
@@ -1837,7 +1848,7 @@
   {
     "id": 13041,
     "content": "On First Principles: Origen, G. W. Butterworth, Henri de Lubac, John C. Cavadini + Free Shipping  <a target=\"_blank\" href=\"https://www.amazon.com/First-Principles-Origen/dp/0870612794\">link &nearr;</a>",
-    "start": "2022-10-21T00:28:06.460Z"
+    "start": "2022-10-21T18:28:36.568Z"
   },
   {
     "id": 13043,
@@ -1877,27 +1888,27 @@
   {
     "id": 13050,
     "content": "YouTube Creator Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/\">link &nearr;</a>",
-    "start": "2022-10-21T01:24:17.963Z"
+    "start": "2022-10-21T18:27:41.919Z"
   },
   {
     "id": 13051,
     "content": "Channel dashboard - YouTube Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw\">link &nearr;</a>",
-    "start": "2022-10-21T01:24:18.133Z"
+    "start": "2022-10-21T18:27:42.060Z"
   },
   {
     "id": 13052,
     "content": "Channel customization - YouTube Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw/editing\">link &nearr;</a>",
-    "start": "2022-10-21T01:24:21.370Z"
+    "start": "2022-10-21T18:27:58.927Z"
   },
   {
     "id": 13053,
     "content": "Channel customization - YouTube Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw/editing/sections\">link &nearr;</a>",
-    "start": "2022-10-21T01:28:28.324Z"
+    "start": "2022-10-21T18:27:59.011Z"
   },
   {
     "id": 13054,
     "content": "Channel customization - YouTube Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw/editing/details\">link &nearr;</a>",
-    "start": "2022-10-21T01:29:16.575Z"
+    "start": "2022-10-21T18:28:02.968Z"
   },
   {
     "id": 13055,
@@ -1907,7 +1918,7 @@
   {
     "id": 13056,
     "content": "Channel customization - YouTube Studio  <a target=\"_blank\" href=\"https://studio.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw/editing/images\">link &nearr;</a>",
-    "start": "2022-10-21T01:28:19.276Z"
+    "start": "2022-10-21T18:28:16.573Z"
   },
   {
     "id": 13057,
@@ -2058,6 +2069,96 @@
     "id": 13099,
     "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?hl=en&authuser=0&ei=nTRLY4DpKeCekPIP96CO4Ac%3A31&ved=1t%3A17706&pli=1&pb=!1m2!1m1!1s2001-06-22&rapt=AEjHL4MczQxr_d0RmpeVOo3OYY3c_7RdOGUBWgLNGEvL21fcyV1Kaiw0Z9kHqCQD7Ii5245ioabiVLGzulsbGuMXRWXzoekCAg\">link &nearr;</a>",
     "start": "2022-10-21T17:03:23.569Z"
+  },
+  {
+    "id": 13101,
+    "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?hl=en&authuser=0&ei=nTRLY4DpKeCekPIP96CO4Ac%3A31&ved=1t%3A17706&pli=1&pb=%211m2%211m1%211s2001-06-22&rapt=AEjHL4OqRmpzsJc6qSOOh1dF2TWloV1nRHJNlocRUgh52YmXG_iZCXaRiEJcVFza3XICbS4Po_XNHCHqxrEUX_jvodoW7lMGIw\">link &nearr;</a>",
+    "start": "2022-10-21T18:03:27.402Z"
+  },
+  {
+    "id": 13102,
+    "content": "Timeline  <a target=\"_blank\" href=\"https://timeline.google.com/maps/timeline?hl=en&authuser=0&ei=nTRLY4DpKeCekPIP96CO4Ac%3A31&ved=1t%3A17706&pli=1&pb=!1m2!1m1!1s2001-06-22&rapt=AEjHL4OqRmpzsJc6qSOOh1dF2TWloV1nRHJNlocRUgh52YmXG_iZCXaRiEJcVFza3XICbS4Po_XNHCHqxrEUX_jvodoW7lMGIw\">link &nearr;</a>",
+    "start": "2022-10-21T18:03:27.628Z"
+  },
+  {
+    "id": 13103,
+    "content": "Amazon.com Shopping Cart  <a target=\"_blank\" href=\"https://www.amazon.com/gp/cart/view.html?ref_=nav_cart\">link &nearr;</a>",
+    "start": "2022-10-21T18:28:31.646Z"
+  },
+  {
+    "id": 13105,
+    "content": "Amazon.com Shopping Cart  <a target=\"_blank\" href=\"https://www.amazon.com/gp/product/handle-buy-box/ref=dp_start-bbf_1_glance\">link &nearr;</a>",
+    "start": "2022-10-21T18:28:40.381Z"
+  },
+  {
+    "id": 13106,
+    "content": "Amazon.com Shopping Cart  <a target=\"_blank\" href=\"https://www.amazon.com/cart/smart-wagon?newItems=C6d637d81-8a9d-4bde-bfc3-f4ff372a93c7,1\">link &nearr;</a>",
+    "start": "2022-10-21T18:28:40.957Z"
+  },
+  {
+    "id": 13107,
+    "content": "github account recover deleted account - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=github+account+recover+deleted+account&oq=github+account+recover+deleted+account&aqs=chrome..69i57j69i64.7108j0j4&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-10-21T18:31:02.758Z"
+  },
+  {
+    "id": 13108,
+    "content": "Restoring a deleted repository - GitHub Docs  <a target=\"_blank\" href=\"https://docs.github.com/en/repositories/creating-and-managing-repositories/restoring-a-deleted-repository\">link &nearr;</a>",
+    "start": "2022-10-21T18:30:52.115Z"
+  },
+  {
+    "id": 13109,
+    "content": "You can resurrect any deleted GitHub account name. And this is why we have trust issues • The Regist  <a target=\"_blank\" href=\"https://www.theregister.com/2018/02/10/github_account_name_reuse/\">link &nearr;</a>",
+    "start": "2022-10-21T18:31:06.851Z"
+  },
+  {
+    "id": 13110,
+    "content": "stanislaw l e m - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=stanislaw+l+e+m&oq=stanislaw+l+e+m&aqs=chrome..69i57.3689j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-10-21T18:32:35.123Z"
+  },
+  {
+    "id": 13111,
+    "content": "List of works by Stanisław Lem and their adaptations - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/List_of_works_by_Stanis%C5%82aw_Lem_and_their_adaptations\">link &nearr;</a>",
+    "start": "2022-10-21T18:32:47.061Z"
+  },
+  {
+    "id": 13112,
+    "content": "List of works by Stanisław Lem and their adaptations - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/List_of_works_by_Stanis%C5%82aw_Lem_and_their_adaptations#Individual_works\">link &nearr;</a>",
+    "start": "2022-10-21T18:34:11.006Z"
+  },
+  {
+    "id": 13113,
+    "content": "The Man from Mars - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/The_Man_from_Mars\">link &nearr;</a>",
+    "start": "2022-10-21T18:33:36.039Z"
+  },
+  {
+    "id": 13114,
+    "content": "Solaris (novel) - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Solaris_(novel)\">link &nearr;</a>",
+    "start": "2022-10-21T18:34:14.358Z"
+  },
+  {
+    "id": 13115,
+    "content": "solaris - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=solaris&oq=solaris&aqs=chrome..69i57j69i60.884j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-10-21T18:38:39.181Z"
+  },
+  {
+    "id": 13116,
+    "content": "Solaris (2002) - IMDb  <a target=\"_blank\" href=\"https://www.imdb.com/title/tt0307479/\">link &nearr;</a>",
+    "start": "2022-10-21T18:38:53.393Z"
+  },
+  {
+    "id": 13117,
+    "content": "solaris is a real planet - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=solaris+is+a+real+planet&oq=solaris+is+a+real+planet&aqs=chrome..69i57.7622j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-10-21T18:40:55.925Z"
+  },
+  {
+    "id": 13118,
+    "content": "BD+14 4559 - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/BD%2B14_4559#:~:text=BD%2B14%204559%20is%20a,by%20Polish%20writer%20Stanislaw%20Lem.\">link &nearr;</a>",
+    "start": "2022-10-21T18:41:03.116Z"
+  },
+  {
+    "id": 13119,
+    "content": "Celestial sphere - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Celestial_sphere\">link &nearr;</a>",
+    "start": "2022-10-21T18:41:49.777Z"
   }
 ])
       // Configuration for the Timeline
