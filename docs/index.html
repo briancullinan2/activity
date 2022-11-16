@@ -561,38 +561,7 @@
       const container = document.getElementById("visualization")
       const timezone = (new Date()).getTimezoneOffset()
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([
-  {
-    "id": 9189,
-    "content": "Google Calendar - Week of November 13, 2022  <a target=\"_blank\" href=\"https://calendar.google.com/\">link &nearr;</a>",
-    "start": "2022-11-14T03:45:53.344Z"
-  },
-  {
-    "id": 9190,
-    "content": "Google Calendar - Week of November 13, 2022  <a target=\"_blank\" href=\"https://calendar.google.com/calendar\">link &nearr;</a>",
-    "start": "2022-11-14T03:45:53.344Z"
-  },
-  {
-    "id": 11033,
-    "content": "Google Calendar - Week of November 13, 2022  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0\">link &nearr;</a>",
-    "start": "2022-11-14T03:45:53.344Z"
-  },
-  {
-    "id": 11034,
-    "content": "Google Calendar - Week of November 13, 2022  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r\">link &nearr;</a>",
-    "start": "2022-11-14T03:45:54.619Z"
-  },
-  {
-    "id": 11421,
-    "content": "Google Calendar - General settings  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/settings\">link &nearr;</a>",
-    "start": "2022-11-14T03:46:02.039Z"
-  },
-  {
-    "id": 12778,
-    "content": "Google Calendar - Export/import calendars  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/settings/export\">link &nearr;</a>",
-    "start": "2022-11-14T03:46:08.358Z"
-  }
-])
+      const items = new vis.DataSet([])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
