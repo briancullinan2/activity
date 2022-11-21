@@ -561,7 +561,18 @@
       const container = document.getElementById("visualization")
       const timezone = (new Date()).getTimezoneOffset()
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
+      const items = new vis.DataSet([
+  {
+    "id": 12778,
+    "content": "Google Calendar - Export/import calendars  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/settings/export\">link &nearr;</a>",
+    "start": "2022-11-21T03:26:57.134Z"
+  },
+  {
+    "id": 12929,
+    "content": "Google Calendar - Export/import calendars  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/settings/export?autorel=1\">link &nearr;</a>",
+    "start": "2022-11-21T03:10:33.543Z"
+  }
+])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
