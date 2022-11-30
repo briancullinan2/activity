@@ -141,9 +141,6 @@
 <li class=""><a href="#Activity Monitor">
 		<label for="win-Activity Monitor">Activity Monitor</a></label>
 		</li>
-<li class=""><a href="#Google Chrome">
-		<label for="win-Google Chrome">Google Chrome</a></label>
-		</li>
 <li class=""><a href="#Fork">
 		<label for="win-Fork">Fork</a></label>
 		</li>
@@ -153,8 +150,14 @@
 <li class=""><a href="#Epic Games Launcher">
 		<label for="win-Epic Games Launcher">Epic Games Launcher</a></label>
 		</li>
-<li class="active"><a href="#Finder">
+<li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
+		</li>
+<li class="active"><a href="#Google Chrome">
+		<label for="win-Google Chrome">Google Chrome</a></label>
+		</li>
+<li class=""><a href="#Numbers">
+		<label for="win-Numbers">Numbers</a></label>
 		</li>
 <li class=""><a href="#Steam">
 		<label for="win-Steam">Steam</a></label>
@@ -561,7 +564,128 @@
       const container = document.getElementById("visualization")
       const timezone = (new Date()).getTimezoneOffset()
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
+      const items = new vis.DataSet([
+  {
+    "id": 9168,
+    "content": "Inbox (8,940) - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://gmail.com/\">link &nearr;</a>",
+    "start": "2022-11-30T02:13:15.508Z"
+  },
+  {
+    "id": 9169,
+    "content": "Inbox (8,940) - megamindbrian@gmail.com - Gmail  <a target=\"_blank\" href=\"https://www.google.com/gmail/\">link &nearr;</a>",
+    "start": "2022-11-30T02:13:15.508Z"
+  },
+  {
+    "id": 12743,
+    "content": "Arizona Massage Therapy School | ASIS Massage Education | Arizona School of Integrative Studies  <a target=\"_blank\" href=\"https://www.asismassage.edu/\">link &nearr;</a>",
+    "start": "2022-11-30T02:20:33.434Z"
+  },
+  {
+    "id": 14469,
+    "content": "ASIS Massage Education — Moodle Hub  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/\">link &nearr;</a>",
+    "start": "2022-11-30T02:21:14.142Z"
+  },
+  {
+    "id": 14470,
+    "content": "ASIS Massage Education — Moodle Hub: Log in to the site  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/login/index.php\">link &nearr;</a>",
+    "start": "2022-11-30T02:20:49.421Z"
+  },
+  {
+    "id": 14471,
+    "content": "ASIS Massage Education — Moodle Hub  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/login/index.php?testsession=4975\">link &nearr;</a>",
+    "start": "2022-11-30T02:21:14.142Z"
+  },
+  {
+    "id": 14472,
+    "content": "ASIS Moodle Hub: All courses  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/course/index.php?categoryid=3\">link &nearr;</a>",
+    "start": "2022-11-30T02:21:49.542Z"
+  },
+  {
+    "id": 14473,
+    "content": "Course: engaging with alpha  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/course/view.php?id=120\">link &nearr;</a>",
+    "start": "2022-11-30T02:21:57.466Z"
+  },
+  {
+    "id": 14474,
+    "content": "engaging: Updated Swedish Final  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/view.php?id=4171\">link &nearr;</a>",
+    "start": "2022-11-30T02:22:05.595Z"
+  },
+  {
+    "id": 14475,
+    "content": "Updated Swedish Final (page 1 of 20)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=207232&cmid=4171\">link &nearr;</a>",
+    "start": "2022-11-30T02:22:16.297Z"
+  },
+  {
+    "id": 14476,
+    "content": "Updated Swedish Final (page 2 of 20)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=207232&cmid=4171&page=1\">link &nearr;</a>",
+    "start": "2022-11-30T02:23:58.723Z"
+  },
+  {
+    "id": 14477,
+    "content": "recumbent - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=recumbent&oq=recumbent&aqs=chrome..69i57.2280j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-11-30T02:24:11.613Z"
+  },
+  {
+    "id": 14478,
+    "content": "Updated Swedish Final (page 3 of 20)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=207232&cmid=4171&page=2\">link &nearr;</a>",
+    "start": "2022-11-30T02:33:40.618Z"
+  },
+  {
+    "id": 14479,
+    "content": "Updated Swedish Final (page 4 of 20)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=207232&cmid=4171&page=3\">link &nearr;</a>",
+    "start": "2022-11-30T02:33:44.491Z"
+  },
+  {
+    "id": 14480,
+    "content": "Navicular tuberosity - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=Navicular+tuberosity&oq=Navicular+tuberosity&aqs=chrome..69i57.420j0j9&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-11-30T02:28:08.041Z"
+  },
+  {
+    "id": 14481,
+    "content": "Navicular tuberosity - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=Navicular+tuberosity&oq=Navicular+tuberosity&aqs=chrome..69i57.420j0j9&sourceid=chrome&ie=UTF-8#imgrc=RKtskB5cMuwFiM\">link &nearr;</a>",
+    "start": "2022-11-30T02:28:16.250Z"
+  },
+  {
+    "id": 14482,
+    "content": "third cuneiform - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=third+cuneiform&oq=third+cuneiform&aqs=chrome..69i57.3801j0j9&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-11-30T02:28:41.043Z"
+  },
+  {
+    "id": 14483,
+    "content": "third cuneiform - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=third+cuneiform&oq=third+cuneiform&aqs=chrome..69i57.3801j0j9&sourceid=chrome&ie=UTF-8#imgrc=wJH3iinBJio58M\">link &nearr;</a>",
+    "start": "2022-11-30T02:28:49.000Z"
+  },
+  {
+    "id": 14484,
+    "content": "Head of the fifth metatarsal - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=Head+of+the+fifth+metatarsal&oq=Head+of+the+fifth+metatarsal&aqs=chrome..69i57.455j0j9&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-11-30T02:29:16.708Z"
+  },
+  {
+    "id": 14485,
+    "content": "Head of the fifth metatarsal - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=Head+of+the+fifth+metatarsal&oq=Head+of+the+fifth+metatarsal&aqs=chrome..69i57.455j0j9&sourceid=chrome&ie=UTF-8#imgrc=IVOBf2EqgKNApM\">link &nearr;</a>",
+    "start": "2022-11-30T02:29:20.874Z"
+  },
+  {
+    "id": 14486,
+    "content": "Which area of the foot makes contact with the ground? - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=Which+area+of+the+foot+makes+contact+with+the+ground%3F&oq=Which+area+of+the+foot+makes+contact+with+the+ground%3F&aqs=chrome..69i57.313j0j9&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-11-30T02:29:49.759Z"
+  },
+  {
+    "id": 14487,
+    "content": "Updated Swedish Final (page 5 of 20)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=207232&cmid=4171&page=4\">link &nearr;</a>",
+    "start": "2022-11-30T02:30:28.545Z"
+  },
+  {
+    "id": 14488,
+    "content": "Updated Swedish Final (page 6 of 20)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=207232&cmid=4171&page=5\">link &nearr;</a>",
+    "start": "2022-11-30T02:30:37.361Z"
+  },
+  {
+    "id": 14489,
+    "content": "Updated Swedish Final (page 7 of 20)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=207232&cmid=4171&page=6\">link &nearr;</a>",
+    "start": "2022-11-30T02:33:46.497Z"
+  }
+])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
