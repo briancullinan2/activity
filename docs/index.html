@@ -132,7 +132,10 @@
     <h2>Live Development</h2>
     
   <ol class="windows">
-  <li class=""><a href="#Google Drive">
+  <li class=""><a href="#loginwindow">
+		<label for="win-loginwindow">loginwindow</a></label>
+		</li>
+<li class=""><a href="#Google Drive">
 		<label for="win-Google Drive">Google Drive</a></label>
 		</li>
 <li class=""><a href="#Calendar">
@@ -156,6 +159,12 @@
 <li class="active"><a href="#Google Chrome">
 		<label for="win-Google Chrome">Google Chrome</a></label>
 		</li>
+<li class=""><a href="#Notes">
+		<label for="win-Notes">Notes</a></label>
+		</li>
+<li class=""><a href="#Steam">
+		<label for="win-Steam">Steam</a></label>
+		</li>
 <li class=""><a href="#Terminal">
 		<label for="win-Terminal">Terminal</a></label>
 		</li>
@@ -168,14 +177,8 @@
 <li class=""><a href="#Preview">
 		<label for="win-Preview">Preview</a></label>
 		</li>
-<li class=""><a href="#System Preferences">
-		<label for="win-System Preferences">System Preferences</a></label>
-		</li>
 <li class=""><a href="#Numbers">
 		<label for="win-Numbers">Numbers</a></label>
-		</li>
-<li class=""><a href="#Steam">
-		<label for="win-Steam">Steam</a></label>
 		</li>
   </ol></ol>
     <div class="livedev">
@@ -572,9 +575,74 @@
       // Create a DataSet (allows two way data-binding)
       const items = new vis.DataSet([
   {
+    "id": 11024,
+    "content": "Photos - Google Photos  <a target=\"_blank\" href=\"https://photos.google.com/\">link &nearr;</a>",
+    "start": "2022-12-30T00:49:39.430Z"
+  },
+  {
+    "id": 11447,
+    "content": "Messages by Google - A simple, helpful text messaging app  <a target=\"_blank\" href=\"https://messages.google.com/\">link &nearr;</a>",
+    "start": "2022-12-30T01:14:18.154Z"
+  },
+  {
+    "id": 11448,
+    "content": "Messages  <a target=\"_blank\" href=\"https://messages.google.com/web/authentication\">link &nearr;</a>",
+    "start": "2022-12-30T01:14:32.824Z"
+  },
+  {
+    "id": 11452,
+    "content": "Messages  <a target=\"_blank\" href=\"https://messages.google.com/web/conversations\">link &nearr;</a>",
+    "start": "2022-12-30T01:14:36.000Z"
+  },
+  {
+    "id": 11457,
+    "content": "Messages  <a target=\"_blank\" href=\"https://messages.google.com/web/conversations/f014916078355ccc02f3d014870bc503\">link &nearr;</a>",
+    "start": "2022-12-30T01:14:37.792Z"
+  },
+  {
+    "id": 14359,
+    "content": "Host Dashboard - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting\">link &nearr;</a>",
+    "start": "2022-12-30T01:10:40.109Z"
+  },
+  {
     "id": 14361,
     "content": "Become a Host - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/become-a-host\">link &nearr;</a>",
     "start": "2022-12-30T00:42:38.557Z"
+  },
+  {
+    "id": 14553,
+    "content": "Optimum | Suddenlink Has Become Optimum  <a target=\"_blank\" href=\"https://www.optimum.net/pages/transition.html\">link &nearr;</a>",
+    "start": "2022-12-30T01:20:27.696Z"
+  },
+  {
+    "id": 14574,
+    "content": "Optimum | Suddenlink Has Become Optimum  <a target=\"_blank\" href=\"http://192.168.1.1/\">link &nearr;</a>",
+    "start": "2022-12-30T01:20:27.696Z"
+  },
+  {
+    "id": 14575,
+    "content": "Optimum | Suddenlink Has Become Optimum  <a target=\"_blank\" href=\"https://account.suddenlink.net/router-portal/login.html\">link &nearr;</a>",
+    "start": "2022-12-30T01:20:27.696Z"
+  },
+  {
+    "id": 14576,
+    "content": "Optimum | Suddenlink Has Become Optimum  <a target=\"_blank\" href=\"https://www.optimum.net/api/login/services/v1/signout?referer=https%3A%2F%2Fwww.optimum.net%2Fpages%2Ftransition.html\">link &nearr;</a>",
+    "start": "2022-12-30T01:16:19.478Z"
+  },
+  {
+    "id": 14577,
+    "content": "Optimum | Suddenlink Has Become Optimum  <a target=\"_blank\" href=\"https://www.optimum.net/api/login/services/v1/signout2?referer=https%3A%2F%2Fwww.optimum.net%2Fpages%2Ftransition.html\">link &nearr;</a>",
+    "start": "2022-12-30T01:16:20.027Z"
+  },
+  {
+    "id": 14578,
+    "content": "Optimum | Suddenlink Has Become Optimum  <a target=\"_blank\" href=\"https://www.optimum.net/logoutEx.html?referer=https%3A%2F%2Fwww.optimum.net%2Fpages%2Ftransition.html\">link &nearr;</a>",
+    "start": "2022-12-30T01:16:20.027Z"
+  },
+  {
+    "id": 14602,
+    "content": "Optimum | Manage Your Router  <a target=\"_blank\" href=\"https://www.optimum.net/internet/manage-router\">link &nearr;</a>",
+    "start": "2022-12-30T01:20:36.256Z"
   },
   {
     "id": 14686,
@@ -582,39 +650,24 @@
     "start": "2022-12-30T00:42:43.954Z"
   },
   {
-    "id": 14870,
-    "content": "iptorrents - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=iptorrents&oq=iptorrents&aqs=chrome..69i57.2142j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2022-12-29T03:58:26.772Z"
+    "id": 14775,
+    "content": "Airbnb: Vacation Rentals, Cabins, Beach Houses, Unique Homes & Experiences  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/inbox\">link &nearr;</a>",
+    "start": "2022-12-30T01:10:42.254Z"
   },
   {
-    "id": 14871,
-    "content": "Torrents - IPTorrents - #1 Private Tracker  <a target=\"_blank\" href=\"https://www.iptorrents.com/\">link &nearr;</a>",
-    "start": "2022-12-29T03:58:37.940Z"
+    "id": 14776,
+    "content": "All messages - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/inbox/folder/all\">link &nearr;</a>",
+    "start": "2022-12-30T01:10:42.505Z"
   },
   {
-    "id": 14872,
-    "content": "IPTorrents  <a target=\"_blank\" href=\"https://www.iptorrents.com/login.php\">link &nearr;</a>",
-    "start": "2022-12-29T03:58:33.046Z"
+    "id": 14792,
+    "content": "Edit listing 'Mountain Cabin in the Pines' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/776859070387566845/details\">link &nearr;</a>",
+    "start": "2022-12-30T01:00:25.766Z"
   },
   {
-    "id": 14873,
-    "content": "Just a moment...  <a target=\"_blank\" href=\"https://www.iptorrents.com/login.php?__cf_chl_rt_tk=QRncX0X9U96sPnU9bylanj2kDJLHYk6p_Nf1RHrb_g0-1672285888-0-gaNycGzNBtE\">link &nearr;</a>",
-    "start": "2022-12-29T03:58:29.316Z"
-  },
-  {
-    "id": 14874,
-    "content": "Just a moment...  <a target=\"_blank\" href=\"https://www.iptorrents.com/login.php?__cf_chl_tk=QRncX0X9U96sPnU9bylanj2kDJLHYk6p_Nf1RHrb_g0-1672285888-0-gaNycGzNBtE\">link &nearr;</a>",
-    "start": "2022-12-29T03:58:32.660Z"
-  },
-  {
-    "id": 14875,
-    "content": "Torrents - IPTorrents - #1 Private Tracker  <a target=\"_blank\" href=\"https://www.iptorrents.com/t\">link &nearr;</a>",
-    "start": "2022-12-29T03:58:37.940Z"
-  },
-  {
-    "id": 14876,
-    "content": "Torrents - IPTorrents - #1 Private Tracker  <a target=\"_blank\" href=\"https://www.iptorrents.com/t?q=babylon&qf=#torrents\">link &nearr;</a>",
-    "start": "2022-12-29T03:59:16.071Z"
+    "id": 14793,
+    "content": "Edit listing 'Mountain Cabin in the Pines' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/776859070387566845/pricing-and-availability\">link &nearr;</a>",
+    "start": "2022-12-30T00:59:51.376Z"
   },
   {
     "id": 14877,
@@ -650,6 +703,276 @@
     "id": 14883,
     "content": "Choose your amenities - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/become-a-host/792922663665034759/amenities\">link &nearr;</a>",
     "start": "2022-12-30T00:45:03.322Z"
+  },
+  {
+    "id": 14884,
+    "content": "Add some photos - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/become-a-host/792922663665034759/photos\">link &nearr;</a>",
+    "start": "2022-12-30T00:48:37.050Z"
+  },
+  {
+    "id": 14885,
+    "content": "Photo - Google Photos  <a target=\"_blank\" href=\"https://photos.google.com/photo/AF1QipMG7oZE7MR5dSqfp0YM0oZmV7co6S7BjbW2oVsH\">link &nearr;</a>",
+    "start": "2022-12-30T00:49:20.262Z"
+  },
+  {
+    "id": 14886,
+    "content": "Photo - Google Photos  <a target=\"_blank\" href=\"https://photos.google.com/photo/AF1QipMXKMCiWvW2VrD3gUz5e3m_1f7akkz9DVLdCaRH\">link &nearr;</a>",
+    "start": "2022-12-30T00:49:03.188Z"
+  },
+  {
+    "id": 14887,
+    "content": "Photo - Google Photos  <a target=\"_blank\" href=\"https://photos.google.com/photo/AF1QipPQdhxZFyEO1QDei0E3FfLKyZMGIddTYIghUuC9\">link &nearr;</a>",
+    "start": "2022-12-30T00:49:09.830Z"
+  },
+  {
+    "id": 14888,
+    "content": "Photo - Google Photos  <a target=\"_blank\" href=\"https://photos.google.com/photo/AF1QipO4-TzKBHsc7sNdAH2d3P-JjNyDYcwW_HfuwxLm\">link &nearr;</a>",
+    "start": "2022-12-30T00:49:14.897Z"
+  },
+  {
+    "id": 14889,
+    "content": "Photo - Google Photos  <a target=\"_blank\" href=\"https://photos.google.com/photo/AF1QipPEC3FVr8rSQeot_SfO2ghacbb-rZwkn2ZbMMmd\">link &nearr;</a>",
+    "start": "2022-12-30T00:49:35.297Z"
+  },
+  {
+    "id": 14890,
+    "content": "Give your place a title - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/become-a-host/792922663665034759/title\">link &nearr;</a>",
+    "start": "2022-12-30T00:53:03.988Z"
+  },
+  {
+    "id": 14891,
+    "content": "Describe your place - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/become-a-host/792922663665034759/description\">link &nearr;</a>",
+    "start": "2022-12-30T00:53:54.288Z"
+  },
+  {
+    "id": 14892,
+    "content": "Step 3: Finish your listing - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/become-a-host/792922663665034759/finish-setup\">link &nearr;</a>",
+    "start": "2022-12-30T00:58:25.799Z"
+  },
+  {
+    "id": 14893,
+    "content": "Set your price - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/become-a-host/792922663665034759/price\">link &nearr;</a>",
+    "start": "2022-12-30T00:58:30.348Z"
+  },
+  {
+    "id": 14894,
+    "content": "Answer some final questions - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/become-a-host/792922663665034759/legal\">link &nearr;</a>",
+    "start": "2022-12-30T00:59:02.527Z"
+  },
+  {
+    "id": 14895,
+    "content": "Review and publish your listing - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/become-a-host/792922663665034759/receipt\">link &nearr;</a>",
+    "start": "2022-12-30T00:59:11.133Z"
+  },
+  {
+    "id": 14896,
+    "content": "Welcome to Hosting - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/become-a-host/792922663665034759/publish-celebration\">link &nearr;</a>",
+    "start": "2022-12-30T00:59:25.210Z"
+  },
+  {
+    "id": 14897,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details\">link &nearr;</a>",
+    "start": "2022-12-30T01:15:13.744Z"
+  },
+  {
+    "id": 14898,
+    "content": "Mountain Cabin - Guesthouses for Rent in Flagstaff, Arizona, United States - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/rooms/792922663665034759?preview_for_ml=true\">link &nearr;</a>",
+    "start": "2022-12-30T01:00:02.327Z"
+  },
+  {
+    "id": 14899,
+    "content": "Mountain Cabin - Guesthouses for Rent in Flagstaff, Arizona, United States - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/rooms/792922663665034759?preview_for_ml=true&source_impression_id=p3_1672361582_Mz5h8VFBdBHBSp2M\">link &nearr;</a>",
+    "start": "2022-12-30T01:00:54.018Z"
+  },
+  {
+    "id": 14900,
+    "content": "Mountain Cabin - Guesthouses for Rent in Flagstaff, Arizona, United States - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/rooms/792922663665034759/amenities?preview_for_ml=true&source_impression_id=p3_1672361582_Mz5h8VFBdBHBSp2M\">link &nearr;</a>",
+    "start": "2022-12-30T01:00:44.055Z"
+  },
+  {
+    "id": 14901,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities\">link &nearr;</a>",
+    "start": "2022-12-30T01:07:37.028Z"
+  },
+  {
+    "id": 14902,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=heating&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:01:08.071Z"
+  },
+  {
+    "id": 14903,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=washer&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:02:12.273Z"
+  },
+  {
+    "id": 14904,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=body_soap&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:02:23.394Z"
+  },
+  {
+    "id": 14905,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=conditioner&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:02:29.683Z"
+  },
+  {
+    "id": 14906,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=shampoo&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:02:38.006Z"
+  },
+  {
+    "id": 14907,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=bed_linens&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:02:50.533Z"
+  },
+  {
+    "id": 14908,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=dryer&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:02:56.065Z"
+  },
+  {
+    "id": 14909,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=wardrobe_or_closet&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:03:05.256Z"
+  },
+  {
+    "id": 14910,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=coffee_maker&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:05:33.823Z"
+  },
+  {
+    "id": 14911,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=oven&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:06:35.032Z"
+  },
+  {
+    "id": 14912,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=refrigerator&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:06:41.409Z"
+  },
+  {
+    "id": 14913,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=stove&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:06:45.327Z"
+  },
+  {
+    "id": 14914,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=resort_access&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:07:17.326Z"
+  },
+  {
+    "id": 14915,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/details/amenities?modal=garden_or_backyard&modalItem=\">link &nearr;</a>",
+    "start": "2022-12-30T01:07:31.123Z"
+  },
+  {
+    "id": 14916,
+    "content": "Messages • Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/guest/inbox\">link &nearr;</a>",
+    "start": "2022-12-30T01:09:58.375Z"
+  },
+  {
+    "id": 14917,
+    "content": "Messages • Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/guest/inbox/338027582?ttype=outbound_cx\">link &nearr;</a>",
+    "start": "2022-12-30T01:09:59.401Z"
+  },
+  {
+    "id": 14918,
+    "content": "Messages • Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/guest/inbox/285867394?ttype=home_booking\">link &nearr;</a>",
+    "start": "2022-12-30T01:10:28.575Z"
+  },
+  {
+    "id": 14919,
+    "content": "All messages - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/inbox/folder/all/thread/1352120846/details\">link &nearr;</a>",
+    "start": "2022-12-30T01:13:56.358Z"
+  },
+  {
+    "id": 14920,
+    "content": "Reservation HM9YWZP44K - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/inbox/folder/all/thread/1347870129/details\">link &nearr;</a>",
+    "start": "2022-12-30T01:10:56.793Z"
+  },
+  {
+    "id": 14921,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/pricing-and-availability\">link &nearr;</a>",
+    "start": "2022-12-30T01:11:14.549Z"
+  },
+  {
+    "id": 14922,
+    "content": "Erin's Profile - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/users/show/3703127\">link &nearr;</a>",
+    "start": "2022-12-30T01:13:13.846Z"
+  },
+  {
+    "id": 14923,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/policies-and-rules\">link &nearr;</a>",
+    "start": "2022-12-30T01:15:16.883Z"
+  },
+  {
+    "id": 14924,
+    "content": "Edit listing 'Mountain Cabin' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/792922663665034759/info-for-guests\">link &nearr;</a>",
+    "start": "2022-12-30T01:15:26.951Z"
+  },
+  {
+    "id": 14925,
+    "content": "Optimum | Suddenlink Has Become Optimum  <a target=\"_blank\" href=\"https://www.optimum.net/api/login/services/v1/login/processLogin\">link &nearr;</a>",
+    "start": "2022-12-30T01:20:11.143Z"
+  },
+  {
+    "id": 14926,
+    "content": "Messages  <a target=\"_blank\" href=\"https://messages.google.com/web/conversations/6d068c7f185475ea76201fa5fc949091\">link &nearr;</a>",
+    "start": "2022-12-30T01:18:28.841Z"
+  },
+  {
+    "id": 14927,
+    "content": "Messages  <a target=\"_blank\" href=\"https://messages.google.com/web/conversations/a46a4c31f85007a92c9be8aedd68fab7\">link &nearr;</a>",
+    "start": "2022-12-30T01:18:36.751Z"
+  },
+  {
+    "id": 14928,
+    "content": "Messages  <a target=\"_blank\" href=\"https://messages.google.com/web/conversations/66540252c4d22ce0fc8a5fdd9b4fc413\">link &nearr;</a>",
+    "start": "2022-12-30T01:18:42.301Z"
+  },
+  {
+    "id": 14929,
+    "content": "Messages  <a target=\"_blank\" href=\"https://messages.google.com/web/conversations/3f74dc62b7ffda95822c1b2857e600b8\">link &nearr;</a>",
+    "start": "2022-12-30T01:18:56.301Z"
+  },
+  {
+    "id": 14930,
+    "content": "Messages  <a target=\"_blank\" href=\"https://messages.google.com/web/conversations/new\">link &nearr;</a>",
+    "start": "2022-12-30T01:19:14.199Z"
+  },
+  {
+    "id": 14931,
+    "content": "Messages  <a target=\"_blank\" href=\"https://messages.google.com/web/conversations/908700422df509c6cfcefbd20f780bdd\">link &nearr;</a>",
+    "start": "2022-12-30T01:19:18.796Z"
+  },
+  {
+    "id": 14932,
+    "content": "nau blackboard - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=nau+blackboard&oq=nau+blackboard&aqs=chrome..69i57.2019j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-12-30T22:50:55.948Z"
+  },
+  {
+    "id": 14933,
+    "content": "Blackboard Learn  <a target=\"_blank\" href=\"https://bblearn.nau.edu/\">link &nearr;</a>",
+    "start": "2022-12-30T22:51:25.571Z"
+  },
+  {
+    "id": 14934,
+    "content": "Login - CAS – Central Authentication Service  <a target=\"_blank\" href=\"https://bblearn.nau.edu/webapps/bb-auth-provider-cas-BB5b6cbef360ea4/execute/casLogin?cmd=login&authProviderId=_102_1&redirectUrl=https://bblearn.nau.edu\">link &nearr;</a>",
+    "start": "2022-12-30T22:51:03.409Z"
+  },
+  {
+    "id": 14935,
+    "content": "Login - CAS – Central Authentication Service  <a target=\"_blank\" href=\"https://cas.nau.edu/cas/login?service=https%3A%2F%2Fbblearn.nau.edu%2Fwebapps%2Fbb-auth-provider-cas-BB5b6cbef360ea4%2Fexecute%2FcasLogin%3Fcmd%3Dlogin%26authProviderId%3D_102_1%26redirectUrl%3Dhttps%253A%252F%252Fbblearn.nau.edu%26globalLogoutEnabled%3Dtrue\">link &nearr;</a>",
+    "start": "2022-12-30T22:51:03.409Z"
+  },
+  {
+    "id": 14936,
+    "content": "nau blackboard - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=nau+blackboard&oq=&aqs=chrome.0.69i59i450l8.29792j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2022-12-30T22:51:23.437Z"
+  },
+  {
+    "id": 14937,
+    "content": "Login - CAS – Central Authentication Service  <a target=\"_blank\" href=\"https://cas.nau.edu/cas/login\">link &nearr;</a>",
+    "start": "2022-12-30T22:52:25.428Z"
   }
 ])
       // Configuration for the Timeline
