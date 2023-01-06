@@ -147,9 +147,6 @@
 <li class=""><a href="#Fork">
 		<label for="win-Fork">Fork</a></label>
 		</li>
-<li class=""><a href="#Brave Browser">
-		<label for="win-Brave Browser">Brave Browser</a></label>
-		</li>
 <li class=""><a href="#Epic Games Launcher">
 		<label for="win-Epic Games Launcher">Epic Games Launcher</a></label>
 		</li>
@@ -573,7 +570,273 @@
       const container = document.getElementById("visualization")
       const timezone = (new Date()).getTimezoneOffset()
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
+      const items = new vis.DataSet([
+  {
+    "id": 12743,
+    "content": "Arizona Massage Therapy School | ASIS Massage Education | Arizona School of Integrative Studies  <a target=\"_blank\" href=\"https://www.asismassage.edu/\">link &nearr;</a>",
+    "start": "2023-01-06T03:45:12.321Z"
+  },
+  {
+    "id": 14469,
+    "content": "ASIS Massage Education — Moodle Hub  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/\">link &nearr;</a>",
+    "start": "2023-01-06T03:45:35.025Z"
+  },
+  {
+    "id": 14470,
+    "content": "ASIS Massage Education — Moodle Hub: Log in to the site  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/login/index.php\">link &nearr;</a>",
+    "start": "2023-01-06T03:45:31.735Z"
+  },
+  {
+    "id": 14471,
+    "content": "ASIS Massage Education — Moodle Hub  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/login/index.php?testsession=4975\">link &nearr;</a>",
+    "start": "2023-01-06T03:45:35.025Z"
+  },
+  {
+    "id": 14602,
+    "content": "Sign In to Manage Your Services | Optimum  <a target=\"_blank\" href=\"https://www.optimum.net/internet/manage-router\">link &nearr;</a>",
+    "start": "2023-01-06T03:42:19.924Z"
+  },
+  {
+    "id": 14775,
+    "content": "Airbnb: Vacation Rentals, Cabins, Beach Houses, Unique Homes & Experiences  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/inbox\">link &nearr;</a>",
+    "start": "2023-01-06T03:42:54.897Z"
+  },
+  {
+    "id": 14776,
+    "content": "All messages - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/inbox/folder/all\">link &nearr;</a>",
+    "start": "2023-01-06T03:42:55.253Z"
+  },
+  {
+    "id": 14938,
+    "content": "Sign In to Manage Your Services | Optimum  <a target=\"_blank\" href=\"https://www.optimum.net/login/?referer=%2finternet%2fmanage-router\">link &nearr;</a>",
+    "start": "2023-01-06T03:42:25.331Z"
+  },
+  {
+    "id": 14939,
+    "content": "Sign In to Manage Your Services | Optimum  <a target=\"_blank\" href=\"https://www.optimum.net/api/login/services/v1/signout?referer=https%3A%2F%2Fwww.optimum.net%2Flogin%2F%3Freferer%3D%252finternet%252fmanage-router\">link &nearr;</a>",
+    "start": "2023-01-06T03:42:24.636Z"
+  },
+  {
+    "id": 14940,
+    "content": "Sign In to Manage Your Services | Optimum  <a target=\"_blank\" href=\"https://www.optimum.net/api/login/services/v1/signout2?referer=https%3A%2F%2Fwww.optimum.net%2Flogin%2F%3Freferer%3D%252finternet%252fmanage-router\">link &nearr;</a>",
+    "start": "2023-01-06T03:42:25.204Z"
+  },
+  {
+    "id": 14941,
+    "content": "Sign In to Manage Your Services | Optimum  <a target=\"_blank\" href=\"https://www.optimum.net/logoutEx.html?referer=https%3A%2F%2Fwww.optimum.net%2Flogin%2F%3Freferer%3D%252finternet%252fmanage-router\">link &nearr;</a>",
+    "start": "2023-01-06T03:42:25.204Z"
+  },
+  {
+    "id": 14942,
+    "content": "Reservation HMQSJWWYXW - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/inbox/folder/all/thread/1352049071/details\">link &nearr;</a>",
+    "start": "2023-01-06T03:42:57.847Z"
+  },
+  {
+    "id": 14943,
+    "content": "Reviews  <a target=\"_blank\" href=\"https://www.airbnb.com/users/reviews?review_id=786329224770367722\">link &nearr;</a>",
+    "start": "2023-01-06T03:43:13.378Z"
+  },
+  {
+    "id": 14944,
+    "content": "ASIS Moodle Hub: All courses  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/course/index.php?categoryid=24\">link &nearr;</a>",
+    "start": "2023-01-06T03:45:40.294Z"
+  },
+  {
+    "id": 14945,
+    "content": "Course: FT Riding the wave  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/course/view.php?id=252\">link &nearr;</a>",
+    "start": "2023-01-06T03:59:14.001Z"
+  },
+  {
+    "id": 14946,
+    "content": "FT Riding: Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/view.php?id=9228\">link &nearr;</a>",
+    "start": "2023-01-06T03:46:04.165Z"
+  },
+  {
+    "id": 14947,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again (page 7 of 15)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=211060&page=6&cmid=9228\">link &nearr;</a>",
+    "start": "2023-01-06T03:46:07.208Z"
+  },
+  {
+    "id": 14948,
+    "content": "FT Riding: Kines Shoulder 3 Muscle Questions (unlimited tries)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/view.php?id=9195\">link &nearr;</a>",
+    "start": "2023-01-06T03:46:23.255Z"
+  },
+  {
+    "id": 14949,
+    "content": "Kines Shoulder 3 Muscle Questions (unlimited tries): Attempt review  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/review.php?attempt=210943&cmid=9195\">link &nearr;</a>",
+    "start": "2023-01-06T03:46:26.378Z"
+  },
+  {
+    "id": 14950,
+    "content": "FT Riding: Shoulder muscles questions (set to unlimited tries)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/view.php?id=9147\">link &nearr;</a>",
+    "start": "2023-01-06T03:46:37.060Z"
+  },
+  {
+    "id": 14951,
+    "content": "Shoulder muscles questions (set to unlimited tries): Attempt review  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/review.php?attempt=209785&cmid=9147\">link &nearr;</a>",
+    "start": "2023-01-06T03:46:39.857Z"
+  },
+  {
+    "id": 14952,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again (page 8 of 15)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=211060&cmid=9228&page=7\">link &nearr;</a>",
+    "start": "2023-01-06T03:46:54.825Z"
+  },
+  {
+    "id": 14953,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again (page 9 of 15)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=211060&cmid=9228&page=8\">link &nearr;</a>",
+    "start": "2023-01-06T03:47:11.107Z"
+  },
+  {
+    "id": 14954,
+    "content": "FT Riding: Learning Checkpoint 2  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/view.php?id=6604\">link &nearr;</a>",
+    "start": "2023-01-06T03:47:43.423Z"
+  },
+  {
+    "id": 14955,
+    "content": "Learning Checkpoint 2: Attempt review  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/review.php?attempt=209788&cmid=6604\">link &nearr;</a>",
+    "start": "2023-01-06T03:47:45.717Z"
+  },
+  {
+    "id": 14956,
+    "content": "FT Riding: Kinesiology of the Shoulder Topography, Bones and Landmarks (unlimited tries)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/view.php?id=9099\">link &nearr;</a>",
+    "start": "2023-01-06T03:47:57.930Z"
+  },
+  {
+    "id": 14957,
+    "content": "Kinesiology of the Shoulder Topography, Bones and Landmarks (unlimited tries): Attempt review  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/review.php?attempt=208951&cmid=9099\">link &nearr;</a>",
+    "start": "2023-01-06T03:48:00.206Z"
+  },
+  {
+    "id": 14958,
+    "content": "FT Riding: Shoulder review: Shorten or lengthen? (unlimited tries)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/view.php?id=9222\">link &nearr;</a>",
+    "start": "2023-01-06T03:48:52.835Z"
+  },
+  {
+    "id": 14959,
+    "content": "Shoulder review: Shorten or lengthen? (unlimited tries): Attempt review  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/review.php?attempt=211057&cmid=9222\">link &nearr;</a>",
+    "start": "2023-01-06T03:48:55.118Z"
+  },
+  {
+    "id": 14960,
+    "content": "Sliding laterally off the lateral border of the scapula, you can feel the tube-shaped belly of which  <a target=\"_blank\" href=\"https://www.google.com/search?q=Sliding+laterally+off+the+lateral+border+of+the+scapula%2C+you+can+feel+the+tube-shaped+belly+of+which+muscle&oq=Sliding+laterally+off+the+lateral+border+of+the+scapula%2C+you+can+feel+the+tube-shaped+belly+of+which+muscle&aqs=chrome..69i57.303j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2023-01-06T03:51:06.595Z"
+  },
+  {
+    "id": 14961,
+    "content": "kinesiology final Flashcards | Quizlet  <a target=\"_blank\" href=\"https://quizlet.com/343348228/kinesiology-final-flash-cards/\">link &nearr;</a>",
+    "start": "2023-01-06T03:51:15.838Z"
+  },
+  {
+    "id": 14962,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again (page 10 of 15)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=211060&cmid=9228&page=9\">link &nearr;</a>",
+    "start": "2023-01-06T03:51:32.731Z"
+  },
+  {
+    "id": 14963,
+    "content": "daniel_wolfard | Quizlet  <a target=\"_blank\" href=\"https://quizlet.com/daniel_wolfard\">link &nearr;</a>",
+    "start": "2023-01-06T03:51:42.302Z"
+  },
+  {
+    "id": 14964,
+    "content": "The anterior surface of the medial border of the scapula serves as an attachment site for which musc  <a target=\"_blank\" href=\"https://www.google.com/search?q=The+anterior+surface+of+the+medial+border+of+the+scapula+serves+as+an+attachment+site+for+which+muscle&oq=The+anterior+surface+of+the+medial+border+of+the+scapula+serves+as+an+attachment+site+for+which+muscle&aqs=chrome..69i57j69i64.532j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2023-01-06T03:52:25.345Z"
+  },
+  {
+    "id": 14965,
+    "content": "Shoulder Anatomy Flashcards | Quizlet  <a target=\"_blank\" href=\"https://quizlet.com/320101302/shoulder-anatomy-flash-cards/\">link &nearr;</a>",
+    "start": "2023-01-06T03:52:27.159Z"
+  },
+  {
+    "id": 14966,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again (page 11 of 15)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=211060&cmid=9228&page=10\">link &nearr;</a>",
+    "start": "2023-01-06T03:53:16.605Z"
+  },
+  {
+    "id": 14967,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again (page 12 of 15)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=211060&cmid=9228&page=11\">link &nearr;</a>",
+    "start": "2023-01-06T03:53:52.968Z"
+  },
+  {
+    "id": 14968,
+    "content": "The brachial artery can be located on the medial side of the arm between which two muscles - Google   <a target=\"_blank\" href=\"https://www.google.com/search?q=The+brachial+artery+can+be+located+on+the+medial+side+of+the+arm+between+which+two+muscles&oq=The+brachial+artery+can+be+located+on+the+medial+side+of+the+arm+between+which+two+muscles&aqs=chrome..69i57j69i64.265j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2023-01-06T03:54:45.204Z"
+  },
+  {
+    "id": 14969,
+    "content": "shoulder and arm Flashcards | Quizlet  <a target=\"_blank\" href=\"https://quizlet.com/373640209/shoulder-and-arm-flash-cards/\">link &nearr;</a>",
+    "start": "2023-01-06T03:54:49.843Z"
+  },
+  {
+    "id": 14970,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again (page 13 of 15)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=211060&cmid=9228&page=12\">link &nearr;</a>",
+    "start": "2023-01-06T03:55:04.938Z"
+  },
+  {
+    "id": 14971,
+    "content": "The three bones that make up the shoulder complex are the clavicle, scapula and - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=The+three+bones+that+make+up+the+shoulder+complex+are+the+clavicle%2C+scapula+and&oq=The+three+bones+that+make+up+the+shoulder+complex+are+the+clavicle%2C+scapula+and&aqs=chrome..69i57j69i64.244j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2023-01-06T03:55:26.364Z"
+  },
+  {
+    "id": 14972,
+    "content": "Bones and Bony Landmarks #1: Shoulder and Arm Flashcards | Quizlet  <a target=\"_blank\" href=\"https://quizlet.com/197789883/bones-and-bony-landmarks-1-shoulder-and-arm-flash-cards/\">link &nearr;</a>",
+    "start": "2023-01-06T03:55:28.219Z"
+  },
+  {
+    "id": 14973,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again (page 14 of 15)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=211060&cmid=9228&page=13\">link &nearr;</a>",
+    "start": "2023-01-06T03:55:35.100Z"
+  },
+  {
+    "id": 14974,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again (page 15 of 15)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=211060&cmid=9228&page=14\">link &nearr;</a>",
+    "start": "2023-01-06T03:56:07.151Z"
+  },
+  {
+    "id": 14975,
+    "content": "What bony landmark can be located by sliding off the acromion, inferiorly and laterally, approximate  <a target=\"_blank\" href=\"https://www.google.com/search?q=What+bony+landmark+can+be+located+by+sliding+off+the+acromion%2C+inferiorly+and+laterally%2C+approximately+one+inch&oq=What+bony+landmark+can+be+located+by+sliding+off+the+acromion%2C+inferiorly+and+laterally%2C+approximately+one+inch&aqs=chrome..69i57.2696j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2023-01-06T03:56:57.257Z"
+  },
+  {
+    "id": 14976,
+    "content": "Kinesiology Shoulder and Arms Flashcards | Quizlet  <a target=\"_blank\" href=\"https://quizlet.com/458870030/kinesiology-shoulder-and-arms-flash-cards/\">link &nearr;</a>",
+    "start": "2023-01-06T03:56:58.569Z"
+  },
+  {
+    "id": 14977,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again: Attempt summary  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/summary.php?attempt=211060&cmid=9228\">link &nearr;</a>",
+    "start": "2023-01-06T03:57:56.344Z"
+  },
+  {
+    "id": 14978,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again (page 6 of 15)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=211060&cmid=9228&page=5#\">link &nearr;</a>",
+    "start": "2023-01-06T03:57:22.688Z"
+  },
+  {
+    "id": 14979,
+    "content": "As you follow the biceps brachii belly proximally, it becomes deep to which muscle - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=As+you+follow+the+biceps+brachii+belly+proximally%2C+it+becomes+deep+to+which+muscle&oq=As+you+follow+the+biceps+brachii+belly+proximally%2C+it+becomes+deep+to+which+muscle&aqs=chrome..69i57j69i64.564j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
+    "start": "2023-01-06T03:57:44.035Z"
+  },
+  {
+    "id": 14980,
+    "content": "Shoulder & Arm Flashcards | Quizlet  <a target=\"_blank\" href=\"https://quizlet.com/225965662/shoulder-arm-flash-cards/\">link &nearr;</a>",
+    "start": "2023-01-06T03:57:45.245Z"
+  },
+  {
+    "id": 14981,
+    "content": "Kinesiology of the Shoulder Quiz - GRADED - must be reopened to take again: Attempt review  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/review.php?attempt=211060&cmid=9228\">link &nearr;</a>",
+    "start": "2023-01-06T03:58:00.871Z"
+  },
+  {
+    "id": 14982,
+    "content": "FT Riding: Nervous/Endocrine Systems Quiz - GRADED - must be reopened to take again  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/view.php?id=9231\">link &nearr;</a>",
+    "start": "2023-01-06T03:59:46.204Z"
+  },
+  {
+    "id": 14983,
+    "content": "Nervous/Endocrine Systems Quiz - GRADED - must be reopened to take again (page 1 of 20)  <a target=\"_blank\" href=\"https://asismassage.moodlehub.com/mod/quiz/attempt.php?attempt=211381&cmid=9231\">link &nearr;</a>",
+    "start": "2023-01-06T03:59:50.637Z"
+  }
+])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
