@@ -13,7 +13,7 @@ const CALENDAR_NAMES = [
 	'Predictions', 'Revelation', 'Robot do'
 ]
 const PUBLIC_CALENDARS = [
-	'Diet', 'General', 'Revelation', 'Robot do'
+	'Diet', 'General', 'Revelation', 'Robot do', 'Predictions'
 ]
 
 const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
