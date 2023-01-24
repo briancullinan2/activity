@@ -576,7 +576,63 @@
       const container = document.getElementById("visualization")
       const timezone = (new Date()).getTimezoneOffset()
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
+      const items = new vis.DataSet([
+  {
+    "id": 11447,
+    "content": "Google Fi  <a target=\"_blank\" href=\"https://messages.google.com/\">link &nearr;</a>",
+    "start": "2023-01-24T01:09:22.192Z"
+  },
+  {
+    "id": 11818,
+    "content": "Google Fi  <a target=\"_blank\" href=\"https://messages.google.com/web\">link &nearr;</a>",
+    "start": "2023-01-24T01:09:22.416Z"
+  },
+  {
+    "id": 11819,
+    "content": "Google Fi  <a target=\"_blank\" href=\"https://messages.google.com/web/\">link &nearr;</a>",
+    "start": "2023-01-24T01:09:22.416Z"
+  },
+  {
+    "id": 14347,
+    "content": "Vacation Homes & Condo Rentals - Airbnb - Airbnb  <a target=\"_blank\" href=\"https://airbnb.com/\">link &nearr;</a>",
+    "start": "2023-01-23T03:57:40.414Z"
+  },
+  {
+    "id": 14348,
+    "content": "Vacation Homes & Condo Rentals - Airbnb - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/\">link &nearr;</a>",
+    "start": "2023-01-23T03:57:41.878Z"
+  },
+  {
+    "id": 14359,
+    "content": "Host Dashboard - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting\">link &nearr;</a>",
+    "start": "2023-01-23T03:57:47.772Z"
+  },
+  {
+    "id": 14360,
+    "content": "Manage your listings - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings\">link &nearr;</a>",
+    "start": "2023-01-23T03:59:04.744Z"
+  },
+  {
+    "id": 14605,
+    "content": "Choose your amenities - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/become-a-host/46428872\">link &nearr;</a>",
+    "start": "2023-01-23T03:59:01.705Z"
+  },
+  {
+    "id": 14782,
+    "content": "Choose your amenities - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/46428872/details\">link &nearr;</a>",
+    "start": "2023-01-23T03:59:00.704Z"
+  },
+  {
+    "id": 14792,
+    "content": "Edit listing 'Mountain Cabin in the Pines' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/776859070387566845/details\">link &nearr;</a>",
+    "start": "2023-01-23T03:58:36.872Z"
+  },
+  {
+    "id": 14793,
+    "content": "Edit listing 'Mountain Cabin in the Pines' - Airbnb  <a target=\"_blank\" href=\"https://www.airbnb.com/hosting/listings/776859070387566845/pricing-and-availability\">link &nearr;</a>",
+    "start": "2023-01-23T03:58:16.114Z"
+  }
+])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
