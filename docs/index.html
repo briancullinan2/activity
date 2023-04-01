@@ -145,8 +145,14 @@
 <li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
 		</li>
+<li class=""><a href="#Activity Monitor">
+		<label for="win-Activity Monitor">Activity Monitor</a></label>
+		</li>
 <li class="active"><a href="#Google Chrome">
 		<label for="win-Google Chrome">Google Chrome</a></label>
+		</li>
+<li class=""><a href="#System Preferences">
+		<label for="win-System Preferences">System Preferences</a></label>
 		</li>
 <li class=""><a href="#Visual Studio Code">
 		<label for="win-Visual Studio Code">Visual Studio Code</a></label>
@@ -156,9 +162,6 @@
 		</li>
 <li class=""><a href="#Preview">
 		<label for="win-Preview">Preview</a></label>
-		</li>
-<li class=""><a href="#UserNotificationCenter">
-		<label for="win-UserNotificationCenter">UserNotificationCenter</a></label>
 		</li>
 <li class=""><a href="#OBS Studio">
 		<label for="win-OBS Studio">OBS Studio</a></label>
@@ -568,7 +571,18 @@
       const container = document.getElementById("visualization")
       const timezone = (new Date()).getTimezoneOffset()
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
+      const items = new vis.DataSet([
+  {
+    "id": 12778,
+    "content": "Google Calendar - Export/import calendars  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/settings/export\">link &nearr;</a>",
+    "start": "2023-04-01T00:07:25.508Z"
+  },
+  {
+    "id": 12929,
+    "content": "https://calendar.google.com/calendar/u/0/r/settings/export?autorel=1  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/settings/export?autorel=1\">link &nearr;</a>",
+    "start": "2023-04-01T00:07:24.703Z"
+  }
+])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
