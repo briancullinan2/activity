@@ -571,7 +571,88 @@
       const container = document.getElementById("visualization")
       const timezone = (new Date()).getTimezoneOffset()
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
+      const items = new vis.DataSet([
+  {
+    "id": 16490,
+    "content": "Google Services at NAU | Information Technology Services  <a target=\"_blank\" href=\"https://mail.nau.edu/\">link &nearr;</a>",
+    "start": "2023-05-07T20:18:06.593Z"
+  },
+  {
+    "id": 16491,
+    "content": "Google Services at NAU | Information Technology Services  <a target=\"_blank\" href=\"https://nau.edu/its/services/google/\">link &nearr;</a>",
+    "start": "2023-05-07T20:18:06.593Z"
+  },
+  {
+    "id": 16492,
+    "content": "Google Services at NAU | Information Technology Services  <a target=\"_blank\" href=\"https://in.nau.edu/its/google/\">link &nearr;</a>",
+    "start": "2023-05-07T20:18:06.593Z"
+  },
+  {
+    "id": 16493,
+    "content": "Login - CAS – Central Authentication Service  <a target=\"_blank\" href=\"http://gmail.nau.edu/\">link &nearr;</a>",
+    "start": "2023-05-07T20:19:01.972Z"
+  },
+  {
+    "id": 16497,
+    "content": "Login - CAS – Central Authentication Service  <a target=\"_blank\" href=\"https://shibboleth.nau.edu/idp/googleprofile/SAML2/Redirect/SSO?execution=e1s1\">link &nearr;</a>",
+    "start": "2023-05-07T20:18:16.062Z"
+  },
+  {
+    "id": 16498,
+    "content": "Login - CAS – Central Authentication Service  <a target=\"_blank\" href=\"https://shibboleth.nau.edu/idp/Authn/External?conversation=e1s1\">link &nearr;</a>",
+    "start": "2023-05-07T20:18:16.062Z"
+  },
+  {
+    "id": 16499,
+    "content": "Login - CAS – Central Authentication Service  <a target=\"_blank\" href=\"https://cas.nau.edu/cas/login?service=https%3A%2F%2Fshibboleth.nau.edu%2Fidp%2FAuthn%2FExternal%3Fconversation%3De1s1&entityId=google.com\">link &nearr;</a>",
+    "start": "2023-05-07T20:18:16.062Z"
+  },
+  {
+    "id": 16501,
+    "content": "Duo Security - Two-Factor Authentication  <a target=\"_blank\" href=\"https://api-2b8437ca.duosecurity.com/frame/frameless/v4/auth?sid=frameless-9ee06962-6fe4-456c-8b40-4150a32a42d0&tx=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJkdW9fdW5hbWUiOiJyanIyOCIsInNjb3BlIjoib3BlbmlkIiwicmVzcG9uc2VfdHlwZSI6ImNvZGUiLCJyZWRpcmVjdF91cmkiOiJodHRwczovL2Nhcy5uYXUuZWR1L2Nhcy9sb2dpbiIsInN0YXRlIjoiVFNULWFhZDA4MDhhNmJlMWU2ZWU1OTIwMjI3YzY3NDMzNjUyNzJjMSIsImV4cCI6MTY4MzQ5MzkwMSwidXNlX2R1b19jb2RlX2F0dHJpYnV0ZSI6dHJ1ZSwiY2xpZW50X2lkIjoiRElER0xLS1ROQ0VLRkpDNE9IT0wifQ.8kf17YapXRlQvcIyXhxuf_7m4vIVmTllPt-zriWSp5ufMW5UlPTR4IzVX34peqkMcVfz_lt2SMYZZhckRmnj_Q\">link &nearr;</a>",
+    "start": "2023-05-07T20:18:43.097Z"
+  },
+  {
+    "id": 16503,
+    "content": "Duo Security - Two-Factor Authentication  <a target=\"_blank\" href=\"https://api-2b8437ca.duosecurity.com/frame/v4/return?sid=frameless-9ee06962-6fe4-456c-8b40-4150a32a42d0\">link &nearr;</a>",
+    "start": "2023-05-07T20:18:43.097Z"
+  },
+  {
+    "id": 16506,
+    "content": "Login - CAS – Central Authentication Service  <a target=\"_blank\" href=\"https://shibboleth.nau.edu/idp/googleprofile/SAML2/Redirect/SSO?execution=e2s1\">link &nearr;</a>",
+    "start": "2023-05-07T20:19:01.972Z"
+  },
+  {
+    "id": 16507,
+    "content": "Login - CAS – Central Authentication Service  <a target=\"_blank\" href=\"https://shibboleth.nau.edu/idp/Authn/External?conversation=e2s1\">link &nearr;</a>",
+    "start": "2023-05-07T20:19:01.972Z"
+  },
+  {
+    "id": 16508,
+    "content": "Login - CAS – Central Authentication Service  <a target=\"_blank\" href=\"https://cas.nau.edu/cas/login?service=https%3A%2F%2Fshibboleth.nau.edu%2Fidp%2FAuthn%2FExternal%3Fconversation%3De2s1&entityId=google.com\">link &nearr;</a>",
+    "start": "2023-05-07T20:19:01.972Z"
+  },
+  {
+    "id": 16510,
+    "content": "Duo Security - Two-Factor Authentication  <a target=\"_blank\" href=\"https://api-2b8437ca.duosecurity.com/frame/frameless/v4/auth?sid=frameless-a985acfe-045a-4082-8699-d80f8095f2f6&tx=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJkdW9fdW5hbWUiOiJyanIyOCIsInNjb3BlIjoib3BlbmlkIiwicmVzcG9uc2VfdHlwZSI6ImNvZGUiLCJyZWRpcmVjdF91cmkiOiJodHRwczovL2Nhcy5uYXUuZWR1L2Nhcy9sb2dpbiIsInN0YXRlIjoiVFNULTkxNDliYjM1YjQ5NWI5YmRkZTI5ZGNjYjQyNjM0OTdhNmYxMyIsImV4cCI6MTY4MzQ5MzkyMywidXNlX2R1b19jb2RlX2F0dHJpYnV0ZSI6dHJ1ZSwiY2xpZW50X2lkIjoiRElER0xLS1ROQ0VLRkpDNE9IT0wifQ.V-_TiDbXRj8aeKrIzhHRmQ66KwNiPSxH9Eugw6-gEiqIxlbKUUoyqwkV1swa8fqq7sltgNgX_wthwF1t9UalGQ\">link &nearr;</a>",
+    "start": "2023-05-07T20:19:04.859Z"
+  },
+  {
+    "id": 16512,
+    "content": "Duo Security - Two-Factor Authentication  <a target=\"_blank\" href=\"https://api-2b8437ca.duosecurity.com/frame/v4/return?sid=frameless-a985acfe-045a-4082-8699-d80f8095f2f6\">link &nearr;</a>",
+    "start": "2023-05-07T20:19:04.859Z"
+  },
+  {
+    "id": 16515,
+    "content": "Login - CAS – Central Authentication Service  <a target=\"_blank\" href=\"https://cas.nau.edu/cas/login?state=TST-9149bb35b495b9bdde29dccb4263497a6f13&duo_code=RvBpzcZx1KPmywG620KXncGlTDKhDTcf\">link &nearr;</a>",
+    "start": "2023-05-07T20:19:41.729Z"
+  },
+  {
+    "id": 16518,
+    "content": "Redirecting...  <a target=\"_blank\" href=\"https://www.google.com/a/nau.edu/acs\">link &nearr;</a>",
+    "start": "2023-05-07T20:19:46.018Z"
+  }
+])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
