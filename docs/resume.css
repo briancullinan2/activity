@@ -226,6 +226,13 @@ div.container.timeline .history-item .time {
   width: 100px;
 }
 
+div.container.timeline .history-item .content {
+  display: inline-block;
+  width: 100%;
+  margin-left: -100px;
+  padding-left: 100px;
+}
+
 div.container.projects svg,
 div.container.projects img {
   max-width: 100%;
