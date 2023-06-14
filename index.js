@@ -32,8 +32,8 @@ async function renderIndex() {
 		.map(item => {
 			return `<div class="history-item">${item.content}</div>`
 		}).join('\n')
-	bodyTag = index.match(/<h2>Daily Activity<\/h2>/i)
-	offset = bodyTag.index + bodyTag[0].length
+	bodyTag = index.match(/<h2>Browsing Activity<\/h2>/i)
+	offset = bodyTag.index
 	index = index.substring(0, offset)
 		+ historyStr + index.substring(offset + bodyTag[0].length, index.length)
 
@@ -48,18 +48,13 @@ async function renderIndex() {
 			arr.sort((a, b) => b.start - a.start)
 			return arr.slice(0, 20)
 		}).flat(1)
+	let calendarStr = ''
 
-	/*
-	bodyTag = index.match(/groups = new vis.DataSet\(\[\]\)/i)
+	bodyTag = index.match(/<h2>Daily Activity<\/h2>/i)
 	offset = bodyTag.index
 	index = index.substring(0, offset)
-		+ `groups = new vis.DataSet(${JSON.stringify(groups, null, 2)})` + index.substring(offset + bodyTag[0].length, index.length)
+		+ calendarStr + index.substring(offset + bodyTag[0].length, index.length)
 
-	bodyTag = index.match(/items2 = new vis.DataSet\(\[\]\)/i)
-	offset = bodyTag.index
-	index = index.substring(0, offset)
-		+ `items2 = new vis.DataSet(${JSON.stringify(listAllEvents, null, 2)})` + index.substring(offset + bodyTag[0].length, index.length)
-	*/
 
 	fs.writeFileSync(path.join(__dirname, 'docs/index.html'), index)
 }
