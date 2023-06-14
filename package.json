@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "generate": "node -e \"require('./index.js').renderIndex()\"",
+    "debug": "node --inspect-brk -e \"require('./index.js').renderIndex()\"",
     "generate:projects": "node -e \"require('./projects.js').projectHeatmap()\"",
     "encrypt:bookmarks": "node -e \"require('./bookmarks.js').encryptBookmarks()\"",
     "update": "git add -A && git commit -m \"auto-update\" && git push",

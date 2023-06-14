@@ -521,83 +521,13 @@
 
   <div class="container timeline">
     <h2>Browsing Activity</h2>
-    <p><a class="nowButton" href="javascript:resetTimeline()">Now</a></p>
-    <div id="visualization"></div>
-
-    <script type="text/javascript"
-      src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
-
-    <script type="text/javascript">
-      // DOM element where the Timeline will be attached
-      const container = document.getElementById("visualization")
-      const timezone = (new Date()).getTimezoneOffset()
-      // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([])
-      // Configuration for the Timeline
-      const options = {
-        maxHeight: '100%',
-        stack: true,
-        moment: function (date) {
-          return vis.moment(date);
-        },
-        rollingMode: {
-          follow: true,
-          offset: 0.5
-        }
-      }
-      // Create a Timeline
-      const timeline = new vis.Timeline(container, items, options)
-
-      function resetTimeline() {
-        const now = (new Date).getTime()
-        timeline.setWindow(
-          new Date(now - 60 * 60 * 1000),
-          new Date(now + 60 * 60 * 1000))
-      }
-
-      setTimeout(resetTimeline, 3000)
-    </script>
+    
   </div>
 
 
   <div class="container timeline">
     <h2>Daily Activity</h2>
-    <p><a class="nowButton" href="javascript:resetTimeline2()">Now</a></p>
-
-    <div id="visualization2"></div>
-
-    <script type="text/javascript">
-      // create a data set with groups
-      const groups = new vis.DataSet([])
-
-      // create a dataset with items
-      const items2 = new vis.DataSet([])
-
-      // create visualization
-      const container2 = document.getElementById('visualization2');
-      const options2 = {
-        maxHeight: '100%',
-        stack: true,
-        moment: function (date) {
-          return vis.moment(date)
-        },
-        groupOrder: 'content'  // groupOrder can be a property name or a sorting function
-      };
-
-      const timeline2 = new vis.Timeline(container2);
-      timeline2.setOptions(options2);
-      timeline2.setGroups(groups);
-      timeline2.setItems(items2);
-
-      function resetTimeline2() {
-        const now = (new Date).getTime()
-        timeline2.setWindow(
-          new Date(now - 60 * 60 * 1000),
-          new Date(now + 60 * 60 * 1000))
-      }
-
-      setTimeout(resetTimeline2, 2000)
-    </script>
+    
   </div>
 
   <div class="container">

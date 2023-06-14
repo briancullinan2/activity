@@ -33,7 +33,7 @@ async function renderIndex() {
 			return `<div class="history-item">${item.content}</div>`
 		}).join('\n')
 	bodyTag = index.match(/<h2>Daily Activity<\/h2>/i)
-	offset = bodyTag.index
+	offset = bodyTag.index + bodyTag[0].length
 	index = index.substring(0, offset)
 		+ historyStr + index.substring(offset + bodyTag[0].length, index.length)
 
@@ -49,6 +49,7 @@ async function renderIndex() {
 			return arr.slice(0, 20)
 		}).flat(1)
 
+	/*
 	bodyTag = index.match(/groups = new vis.DataSet\(\[\]\)/i)
 	offset = bodyTag.index
 	index = index.substring(0, offset)
@@ -58,7 +59,8 @@ async function renderIndex() {
 	offset = bodyTag.index
 	index = index.substring(0, offset)
 		+ `items2 = new vis.DataSet(${JSON.stringify(listAllEvents, null, 2)})` + index.substring(offset + bodyTag[0].length, index.length)
-	
+	*/
+
 	fs.writeFileSync(path.join(__dirname, 'docs/index.html'), index)
 }
 
