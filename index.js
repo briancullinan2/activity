@@ -52,7 +52,7 @@ async function renderIndex() {
 	*/
 	let listAllEvents = Object.values(calendarEntries)
 		.map(arr => {
-			return arr.slice(0, 20)
+			return arr.slice(0, 30)
 		})
 		.flat(1)
 		.sort((a, b) => a.start - b.start)
