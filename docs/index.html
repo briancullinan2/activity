@@ -140,10 +140,7 @@
     <h2>Live Development</h2>
     
   <ol class="windows">
-  <li class=""><a href="#loginwindow">
-		<label for="win-loginwindow">loginwindow</a></label>
-		</li>
-<li class=""><a href="#Google Drive">
+  <li class=""><a href="#Google Drive">
 		<label for="win-Google Drive">Google Drive</a></label>
 		</li>
 <li class=""><a href="#Activity Monitor">
@@ -155,14 +152,14 @@
 <li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
 		</li>
-<li class="active"><a href="#Google Chrome">
+<li class=""><a href="#Google Chrome">
 		<label for="win-Google Chrome">Google Chrome</a></label>
+		</li>
+<li class="active"><a href="#Terminal">
+		<label for="win-Terminal">Terminal</a></label>
 		</li>
 <li class=""><a href="#Visual Studio Code">
 		<label for="win-Visual Studio Code">Visual Studio Code</a></label>
-		</li>
-<li class=""><a href="#Terminal">
-		<label for="win-Terminal">Terminal</a></label>
 		</li>
 <li class=""><a href="#System Preferences">
 		<label for="win-System Preferences">System Preferences</a></label>
@@ -585,1913 +582,7 @@
       const container = document.getElementById("visualization")
       const timezone = (new Date()).getTimezoneOffset()
       // Create a DataSet (allows two way data-binding)
-      const items = new vis.DataSet([
-  {
-    "id": 9150,
-    "content": "Brian Cullinan's Live Resume  <a target=\"_blank\" href=\"https://briancullinan.com/\">link &nearr;</a>",
-    "start": "2023-06-14T04:56:46.250Z"
-  },
-  {
-    "id": 9310,
-    "content": "Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/?usp=direct_url&rswr=true\">link &nearr;</a>",
-    "start": "2023-06-14T03:56:05.543Z"
-  },
-  {
-    "id": 9311,
-    "content": "Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/u/0/?usp=direct_url&rswr=true\">link &nearr;</a>",
-    "start": "2023-06-14T03:56:05.543Z"
-  },
-  {
-    "id": 9312,
-    "content": "Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/u/0/\">link &nearr;</a>",
-    "start": "2023-06-14T03:56:05.878Z"
-  },
-  {
-    "id": 9313,
-    "content": "Untitled document - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/u/0/create?usp=docs_home&ths=true\">link &nearr;</a>",
-    "start": "2023-06-14T03:56:08.292Z"
-  },
-  {
-    "id": 9465,
-    "content": "Faiss: A library for efficient similarity search - Engineering at Meta  <a target=\"_blank\" href=\"https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/\">link &nearr;</a>",
-    "start": "2023-06-12T23:44:39.971Z"
-  },
-  {
-    "id": 11034,
-    "content": "Google Calendar - Week of June 11, 2023  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r\">link &nearr;</a>",
-    "start": "2023-06-13T19:12:19.085Z"
-  },
-  {
-    "id": 11421,
-    "content": "Google Calendar - General settings  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/settings\">link &nearr;</a>",
-    "start": "2023-06-13T17:22:08.996Z"
-  },
-  {
-    "id": 12778,
-    "content": "Google Calendar - Export/import calendars  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/settings/export\">link &nearr;</a>",
-    "start": "2023-06-13T17:22:07.134Z"
-  },
-  {
-    "id": 14149,
-    "content": "Hesychasm - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Hesychasm\">link &nearr;</a>",
-    "start": "2023-06-14T05:03:01.539Z"
-  },
-  {
-    "id": 16306,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.494pc0jag57m\">link &nearr;</a>",
-    "start": "2023-06-13T17:42:34.978Z"
-  },
-  {
-    "id": 16307,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#\">link &nearr;</a>",
-    "start": "2023-06-14T05:06:47.304Z"
-  },
-  {
-    "id": 16308,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.mpgkrpg18d97\">link &nearr;</a>",
-    "start": "2023-06-13T17:42:45.930Z"
-  },
-  {
-    "id": 16313,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.rmxboedkmxd2\">link &nearr;</a>",
-    "start": "2023-06-13T17:43:16.691Z"
-  },
-  {
-    "id": 16314,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4s86d76p58mg\">link &nearr;</a>",
-    "start": "2023-06-13T17:43:29.961Z"
-  },
-  {
-    "id": 16316,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.7848qngin9ws\">link &nearr;</a>",
-    "start": "2023-06-13T18:59:46.474Z"
-  },
-  {
-    "id": 16318,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8smdzn9dc8o\">link &nearr;</a>",
-    "start": "2023-06-13T17:53:32.627Z"
-  },
-  {
-    "id": 16319,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.2nigx83wz7ud\">link &nearr;</a>",
-    "start": "2023-06-13T17:53:35.099Z"
-  },
-  {
-    "id": 16325,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5zzlrbt931xf\">link &nearr;</a>",
-    "start": "2023-06-13T17:56:19.158Z"
-  },
-  {
-    "id": 16327,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.1szhld4y1dhd\">link &nearr;</a>",
-    "start": "2023-06-13T18:05:16.796Z"
-  },
-  {
-    "id": 16328,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.uje8qr4q2sjt\">link &nearr;</a>",
-    "start": "2023-06-13T19:58:38.130Z"
-  },
-  {
-    "id": 16330,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.6s9lc25hibs2\">link &nearr;</a>",
-    "start": "2023-06-13T19:58:42.401Z"
-  },
-  {
-    "id": 16344,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tvimg2xt0j9h\">link &nearr;</a>",
-    "start": "2023-06-13T17:57:51.978Z"
-  },
-  {
-    "id": 16346,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.k2t7w2ql70qe\">link &nearr;</a>",
-    "start": "2023-06-13T19:50:18.979Z"
-  },
-  {
-    "id": 16349,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.7vf7gj6ae7p\">link &nearr;</a>",
-    "start": "2023-06-13T17:43:37.573Z"
-  },
-  {
-    "id": 16350,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.pvcqvbbuj4wx\">link &nearr;</a>",
-    "start": "2023-06-13T19:01:37.934Z"
-  },
-  {
-    "id": 16351,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3ne4duvc5wu0\">link &nearr;</a>",
-    "start": "2023-06-13T18:20:27.119Z"
-  },
-  {
-    "id": 16352,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kslxzwxm343s\">link &nearr;</a>",
-    "start": "2023-06-13T18:17:38.173Z"
-  },
-  {
-    "id": 16354,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.a9e58tb4m79h\">link &nearr;</a>",
-    "start": "2023-06-13T17:51:55.087Z"
-  },
-  {
-    "id": 16355,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.nhx2pwb7wqgz\">link &nearr;</a>",
-    "start": "2023-06-13T17:52:03.174Z"
-  },
-  {
-    "id": 16357,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.1qp0x8ta7jde\">link &nearr;</a>",
-    "start": "2023-06-13T19:48:34.201Z"
-  },
-  {
-    "id": 16358,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.1kjrcydgft8x\">link &nearr;</a>",
-    "start": "2023-06-13T19:48:40.695Z"
-  },
-  {
-    "id": 16359,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3r945yx5qyl6\">link &nearr;</a>",
-    "start": "2023-06-13T17:56:06.150Z"
-  },
-  {
-    "id": 16360,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.pvelt4kg6pu1\">link &nearr;</a>",
-    "start": "2023-06-13T19:48:56.186Z"
-  },
-  {
-    "id": 16361,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.2stka2y1f11o\">link &nearr;</a>",
-    "start": "2023-06-13T17:55:20.719Z"
-  },
-  {
-    "id": 16364,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.39i0zq4y7o6u\">link &nearr;</a>",
-    "start": "2023-06-13T18:09:11.174Z"
-  },
-  {
-    "id": 16365,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.yjbtggs7b5re\">link &nearr;</a>",
-    "start": "2023-06-13T18:09:15.572Z"
-  },
-  {
-    "id": 16366,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.67nc7z3an0j9\">link &nearr;</a>",
-    "start": "2023-06-13T18:09:09.707Z"
-  },
-  {
-    "id": 16368,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.utuu9nyfjj3i\">link &nearr;</a>",
-    "start": "2023-06-13T18:01:19.689Z"
-  },
-  {
-    "id": 16373,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.i3dpkw9h6lfx\">link &nearr;</a>",
-    "start": "2023-06-13T17:58:10.405Z"
-  },
-  {
-    "id": 16374,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.bwfndu36lcx\">link &nearr;</a>",
-    "start": "2023-06-13T17:58:22.102Z"
-  },
-  {
-    "id": 16375,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3y91wle3ldst\">link &nearr;</a>",
-    "start": "2023-06-13T17:44:47.974Z"
-  },
-  {
-    "id": 16379,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.gtmcovl0i5y8\">link &nearr;</a>",
-    "start": "2023-06-13T18:56:57.363Z"
-  },
-  {
-    "id": 16380,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.6dc7tshvkdji\">link &nearr;</a>",
-    "start": "2023-06-13T18:57:28.528Z"
-  },
-  {
-    "id": 16384,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ej5zuz2pncbh\">link &nearr;</a>",
-    "start": "2023-06-13T19:03:21.976Z"
-  },
-  {
-    "id": 16387,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.bq5m5tybny3l\">link &nearr;</a>",
-    "start": "2023-06-13T18:41:14.692Z"
-  },
-  {
-    "id": 16388,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ohclgvh0wndq\">link &nearr;</a>",
-    "start": "2023-06-13T18:02:41.898Z"
-  },
-  {
-    "id": 16389,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.s52j0pmx4k8j\">link &nearr;</a>",
-    "start": "2023-06-13T18:02:39.538Z"
-  },
-  {
-    "id": 16390,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xda0dj1uli94\">link &nearr;</a>",
-    "start": "2023-06-13T18:03:02.056Z"
-  },
-  {
-    "id": 16395,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3fjeoemb51it\">link &nearr;</a>",
-    "start": "2023-06-13T01:36:08.908Z"
-  },
-  {
-    "id": 16397,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fffza16lmsiy\">link &nearr;</a>",
-    "start": "2023-06-13T18:20:34.768Z"
-  },
-  {
-    "id": 16399,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lyc12i28nba9\">link &nearr;</a>",
-    "start": "2023-06-13T17:51:03.780Z"
-  },
-  {
-    "id": 16400,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.37l1l5oqub0p\">link &nearr;</a>",
-    "start": "2023-06-13T17:48:55.472Z"
-  },
-  {
-    "id": 16402,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.i484ilra8xcp\">link &nearr;</a>",
-    "start": "2023-06-13T17:48:20.452Z"
-  },
-  {
-    "id": 16408,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.s9r42su6435u\">link &nearr;</a>",
-    "start": "2023-06-13T19:26:45.814Z"
-  },
-  {
-    "id": 16417,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.7szr37kophtn\">link &nearr;</a>",
-    "start": "2023-06-13T18:03:46.351Z"
-  },
-  {
-    "id": 16418,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xre0zwf6knpn\">link &nearr;</a>",
-    "start": "2023-06-13T18:03:38.936Z"
-  },
-  {
-    "id": 16420,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4qicoaa7s5o9\">link &nearr;</a>",
-    "start": "2023-06-13T17:39:32.770Z"
-  },
-  {
-    "id": 16427,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.7bkm5lf7w7ze\">link &nearr;</a>",
-    "start": "2023-06-13T01:39:47.313Z"
-  },
-  {
-    "id": 16432,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.alagd1gn5ja8\">link &nearr;</a>",
-    "start": "2023-06-13T17:54:36.343Z"
-  },
-  {
-    "id": 16438,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.gy1c26p4uwxu\">link &nearr;</a>",
-    "start": "2023-06-13T19:04:16.381Z"
-  },
-  {
-    "id": 16439,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5m7ty4qwbbph\">link &nearr;</a>",
-    "start": "2023-06-13T18:43:35.367Z"
-  },
-  {
-    "id": 16441,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.f52gaby94v4h\">link &nearr;</a>",
-    "start": "2023-06-13T19:01:23.207Z"
-  },
-  {
-    "id": 16442,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jyccuqetopih\">link &nearr;</a>",
-    "start": "2023-06-13T18:56:26.411Z"
-  },
-  {
-    "id": 16443,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3uj0vuvp72ka\">link &nearr;</a>",
-    "start": "2023-06-13T18:56:18.146Z"
-  },
-  {
-    "id": 16444,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jlr4kws3a3yv\">link &nearr;</a>",
-    "start": "2023-06-13T19:22:35.349Z"
-  },
-  {
-    "id": 16445,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.vdgbw427gy2d\">link &nearr;</a>",
-    "start": "2023-06-13T19:04:49.843Z"
-  },
-  {
-    "id": 16446,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3ttgvvmifxfv\">link &nearr;</a>",
-    "start": "2023-06-13T19:04:41.900Z"
-  },
-  {
-    "id": 16448,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4vj74u9t07g2\">link &nearr;</a>",
-    "start": "2023-06-13T19:01:33.741Z"
-  },
-  {
-    "id": 16449,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fg5t5eqi4gis\">link &nearr;</a>",
-    "start": "2023-06-13T19:04:25.711Z"
-  },
-  {
-    "id": 16452,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.i8e5trb2csee\">link &nearr;</a>",
-    "start": "2023-06-13T18:12:49.896Z"
-  },
-  {
-    "id": 16453,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.y1plxwppstav\">link &nearr;</a>",
-    "start": "2023-06-13T18:13:00.094Z"
-  },
-  {
-    "id": 16550,
-    "content": "Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/\">link &nearr;</a>",
-    "start": "2023-06-14T03:56:05.543Z"
-  },
-  {
-    "id": 16576,
-    "content": "JavaScript Payment API Integration  <a target=\"_blank\" href=\"https://chat.openai.com/?model=text-davinci-002-render-sha\">link &nearr;</a>",
-    "start": "2023-06-14T04:54:28.794Z"
-  },
-  {
-    "id": 16579,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.l7i77kr9zxcd\">link &nearr;</a>",
-    "start": "2023-06-13T18:59:49.316Z"
-  },
-  {
-    "id": 16581,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.dc0xzgpir3y3\">link &nearr;</a>",
-    "start": "2023-06-13T19:05:03.317Z"
-  },
-  {
-    "id": 16586,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.erl4s23t1snb\">link &nearr;</a>",
-    "start": "2023-06-13T20:08:11.236Z"
-  },
-  {
-    "id": 16587,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xzaf5heldzy0\">link &nearr;</a>",
-    "start": "2023-06-13T20:08:19.479Z"
-  },
-  {
-    "id": 16592,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.63o4gtq20fom\">link &nearr;</a>",
-    "start": "2023-06-13T17:45:08.530Z"
-  },
-  {
-    "id": 16594,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.h2pur7d482yl\">link &nearr;</a>",
-    "start": "2023-06-13T17:46:11.363Z"
-  },
-  {
-    "id": 16595,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lpytphjq75c\">link &nearr;</a>",
-    "start": "2023-06-13T19:24:36.744Z"
-  },
-  {
-    "id": 16596,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.trjuxj9nmz7w\">link &nearr;</a>",
-    "start": "2023-06-13T19:25:15.234Z"
-  },
-  {
-    "id": 16598,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.o83rgzdlmo2\">link &nearr;</a>",
-    "start": "2023-06-13T20:08:27.438Z"
-  },
-  {
-    "id": 16600,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fgug4wxrnv71\">link &nearr;</a>",
-    "start": "2023-06-13T19:56:56.272Z"
-  },
-  {
-    "id": 16601,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.81c5gjv61qia\">link &nearr;</a>",
-    "start": "2023-06-13T19:57:01.811Z"
-  },
-  {
-    "id": 16606,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.677mutsqv4dz\">link &nearr;</a>",
-    "start": "2023-06-13T19:08:13.765Z"
-  },
-  {
-    "id": 16607,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.2xyxkd9ckh0\">link &nearr;</a>",
-    "start": "2023-06-13T19:08:20.956Z"
-  },
-  {
-    "id": 16610,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fhy1ggd7diic\">link &nearr;</a>",
-    "start": "2023-06-13T17:42:40.198Z"
-  },
-  {
-    "id": 16631,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.w0s8xsokm82r\">link &nearr;</a>",
-    "start": "2023-06-13T17:26:27.390Z"
-  },
-  {
-    "id": 16632,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kgmo9ct3dq9v\">link &nearr;</a>",
-    "start": "2023-06-13T20:08:30.829Z"
-  },
-  {
-    "id": 16640,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.2vcjc870uud\">link &nearr;</a>",
-    "start": "2023-06-13T19:27:49.806Z"
-  },
-  {
-    "id": 16647,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.br8hogp8qaxn\">link &nearr;</a>",
-    "start": "2023-06-13T17:52:07.945Z"
-  },
-  {
-    "id": 16650,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.icmcobse2u7r\">link &nearr;</a>",
-    "start": "2023-06-13T19:06:44.393Z"
-  },
-  {
-    "id": 16659,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.i45ov6cq4zy8\">link &nearr;</a>",
-    "start": "2023-06-13T20:12:26.065Z"
-  },
-  {
-    "id": 16664,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.h33dxcjumh52\">link &nearr;</a>",
-    "start": "2023-06-13T20:12:37.644Z"
-  },
-  {
-    "id": 16666,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.h2ojx4l3kazz\">link &nearr;</a>",
-    "start": "2023-06-13T20:13:03.355Z"
-  },
-  {
-    "id": 16671,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jj214stph5tj\">link &nearr;</a>",
-    "start": "2023-06-13T19:30:18.637Z"
-  },
-  {
-    "id": 16672,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4nqxyw9dx1d8\">link &nearr;</a>",
-    "start": "2023-06-13T19:30:12.770Z"
-  },
-  {
-    "id": 16675,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8nbvyngr2b3m\">link &nearr;</a>",
-    "start": "2023-06-13T01:36:22.429Z"
-  },
-  {
-    "id": 16676,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lka50tfozh8k\">link &nearr;</a>",
-    "start": "2023-06-13T20:02:42.888Z"
-  },
-  {
-    "id": 16677,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5z8xh9jekyfb\">link &nearr;</a>",
-    "start": "2023-06-13T20:05:39.974Z"
-  },
-  {
-    "id": 16678,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.njo78i8bop24\">link &nearr;</a>",
-    "start": "2023-06-13T20:05:31.936Z"
-  },
-  {
-    "id": 16680,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.iod20m3pvpbp\">link &nearr;</a>",
-    "start": "2023-06-13T20:05:05.948Z"
-  },
-  {
-    "id": 16682,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.vqrj8xuf52os\">link &nearr;</a>",
-    "start": "2023-06-13T18:15:55.989Z"
-  },
-  {
-    "id": 16683,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ktwk8mvzfnku\">link &nearr;</a>",
-    "start": "2023-06-13T20:04:17.862Z"
-  },
-  {
-    "id": 16687,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.wwzryk2kppl1\">link &nearr;</a>",
-    "start": "2023-06-13T20:05:49.913Z"
-  },
-  {
-    "id": 16689,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fu1phxq1ys6j\">link &nearr;</a>",
-    "start": "2023-06-13T20:05:46.267Z"
-  },
-  {
-    "id": 16690,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4vqqto27ifj\">link &nearr;</a>",
-    "start": "2023-06-13T20:05:15.619Z"
-  },
-  {
-    "id": 16693,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tgpwfhnux7yj\">link &nearr;</a>",
-    "start": "2023-06-13T20:13:16.070Z"
-  },
-  {
-    "id": 16694,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.h47yrdch3hwy\">link &nearr;</a>",
-    "start": "2023-06-13T20:13:23.650Z"
-  },
-  {
-    "id": 16695,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ugh3lt4l4i4g\">link &nearr;</a>",
-    "start": "2023-06-13T01:45:23.705Z"
-  },
-  {
-    "id": 16696,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3xja4cc4hnu2\">link &nearr;</a>",
-    "start": "2023-06-13T20:13:39.157Z"
-  },
-  {
-    "id": 16699,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3zogimlg0425\">link &nearr;</a>",
-    "start": "2023-06-13T17:45:44.344Z"
-  },
-  {
-    "id": 16703,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xhnwu1k0sy7l\">link &nearr;</a>",
-    "start": "2023-06-13T19:14:43.765Z"
-  },
-  {
-    "id": 16704,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.66pcet5n9ze\">link &nearr;</a>",
-    "start": "2023-06-13T19:11:18.870Z"
-  },
-  {
-    "id": 16705,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.692i312am8rs\">link &nearr;</a>",
-    "start": "2023-06-13T19:14:24.370Z"
-  },
-  {
-    "id": 16711,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.dh7coyn7y4yc\">link &nearr;</a>",
-    "start": "2023-06-13T20:02:52.964Z"
-  },
-  {
-    "id": 16713,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8jv04cgxlgm2\">link &nearr;</a>",
-    "start": "2023-06-13T20:07:44.085Z"
-  },
-  {
-    "id": 16717,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.awl17guu18ie\">link &nearr;</a>",
-    "start": "2023-06-13T20:02:14.909Z"
-  },
-  {
-    "id": 16718,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.b1c2gfxpl7o\">link &nearr;</a>",
-    "start": "2023-06-13T20:02:20.652Z"
-  },
-  {
-    "id": 16721,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8dsiekjupn3x\">link &nearr;</a>",
-    "start": "2023-06-13T02:15:48.460Z"
-  },
-  {
-    "id": 16722,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5a4alult2crb\">link &nearr;</a>",
-    "start": "2023-06-13T18:00:08.749Z"
-  },
-  {
-    "id": 16724,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.o353p1wlgssa\">link &nearr;</a>",
-    "start": "2023-06-13T18:37:58.402Z"
-  },
-  {
-    "id": 16725,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.g86tc4qy7f3e\">link &nearr;</a>",
-    "start": "2023-06-13T19:33:58.169Z"
-  },
-  {
-    "id": 16726,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.mimopn60lwkr\">link &nearr;</a>",
-    "start": "2023-06-13T19:33:52.072Z"
-  },
-  {
-    "id": 16727,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.uka081umx65\">link &nearr;</a>",
-    "start": "2023-06-13T19:30:36.691Z"
-  },
-  {
-    "id": 16728,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.x7zel972n7p3\">link &nearr;</a>",
-    "start": "2023-06-13T18:37:56.059Z"
-  },
-  {
-    "id": 16730,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fl1cthwmcxp0\">link &nearr;</a>",
-    "start": "2023-06-13T17:45:18.716Z"
-  },
-  {
-    "id": 16732,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.l0tzmn1fz763\">link &nearr;</a>",
-    "start": "2023-06-13T20:09:32.876Z"
-  },
-  {
-    "id": 16734,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.q0o20qquycxj\">link &nearr;</a>",
-    "start": "2023-06-13T20:10:22.387Z"
-  },
-  {
-    "id": 16735,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.s9t2rg9i459h\">link &nearr;</a>",
-    "start": "2023-06-13T01:36:53.898Z"
-  },
-  {
-    "id": 16736,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8xpxsbcv2ogj\">link &nearr;</a>",
-    "start": "2023-06-13T20:06:20.963Z"
-  },
-  {
-    "id": 16738,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lkqhbpu6tppw\">link &nearr;</a>",
-    "start": "2023-06-13T20:06:39.015Z"
-  },
-  {
-    "id": 16739,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.uytihimyggb6\">link &nearr;</a>",
-    "start": "2023-06-13T20:06:35.448Z"
-  },
-  {
-    "id": 16740,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.6j2h1wqbs36n\">link &nearr;</a>",
-    "start": "2023-06-13T20:06:28.864Z"
-  },
-  {
-    "id": 16742,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.sjudgw5iih3m\">link &nearr;</a>",
-    "start": "2023-06-13T18:34:54.909Z"
-  },
-  {
-    "id": 16747,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.eak00e6phvsk\">link &nearr;</a>",
-    "start": "2023-06-13T18:36:45.444Z"
-  },
-  {
-    "id": 16748,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.t8k7bfmm45fa\">link &nearr;</a>",
-    "start": "2023-06-13T18:36:48.918Z"
-  },
-  {
-    "id": 16750,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.vilntsn1nyb\">link &nearr;</a>",
-    "start": "2023-06-13T20:00:45.917Z"
-  },
-  {
-    "id": 16751,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.dbkqe5dwizqc\">link &nearr;</a>",
-    "start": "2023-06-13T20:00:41.849Z"
-  },
-  {
-    "id": 16753,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3nai5frwy3m2\">link &nearr;</a>",
-    "start": "2023-06-13T18:09:28.529Z"
-  },
-  {
-    "id": 16754,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.z9iqnzh7zd3x\">link &nearr;</a>",
-    "start": "2023-06-13T20:00:33.915Z"
-  },
-  {
-    "id": 16756,
-    "content": "Messages  <a target=\"_blank\" href=\"https://messages.google.com/web/u/0/conversations/cf40122ba58fd9461b5274e9eaca8566\">link &nearr;</a>",
-    "start": "2023-06-14T04:51:56.006Z"
-  },
-  {
-    "id": 16771,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.mb8ir363b6g\">link &nearr;</a>",
-    "start": "2023-06-13T20:01:38.672Z"
-  },
-  {
-    "id": 16772,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.aoq43eofin0x\">link &nearr;</a>",
-    "start": "2023-06-13T20:01:31.188Z"
-  },
-  {
-    "id": 16780,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.n0erorpaco40\">link &nearr;</a>",
-    "start": "2023-06-13T17:55:19.719Z"
-  },
-  {
-    "id": 16782,
-    "content": "Perennial Food Crops  <a target=\"_blank\" href=\"https://chat.openai.com/c/59ddab20-18e8-461b-b874-3dd2eb465695\">link &nearr;</a>",
-    "start": "2023-06-13T00:08:18.951Z"
-  },
-  {
-    "id": 16785,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.yxklo1p0ee15\">link &nearr;</a>",
-    "start": "2023-06-13T19:16:40.787Z"
-  },
-  {
-    "id": 16786,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jd3ysuuzjq65\">link &nearr;</a>",
-    "start": "2023-06-13T17:45:45.936Z"
-  },
-  {
-    "id": 16787,
-    "content": "Existence of Logic  <a target=\"_blank\" href=\"https://chat.openai.com/c/8e425b7e-2be5-436d-a1e2-49e33188b61f\">link &nearr;</a>",
-    "start": "2023-06-13T00:33:00.531Z"
-  },
-  {
-    "id": 16788,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.dp1hvuxfykws\">link &nearr;</a>",
-    "start": "2023-06-13T17:46:09.958Z"
-  },
-  {
-    "id": 16793,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.mzruyj1detv0\">link &nearr;</a>",
-    "start": "2023-06-13T17:52:09.570Z"
-  },
-  {
-    "id": 16794,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.rt5clkyaospx\">link &nearr;</a>",
-    "start": "2023-06-13T19:34:20.148Z"
-  },
-  {
-    "id": 16796,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.il86y7o9eni6\">link &nearr;</a>",
-    "start": "2023-06-13T19:01:14.719Z"
-  },
-  {
-    "id": 16797,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.1u3h8fgvgocx\">link &nearr;</a>",
-    "start": "2023-06-13T19:23:16.381Z"
-  },
-  {
-    "id": 16799,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.o2ekcyb57gtl\">link &nearr;</a>",
-    "start": "2023-06-13T19:23:38.348Z"
-  },
-  {
-    "id": 16800,
-    "content": "ai for facial expressions - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=ai+for+facial+expressions&oq=ai+for+facial+expressions&aqs=chrome..69i57.5699j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2023-06-12T23:43:39.430Z"
-  },
-  {
-    "id": 16801,
-    "content": "emotion ai - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=emotion+ai&sxsrf=APwXEdfpNcw1ftJyWu7apRYAkqgQiMceBA%3A1686612998728&ei=BqyHZIqALJ3G0PEPzbOkyAQ&ved=0ahUKEwiKm6aF877_AhUdIzQIHc0ZCUkQ4dUDCBA&uact=5&oq=emotion+ai&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIICAAQigUQkQIyCAgAEIoFEJECMgUIABCABDIFCAAQgAQyBwgAEIAEEAoyBQgAEIAEMgUIABCABDILCC4QgAQQxwEQrwEyBQgAEIAEMgUIABCABDoKCAAQRxDWBBCwAzoECCMQJzoHCAAQigUQQzoRCC4QgAQQsQMQgwEQxwEQ0QM6CwgAEIAEELEDEIMBOggILhCABBCxAzoLCC4QgAQQsQMQgwE6CggAEIoFELEDEEM6CAgAEIAEELEDSgQIQRgAUJoKWPQSYLAXaAFwAXgAgAGRAYgB3AiSAQMxLjmYAQCgAQHAAQHIAQg&sclient=gws-wiz-serp\">link &nearr;</a>",
-    "start": "2023-06-12T23:47:35.034Z"
-  },
-  {
-    "id": 16802,
-    "content": "Emotion AI: 3 Experts on the Possibilities and Risks | Built In  <a target=\"_blank\" href=\"https://builtin.com/artificial-intelligence/emotion-ai#:~:text=Emotion%20AI%20refers%20to%20artificial,physiological%20signals)%20or%20combinations%20thereof.\">link &nearr;</a>",
-    "start": "2023-06-12T23:43:58.163Z"
-  },
-  {
-    "id": 16803,
-    "content": "Emotion AI: 3 Experts on the Possibilities and Risks | Built In  <a target=\"_blank\" href=\"https://builtin.com/artificial-intelligence/emotion-ai\">link &nearr;</a>",
-    "start": "2023-06-12T23:43:59.979Z"
-  },
-  {
-    "id": 16804,
-    "content": "Issues — Emotional AI Lab  <a target=\"_blank\" href=\"https://emotionalai.org/so-what-is-emotional-ai\">link &nearr;</a>",
-    "start": "2023-06-12T23:47:17.943Z"
-  },
-  {
-    "id": 16805,
-    "content": "Emotional AI Lab  <a target=\"_blank\" href=\"https://emotionalai.org/\">link &nearr;</a>",
-    "start": "2023-06-12T23:47:15.580Z"
-  },
-  {
-    "id": 16806,
-    "content": "Emotion AI: Measuring Customer Emotion with Emotional AI Technology  <a target=\"_blank\" href=\"https://www.uniphore.com/emotion-ai/\">link &nearr;</a>",
-    "start": "2023-06-12T23:47:27.805Z"
-  },
-  {
-    "id": 16807,
-    "content": "emotion ai - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=emotion+ai&sxsrf=APwXEdfpNcw1ftJyWu7apRYAkqgQiMceBA%3A1686612998728&ei=BqyHZIqALJ3G0PEPzbOkyAQ&ved=0ahUKEwiKm6aF877_AhUdIzQIHc0ZCUkQ4dUDCBA&uact=5&oq=emotion+ai&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIICAAQigUQkQIyCAgAEIoFEJECMgUIABCABDIFCAAQgAQyBwgAEIAEEAoyBQgAEIAEMgUIABCABDILCC4QgAQQxwEQrwEyBQgAEIAEMgUIABCABDoKCAAQRxDWBBCwAzoECCMQJzoHCAAQigUQQzoRCC4QgAQQsQMQgwEQxwEQ0QM6CwgAEIAEELEDEIMBOggILhCABBCxAzoLCC4QgAQQsQMQgwE6CggAEIoFELEDEEM6CAgAEIAEELEDSgQIQRgAUJoKWPQSYLAXaAFwAXgAgAGRAYgB3AiSAQMxLjmYAQCgAQHAAQHIAQg&sclient=gws-wiz-serp#ip=1\">link &nearr;</a>",
-    "start": "2023-06-12T23:47:43.349Z"
-  },
-  {
-    "id": 16808,
-    "content": "Emotion AI | Course5 Intelligence  <a target=\"_blank\" href=\"https://www.course5i.com/emotion-ai/\">link &nearr;</a>",
-    "start": "2023-06-12T23:47:54.838Z"
-  },
-  {
-    "id": 16809,
-    "content": "AI Labs | Artificial Intelligence Research & Product Development  <a target=\"_blank\" href=\"https://www.course5i.com/ai-labs/\">link &nearr;</a>",
-    "start": "2023-06-12T23:48:01.322Z"
-  },
-  {
-    "id": 16810,
-    "content": "Facial Emotion Recognition  <a target=\"_blank\" href=\"https://edps.europa.eu/system/files/2021-05/21-05-26_techdispatch-facial-emotion-recognition_ref_en.pdf\">link &nearr;</a>",
-    "start": "2023-06-12T23:48:26.587Z"
-  },
-  {
-    "id": 16811,
-    "content": "graph of every emotion ai can detect - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=graph+of+every+emotion+ai+can+detect&oq=graph+of+every+emotion+ai+can+detect&aqs=chrome..69i57.8585j0j4&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2023-06-12T23:50:22.331Z"
-  },
-  {
-    "id": 16812,
-    "content": "Frontiers | Emotion Recognition With Knowledge Graph Based on Electrodermal Activity  <a target=\"_blank\" href=\"https://www.frontiersin.org/articles/10.3389/fnins.2022.911767/full\">link &nearr;</a>",
-    "start": "2023-06-12T23:49:08.625Z"
-  },
-  {
-    "id": 16813,
-    "content": "What is the Emotion Chart, and why it's important? | Blog MorphCast  <a target=\"_blank\" href=\"https://www.morphcast.com/what-is-and-how-important-is-the-emotion-chart-in-2023-more-than-ever/\">link &nearr;</a>",
-    "start": "2023-06-12T23:49:13.242Z"
-  },
-  {
-    "id": 16814,
-    "content": "GoEmotions: A Dataset for Fine-Grained Emotion Classification – Google AI Blog  <a target=\"_blank\" href=\"https://ai.googleblog.com/2021/10/goemotions-dataset-for-fine-grained.html\">link &nearr;</a>",
-    "start": "2023-06-12T23:49:25.190Z"
-  },
-  {
-    "id": 16815,
-    "content": "interactive graph of every emotion ai can detect - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=interactive+graph+of+every+emotion+ai+can+detect&sxsrf=APwXEdffoObWByLcZudxj5ZwB-gxH1-c7w%3A1686613321246&ei=Sa2HZLjeDo3akPIPyZyGmAI&ved=0ahUKEwj4pouf9L7_AhUNLUQIHUmOASMQ4dUDCBA&uact=5&oq=interactive+graph+of+every+emotion+ai+can+detect&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEMgUIABCiBDoKCAAQRxDWBBCwAzoHCCMQsAIQJzoKCCEQoAEQwwQQCjoICCEQoAEQwwRKBAhBGABQ9gtYsRdg1RloAXAAeACAAYcBiAGgDJIBBDEuMTKYAQCgAQHAAQHIAQg&sclient=gws-wiz-serp\">link &nearr;</a>",
-    "start": "2023-06-12T23:50:50.673Z"
-  },
-  {
-    "id": 16816,
-    "content": "BDCC | Free Full-Text | AI Based Emotion Detection for Textual Big Data: Techniques and Contribution  <a target=\"_blank\" href=\"https://www.mdpi.com/2504-2289/5/3/43\">link &nearr;</a>",
-    "start": "2023-06-12T23:50:42.760Z"
-  },
-  {
-    "id": 16817,
-    "content": "Emotion AI Interactive Video Platform | Face Emotion AI Analysis | MorphCast  <a target=\"_blank\" href=\"https://www.morphcast.com/interactive-video-platform/\">link &nearr;</a>",
-    "start": "2023-06-12T23:50:47.559Z"
-  },
-  {
-    "id": 16818,
-    "content": "Emotion recognition: can AI detect human feelings from a face? | Financial Times  <a target=\"_blank\" href=\"https://www.ft.com/content/c0b03d1d-f72f-48a8-b342-b4a926109452\">link &nearr;</a>",
-    "start": "2023-06-12T23:50:58.905Z"
-  },
-  {
-    "id": 16819,
-    "content": "The emotion business: who's cashing in on your emotions  <a target=\"_blank\" href=\"https://ig.ft.com/emotion-recognition/\">link &nearr;</a>",
-    "start": "2023-06-12T23:51:07.517Z"
-  },
-  {
-    "id": 16820,
-    "content": "ai that recognizes facial action coding system - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=ai+that+recognizes+facial+action+coding+system&oq=ai+that+recognizes+facial+action+coding+system&aqs=chrome..69i57.8438j0j4&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2023-06-12T23:54:44.428Z"
-  },
-  {
-    "id": 16821,
-    "content": "Frontiers | Facing the FACS—Using AI to Evaluate and Control Facial Action Units in Humanoid Robot F  <a target=\"_blank\" href=\"https://www.frontiersin.org/articles/10.3389/frobt.2022.887645/full\">link &nearr;</a>",
-    "start": "2023-06-12T23:54:16.961Z"
-  },
-  {
-    "id": 16822,
-    "content": "Facial Action Coding System (FACS) - EIA Group  <a target=\"_blank\" href=\"https://www.eiagroup.com/study/facial-expressions/facial-action-coding-system-facs/\">link &nearr;</a>",
-    "start": "2023-06-12T23:54:36.853Z"
-  },
-  {
-    "id": 16823,
-    "content": "ai that recognizes facial action coding system - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=ai+that+recognizes+facial+action+coding+system&oq=ai+that+recognizes+facial+action+coding+system&aqs=chrome..69i57.8438j0j4&sourceid=chrome&ie=UTF-8#ip=1\">link &nearr;</a>",
-    "start": "2023-06-12T23:54:52.336Z"
-  },
-  {
-    "id": 16824,
-    "content": "interactive graph ai that recognizes facial action coding system - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=interactive+graph+ai+that+recognizes+facial+action+coding+system&sxsrf=APwXEdcHie0akfIg6psQvyDmEPxWRM7mgA%3A1686613629580&ei=fa6HZM_3IpLMkPIPiY6ryAw&ved=0ahUKEwiPqo6y9b7_AhUSJkQIHQnHCskQ4dUDCBA&uact=5&oq=interactive+graph+ai+that+recognizes+facial+action+coding+system&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzoKCCEQoAEQwwQQCkoECEEYAFAAWLMSYNEWaABwAXgAgAGRAYgBshGSAQQwLjE4mAEAoAEBwAEB&sclient=gws-wiz-serp\">link &nearr;</a>",
-    "start": "2023-06-12T23:55:11.767Z"
-  },
-  {
-    "id": 16825,
-    "content": "J. Imaging | Free Full-Text | FACS-Based Graph Features for Real-Time Micro-Expression Recognition  <a target=\"_blank\" href=\"https://www.mdpi.com/2313-433X/6/12/130\">link &nearr;</a>",
-    "start": "2023-06-12T23:55:09.109Z"
-  },
-  {
-    "id": 16826,
-    "content": "interactive graph ai that recognizes facial action coding system - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=interactive+graph+ai+that+recognizes+facial+action+coding+system&sxsrf=APwXEdcHie0akfIg6psQvyDmEPxWRM7mgA%3A1686613629580&ei=fa6HZM_3IpLMkPIPiY6ryAw&ved=0ahUKEwiPqo6y9b7_AhUSJkQIHQnHCskQ4dUDCBA&uact=5&oq=interactive+graph+ai+that+recognizes+facial+action+coding+system&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzoKCCEQoAEQwwQQCkoECEEYAFAAWLMSYNEWaABwAXgAgAGRAYgBshGSAQQwLjE4mAEAoAEBwAEB&sclient=gws-wiz-serp#ip=1\">link &nearr;</a>",
-    "start": "2023-06-12T23:55:30.913Z"
-  },
-  {
-    "id": 16829,
-    "content": "interactive graph of every emotion - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=interactive+graph+of+every+emotion&sxsrf=APwXEddCx9dEqw2q4MVjjbvAm8sTowtb4g%3A1686613681372&ei=sa6HZLyoFvXG9AP9nIygAw&ved=0ahUKEwj8xOfK9b7_AhV1I30KHX0OAzQQ4dUDCBA&uact=5&oq=interactive+graph+of+every+emotion&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoECAAQRzoFCAAQgAQ6BggAEBYQHjoICAAQFhAeEA9KBAhBGABQ4ARYvjlg1TtoDnACeACAAYsBiAHHDpIBBDIuMTSYAQCgAQHAAQHIAQg&sclient=gws-wiz-serp\">link &nearr;</a>",
-    "start": "2023-06-12T23:58:06.492Z"
-  },
-  {
-    "id": 16830,
-    "content": "machine learning facial expressions graph - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=machine+learning+facial+expressions+graph&sxsrf=APwXEddh1g7PJT2b5Rf7YCjdWJWfJOs7bA%3A1686613865752&ei=aa-HZMK_Lc_7kPIP7YiYgAU&ved=0ahUKEwiCmN2i9r7_AhXPPUQIHW0EBlAQ4dUDCBA&uact=5&oq=machine+learning+facial+expressions+graph&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCCEQoAE6BwgjELADECc6CggAEEcQ1gQQsAM6BwgjEIoFECc6BAgjECc6CAgAEIoFEJECOgcIABCKBRBDOgsIABCABBCxAxCDAToRCC4QgAQQsQMQgwEQxwEQ0QM6CwguEIAEELEDEIMBOgcILhCKBRBDOgsIABCKBRCxAxCDAToNCC4QigUQxwEQ0QMQQzoLCAAQgAQQsQMQyQM6CAgAEIoFEJIDOgsILhCABBDHARDRAzoQCC4QigUQsQMQgwEQ5QQQQzoNCAAQigUQsQMQgwEQQzoICC4QgAQQsQM6EQguEIAEELEDEMcBEK8BENQCOgoIABCKBRCxAxBDOggILhCxAxCABDoICAAQgAQQsQM6CggAEIAEEBQQhwI6EAgAEIAEEBQQhwIQsQMQgwE6CAgAEIAEEMkDOgUIABCABDoICC4QgAQQ1AI6BggAEBYQHjoICAAQFhAeEA86CAgAEIoFEIYDOgUIIRCrAjoICCEQFhAeEB1KBAhBGABQuAxYzVhg61toAXABeACAAY4BiAH7JJIBBDguMzOYAQCgAQHAAQHIAQk&sclient=gws-wiz-serp\">link &nearr;</a>",
-    "start": "2023-06-12T23:59:16.617Z"
-  },
-  {
-    "id": 16831,
-    "content": "Frontiers | Facial Expression Emotion Recognition Model Integrating Philosophy and Machine Learning   <a target=\"_blank\" href=\"https://www.frontiersin.org/articles/10.3389/fpsyg.2021.759485/full\">link &nearr;</a>",
-    "start": "2023-06-12T23:58:40.343Z"
-  },
-  {
-    "id": 16832,
-    "content": "Micro-Expression Recognition Based on Facial Graph Representation Learning and Facial Action Unit Fu  <a target=\"_blank\" href=\"https://openaccess.thecvf.com/content/CVPR2021W/AUVi/papers/Lei_Micro-Expression_Recognition_Based_on_Facial_Graph_Representation_Learning_and_Facial_CVPRW_2021_paper.pdf\">link &nearr;</a>",
-    "start": "2023-06-12T23:59:13.769Z"
-  },
-  {
-    "id": 16833,
-    "content": "machine learning facial expressions graph - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=machine+learning+facial+expressions+graph&sxsrf=APwXEddh1g7PJT2b5Rf7YCjdWJWfJOs7bA%3A1686613865752&ei=aa-HZMK_Lc_7kPIP7YiYgAU&ved=0ahUKEwiCmN2i9r7_AhXPPUQIHW0EBlAQ4dUDCBA&uact=5&oq=machine+learning+facial+expressions+graph&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCCEQoAE6BwgjELADECc6CggAEEcQ1gQQsAM6BwgjEIoFECc6BAgjECc6CAgAEIoFEJECOgcIABCKBRBDOgsIABCABBCxAxCDAToRCC4QgAQQsQMQgwEQxwEQ0QM6CwguEIAEELEDEIMBOgcILhCKBRBDOgsIABCKBRCxAxCDAToNCC4QigUQxwEQ0QMQQzoLCAAQgAQQsQMQyQM6CAgAEIoFEJIDOgsILhCABBDHARDRAzoQCC4QigUQsQMQgwEQ5QQQQzoNCAAQigUQsQMQgwEQQzoICC4QgAQQsQM6EQguEIAEELEDEMcBEK8BENQCOgoIABCKBRCxAxBDOggILhCxAxCABDoICAAQgAQQsQM6CggAEIAEEBQQhwI6EAgAEIAEEBQQhwIQsQMQgwE6CAgAEIAEEMkDOgUIABCABDoICC4QgAQQ1AI6BggAEBYQHjoICAAQFhAeEA86CAgAEIoFEIYDOgUIIRCrAjoICCEQFhAeEB1KBAhBGABQuAxYzVhg61toAXABeACAAY4BiAH7JJIBBDguMzOYAQCgAQHAAQHIAQk&sclient=gws-wiz-serp#ip=1\">link &nearr;</a>",
-    "start": "2023-06-13T00:00:14.979Z"
-  },
-  {
-    "id": 16834,
-    "content": "FERGCN: facial expression recognition based on graph convolution network - PubMed  <a target=\"_blank\" href=\"https://pubmed.ncbi.nlm.nih.gov/35342228/\">link &nearr;</a>",
-    "start": "2023-06-12T23:59:24.293Z"
-  },
-  {
-    "id": 16835,
-    "content": "Facial Emotion Recognition using Keras Tensorflow | Deep Learning | Python - YouTube  <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=mj-3vzJ4ZVw\">link &nearr;</a>",
-    "start": "2023-06-12T23:59:35.442Z"
-  },
-  {
-    "id": 16836,
-    "content": "Facial Expression Analysis | DesignWare IP | Synopsys  <a target=\"_blank\" href=\"https://www.synopsys.com/designware-ip/technical-bulletin/ev-facial-expression-dwtb-q117.html\">link &nearr;</a>",
-    "start": "2023-06-13T00:02:10.683Z"
-  },
-  {
-    "id": 16837,
-    "content": "Face expression recognition with Deep Learning | Kaggle  <a target=\"_blank\" href=\"https://www.kaggle.com/code/jonathanoheix/face-expression-recognition-with-deep-learning\">link &nearr;</a>",
-    "start": "2023-06-13T00:00:14.785Z"
-  },
-  {
-    "id": 16838,
-    "content": "Kaggle: Your Machine Learning and Data Science Community  <a target=\"_blank\" href=\"https://www.kaggle.com/\">link &nearr;</a>",
-    "start": "2023-06-13T00:00:12.586Z"
-  },
-  {
-    "id": 16839,
-    "content": "machine learning facial expressions graph - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?sxsrf=APwXEdcAxo3bZKq5aufiTN1cv1XaMRKz7Q:1686613893961&q=machine+learning+facial+expressions+graph&tbm=isch&sa=X&ved=2ahUKEwic-5aw9r7_AhWPh-4BHYhjBIkQ0pQJegQIDxAB&biw=1688&bih=806&dpr=2\">link &nearr;</a>",
-    "start": "2023-06-13T00:00:26.470Z"
-  },
-  {
-    "id": 16840,
-    "content": "interactive graph of facial expression recognition - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=interactive+graph+of+facial+expression+recognition&tbm=isch&ved=2ahUKEwjB6KHl9r7_AhWJBkQIHaP5DNgQ2-cCegQIABAA&oq=interactive+graph+of+facial+expression+recognition&gs_lcp=CgNpbWcQAzoECCMQJzoICAAQgAQQsQM6BAgAEAM6BwgAEIoFEEM6BQgAEIAEOgoIABCKBRCxAxBDOgsIABCABBCxAxCDAToECAAQHjoGCAAQBRAeOgYIABAIEB46BwgAEBgQgARQgwpY6Upg6UxoAHAAeACAAY0BiAHiI5IBBDQ2LjWYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=9a-HZIGaEYmNkPIPo_OzwA0&bih=806&biw=1688\">link &nearr;</a>",
-    "start": "2023-06-13T00:00:41.454Z"
-  },
-  {
-    "id": 16841,
-    "content": "interactive graph of facial expression recognition - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=interactive+graph+of+facial+expression+recognition&source=lmns&bih=806&biw=1688&hl=en&sa=X&ved=2ahUKEwjFo8ns9r7_AhUEBEQIHU-AC7EQ0pQJKAB6BAgBEAI\">link &nearr;</a>",
-    "start": "2023-06-13T00:00:50.673Z"
-  },
-  {
-    "id": 16844,
-    "content": "interactive graph of facial expression recognition - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=interactive+graph+of+facial+expression+recognition&source=lmns&bih=806&biw=1688&hl=en&sa=X&ved=2ahUKEwjFo8ns9r7_AhUEBEQIHU-AC7EQ0pQJKAB6BAgBEAI#ip=1\">link &nearr;</a>",
-    "start": "2023-06-13T00:03:01.318Z"
-  },
-  {
-    "id": 16845,
-    "content": "tiktok interactive graph of facial expression recognition - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=tiktok+interactive+graph+of+facial+expression+recognition&bih=806&biw=1688&hl=en&sxsrf=APwXEdfkJdqn3VN-2cm_jFpFUcAJU9-eBA%3A1686614025811&ei=CbCHZNqWMZOOur8P9YS-wAo&ved=0ahUKEwiav4bv9r7_AhUTh-4BHXWCD6gQ4dUDCBA&uact=5&oq=tiktok+interactive+graph+of+facial+expression+recognition&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEOgoIIRCgARDDBBAKSgQIQRgAUABY7AVg7AdoAHAAeACAAZgBiAHNBpIBAzAuN5gBAKABAcABAQ&sclient=gws-wiz-serp\">link &nearr;</a>",
-    "start": "2023-06-13T00:01:17.058Z"
-  },
-  {
-    "id": 16846,
-    "content": "Facial Expression Detection | TikTok Effect House  <a target=\"_blank\" href=\"https://effecthouse.tiktok.com/learn/visual-scripting/head-and-face/facial-expression-detection/\">link &nearr;</a>",
-    "start": "2023-06-13T00:01:16.688Z"
-  },
-  {
-    "id": 16847,
-    "content": "tiktok interactive graph of facial expression recognition - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=tiktok+interactive+graph+of+facial+expression+recognition&bih=806&biw=1688&hl=en&sxsrf=APwXEdfkJdqn3VN-2cm_jFpFUcAJU9-eBA%3A1686614025811&ei=CbCHZNqWMZOOur8P9YS-wAo&ved=0ahUKEwiav4bv9r7_AhUTh-4BHXWCD6gQ4dUDCBA&uact=5&oq=tiktok+interactive+graph+of+facial+expression+recognition&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEOgoIIRCgARDDBBAKSgQIQRgAUABY7AVg7AdoAHAAeACAAZgBiAHNBpIBAzAuN5gBAKABAcABAQ&sclient=gws-wiz-serp#ip=1\">link &nearr;</a>",
-    "start": "2023-06-13T00:01:22.478Z"
-  },
-  {
-    "id": 16848,
-    "content": "ARC EV Processors | DesignWare IP | Synopsys  <a target=\"_blank\" href=\"https://www.synopsys.com/designware-ip/processor-solutions/ev-processors.html\">link &nearr;</a>",
-    "start": "2023-06-13T00:02:01.440Z"
-  },
-  {
-    "id": 16849,
-    "content": "emotion-recognition-from-human-actions.pdf  <a target=\"_blank\" href=\"https://sentic.net/emotion-recognition-from-human-actions.pdf\">link &nearr;</a>",
-    "start": "2023-06-13T00:02:34.106Z"
-  },
-  {
-    "id": 16850,
-    "content": "Facial expression recognition and histograms of oriented gradients: a comprehensive study | Springer  <a target=\"_blank\" href=\"https://springerplus.springeropen.com/articles/10.1186/s40064-015-1427-3\">link &nearr;</a>",
-    "start": "2023-06-13T00:02:44.233Z"
-  },
-  {
-    "id": 16851,
-    "content": "NVIDIA Maxine | NVIDIA Developer  <a target=\"_blank\" href=\"https://developer.nvidia.com/maxine\">link &nearr;</a>",
-    "start": "2023-06-13T00:02:54.464Z"
-  },
-  {
-    "id": 16852,
-    "content": "Home | Hume AI  <a target=\"_blank\" href=\"https://hume.ai/\">link &nearr;</a>",
-    "start": "2023-06-13T00:06:14.537Z"
-  },
-  {
-    "id": 16853,
-    "content": "Form  <a target=\"_blank\" href=\"https://share.hsforms.com/1lVY-gpw0RTaWCeu7ZTkH-wcjsur\">link &nearr;</a>",
-    "start": "2023-06-13T00:06:21.164Z"
-  },
-  {
-    "id": 16854,
-    "content": "Exploring Universe: Not Sinful?  <a target=\"_blank\" href=\"https://chat.openai.com/c/bf6a99a2-99e5-488a-ac2d-915efc4783eb\">link &nearr;</a>",
-    "start": "2023-06-13T17:23:46.606Z"
-  },
-  {
-    "id": 16855,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.igmyf48xzsgy\">link &nearr;</a>",
-    "start": "2023-06-13T19:01:08.562Z"
-  },
-  {
-    "id": 16856,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fy7uvmcf5dk2\">link &nearr;</a>",
-    "start": "2023-06-13T19:18:52.009Z"
-  },
-  {
-    "id": 16857,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tvabtf89azp4\">link &nearr;</a>",
-    "start": "2023-06-13T00:12:26.447Z"
-  },
-  {
-    "id": 16858,
-    "content": "Second-Degree Murder Examples  <a target=\"_blank\" href=\"https://chat.openai.com/c/8832f1d1-4a88-4779-8a43-f2c5091f6a3c\">link &nearr;</a>",
-    "start": "2023-06-13T00:25:28.606Z"
-  },
-  {
-    "id": 16859,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.by5obyizychu\">link &nearr;</a>",
-    "start": "2023-06-13T18:20:31.518Z"
-  },
-  {
-    "id": 16860,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.g2mp7a3u8ktw\">link &nearr;</a>",
-    "start": "2023-06-13T00:26:54.570Z"
-  },
-  {
-    "id": 16861,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.vimldgchj9y5\">link &nearr;</a>",
-    "start": "2023-06-13T00:27:02.779Z"
-  },
-  {
-    "id": 16862,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.d1nber1y67dm\">link &nearr;</a>",
-    "start": "2023-06-13T00:28:14.406Z"
-  },
-  {
-    "id": 16863,
-    "content": "Malcolm X Assassinated  <a target=\"_blank\" href=\"https://chat.openai.com/c/cf992c68-85be-4813-b1ac-e58e3798d55f\">link &nearr;</a>",
-    "start": "2023-06-13T00:28:18.137Z"
-  },
-  {
-    "id": 16864,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ixx3277vohim\">link &nearr;</a>",
-    "start": "2023-06-13T19:21:17.864Z"
-  },
-  {
-    "id": 16865,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xx43gnmrl5pj\">link &nearr;</a>",
-    "start": "2023-06-13T19:21:11.399Z"
-  },
-  {
-    "id": 16866,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.6u3igwrlznwg\">link &nearr;</a>",
-    "start": "2023-06-13T19:21:01.069Z"
-  },
-  {
-    "id": 16867,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.qp5j8ou8nnk8\">link &nearr;</a>",
-    "start": "2023-06-13T19:11:02.058Z"
-  },
-  {
-    "id": 16868,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kj8grgs53x49\">link &nearr;</a>",
-    "start": "2023-06-13T19:10:52.350Z"
-  },
-  {
-    "id": 16869,
-    "content": "Profanity Request Declined  <a target=\"_blank\" href=\"https://chat.openai.com/c/bda54fdd-f7ba-4fd7-a213-cd69ec2a289b\">link &nearr;</a>",
-    "start": "2023-06-13T01:31:18.128Z"
-  },
-  {
-    "id": 16870,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lnjir482l7e1\">link &nearr;</a>",
-    "start": "2023-06-13T18:05:51.202Z"
-  },
-  {
-    "id": 16871,
-    "content": "Black Men & Penis Stereotypes  <a target=\"_blank\" href=\"https://chat.openai.com/c/dce66933-d2ce-44a5-911a-3d34ece7cb2b\">link &nearr;</a>",
-    "start": "2023-06-13T17:23:58.847Z"
-  },
-  {
-    "id": 16872,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kuz6y4mmrhlg\">link &nearr;</a>",
-    "start": "2023-06-13T17:52:29.107Z"
-  },
-  {
-    "id": 16873,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.qsp62tr9lze0\">link &nearr;</a>",
-    "start": "2023-06-13T17:53:12.742Z"
-  },
-  {
-    "id": 16874,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.b89l3wlf4ss3\">link &nearr;</a>",
-    "start": "2023-06-13T01:16:24.136Z"
-  },
-  {
-    "id": 16875,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.hwfv0kd8u9az\">link &nearr;</a>",
-    "start": "2023-06-13T19:41:22.708Z"
-  },
-  {
-    "id": 16876,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ms5k6obbyftn\">link &nearr;</a>",
-    "start": "2023-06-13T02:19:51.344Z"
-  },
-  {
-    "id": 16877,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.h3w95b1l79jd\">link &nearr;</a>",
-    "start": "2023-06-13T01:29:13.723Z"
-  },
-  {
-    "id": 16878,
-    "content": "Family Love, Lust Warnings  <a target=\"_blank\" href=\"https://chat.openai.com/c/a68121da-3339-48cd-ba75-1a85c8f1d9c5\">link &nearr;</a>",
-    "start": "2023-06-13T01:38:56.023Z"
-  },
-  {
-    "id": 16879,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.bpil9hvr29qn\">link &nearr;</a>",
-    "start": "2023-06-13T19:45:09.983Z"
-  },
-  {
-    "id": 16880,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4rl7pravkn4s\">link &nearr;</a>",
-    "start": "2023-06-13T01:30:44.307Z"
-  },
-  {
-    "id": 16881,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.je1jcwga60el\">link &nearr;</a>",
-    "start": "2023-06-13T18:53:36.189Z"
-  },
-  {
-    "id": 16882,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.g30gfmkmhnuo\">link &nearr;</a>",
-    "start": "2023-06-13T01:31:12.482Z"
-  },
-  {
-    "id": 16883,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.wd1yrjtkazkt\">link &nearr;</a>",
-    "start": "2023-06-13T01:34:29.821Z"
-  },
-  {
-    "id": 16884,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.1x3pgmf8185l\">link &nearr;</a>",
-    "start": "2023-06-13T01:35:31.332Z"
-  },
-  {
-    "id": 16885,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.o9d63qdz5vyl\">link &nearr;</a>",
-    "start": "2023-06-13T17:42:33.524Z"
-  },
-  {
-    "id": 16886,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.q9j6np8tauy2\">link &nearr;</a>",
-    "start": "2023-06-13T01:43:34.494Z"
-  },
-  {
-    "id": 16887,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.93lq6x68iqk\">link &nearr;</a>",
-    "start": "2023-06-13T02:10:01.974Z"
-  },
-  {
-    "id": 16888,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4y9kcerqwpdy\">link &nearr;</a>",
-    "start": "2023-06-13T02:13:44.269Z"
-  },
-  {
-    "id": 16889,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.r1k400ql1enh\">link &nearr;</a>",
-    "start": "2023-06-13T02:18:50.124Z"
-  },
-  {
-    "id": 16898,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.sg8pujcxuu23\">link &nearr;</a>",
-    "start": "2023-06-13T17:24:47.475Z"
-  },
-  {
-    "id": 16899,
-    "content": "Child's inquisitiveness development  <a target=\"_blank\" href=\"https://chat.openai.com/c/01342575-1d4f-4667-b2b6-24b1a6fba157\">link &nearr;</a>",
-    "start": "2023-06-13T17:26:52.581Z"
-  },
-  {
-    "id": 16900,
-    "content": "Bible's Guidance on Work  <a target=\"_blank\" href=\"https://chat.openai.com/c/a302d051-fe7f-45d0-9010-83dbd4106ad8\">link &nearr;</a>",
-    "start": "2023-06-13T17:27:38.806Z"
-  },
-  {
-    "id": 16901,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lvdvpv5cyfs3\">link &nearr;</a>",
-    "start": "2023-06-13T17:30:07.403Z"
-  },
-  {
-    "id": 16902,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.p3rw11qxz80v\">link &nearr;</a>",
-    "start": "2023-06-13T17:45:47.122Z"
-  },
-  {
-    "id": 16903,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.dui54uggbz6h\">link &nearr;</a>",
-    "start": "2023-06-13T17:30:45.977Z"
-  },
-  {
-    "id": 16904,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.w2i7ae6mssq\">link &nearr;</a>",
-    "start": "2023-06-13T17:30:44.874Z"
-  },
-  {
-    "id": 16905,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.2w94mvajz2oh\">link &nearr;</a>",
-    "start": "2023-06-13T17:30:49.205Z"
-  },
-  {
-    "id": 16906,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8tx7fecw0pbn\">link &nearr;</a>",
-    "start": "2023-06-13T17:30:53.210Z"
-  },
-  {
-    "id": 16907,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.hbup71tgta4m\">link &nearr;</a>",
-    "start": "2023-06-13T19:18:41.007Z"
-  },
-  {
-    "id": 16908,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.k7lr58joz4o\">link &nearr;</a>",
-    "start": "2023-06-13T19:18:34.297Z"
-  },
-  {
-    "id": 16909,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.cpd9qbwv3k1g\">link &nearr;</a>",
-    "start": "2023-06-13T19:18:09.091Z"
-  },
-  {
-    "id": 16910,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kx58okcg90ck\">link &nearr;</a>",
-    "start": "2023-06-13T18:35:30.200Z"
-  },
-  {
-    "id": 16911,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.p7op0ulqvej2\">link &nearr;</a>",
-    "start": "2023-06-13T17:42:29.223Z"
-  },
-  {
-    "id": 16912,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.15s7ogtj9n59\">link &nearr;</a>",
-    "start": "2023-06-13T17:41:59.240Z"
-  },
-  {
-    "id": 16913,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.j5v9tidob1qh\">link &nearr;</a>",
-    "start": "2023-06-13T17:55:24.708Z"
-  },
-  {
-    "id": 16914,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kwtgfksw5hbs\">link &nearr;</a>",
-    "start": "2023-06-13T19:49:14.058Z"
-  },
-  {
-    "id": 16915,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.prfhmwzfstyc\">link &nearr;</a>",
-    "start": "2023-06-13T18:03:18.115Z"
-  },
-  {
-    "id": 16916,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.prf4g7kl9n0x\">link &nearr;</a>",
-    "start": "2023-06-13T18:03:54.548Z"
-  },
-  {
-    "id": 16917,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.iy0nipupc7kx\">link &nearr;</a>",
-    "start": "2023-06-13T18:10:32.076Z"
-  },
-  {
-    "id": 16918,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jdtab2avlckd\">link &nearr;</a>",
-    "start": "2023-06-13T20:01:45.917Z"
-  },
-  {
-    "id": 16919,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.vsdmzpj8gpji\">link &nearr;</a>",
-    "start": "2023-06-13T20:01:52.535Z"
-  },
-  {
-    "id": 16920,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.i0s9dnb4ufgo\">link &nearr;</a>",
-    "start": "2023-06-13T18:11:19.157Z"
-  },
-  {
-    "id": 16921,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.nbhwxzwu3ezq\">link &nearr;</a>",
-    "start": "2023-06-13T18:12:51.819Z"
-  },
-  {
-    "id": 16922,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4sywqdx1uh21\">link &nearr;</a>",
-    "start": "2023-06-13T20:04:54.494Z"
-  },
-  {
-    "id": 16923,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.6liw0plyvf71\">link &nearr;</a>",
-    "start": "2023-06-13T20:13:36.255Z"
-  },
-  {
-    "id": 16924,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5vxgehd12o1n\">link &nearr;</a>",
-    "start": "2023-06-13T18:33:16.941Z"
-  },
-  {
-    "id": 16925,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.arycbkxfmzdl\">link &nearr;</a>",
-    "start": "2023-06-13T18:40:21.204Z"
-  },
-  {
-    "id": 16926,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.pr3lxgz4csiy\">link &nearr;</a>",
-    "start": "2023-06-13T18:41:50.804Z"
-  },
-  {
-    "id": 16927,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.s25p8nofhvcg\">link &nearr;</a>",
-    "start": "2023-06-13T18:45:45.746Z"
-  },
-  {
-    "id": 16928,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xcgbk3l1ol2o\">link &nearr;</a>",
-    "start": "2023-06-13T18:54:27.679Z"
-  },
-  {
-    "id": 16929,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ewx1hbsecx4l\">link &nearr;</a>",
-    "start": "2023-06-13T18:56:44.447Z"
-  },
-  {
-    "id": 16930,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.r483tj7z9vdl\">link &nearr;</a>",
-    "start": "2023-06-13T18:56:52.351Z"
-  },
-  {
-    "id": 16931,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.hs206zq9mdky\">link &nearr;</a>",
-    "start": "2023-06-13T19:02:40.257Z"
-  },
-  {
-    "id": 16932,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tibr31qpeyu3\">link &nearr;</a>",
-    "start": "2023-06-13T19:03:23.517Z"
-  },
-  {
-    "id": 16933,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5ydke19mkz7i\">link &nearr;</a>",
-    "start": "2023-06-13T19:08:15.165Z"
-  },
-  {
-    "id": 16934,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.uhxuv9r5pwsk\">link &nearr;</a>",
-    "start": "2023-06-13T19:08:47.169Z"
-  },
-  {
-    "id": 16935,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.twzsexlcochj\">link &nearr;</a>",
-    "start": "2023-06-13T19:10:48.250Z"
-  },
-  {
-    "id": 16936,
-    "content": "Google Calendar - Search  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/search?q=period\">link &nearr;</a>",
-    "start": "2023-06-13T19:12:09.668Z"
-  },
-  {
-    "id": 16937,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.soheg6emmddi\">link &nearr;</a>",
-    "start": "2023-06-13T19:16:14.990Z"
-  },
-  {
-    "id": 16938,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.qrerix4t7jwd\">link &nearr;</a>",
-    "start": "2023-06-13T19:17:36.969Z"
-  },
-  {
-    "id": 16939,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.95or5bqwuomz\">link &nearr;</a>",
-    "start": "2023-06-13T19:17:51.190Z"
-  },
-  {
-    "id": 16940,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jhbj8z1um7l3\">link &nearr;</a>",
-    "start": "2023-06-13T19:17:59.098Z"
-  },
-  {
-    "id": 16941,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tka7adm1keiw\">link &nearr;</a>",
-    "start": "2023-06-13T19:20:53.301Z"
-  },
-  {
-    "id": 16942,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tzg0zx4w5o6e\">link &nearr;</a>",
-    "start": "2023-06-13T19:23:22.369Z"
-  },
-  {
-    "id": 16943,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xza3fpi7gvtb\">link &nearr;</a>",
-    "start": "2023-06-13T19:24:08.304Z"
-  },
-  {
-    "id": 16944,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4tsxfyxs2tri\">link &nearr;</a>",
-    "start": "2023-06-13T19:24:14.524Z"
-  },
-  {
-    "id": 16945,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5o7a6pvrsiyx\">link &nearr;</a>",
-    "start": "2023-06-13T19:25:04.489Z"
-  },
-  {
-    "id": 16946,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.qv5k42vpb61z\">link &nearr;</a>",
-    "start": "2023-06-13T19:25:22.262Z"
-  },
-  {
-    "id": 16947,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5hruupw6fo5d\">link &nearr;</a>",
-    "start": "2023-06-13T19:25:32.577Z"
-  },
-  {
-    "id": 16948,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.v8tnu4oli9vp\">link &nearr;</a>",
-    "start": "2023-06-13T19:30:06.247Z"
-  },
-  {
-    "id": 16949,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.q3qywf545559\">link &nearr;</a>",
-    "start": "2023-06-13T19:34:04.649Z"
-  },
-  {
-    "id": 16950,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.19lyp7f9mc20\">link &nearr;</a>",
-    "start": "2023-06-13T19:34:13.652Z"
-  },
-  {
-    "id": 16951,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.mjqzdkjcbgtc\">link &nearr;</a>",
-    "start": "2023-06-13T19:37:20.637Z"
-  },
-  {
-    "id": 16952,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.b5knofcv02go\">link &nearr;</a>",
-    "start": "2023-06-13T19:38:38.747Z"
-  },
-  {
-    "id": 16953,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.y2vsfqdn9i77\">link &nearr;</a>",
-    "start": "2023-06-13T19:41:27.952Z"
-  },
-  {
-    "id": 16954,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.m5ggkxkaa9hf\">link &nearr;</a>",
-    "start": "2023-06-13T19:49:51.365Z"
-  },
-  {
-    "id": 16955,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.efegrd9d6ig6\">link &nearr;</a>",
-    "start": "2023-06-13T19:52:17.395Z"
-  },
-  {
-    "id": 16956,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.e4r2a6naqtgt\">link &nearr;</a>",
-    "start": "2023-06-13T19:55:28.912Z"
-  },
-  {
-    "id": 16957,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kb7ey1f2r604\">link &nearr;</a>",
-    "start": "2023-06-13T20:00:27.231Z"
-  },
-  {
-    "id": 16958,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3zfxiegdh4r4\">link &nearr;</a>",
-    "start": "2023-06-13T20:00:54.259Z"
-  },
-  {
-    "id": 16959,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.qgwfrabg4651\">link &nearr;</a>",
-    "start": "2023-06-13T20:01:57.191Z"
-  },
-  {
-    "id": 16960,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.a5om7ks9qw14\">link &nearr;</a>",
-    "start": "2023-06-13T20:02:01.561Z"
-  },
-  {
-    "id": 16961,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3ujeh0rjujoz\">link &nearr;</a>",
-    "start": "2023-06-13T20:02:11.138Z"
-  },
-  {
-    "id": 16962,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.f2xjab9m3dzt\">link &nearr;</a>",
-    "start": "2023-06-13T20:02:35.443Z"
-  },
-  {
-    "id": 16963,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.js3u6sa1no3a\">link &nearr;</a>",
-    "start": "2023-06-13T20:06:23.803Z"
-  },
-  {
-    "id": 16964,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.bgo5812u8nwd\">link &nearr;</a>",
-    "start": "2023-06-13T20:08:16.526Z"
-  },
-  {
-    "id": 16965,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4rx7bja3g42f\">link &nearr;</a>",
-    "start": "2023-06-13T20:08:57.393Z"
-  },
-  {
-    "id": 16966,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.euol8ny8nrc2\">link &nearr;</a>",
-    "start": "2023-06-13T20:09:16.242Z"
-  },
-  {
-    "id": 16967,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.7p71ww5sqviz\">link &nearr;</a>",
-    "start": "2023-06-13T20:09:31.347Z"
-  },
-  {
-    "id": 16968,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.r6caxv8e4s42\">link &nearr;</a>",
-    "start": "2023-06-13T20:12:30.062Z"
-  },
-  {
-    "id": 16969,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.cfdo0dny5zx0\">link &nearr;</a>",
-    "start": "2023-06-13T20:12:58.276Z"
-  },
-  {
-    "id": 16974,
-    "content": "Daniel, Metairie linkedin - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=Daniel%2C+Metairie+linkedin&oq=Daniel%2C+Metairie+linkedin&aqs=chrome..69i57.2142j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2023-06-13T20:16:59.135Z"
-  },
-  {
-    "id": 16975,
-    "content": "Daniel Metairie linkedin - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=Daniel+Metairie+linkedin&sxsrf=APwXEdf3Yz2bqM4-gdoSHt0gkIPcBWV8RA%3A1686686998589&ei=Fs2IZJbMI6PRkPIP9ueA4Ao&ved=0ahUKEwiWr5fbhsH_AhWjKEQIHfYzAKwQ4dUDCBA&uact=5&oq=Daniel+Metairie+linkedin&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoICAAQogQQsAM6CAguEIoFEJECOgYIABAHEB46FgguEIoFEJECEJcFENwEEN4EEOAEGAFKBAhBGAFQ-ANYyS9gpjRoBXAAeACAAYkBiAGHBJIBAzIuM5gBAKABAaABAsABAcgBAtoBBggBEAEYFA&sclient=gws-wiz-serp\">link &nearr;</a>",
-    "start": "2023-06-13T20:17:11.077Z"
-  },
-  {
-    "id": 16976,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/sharing/boq/driveshare?id=1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac&resourcekey=%5B%221N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac%22%2Cnull%5D&themeColor=2&foreignService=kix&gaiaService=writely&shareService=kix&command=init_share&subapp=10&popupWindowsEnabled=true&shareUiType=default&hl=en&authuser=0&rand=1686687044635&locationHint=unknown&preload=false&origin=https%3A%2F%2Fdocs.google.com\">link &nearr;</a>",
-    "start": "2023-06-13T20:18:20.944Z"
-  },
-  {
-    "id": 16977,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit\">link &nearr;</a>",
-    "start": "2023-06-14T04:56:31.521Z"
-  },
-  {
-    "id": 16981,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.gli6wg92el3l\">link &nearr;</a>",
-    "start": "2023-06-14T04:18:09.610Z"
-  },
-  {
-    "id": 16982,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.4vyurb8wwc21\">link &nearr;</a>",
-    "start": "2023-06-14T04:27:17.331Z"
-  },
-  {
-    "id": 16983,
-    "content": "Untitled document - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.c9mmjin8enmv\">link &nearr;</a>",
-    "start": "2023-06-14T04:00:19.866Z"
-  },
-  {
-    "id": 16984,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.8lj59kxp8g3c\">link &nearr;</a>",
-    "start": "2023-06-14T04:33:30.077Z"
-  },
-  {
-    "id": 16985,
-    "content": "Untitled document - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.xjjp0vu3ess4\">link &nearr;</a>",
-    "start": "2023-06-14T04:03:08.248Z"
-  },
-  {
-    "id": 16986,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.srj6ssfoueva\">link &nearr;</a>",
-    "start": "2023-06-14T04:07:39.290Z"
-  },
-  {
-    "id": 16987,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.kme2h10ife\">link &nearr;</a>",
-    "start": "2023-06-14T04:07:35.492Z"
-  },
-  {
-    "id": 16988,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.b3r43wxb37ye\">link &nearr;</a>",
-    "start": "2023-06-14T04:07:50.432Z"
-  },
-  {
-    "id": 16989,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.vp7d7g2c2ytj\">link &nearr;</a>",
-    "start": "2023-06-14T04:11:14.560Z"
-  },
-  {
-    "id": 16990,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.5zqx7ggph5as\">link &nearr;</a>",
-    "start": "2023-06-14T04:12:29.082Z"
-  },
-  {
-    "id": 16991,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.46g5737u9ojg\">link &nearr;</a>",
-    "start": "2023-06-14T04:13:29.597Z"
-  },
-  {
-    "id": 16992,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.98amzb17kb8x\">link &nearr;</a>",
-    "start": "2023-06-14T04:15:43.083Z"
-  },
-  {
-    "id": 16993,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.mphxhnajbcxg\">link &nearr;</a>",
-    "start": "2023-06-14T04:16:05.344Z"
-  },
-  {
-    "id": 16994,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.dzcu2cjzd11e\">link &nearr;</a>",
-    "start": "2023-06-14T04:19:23.436Z"
-  },
-  {
-    "id": 16995,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.kj1t90dxqfme\">link &nearr;</a>",
-    "start": "2023-06-14T04:19:34.273Z"
-  },
-  {
-    "id": 16996,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.tyob7umlrme8\">link &nearr;</a>",
-    "start": "2023-06-14T04:20:46.490Z"
-  },
-  {
-    "id": 16997,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.2v80nw3si646\">link &nearr;</a>",
-    "start": "2023-06-14T04:21:25.958Z"
-  },
-  {
-    "id": 16998,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.l8br15luisae\">link &nearr;</a>",
-    "start": "2023-06-14T04:22:46.612Z"
-  },
-  {
-    "id": 16999,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/sharing/boq/driveshare?id=1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M&resourcekey=%5B%221XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M%22%2Cnull%5D&themeColor=2&foreignService=kix&gaiaService=writely&shareService=kix&command=init_share&subapp=10&popupWindowsEnabled=true&shareUiType=default&hl=en&authuser=0&rand=1686716177206&locationHint=unknown&preload=false&origin=https%3A%2F%2Fdocs.google.com\">link &nearr;</a>",
-    "start": "2023-06-14T04:27:14.747Z"
-  },
-  {
-    "id": 17000,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.57dilpe0nrel\">link &nearr;</a>",
-    "start": "2023-06-14T04:25:07.526Z"
-  },
-  {
-    "id": 17001,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.736em125xy6b\">link &nearr;</a>",
-    "start": "2023-06-14T04:28:46.025Z"
-  },
-  {
-    "id": 17002,
-    "content": "Settings  <a target=\"_blank\" href=\"https://messages.google.com/web/u/0/settings\">link &nearr;</a>",
-    "start": "2023-06-14T04:29:32.908Z"
-  },
-  {
-    "id": 17003,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.w5m14asze0m3\">link &nearr;</a>",
-    "start": "2023-06-14T04:30:04.536Z"
-  },
-  {
-    "id": 17004,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.97kcac84vthx\">link &nearr;</a>",
-    "start": "2023-06-14T04:55:33.442Z"
-  },
-  {
-    "id": 17005,
-    "content": "Study Tips  <a target=\"_blank\" href=\"https://chat.openai.com/c/1421c454-7f6c-4001-a35d-aa2e00495031\">link &nearr;</a>",
-    "start": "2023-06-14T04:32:55.949Z"
-  },
-  {
-    "id": 17006,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.wh2rdwgpphok\">link &nearr;</a>",
-    "start": "2023-06-14T04:41:52.964Z"
-  },
-  {
-    "id": 17007,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.4c06oebgf68a\">link &nearr;</a>",
-    "start": "2023-06-14T04:42:10.689Z"
-  },
-  {
-    "id": 17008,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.5wvlmnw0vgr7\">link &nearr;</a>",
-    "start": "2023-06-14T04:42:13.878Z"
-  },
-  {
-    "id": 17009,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.o97brbj0cuyw\">link &nearr;</a>",
-    "start": "2023-06-14T04:42:18.642Z"
-  },
-  {
-    "id": 17010,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.jrd8ovubbxb2\">link &nearr;</a>",
-    "start": "2023-06-14T04:40:43.439Z"
-  },
-  {
-    "id": 17011,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.lkzp4ueshfvl\">link &nearr;</a>",
-    "start": "2023-06-14T04:41:01.839Z"
-  },
-  {
-    "id": 17012,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.xabhvwtes5s\">link &nearr;</a>",
-    "start": "2023-06-14T04:41:05.336Z"
-  },
-  {
-    "id": 17013,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.a40yv2avj29p\">link &nearr;</a>",
-    "start": "2023-06-14T04:41:12.429Z"
-  },
-  {
-    "id": 17014,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.6tblr0y2si9z\">link &nearr;</a>",
-    "start": "2023-06-14T04:41:11.724Z"
-  },
-  {
-    "id": 17015,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.wjn0tca4gzk\">link &nearr;</a>",
-    "start": "2023-06-14T04:41:12.077Z"
-  },
-  {
-    "id": 17016,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.twm5tyfd4f5i\">link &nearr;</a>",
-    "start": "2023-06-14T04:41:12.127Z"
-  },
-  {
-    "id": 17017,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.niwuu86ii2se\">link &nearr;</a>",
-    "start": "2023-06-14T04:42:24.857Z"
-  },
-  {
-    "id": 17018,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.8jidkl27zlug\">link &nearr;</a>",
-    "start": "2023-06-14T04:43:44.053Z"
-  },
-  {
-    "id": 17019,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.58m2knrc509x\">link &nearr;</a>",
-    "start": "2023-06-14T04:44:58.897Z"
-  },
-  {
-    "id": 17020,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.ggjh21xmcsuu\">link &nearr;</a>",
-    "start": "2023-06-14T04:45:27.165Z"
-  },
-  {
-    "id": 17021,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.bl5zrsxjk7ph\">link &nearr;</a>",
-    "start": "2023-06-14T04:43:57.284Z"
-  },
-  {
-    "id": 17022,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.23ot2asnbnmt\">link &nearr;</a>",
-    "start": "2023-06-14T04:47:25.724Z"
-  },
-  {
-    "id": 17023,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.ucd66sgvdy62\">link &nearr;</a>",
-    "start": "2023-06-14T04:48:02.319Z"
-  },
-  {
-    "id": 17024,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.tmlkhlv13xns\">link &nearr;</a>",
-    "start": "2023-06-14T04:44:03.152Z"
-  },
-  {
-    "id": 17025,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.2p64k69wakm8\">link &nearr;</a>",
-    "start": "2023-06-14T04:44:04.735Z"
-  },
-  {
-    "id": 17026,
-    "content": "Studying - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.lwehjaol66gw\">link &nearr;</a>",
-    "start": "2023-06-14T04:44:06.252Z"
-  },
-  {
-    "id": 17027,
-    "content": "Messages  <a target=\"_blank\" href=\"https://messages.google.com/web/u/0/conversations/a6eafaa5c25ed8c9d32bb55c446d7700\">link &nearr;</a>",
-    "start": "2023-06-14T04:51:53.848Z"
-  },
-  {
-    "id": 17028,
-    "content": "Google Calendar - Week of June 4, 2023  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/week/2023/6/6\">link &nearr;</a>",
-    "start": "2023-06-14T04:59:14.637Z"
-  },
-  {
-    "id": 17029,
-    "content": "Google Calendar - Week of May 28, 2023  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/week/2023/5/30\">link &nearr;</a>",
-    "start": "2023-06-14T04:59:16.869Z"
-  },
-  {
-    "id": 17030,
-    "content": "Google Calendar - Week of May 21, 2023  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/week/2023/5/23\">link &nearr;</a>",
-    "start": "2023-06-14T04:59:18.052Z"
-  },
-  {
-    "id": 17031,
-    "content": "Google Calendar - Week of May 14, 2023  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/week/2023/5/16\">link &nearr;</a>",
-    "start": "2023-06-14T04:59:18.931Z"
-  },
-  {
-    "id": 17032,
-    "content": "Google Calendar - Week of May 7, 2023  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/week/2023/5/9\">link &nearr;</a>",
-    "start": "2023-06-14T04:59:19.712Z"
-  },
-  {
-    "id": 17033,
-    "content": "Google Calendar - Week of April 30, 2023  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/week/2023/5/2\">link &nearr;</a>",
-    "start": "2023-06-14T04:59:20.470Z"
-  },
-  {
-    "id": 17034,
-    "content": "Google Calendar - Week of April 23, 2023  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/week/2023/4/25\">link &nearr;</a>",
-    "start": "2023-06-14T04:59:21.269Z"
-  },
-  {
-    "id": 17035,
-    "content": "Google Calendar - Week of April 16, 2023  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/week/2023/4/18\">link &nearr;</a>",
-    "start": "2023-06-14T04:59:22.716Z"
-  },
-  {
-    "id": 17036,
-    "content": "Google Calendar - Week of June 11, 2023  <a target=\"_blank\" href=\"https://calendar.google.com/calendar/u/0/r/week\">link &nearr;</a>",
-    "start": "2023-06-14T04:59:23.794Z"
-  },
-  {
-    "id": 17037,
-    "content": "Talk:Hesychasm - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Talk:Hesychasm\">link &nearr;</a>",
-    "start": "2023-06-14T05:02:59.809Z"
-  },
-  {
-    "id": 17038,
-    "content": "pronounce Hesychasm - Google Search  <a target=\"_blank\" href=\"https://www.google.com/search?q=pronounce+Hesychasm&oq=pronounce+Hesychasm&aqs=chrome..69i57.2820j0j7&sourceid=chrome&ie=UTF-8\">link &nearr;</a>",
-    "start": "2023-06-14T05:04:50.105Z"
-  },
-  {
-    "id": 17039,
-    "content": "Hesychasm Definition & Meaning - Merriam-Webster  <a target=\"_blank\" href=\"https://www.merriam-webster.com/dictionary/hesychasm\">link &nearr;</a>",
-    "start": "2023-06-14T05:03:46.175Z"
-  },
-  {
-    "id": 17040,
-    "content": "How to pronounce hesychasm | HowToPronounce.com  <a target=\"_blank\" href=\"https://www.howtopronounce.com/hesychasm\">link &nearr;</a>",
-    "start": "2023-06-14T05:04:07.509Z"
-  },
-  {
-    "id": 17041,
-    "content": "How to pronounce hesychasm  <a target=\"_blank\" href=\"https://www.definitions.net/pronounce/hesychasm\">link &nearr;</a>",
-    "start": "2023-06-14T05:04:43.112Z"
-  },
-  {
-    "id": 17042,
-    "content": "Hesychasm - Wikipedia  <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Hesychasm#Prelest\">link &nearr;</a>",
-    "start": "2023-06-14T05:05:17.180Z"
-  },
-  {
-    "id": 17043,
-    "content": "ChatGPT - Google Docs  <a target=\"_blank\" href=\"https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4vzowrc666e1\">link &nearr;</a>",
-    "start": "2023-06-14T05:06:46.250Z"
-  }
-])
+      const items = new vis.DataSet([])
       // Configuration for the Timeline
       const options = {
         maxHeight: '100%',
@@ -2520,7 +611,396 @@
 
 
   <div class="container timeline">
-    <h2>Daily Activity</h2>
+    <div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tibr31qpeyu3">link &nearr;</a></div>
+<div class="history-item">Bubbl.us - Brainwriting  <a target="_blank" href="https://bubbl.us/NzI0NjI4My81MDM2MDE0L2U4ZDMzZGRjYmQxMTEwMjgzZDU5MDBjNWNkNDY3ODBk0">link &nearr;</a></div>
+<div class="history-item">Bubbl.us - Brainwriting  <a target="_blank" href="https://bubbl.us/">link &nearr;</a></div>
+<div class="history-item">Bubbl.us - Create Mind Maps | Collaborate and Present ideas  <a target="_blank" href="https://bubbl.us/NzI0NjI4My81MDM2MDE0L2U4ZDMzZGRjYmQxMTEwMjgzZDU5MDBjNWNkNDY3ODBk@X">link &nearr;</a></div>
+<div class="history-item">Bubbl.us - megamindbrian@gmail.com  <a target="_blank" href="http://go.bubbl.us/cde753/afdb?/Brainwriting">link &nearr;</a></div>
+<div class="history-item">Bubbl.us - megamindbrian@gmail.com  <a target="_blank" href="https://bubbl.us/NzI0NjI4My81MDM2MDE0L2U4ZDMzZGRjYmQxMTEwMjgzZDU5MDBjNWNkNDY3ODBk@X?s=13494099&utm_source=shared-link&utm_medium=link&sh=afdb">link &nearr;</a></div>
+<div class="history-item">Brian Cullinan's Live Resume  <a target="_blank" href="http://127.0.0.1:8080/#System%20Preferences">link &nearr;</a></div>
+<div class="history-item">Brian Cullinan's Live Resume  <a target="_blank" href="http://127.0.0.1:8080/#Terminal">link &nearr;</a></div>
+<div class="history-item">Brian Cullinan's Live Resume  <a target="_blank" href="http://127.0.0.1:8080/#Visual%20Studio%20Code">link &nearr;</a></div>
+<div class="history-item">Brian Cullinan's Live Resume  <a target="_blank" href="http://127.0.0.1:8080/">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4vzowrc666e1">link &nearr;</a></div>
+<div class="history-item">Hesychasm - Wikipedia  <a target="_blank" href="https://en.wikipedia.org/wiki/Hesychasm#Prelest">link &nearr;</a></div>
+<div class="history-item">pronounce Hesychasm - Google Search  <a target="_blank" href="https://www.google.com/search?q=pronounce+Hesychasm&oq=pronounce+Hesychasm&aqs=chrome..69i57.2820j0j7&sourceid=chrome&ie=UTF-8">link &nearr;</a></div>
+<div class="history-item">How to pronounce hesychasm  <a target="_blank" href="https://www.definitions.net/pronounce/hesychasm">link &nearr;</a></div>
+<div class="history-item">How to pronounce hesychasm | HowToPronounce.com  <a target="_blank" href="https://www.howtopronounce.com/hesychasm">link &nearr;</a></div>
+<div class="history-item">Hesychasm Definition & Meaning - Merriam-Webster  <a target="_blank" href="https://www.merriam-webster.com/dictionary/hesychasm">link &nearr;</a></div>
+<div class="history-item">Hesychasm - Wikipedia  <a target="_blank" href="https://en.wikipedia.org/wiki/Hesychasm">link &nearr;</a></div>
+<div class="history-item">Talk:Hesychasm - Wikipedia  <a target="_blank" href="https://en.wikipedia.org/wiki/Talk:Hesychasm">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Week of June 11, 2023  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/week">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Week of April 16, 2023  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/week/2023/4/18">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Week of April 23, 2023  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/week/2023/4/25">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Week of April 30, 2023  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/week/2023/5/2">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Week of May 7, 2023  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/week/2023/5/9">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Week of May 14, 2023  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/week/2023/5/16">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Week of May 21, 2023  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/week/2023/5/23">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Week of May 28, 2023  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/week/2023/5/30">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Week of June 4, 2023  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/week/2023/6/6">link &nearr;</a></div>
+<div class="history-item">Brian Cullinan's Live Resume  <a target="_blank" href="https://briancullinan.com/">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.97kcac84vthx">link &nearr;</a></div>
+<div class="history-item">JavaScript Payment API Integration  <a target="_blank" href="https://chat.openai.com/?model=text-davinci-002-render-sha">link &nearr;</a></div>
+<div class="history-item">Messages  <a target="_blank" href="https://messages.google.com/web/u/0/conversations/cf40122ba58fd9461b5274e9eaca8566">link &nearr;</a></div>
+<div class="history-item">Messages  <a target="_blank" href="https://messages.google.com/web/u/0/conversations/a6eafaa5c25ed8c9d32bb55c446d7700">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.ucd66sgvdy62">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.23ot2asnbnmt">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.ggjh21xmcsuu">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.58m2knrc509x">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.lwehjaol66gw">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.2p64k69wakm8">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.tmlkhlv13xns">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.bl5zrsxjk7ph">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.8jidkl27zlug">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.niwuu86ii2se">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.o97brbj0cuyw">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.5wvlmnw0vgr7">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.4c06oebgf68a">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.wh2rdwgpphok">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.a40yv2avj29p">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.twm5tyfd4f5i">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.wjn0tca4gzk">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.6tblr0y2si9z">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.xabhvwtes5s">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.lkzp4ueshfvl">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.jrd8ovubbxb2">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.8lj59kxp8g3c">link &nearr;</a></div>
+<div class="history-item">Study Tips  <a target="_blank" href="https://chat.openai.com/c/1421c454-7f6c-4001-a35d-aa2e00495031">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.w5m14asze0m3">link &nearr;</a></div>
+<div class="history-item">Settings  <a target="_blank" href="https://messages.google.com/web/u/0/settings">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.736em125xy6b">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.4vyurb8wwc21">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/sharing/boq/driveshare?id=1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M&resourcekey=%5B%221XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M%22%2Cnull%5D&themeColor=2&foreignService=kix&gaiaService=writely&shareService=kix&command=init_share&subapp=10&popupWindowsEnabled=true&shareUiType=default&hl=en&authuser=0&rand=1686716177206&locationHint=unknown&preload=false&origin=https%3A%2F%2Fdocs.google.com">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.57dilpe0nrel">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.l8br15luisae">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.2v80nw3si646">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.tyob7umlrme8">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.kj1t90dxqfme">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.dzcu2cjzd11e">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.gli6wg92el3l">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.mphxhnajbcxg">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.98amzb17kb8x">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.46g5737u9ojg">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.5zqx7ggph5as">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.vp7d7g2c2ytj">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.b3r43wxb37ye">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.srj6ssfoueva">link &nearr;</a></div>
+<div class="history-item">Studying - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.kme2h10ife">link &nearr;</a></div>
+<div class="history-item">Untitled document - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.xjjp0vu3ess4">link &nearr;</a></div>
+<div class="history-item">Untitled document - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1XEM3vd3iLNIO7jRltV5Ihojnonle49MOBoV7p5ZIA1M/edit#heading=h.c9mmjin8enmv">link &nearr;</a></div>
+<div class="history-item">Untitled document - Google Docs  <a target="_blank" href="https://docs.google.com/document/u/0/create?usp=docs_home&ths=true">link &nearr;</a></div>
+<div class="history-item">Google Docs  <a target="_blank" href="https://docs.google.com/document/u/0/">link &nearr;</a></div>
+<div class="history-item">Google Docs  <a target="_blank" href="https://docs.google.com/document/?usp=direct_url&rswr=true">link &nearr;</a></div>
+<div class="history-item">Google Docs  <a target="_blank" href="https://docs.google.com/document/u/0/?usp=direct_url&rswr=true">link &nearr;</a></div>
+<div class="history-item">Google Docs  <a target="_blank" href="https://docs.google.com/">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/sharing/boq/driveshare?id=1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac&resourcekey=%5B%221N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac%22%2Cnull%5D&themeColor=2&foreignService=kix&gaiaService=writely&shareService=kix&command=init_share&subapp=10&popupWindowsEnabled=true&shareUiType=default&hl=en&authuser=0&rand=1686687044635&locationHint=unknown&preload=false&origin=https%3A%2F%2Fdocs.google.com">link &nearr;</a></div>
+<div class="history-item">Daniel Metairie linkedin - Google Search  <a target="_blank" href="https://www.google.com/search?q=Daniel+Metairie+linkedin&sxsrf=APwXEdf3Yz2bqM4-gdoSHt0gkIPcBWV8RA%3A1686686998589&ei=Fs2IZJbMI6PRkPIP9ueA4Ao&ved=0ahUKEwiWr5fbhsH_AhWjKEQIHfYzAKwQ4dUDCBA&uact=5&oq=Daniel+Metairie+linkedin&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoICAAQogQQsAM6CAguEIoFEJECOgYIABAHEB46FgguEIoFEJECEJcFENwEEN4EEOAEGAFKBAhBGAFQ-ANYyS9gpjRoBXAAeACAAYkBiAGHBJIBAzIuM5gBAKABAaABAsABAcgBAtoBBggBEAEYFA&sclient=gws-wiz-serp">link &nearr;</a></div>
+<div class="history-item">Daniel, Metairie linkedin - Google Search  <a target="_blank" href="https://www.google.com/search?q=Daniel%2C+Metairie+linkedin&oq=Daniel%2C+Metairie+linkedin&aqs=chrome..69i57.2142j0j7&sourceid=chrome&ie=UTF-8">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3xja4cc4hnu2">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.6liw0plyvf71">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.h47yrdch3hwy">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tgpwfhnux7yj">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.h2ojx4l3kazz">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.cfdo0dny5zx0">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.h33dxcjumh52">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.r6caxv8e4s42">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.i45ov6cq4zy8">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.q0o20qquycxj">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.l0tzmn1fz763">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.7p71ww5sqviz">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.euol8ny8nrc2">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4rx7bja3g42f">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kgmo9ct3dq9v">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.o83rgzdlmo2">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xzaf5heldzy0">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.bgo5812u8nwd">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.erl4s23t1snb">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8jv04cgxlgm2">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lkqhbpu6tppw">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.uytihimyggb6">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.6j2h1wqbs36n">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.js3u6sa1no3a">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8xpxsbcv2ogj">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.wwzryk2kppl1">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fu1phxq1ys6j">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5z8xh9jekyfb">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.njo78i8bop24">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4vqqto27ifj">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.iod20m3pvpbp">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4sywqdx1uh21">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ktwk8mvzfnku">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.dh7coyn7y4yc">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lka50tfozh8k">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.f2xjab9m3dzt">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.b1c2gfxpl7o">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.awl17guu18ie">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3ujeh0rjujoz">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.a5om7ks9qw14">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.qgwfrabg4651">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.vsdmzpj8gpji">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jdtab2avlckd">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.mb8ir363b6g">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.aoq43eofin0x">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3zfxiegdh4r4">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.vilntsn1nyb">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.dbkqe5dwizqc">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.z9iqnzh7zd3x">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kb7ey1f2r604">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.6s9lc25hibs2">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.uje8qr4q2sjt">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.81c5gjv61qia">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fgug4wxrnv71">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.e4r2a6naqtgt">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.efegrd9d6ig6">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.k2t7w2ql70qe">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.m5ggkxkaa9hf">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kwtgfksw5hbs">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.pvelt4kg6pu1">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.1kjrcydgft8x">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.1qp0x8ta7jde">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.bpil9hvr29qn">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.y2vsfqdn9i77">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.hwfv0kd8u9az">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.b5knofcv02go">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.mjqzdkjcbgtc">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.rt5clkyaospx">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.19lyp7f9mc20">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.q3qywf545559">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.g86tc4qy7f3e">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.mimopn60lwkr">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.uka081umx65">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jj214stph5tj">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4nqxyw9dx1d8">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.v8tnu4oli9vp">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.2vcjc870uud">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.s9r42su6435u">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5hruupw6fo5d">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.qv5k42vpb61z">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.trjuxj9nmz7w">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5o7a6pvrsiyx">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lpytphjq75c">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4tsxfyxs2tri">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xza3fpi7gvtb">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.o2ekcyb57gtl">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tzg0zx4w5o6e">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.1u3h8fgvgocx">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jlr4kws3a3yv">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ixx3277vohim">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xx43gnmrl5pj">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.6u3igwrlznwg">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tka7adm1keiw">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fy7uvmcf5dk2">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.hbup71tgta4m">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.k7lr58joz4o">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.cpd9qbwv3k1g">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jhbj8z1um7l3">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.95or5bqwuomz">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.qrerix4t7jwd">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.yxklo1p0ee15">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.soheg6emmddi">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xhnwu1k0sy7l">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.692i312am8rs">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Week of June 11, 2023  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Search  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/search?q=period">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.66pcet5n9ze">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.qp5j8ou8nnk8">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kj8grgs53x49">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.twzsexlcochj">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.uhxuv9r5pwsk">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.2xyxkd9ckh0">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5ydke19mkz7i">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.677mutsqv4dz">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.icmcobse2u7r">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.dc0xzgpir3y3">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.vdgbw427gy2d">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3ttgvvmifxfv">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fg5t5eqi4gis">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.gy1c26p4uwxu">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ej5zuz2pncbh">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.hs206zq9mdky">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.pvcqvbbuj4wx">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4vj74u9t07g2">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.f52gaby94v4h">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.il86y7o9eni6">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.igmyf48xzsgy">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.l7i77kr9zxcd">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.7848qngin9ws">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.6dc7tshvkdji">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.gtmcovl0i5y8">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.r483tj7z9vdl">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ewx1hbsecx4l">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jyccuqetopih">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3uj0vuvp72ka">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xcgbk3l1ol2o">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.je1jcwga60el">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.s25p8nofhvcg">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5m7ty4qwbbph">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.pr3lxgz4csiy">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.bq5m5tybny3l">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.arycbkxfmzdl">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.o353p1wlgssa">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.x7zel972n7p3">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.t8k7bfmm45fa">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.eak00e6phvsk">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kx58okcg90ck">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.sjudgw5iih3m">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5vxgehd12o1n">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fffza16lmsiy">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.by5obyizychu">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3ne4duvc5wu0">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kslxzwxm343s">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.vqrj8xuf52os">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.y1plxwppstav">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.nbhwxzwu3ezq">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.i8e5trb2csee">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.i0s9dnb4ufgo">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.iy0nipupc7kx">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3nai5frwy3m2">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.yjbtggs7b5re">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.39i0zq4y7o6u">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.67nc7z3an0j9">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lnjir482l7e1">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.1szhld4y1dhd">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.prf4g7kl9n0x">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.7szr37kophtn">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xre0zwf6knpn">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.prfhmwzfstyc">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.xda0dj1uli94">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ohclgvh0wndq">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.s52j0pmx4k8j">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.utuu9nyfjj3i">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5a4alult2crb">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.bwfndu36lcx">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.i3dpkw9h6lfx">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tvimg2xt0j9h">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.5zzlrbt931xf">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3r945yx5qyl6">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.j5v9tidob1qh">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.2stka2y1f11o">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.n0erorpaco40">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.alagd1gn5ja8">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.2nigx83wz7ud">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8smdzn9dc8o">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.qsp62tr9lze0">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.kuz6y4mmrhlg">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.mzruyj1detv0">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.br8hogp8qaxn">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.nhx2pwb7wqgz">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.a9e58tb4m79h">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lyc12i28nba9">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.37l1l5oqub0p">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.i484ilra8xcp">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.h2pur7d482yl">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.dp1hvuxfykws">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.p3rw11qxz80v">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.jd3ysuuzjq65">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3zogimlg0425">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fl1cthwmcxp0">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.63o4gtq20fom">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3y91wle3ldst">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.7vf7gj6ae7p">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4s86d76p58mg">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.rmxboedkmxd2">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.mpgkrpg18d97">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.fhy1ggd7diic">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.494pc0jag57m">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.o9d63qdz5vyl">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.p7op0ulqvej2">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.15s7ogtj9n59">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4qicoaa7s5o9">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8tx7fecw0pbn">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.2w94mvajz2oh">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.dui54uggbz6h">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.w2i7ae6mssq">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.lvdvpv5cyfs3">link &nearr;</a></div>
+<div class="history-item">Bible's Guidance on Work  <a target="_blank" href="https://chat.openai.com/c/a302d051-fe7f-45d0-9010-83dbd4106ad8">link &nearr;</a></div>
+<div class="history-item">Child's inquisitiveness development  <a target="_blank" href="https://chat.openai.com/c/01342575-1d4f-4667-b2b6-24b1a6fba157">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.w0s8xsokm82r">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.sg8pujcxuu23">link &nearr;</a></div>
+<div class="history-item">Black Men & Penis Stereotypes  <a target="_blank" href="https://chat.openai.com/c/dce66933-d2ce-44a5-911a-3d34ece7cb2b">link &nearr;</a></div>
+<div class="history-item">Exploring Universe: Not Sinful?  <a target="_blank" href="https://chat.openai.com/c/bf6a99a2-99e5-488a-ac2d-915efc4783eb">link &nearr;</a></div>
+<div class="history-item">Google Calendar - General settings  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/settings">link &nearr;</a></div>
+<div class="history-item">Google Calendar - Export/import calendars  <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/settings/export">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ms5k6obbyftn">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.r1k400ql1enh">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8dsiekjupn3x">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4y9kcerqwpdy">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.93lq6x68iqk">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.ugh3lt4l4i4g">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.q9j6np8tauy2">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.7bkm5lf7w7ze">link &nearr;</a></div>
+<div class="history-item">Family Love, Lust Warnings  <a target="_blank" href="https://chat.openai.com/c/a68121da-3339-48cd-ba75-1a85c8f1d9c5">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.s9t2rg9i459h">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.8nbvyngr2b3m">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.3fjeoemb51it">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.1x3pgmf8185l">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.wd1yrjtkazkt">link &nearr;</a></div>
+<div class="history-item">Profanity Request Declined  <a target="_blank" href="https://chat.openai.com/c/bda54fdd-f7ba-4fd7-a213-cd69ec2a289b">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.g30gfmkmhnuo">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.4rl7pravkn4s">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.h3w95b1l79jd">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.b89l3wlf4ss3">link &nearr;</a></div>
+<div class="history-item">Existence of Logic  <a target="_blank" href="https://chat.openai.com/c/8e425b7e-2be5-436d-a1e2-49e33188b61f">link &nearr;</a></div>
+<div class="history-item">Malcolm X Assassinated  <a target="_blank" href="https://chat.openai.com/c/cf992c68-85be-4813-b1ac-e58e3798d55f">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.d1nber1y67dm">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.vimldgchj9y5">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.g2mp7a3u8ktw">link &nearr;</a></div>
+<div class="history-item">Second-Degree Murder Examples  <a target="_blank" href="https://chat.openai.com/c/8832f1d1-4a88-4779-8a43-f2c5091f6a3c">link &nearr;</a></div>
+<div class="history-item">ChatGPT - Google Docs  <a target="_blank" href="https://docs.google.com/document/d/1N5uOzs1pQAufijyJbuPz2wtPcoDjRCi4EvSUr14Oaac/edit#heading=h.tvabtf89azp4">link &nearr;</a></div>
+<div class="history-item">Perennial Food Crops  <a target="_blank" href="https://chat.openai.com/c/59ddab20-18e8-461b-b874-3dd2eb465695">link &nearr;</a></div>
+<div class="history-item">Form  <a target="_blank" href="https://share.hsforms.com/1lVY-gpw0RTaWCeu7ZTkH-wcjsur">link &nearr;</a></div>
+<div class="history-item">Home | Hume AI  <a target="_blank" href="https://hume.ai/">link &nearr;</a></div>
+<div class="history-item">interactive graph of facial expression recognition - Google Search  <a target="_blank" href="https://www.google.com/search?q=interactive+graph+of+facial+expression+recognition&source=lmns&bih=806&biw=1688&hl=en&sa=X&ved=2ahUKEwjFo8ns9r7_AhUEBEQIHU-AC7EQ0pQJKAB6BAgBEAI#ip=1">link &nearr;</a></div>
+<div class="history-item">NVIDIA Maxine | NVIDIA Developer  <a target="_blank" href="https://developer.nvidia.com/maxine">link &nearr;</a></div>
+<div class="history-item">Facial expression recognition and histograms of oriented gradients: a comprehensive study | Springer  <a target="_blank" href="https://springerplus.springeropen.com/articles/10.1186/s40064-015-1427-3">link &nearr;</a></div>
+<div class="history-item">emotion-recognition-from-human-actions.pdf  <a target="_blank" href="https://sentic.net/emotion-recognition-from-human-actions.pdf">link &nearr;</a></div>
+<div class="history-item">Facial Expression Analysis | DesignWare IP | Synopsys  <a target="_blank" href="https://www.synopsys.com/designware-ip/technical-bulletin/ev-facial-expression-dwtb-q117.html">link &nearr;</a></div>
+<div class="history-item">ARC EV Processors | DesignWare IP | Synopsys  <a target="_blank" href="https://www.synopsys.com/designware-ip/processor-solutions/ev-processors.html">link &nearr;</a></div>
+<div class="history-item">tiktok interactive graph of facial expression recognition - Google Search  <a target="_blank" href="https://www.google.com/search?q=tiktok+interactive+graph+of+facial+expression+recognition&bih=806&biw=1688&hl=en&sxsrf=APwXEdfkJdqn3VN-2cm_jFpFUcAJU9-eBA%3A1686614025811&ei=CbCHZNqWMZOOur8P9YS-wAo&ved=0ahUKEwiav4bv9r7_AhUTh-4BHXWCD6gQ4dUDCBA&uact=5&oq=tiktok+interactive+graph+of+facial+expression+recognition&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEOgoIIRCgARDDBBAKSgQIQRgAUABY7AVg7AdoAHAAeACAAZgBiAHNBpIBAzAuN5gBAKABAcABAQ&sclient=gws-wiz-serp#ip=1">link &nearr;</a></div>
+<div class="history-item">tiktok interactive graph of facial expression recognition - Google Search  <a target="_blank" href="https://www.google.com/search?q=tiktok+interactive+graph+of+facial+expression+recognition&bih=806&biw=1688&hl=en&sxsrf=APwXEdfkJdqn3VN-2cm_jFpFUcAJU9-eBA%3A1686614025811&ei=CbCHZNqWMZOOur8P9YS-wAo&ved=0ahUKEwiav4bv9r7_AhUTh-4BHXWCD6gQ4dUDCBA&uact=5&oq=tiktok+interactive+graph+of+facial+expression+recognition&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEOgoIIRCgARDDBBAKSgQIQRgAUABY7AVg7AdoAHAAeACAAZgBiAHNBpIBAzAuN5gBAKABAcABAQ&sclient=gws-wiz-serp">link &nearr;</a></div>
+<div class="history-item">Facial Expression Detection | TikTok Effect House  <a target="_blank" href="https://effecthouse.tiktok.com/learn/visual-scripting/head-and-face/facial-expression-detection/">link &nearr;</a></div>
+<div class="history-item">interactive graph of facial expression recognition - Google Search  <a target="_blank" href="https://www.google.com/search?q=interactive+graph+of+facial+expression+recognition&source=lmns&bih=806&biw=1688&hl=en&sa=X&ved=2ahUKEwjFo8ns9r7_AhUEBEQIHU-AC7EQ0pQJKAB6BAgBEAI">link &nearr;</a></div>
+<div class="history-item">interactive graph of facial expression recognition - Google Search  <a target="_blank" href="https://www.google.com/search?q=interactive+graph+of+facial+expression+recognition&tbm=isch&ved=2ahUKEwjB6KHl9r7_AhWJBkQIHaP5DNgQ2-cCegQIABAA&oq=interactive+graph+of+facial+expression+recognition&gs_lcp=CgNpbWcQAzoECCMQJzoICAAQgAQQsQM6BAgAEAM6BwgAEIoFEEM6BQgAEIAEOgoIABCKBRCxAxBDOgsIABCABBCxAxCDAToECAAQHjoGCAAQBRAeOgYIABAIEB46BwgAEBgQgARQgwpY6Upg6UxoAHAAeACAAY0BiAHiI5IBBDQ2LjWYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=9a-HZIGaEYmNkPIPo_OzwA0&bih=806&biw=1688">link &nearr;</a></div>
+<div class="history-item">machine learning facial expressions graph - Google Search  <a target="_blank" href="https://www.google.com/search?sxsrf=APwXEdcAxo3bZKq5aufiTN1cv1XaMRKz7Q:1686613893961&q=machine+learning+facial+expressions+graph&tbm=isch&sa=X&ved=2ahUKEwic-5aw9r7_AhWPh-4BHYhjBIkQ0pQJegQIDxAB&biw=1688&bih=806&dpr=2">link &nearr;</a></div>
+<div class="history-item">machine learning facial expressions graph - Google Search  <a target="_blank" href="https://www.google.com/search?q=machine+learning+facial+expressions+graph&sxsrf=APwXEddh1g7PJT2b5Rf7YCjdWJWfJOs7bA%3A1686613865752&ei=aa-HZMK_Lc_7kPIP7YiYgAU&ved=0ahUKEwiCmN2i9r7_AhXPPUQIHW0EBlAQ4dUDCBA&uact=5&oq=machine+learning+facial+expressions+graph&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCCEQoAE6BwgjELADECc6CggAEEcQ1gQQsAM6BwgjEIoFECc6BAgjECc6CAgAEIoFEJECOgcIABCKBRBDOgsIABCABBCxAxCDAToRCC4QgAQQsQMQgwEQxwEQ0QM6CwguEIAEELEDEIMBOgcILhCKBRBDOgsIABCKBRCxAxCDAToNCC4QigUQxwEQ0QMQQzoLCAAQgAQQsQMQyQM6CAgAEIoFEJIDOgsILhCABBDHARDRAzoQCC4QigUQsQMQgwEQ5QQQQzoNCAAQigUQsQMQgwEQQzoICC4QgAQQsQM6EQguEIAEELEDEMcBEK8BENQCOgoIABCKBRCxAxBDOggILhCxAxCABDoICAAQgAQQsQM6CggAEIAEEBQQhwI6EAgAEIAEEBQQhwIQsQMQgwE6CAgAEIAEEMkDOgUIABCABDoICC4QgAQQ1AI6BggAEBYQHjoICAAQFhAeEA86CAgAEIoFEIYDOgUIIRCrAjoICCEQFhAeEB1KBAhBGABQuAxYzVhg61toAXABeACAAY4BiAH7JJIBBDguMzOYAQCgAQHAAQHIAQk&sclient=gws-wiz-serp#ip=1">link &nearr;</a></div>
+<div class="history-item">Face expression recognition with Deep Learning | Kaggle  <a target="_blank" href="https://www.kaggle.com/code/jonathanoheix/face-expression-recognition-with-deep-learning">link &nearr;</a></div>
+<div class="history-item">Kaggle: Your Machine Learning and Data Science Community  <a target="_blank" href="https://www.kaggle.com/">link &nearr;</a></div>
+<div class="history-item">Facial Emotion Recognition using Keras Tensorflow | Deep Learning | Python - YouTube  <a target="_blank" href="https://www.youtube.com/watch?v=mj-3vzJ4ZVw">link &nearr;</a></div>
+<div class="history-item">FERGCN: facial expression recognition based on graph convolution network - PubMed  <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/35342228/">link &nearr;</a></div>
+<div class="history-item">machine learning facial expressions graph - Google Search  <a target="_blank" href="https://www.google.com/search?q=machine+learning+facial+expressions+graph&sxsrf=APwXEddh1g7PJT2b5Rf7YCjdWJWfJOs7bA%3A1686613865752&ei=aa-HZMK_Lc_7kPIP7YiYgAU&ved=0ahUKEwiCmN2i9r7_AhXPPUQIHW0EBlAQ4dUDCBA&uact=5&oq=machine+learning+facial+expressions+graph&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCCEQoAE6BwgjELADECc6CggAEEcQ1gQQsAM6BwgjEIoFECc6BAgjECc6CAgAEIoFEJECOgcIABCKBRBDOgsIABCABBCxAxCDAToRCC4QgAQQsQMQgwEQxwEQ0QM6CwguEIAEELEDEIMBOgcILhCKBRBDOgsIABCKBRCxAxCDAToNCC4QigUQxwEQ0QMQQzoLCAAQgAQQsQMQyQM6CAgAEIoFEJIDOgsILhCABBDHARDRAzoQCC4QigUQsQMQgwEQ5QQQQzoNCAAQigUQsQMQgwEQQzoICC4QgAQQsQM6EQguEIAEELEDEMcBEK8BENQCOgoIABCKBRCxAxBDOggILhCxAxCABDoICAAQgAQQsQM6CggAEIAEEBQQhwI6EAgAEIAEEBQQhwIQsQMQgwE6CAgAEIAEEMkDOgUIABCABDoICC4QgAQQ1AI6BggAEBYQHjoICAAQFhAeEA86CAgAEIoFEIYDOgUIIRCrAjoICCEQFhAeEB1KBAhBGABQuAxYzVhg61toAXABeACAAY4BiAH7JJIBBDguMzOYAQCgAQHAAQHIAQk&sclient=gws-wiz-serp">link &nearr;</a></div>
+<div class="history-item">Micro-Expression Recognition Based on Facial Graph Representation Learning and Facial Action Unit Fu  <a target="_blank" href="https://openaccess.thecvf.com/content/CVPR2021W/AUVi/papers/Lei_Micro-Expression_Recognition_Based_on_Facial_Graph_Representation_Learning_and_Facial_CVPRW_2021_paper.pdf">link &nearr;</a></div>
+<div class="history-item">Frontiers | Facial Expression Emotion Recognition Model Integrating Philosophy and Machine Learning   <a target="_blank" href="https://www.frontiersin.org/articles/10.3389/fpsyg.2021.759485/full">link &nearr;</a></div>
+<div class="history-item">interactive graph of every emotion - Google Search  <a target="_blank" href="https://www.google.com/search?q=interactive+graph+of+every+emotion&sxsrf=APwXEddCx9dEqw2q4MVjjbvAm8sTowtb4g%3A1686613681372&ei=sa6HZLyoFvXG9AP9nIygAw&ved=0ahUKEwj8xOfK9b7_AhV1I30KHX0OAzQQ4dUDCBA&uact=5&oq=interactive+graph+of+every+emotion&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoECAAQRzoFCAAQgAQ6BggAEBYQHjoICAAQFhAeEA9KBAhBGABQ4ARYvjlg1TtoDnACeACAAYsBiAHHDpIBBDIuMTSYAQCgAQHAAQHIAQg&sclient=gws-wiz-serp">link &nearr;</a></div>
+<div class="history-item">interactive graph ai that recognizes facial action coding system - Google Search  <a target="_blank" href="https://www.google.com/search?q=interactive+graph+ai+that+recognizes+facial+action+coding+system&sxsrf=APwXEdcHie0akfIg6psQvyDmEPxWRM7mgA%3A1686613629580&ei=fa6HZM_3IpLMkPIPiY6ryAw&ved=0ahUKEwiPqo6y9b7_AhUSJkQIHQnHCskQ4dUDCBA&uact=5&oq=interactive+graph+ai+that+recognizes+facial+action+coding+system&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzoKCCEQoAEQwwQQCkoECEEYAFAAWLMSYNEWaABwAXgAgAGRAYgBshGSAQQwLjE4mAEAoAEBwAEB&sclient=gws-wiz-serp#ip=1">link &nearr;</a></div>
+<div class="history-item">interactive graph ai that recognizes facial action coding system - Google Search  <a target="_blank" href="https://www.google.com/search?q=interactive+graph+ai+that+recognizes+facial+action+coding+system&sxsrf=APwXEdcHie0akfIg6psQvyDmEPxWRM7mgA%3A1686613629580&ei=fa6HZM_3IpLMkPIPiY6ryAw&ved=0ahUKEwiPqo6y9b7_AhUSJkQIHQnHCskQ4dUDCBA&uact=5&oq=interactive+graph+ai+that+recognizes+facial+action+coding+system&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzoKCCEQoAEQwwQQCkoECEEYAFAAWLMSYNEWaABwAXgAgAGRAYgBshGSAQQwLjE4mAEAoAEBwAEB&sclient=gws-wiz-serp">link &nearr;</a></div>
+<div class="history-item">J. Imaging | Free Full-Text | FACS-Based Graph Features for Real-Time Micro-Expression Recognition  <a target="_blank" href="https://www.mdpi.com/2313-433X/6/12/130">link &nearr;</a></div>
+<div class="history-item">ai that recognizes facial action coding system - Google Search  <a target="_blank" href="https://www.google.com/search?q=ai+that+recognizes+facial+action+coding+system&oq=ai+that+recognizes+facial+action+coding+system&aqs=chrome..69i57.8438j0j4&sourceid=chrome&ie=UTF-8#ip=1">link &nearr;</a></div>
+<div class="history-item">ai that recognizes facial action coding system - Google Search  <a target="_blank" href="https://www.google.com/search?q=ai+that+recognizes+facial+action+coding+system&oq=ai+that+recognizes+facial+action+coding+system&aqs=chrome..69i57.8438j0j4&sourceid=chrome&ie=UTF-8">link &nearr;</a></div>
+<div class="history-item">Facial Action Coding System (FACS) - EIA Group  <a target="_blank" href="https://www.eiagroup.com/study/facial-expressions/facial-action-coding-system-facs/">link &nearr;</a></div>
+<div class="history-item">Frontiers | Facing the FACS—Using AI to Evaluate and Control Facial Action Units in Humanoid Robot F  <a target="_blank" href="https://www.frontiersin.org/articles/10.3389/frobt.2022.887645/full">link &nearr;</a></div>
+<div class="history-item">The emotion business: who's cashing in on your emotions  <a target="_blank" href="https://ig.ft.com/emotion-recognition/">link &nearr;</a></div>
+<div class="history-item">Emotion recognition: can AI detect human feelings from a face? | Financial Times  <a target="_blank" href="https://www.ft.com/content/c0b03d1d-f72f-48a8-b342-b4a926109452">link &nearr;</a></div>
+<div class="history-item">interactive graph of every emotion ai can detect - Google Search  <a target="_blank" href="https://www.google.com/search?q=interactive+graph+of+every+emotion+ai+can+detect&sxsrf=APwXEdffoObWByLcZudxj5ZwB-gxH1-c7w%3A1686613321246&ei=Sa2HZLjeDo3akPIPyZyGmAI&ved=0ahUKEwj4pouf9L7_AhUNLUQIHUmOASMQ4dUDCBA&uact=5&oq=interactive+graph+of+every+emotion+ai+can+detect&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEMgUIABCiBDoKCAAQRxDWBBCwAzoHCCMQsAIQJzoKCCEQoAEQwwQQCjoICCEQoAEQwwRKBAhBGABQ9gtYsRdg1RloAXAAeACAAYcBiAGgDJIBBDEuMTKYAQCgAQHAAQHIAQg&sclient=gws-wiz-serp">link &nearr;</a></div>
+<div class="history-item">Emotion AI Interactive Video Platform | Face Emotion AI Analysis | MorphCast  <a target="_blank" href="https://www.morphcast.com/interactive-video-platform/">link &nearr;</a></div>
+<div class="history-item">BDCC | Free Full-Text | AI Based Emotion Detection for Textual Big Data: Techniques and Contribution  <a target="_blank" href="https://www.mdpi.com/2504-2289/5/3/43">link &nearr;</a></div>
+<div class="history-item">graph of every emotion ai can detect - Google Search  <a target="_blank" href="https://www.google.com/search?q=graph+of+every+emotion+ai+can+detect&oq=graph+of+every+emotion+ai+can+detect&aqs=chrome..69i57.8585j0j4&sourceid=chrome&ie=UTF-8">link &nearr;</a></div>
+<div class="history-item">GoEmotions: A Dataset for Fine-Grained Emotion Classification – Google AI Blog  <a target="_blank" href="https://ai.googleblog.com/2021/10/goemotions-dataset-for-fine-grained.html">link &nearr;</a></div>
+<div class="history-item">What is the Emotion Chart, and why it's important? | Blog MorphCast  <a target="_blank" href="https://www.morphcast.com/what-is-and-how-important-is-the-emotion-chart-in-2023-more-than-ever/">link &nearr;</a></div>
+<div class="history-item">Frontiers | Emotion Recognition With Knowledge Graph Based on Electrodermal Activity  <a target="_blank" href="https://www.frontiersin.org/articles/10.3389/fnins.2022.911767/full">link &nearr;</a></div>
+<div class="history-item">Facial Emotion Recognition  <a target="_blank" href="https://edps.europa.eu/system/files/2021-05/21-05-26_techdispatch-facial-emotion-recognition_ref_en.pdf">link &nearr;</a></div>
+<div class="history-item">AI Labs | Artificial Intelligence Research & Product Development  <a target="_blank" href="https://www.course5i.com/ai-labs/">link &nearr;</a></div>
+<div class="history-item">Emotion AI | Course5 Intelligence  <a target="_blank" href="https://www.course5i.com/emotion-ai/">link &nearr;</a></div>
+<div class="history-item">emotion ai - Google Search  <a target="_blank" href="https://www.google.com/search?q=emotion+ai&sxsrf=APwXEdfpNcw1ftJyWu7apRYAkqgQiMceBA%3A1686612998728&ei=BqyHZIqALJ3G0PEPzbOkyAQ&ved=0ahUKEwiKm6aF877_AhUdIzQIHc0ZCUkQ4dUDCBA&uact=5&oq=emotion+ai&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIICAAQigUQkQIyCAgAEIoFEJECMgUIABCABDIFCAAQgAQyBwgAEIAEEAoyBQgAEIAEMgUIABCABDILCC4QgAQQxwEQrwEyBQgAEIAEMgUIABCABDoKCAAQRxDWBBCwAzoECCMQJzoHCAAQigUQQzoRCC4QgAQQsQMQgwEQxwEQ0QM6CwgAEIAEELEDEIMBOggILhCABBCxAzoLCC4QgAQQsQMQgwE6CggAEIoFELEDEEM6CAgAEIAEELEDSgQIQRgAUJoKWPQSYLAXaAFwAXgAgAGRAYgB3AiSAQMxLjmYAQCgAQHAAQHIAQg&sclient=gws-wiz-serp#ip=1">link &nearr;</a></div>
+<div class="history-item">emotion ai - Google Search  <a target="_blank" href="https://www.google.com/search?q=emotion+ai&sxsrf=APwXEdfpNcw1ftJyWu7apRYAkqgQiMceBA%3A1686612998728&ei=BqyHZIqALJ3G0PEPzbOkyAQ&ved=0ahUKEwiKm6aF877_AhUdIzQIHc0ZCUkQ4dUDCBA&uact=5&oq=emotion+ai&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIICAAQigUQkQIyCAgAEIoFEJECMgUIABCABDIFCAAQgAQyBwgAEIAEEAoyBQgAEIAEMgUIABCABDILCC4QgAQQxwEQrwEyBQgAEIAEMgUIABCABDoKCAAQRxDWBBCwAzoECCMQJzoHCAAQigUQQzoRCC4QgAQQsQMQgwEQxwEQ0QM6CwgAEIAEELEDEIMBOggILhCABBCxAzoLCC4QgAQQsQMQgwE6CggAEIoFELEDEEM6CAgAEIAEELEDSgQIQRgAUJoKWPQSYLAXaAFwAXgAgAGRAYgB3AiSAQMxLjmYAQCgAQHAAQHIAQg&sclient=gws-wiz-serp">link &nearr;</a></div>
+<div class="history-item">Emotion AI: Measuring Customer Emotion with Emotional AI Technology  <a target="_blank" href="https://www.uniphore.com/emotion-ai/">link &nearr;</a></div>
+<div class="history-item">Issues — Emotional AI Lab  <a target="_blank" href="https://emotionalai.org/so-what-is-emotional-ai">link &nearr;</a></div>
+<div class="history-item">Emotional AI Lab  <a target="_blank" href="https://emotionalai.org/">link &nearr;</a></div>
+<div class="history-item">Faiss: A library for efficient similarity search - Engineering at Meta  <a target="_blank" href="https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/">link &nearr;</a></div>
+<div class="history-item">Emotion AI: 3 Experts on the Possibilities and Risks | Built In  <a target="_blank" href="https://builtin.com/artificial-intelligence/emotion-ai">link &nearr;</a></div>
+<div class="history-item">Emotion AI: 3 Experts on the Possibilities and Risks | Built In  <a target="_blank" href="https://builtin.com/artificial-intelligence/emotion-ai#:~:text=Emotion%20AI%20refers%20to%20artificial,physiological%20signals)%20or%20combinations%20thereof.">link &nearr;</a></div>
+<div class="history-item">ai for facial expressions - Google Search  <a target="_blank" href="https://www.google.com/search?q=ai+for+facial+expressions&oq=ai+for+facial+expressions&aqs=chrome..69i57.5699j0j7&sourceid=chrome&ie=UTF-8">link &nearr;</a></div>
     <p><a class="nowButton" href="javascript:resetTimeline2()">Now</a></p>
 
     <div id="visualization2"></div>

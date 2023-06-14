@@ -26,10 +26,16 @@ async function renderIndex() {
 	index = index.substring(0, offset)
 		+ listWindows() + index.substring(offset + bodyTag[0].length, index.length)
 
-	bodyTag = index.match(/items = new vis.DataSet\(\[\]\)/i)
+	let history = await listHistory()
+	let historyStr = history
+		.sort((a, b) => b.start - a.start)
+		.map(item => {
+			return `<div class="history-item">${item.content}</div>`
+		}).join('\n')
+	bodyTag = index.match(/<h2>Daily Activity<\/h2>/i)
 	offset = bodyTag.index
 	index = index.substring(0, offset)
-		+ `items = new vis.DataSet(${JSON.stringify(listHistory(), null, 2)})` + index.substring(offset + bodyTag[0].length, index.length)
+		+ historyStr + index.substring(offset + bodyTag[0].length, index.length)
 
 
 
