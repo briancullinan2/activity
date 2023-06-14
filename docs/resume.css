@@ -221,6 +221,11 @@ div.container.timeline p {
   padding-bottom: 80%;
 }
 
+div.container.timeline .history-item .time {
+  display: inline-block;
+  width: 100px;
+}
+
 div.container.projects svg,
 div.container.projects img {
   max-width: 100%;

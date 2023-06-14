@@ -30,7 +30,7 @@ async function renderIndex() {
 	let historyStr = history
 		.sort((a, b) => b.start - a.start)
 		.map(item => {
-			return `<div class="history-item"><span class="time">${item.start.getHours() % 12}:${item.start.getMinutes()}</span>${item.content}</div>`
+			return `<div class="history-item"><span class="time">${item.start.getHours() % 12}:${item.start.getMinutes()} ${item.start.getHours() >= 12 ? 'pm' : 'am'}</span>${item.content}</div>`
 		}).join('\n')
 	bodyTag = index.match(/<h2>Browsing Activity<\/h2>/i)
 	offset = bodyTag.index + bodyTag[0].length
