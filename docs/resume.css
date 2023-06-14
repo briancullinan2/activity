@@ -223,15 +223,15 @@ div.container.timeline p {
 
 div.container.timeline .history-item .time {
   display: inline-block;
-  width: 120px;
+  width: 150px;
   box-sizing: border-box;
 }
 
 div.container.timeline .history-item .content {
   display: inline-block;
   width: 100%;
-  margin-left: -120px;
-  padding-left: 120px;
+  margin-left: -150px;
+  padding-left: 150px;
   box-sizing: border-box;
 }
 
