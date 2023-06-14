@@ -34,8 +34,8 @@ async function renderIndex() {
 		}).join('\n')
 	bodyTag = index.match(/<h2>Browsing Activity<\/h2>/i)
 	offset = bodyTag.index + bodyTag[0].length
-	index = index.substring(0, offset)
-		+ historyStr + index.substring(offset + bodyTag[0].length, index.length)
+	index = index.substring(0, offset) + historyStr 
+		+ index.substring(offset + bodyTag[0].length, index.length)
 
 
 
@@ -52,8 +52,8 @@ async function renderIndex() {
 
 	bodyTag = index.match(/<h2>Daily Activity<\/h2>/i)
 	offset = bodyTag.index + bodyTag[0].length
-	index = index.substring(0, offset)
-		+ calendarStr + index.substring(offset + bodyTag[0].length, index.length)
+	index = index.substring(0, offset) + calendarStr
+		+ index.substring(offset + bodyTag[0].length, index.length)
 
 
 	fs.writeFileSync(path.join(__dirname, 'docs/index.html'), index)
