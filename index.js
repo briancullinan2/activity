@@ -33,9 +33,9 @@ async function renderIndex() {
 			return `<div class="history-item">${item.content}</div>`
 		}).join('\n')
 	bodyTag = index.match(/<h2>Browsing Activity<\/h2>/i)
-	offset = bodyTag.index
+	offset = bodyTag.index + bodyTag[0].length
 	index = index.substring(0, offset) + historyStr 
-		+ index.substring(offset + bodyTag[0].length, index.length)
+		+ index.substring(offset, index.length)
 
 
 
@@ -53,7 +53,7 @@ async function renderIndex() {
 	bodyTag = index.match(/<h2>Daily Activity<\/h2>/i)
 	offset = bodyTag.index + bodyTag[0].length
 	index = index.substring(0, offset) + calendarStr
-		+ index.substring(offset + bodyTag[0].length, index.length)
+		+ index.substring(offset, index.length)
 
 
 	fs.writeFileSync(path.join(__dirname, 'docs/index.html'), index)
