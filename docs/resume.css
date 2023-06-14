@@ -224,6 +224,7 @@ div.container.timeline p {
 div.container.timeline .history-item .time {
   display: inline-block;
   width: 100px;
+  box-sizing: border-box;
 }
 
 div.container.timeline .history-item .content {
@@ -231,6 +232,7 @@ div.container.timeline .history-item .content {
   width: 100%;
   margin-left: -100px;
   padding-left: 100px;
+  box-sizing: border-box;
 }
 
 div.container.projects svg,
