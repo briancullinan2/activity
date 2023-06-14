@@ -50,13 +50,15 @@ async function renderIndex() {
 			return arr.slice(0, 20)
 		}).flat(1)
 	*/
+	debugger
+
 	let listAllEvents = Object.values(calendarEntries)
 		.map(arr => {
 			arr.sort((a, b) => b.start - a.start)
 			return arr.slice(0, 30)
 		})
 		.flat(1)
-		.sort((a, b) => a.start - b.start)
+		.sort((a, b) => a.start.getTime() - b.start.getTime())
 
 	let calendarStr = listAllEvents.map(item => {
 		return `<div class="history-item"><span class="time">${item.start.getMonth() + 1}/${item.start.getDate()} ${item.start.getHours() % 12}:${item.start.getMinutes() < 10 ? '0' : ''}${item.start.getMinutes()} ${item.start.getHours() >= 12 ? 'pm' : 'am'}</span><span class="content">${item.content}</span></div>`
