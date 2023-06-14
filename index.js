@@ -33,7 +33,7 @@ async function renderIndex() {
 			return `<div class="history-item">${item.content}</div>`
 		}).join('\n')
 	bodyTag = index.match(/<h2>Browsing Activity<\/h2>/i)
-	offset = bodyTag.index + bodyTag[0].length
+	offset = bodyTag.index
 	index = index.substring(0, offset) + historyStr 
 		+ index.substring(offset + bodyTag[0].length, index.length)
 
