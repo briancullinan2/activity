@@ -27,10 +27,16 @@ async function renderIndex() {
 		+ listWindows() + index.substring(offset + bodyTag[0].length, index.length)
 
 	let history = await listHistory()
+	let currYear
 	let historyStr = history
 		.sort((a, b) => a.start - b.start)
 		.map(item => {
-			return `<div class="history-item"><span class="time">${item.start.getMonth() + 1}/${item.start.getDate()} ${item.start.getHours() % 12}:${item.start.getMinutes() < 10 ? '0' : ''}${item.start.getMinutes()} ${item.start.getHours() >= 12 ? 'pm' : 'am'}</span><span class="content">${item.content}</span></div>`
+			let yearStr = ''
+			if(item.start.getFullYear() !== currYear) {
+				currYear = item.start.getFullYear()
+				yearStr = `<div class="history-item"><span class="time">${item.start.getFullYear()}</span></div>`
+			}
+			return `${yearStr}<div class="history-item"><span class="time">${item.start.getMonth() + 1}/${item.start.getDate()} ${item.start.getHours() % 12}:${item.start.getMinutes() < 10 ? '0' : ''}${item.start.getMinutes()} ${item.start.getHours() >= 12 ? 'pm' : 'am'}</span><span class="content">${item.content}</span></div>`
 		}).join('\n')
 	bodyTag = index.match(/<h2>Browsing Activity<\/h2>/i)
 	offset = bodyTag.index + bodyTag[0].length
@@ -50,7 +56,6 @@ async function renderIndex() {
 			return arr.slice(0, 20)
 		}).flat(1)
 	*/
-	debugger
 
 	let listAllEvents = Object.values(calendarEntries)
 		.map(arr => {
@@ -59,9 +64,14 @@ async function renderIndex() {
 		})
 		.flat(1)
 		.sort((a, b) => a.start - b.start)
-
+	let currYear2
 	let calendarStr = listAllEvents.map(item => {
-		return `<div class="history-item"><span class="time">${item.start.getMonth() + 1}/${item.start.getDate()} ${item.start.getHours() % 12}:${item.start.getMinutes() < 10 ? '0' : ''}${item.start.getMinutes()} ${item.start.getHours() >= 12 ? 'pm' : 'am'}</span><span class="content">${item.content}</span></div>`
+		let yearStr = ''
+		if(item.start.getFullYear() !== currYear2) {
+			currYear2 = item.start.getFullYear()
+			yearStr = `<div class="history-item"><span class="time">${item.start.getFullYear()}</span></div>`
+		}
+		return `${yearStr}<div class="history-item"><span class="time">${item.start.getMonth() + 1}/${item.start.getDate()} ${item.start.getHours() % 12}:${item.start.getMinutes() < 10 ? '0' : ''}${item.start.getMinutes()} ${item.start.getHours() >= 12 ? 'pm' : 'am'}</span><span class="content">${item.content}</span></div>`
 	}).join('\n')
 
 	bodyTag = index.match(/<h2>Daily Activity<\/h2>/i)
