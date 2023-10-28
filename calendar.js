@@ -176,7 +176,7 @@ async function listCalendar() {
 							dateString.substr(11, 2),
 							dateString.substr(13, 2))
 						if(k == 'Diet') {
-              console.log(currentEvent.start)
+              //console.log(currentEvent.start)
             }
 						
 					} else
