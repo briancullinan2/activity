@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../bookmarks"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../edit-anywhere"
+		},
+		{
+			"path": "../jupyter_ops"
+		}
+	],
+	"settings": {}
+}
