@@ -6,6 +6,7 @@ const assert = require('assert');
 const util = require('util');
 const { google } = require('googleapis');
 const { authorize } = require('./authorize.js')
+const ical = require('node-ical');
 
 let calendarList = [], lastCalendar;
 const CALENDAR_NAMES = [
@@ -116,108 +117,22 @@ async function listCalendar() {
 		})
     .map(fname => path.join(takeouts[0], fname))
 
-	calendarFiles.forEach((fname, id) => {
+	let calendarEvents = calendarFiles.map((fname, id) => {
 		if (!fs.existsSync(fname)) {
 			return
 		}
-		let calendarLines = fs.readFileSync(fname)
-			.toString('utf-8').split('\n')
-		let k = CALENDAR_NAMES.filter(ical => path.basename(fname).startsWith(ical)
-				&& path.basename(fname).endsWith('.ics'))[0]
-		console.log(k + ' - ' + fname)
+		const events = ical.sync.parseFile(fname);
+		let eventsList = []
+		for (const event of Object.values(events)) {
+			event.content = event.summary + '\n' + event.description
+			eventsList[eventsList.length] = event
+		}
 
-
-		let startLine = 0
-		let currentEvent = {}
-		let insideSummary = false
-		let insideDescription = false
-
-		calendarLines.forEach((line, i) => {
-			if (line.startsWith('BEGIN:VEVENT')) {
-				startLine = i
-				currentEvent = {}
-			} else
-				if (line.startsWith('END:VEVENT')) {
-					if (!currentEvent.start) {
-						console.log(calendarLines.slice(startLine, i))
-						debugger
-					}
-					if (PUBLIC_CALENDARS.includes(k)) {
-						calendarList[k].push({
-							id: ++eventId,
-							group: id,
-							content: (currentEvent.summary || '')
-								.replace(/\\n/g, '\n')
-								.replace(/\\,/g, ',')
-								+ '<br />' + (currentEvent.description || '')
-									.replace(/\\n/g, '\n')
-									.replace(/\\,/g, ',')
-							,
-							start: currentEvent.start,
-							type: 'box'
-						})
-					} else {
-						calendarList[k].push({
-							id: ++eventId,
-							group: id,
-							content: k,
-							start: currentEvent.start,
-							type: 'box'
-						})
-					}
-				} else
-					if (line.startsWith('DTSTART:')) {
-						let dateString = line.substr('DTSTART:'.length)
-						currentEvent.start = new Date(
-							dateString.substr(0, 4),
-							parseInt(dateString.substr(4, 2)) - 1,
-							dateString.substr(6, 2),
-							dateString.substr(9, 2),
-							dateString.substr(11, 2),
-							dateString.substr(13, 2))
-						if(k == 'Diet') {
-              //console.log(currentEvent.start)
-            }
-						
-					} else
-						if (line.startsWith('DTSTART;')) {
-							let dateString = line.substr(line.indexOf(':') + 1)
-							currentEvent.start = new Date(
-								dateString.substr(0, 4),
-								parseInt(dateString.substr(4, 2)) - 1,
-								dateString.substr(6, 2))
-						} else
-							if (line.startsWith('DTEND:')) {
-								//currentEvent.start = new Date(line.substr('DTEND:'.length))
-							} else
-								if (line.startsWith('SUMMARY:')) {
-									if (PUBLIC_CALENDARS.includes(k)) {
-										insideSummary = true
-										currentEvent.summary = line.substr('SUMMARY:'.length)
-									}
-								} else
-									if (line.startsWith('DESCRIPTION:')) {
-										if (PUBLIC_CALENDARS.includes(k)) {
-											insideDescription = true
-											currentEvent.description = line.substr('DESCRIPTION:'.length)
-										}
-									} else
-										if (line.startsWith('TRANSP:') || line.startsWith('LAST-MODIFIED:')
-											|| line.match(/^[A-Z\-]+\:/)) {
-											insideDescription = false
-											insideSummary = false
-										} else
-											if (insideDescription) {
-												currentEvent.description += line
-											} else
-												if (insideSummary) {
-													currentEvent.summary += line
-												}
-		})
+		return eventsList
 
 	})
 
-	return calendarList
+	return calendarEvents
 }
 
 

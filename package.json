@@ -25,6 +25,7 @@
     "live-server": "^1.1.0",
     "moment": "^2.29.4",
     "node-addon-api": "^5.0.0",
-    "node-gyp": "^9.1.0"
+    "node-gyp": "^9.1.0",
+    "node-ical": "^0.17.1"
   }
 }

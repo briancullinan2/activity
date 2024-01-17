@@ -64,9 +64,13 @@ async function renderIndex() {
 		})
 		.flat(1)
 		.sort((a, b) => a.start - b.start)
+		
 	let currYear2
 	let calendarStr = listAllEvents.map(item => {
 		let yearStr = ''
+		if(!item.start) {
+			return true
+		}
 		if(item.start.getFullYear() !== currYear2) {
 			currYear2 = item.start.getFullYear()
 			yearStr = `<div class="history-item"><h3 class="time">${item.start.getFullYear()}</h3></div>`
