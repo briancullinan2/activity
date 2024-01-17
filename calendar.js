@@ -124,7 +124,7 @@ async function listCalendar() {
 		const events = ical.sync.parseFile(fname);
 		let eventsList = []
 		for (const event of Object.values(events)) {
-			event.content = event.summary + '\n' + event.description
+			event.content = (event.summary || '') + '\n' + (event.description || '')
 			eventsList[eventsList.length] = event
 		}
 
