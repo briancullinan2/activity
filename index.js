@@ -69,7 +69,7 @@ async function renderIndex() {
 	let calendarStr = listAllEvents.map(item => {
 		let yearStr = ''
 		if(!item.start) {
-			return true
+			return ''
 		}
 		if(item.start.getFullYear() !== currYear2) {
 			currYear2 = item.start.getFullYear()
