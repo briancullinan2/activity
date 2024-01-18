@@ -121,11 +121,16 @@ async function listCalendar() {
 		if (!fs.existsSync(fname)) {
 			return
 		}
+		let publicName = path.basename(fname).trim().replace(/_.*?\.ics$/ig, '')
 		const events = ical.sync.parseFile(fname);
 		let eventsList = []
 		for (const event of Object.values(events)) {
-			event.content = (event.summary || '') + '\n' + (event.description || '')
-			event.name = path.basename(fname).trim().replace(/_.*?\.ics$/ig, '').replace(/[^a-z]/ig, '_')
+			if(PUBLIC_CALENDARS.includes(publicName)) {
+				event.content = (event.summary || '') + '\n' + (event.description || '')
+			} else {
+				event.content = publicName
+			}
+			event.name = publicName.replace(/[^a-z]/ig, '_')
 			eventsList[eventsList.length] = event
 		}
 

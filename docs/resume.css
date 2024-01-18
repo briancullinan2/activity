@@ -235,8 +235,20 @@ div.container.timeline .history-item .content {
   box-sizing: border-box;
 }
 
-div.container.timeline .history-item .Predictions {
-  border-left: 10px solid #03F;
+.history-item {
+  border-left: 10px solid transparent;
+}
+
+.history-item {
+  border-left: 10px solid transparent;
+}
+
+.history-item.Predictions {
+  border-left: 10px solid #09F;
+}
+
+.history-item.Revelation {
+  border-left: 10px solid #F30;
 }
 
 div.container.projects svg,
