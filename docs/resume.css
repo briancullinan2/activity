@@ -218,7 +218,7 @@ div.container.timeline {
 }
 
 div.container.timeline p {
-  padding-bottom: 80%;
+/*  padding-bottom: 80%; */
 }
 
 div.container.timeline .history-item .time {
@@ -248,6 +248,26 @@ div.container.timeline .history-item .content {
 }
 
 .history-item.Revelation {
+  border-left: 10px solid #F90;
+}
+
+.history-item.Emotions {
+  border-left: 10px solid #999;
+}
+
+.history-item.Iga {
+  border-left: 10px solid #93F;
+}
+
+.history-item.Robot_do {
+  border-left: 10px solid #3F3;
+}
+
+.history-item.General {
+  border-left: 10px solid #363;
+}
+
+.history-item.Diet {
   border-left: 10px solid #F30;
 }
 
