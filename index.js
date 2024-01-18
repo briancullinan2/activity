@@ -75,7 +75,7 @@ async function renderIndex() {
 			currYear2 = item.start.getFullYear()
 			yearStr = `<div class="history-item"><h3 class="time">${item.start.getFullYear()}</h3></div>`
 		}
-		return `${yearStr}<div class="history-item"><span class="time">${item.start.getMonth() + 1}/${item.start.getDate()} ${item.start.getHours() % 12}:${item.start.getMinutes() < 10 ? '0' : ''}${item.start.getMinutes()} ${item.start.getHours() >= 12 ? 'pm' : 'am'}</span><span class="content">${item.content}</span></div>`
+		return `${yearStr}<div class="history-item ${item.name}"><span class="time">${item.start.getMonth() + 1}/${item.start.getDate()} ${item.start.getHours() % 12}:${item.start.getMinutes() < 10 ? '0' : ''}${item.start.getMinutes()} ${item.start.getHours() >= 12 ? 'pm' : 'am'}</span><span class="content">${item.content}</span></div>`
 	}).join('\n')
 
 	bodyTag = index.match(/<h2>Daily Activity<\/h2>/i)

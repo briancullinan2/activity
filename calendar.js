@@ -125,6 +125,7 @@ async function listCalendar() {
 		let eventsList = []
 		for (const event of Object.values(events)) {
 			event.content = (event.summary || '') + '\n' + (event.description || '')
+			event.name = fname.trim().replace(/_.*?\.ics$/, '')
 			eventsList[eventsList.length] = event
 		}
 
