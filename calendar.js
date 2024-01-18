@@ -134,7 +134,7 @@ async function listCalendar() {
 			eventsList[eventsList.length] = event
 		}
 
-		return eventsList
+		return eventsList.sort((a, b) => b.start - a.start)
 
 	})
 
