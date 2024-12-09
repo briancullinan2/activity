@@ -186,6 +186,17 @@ ul.clipart {
   flex-wrap: wrap;
 }
 
+ul.clipart li {
+  flex:33.3%;
+}
+
+
+ul.clipart li {
+  position:relative;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
 
 .clipart li,
 .clipart img {
