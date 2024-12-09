@@ -80,6 +80,7 @@ label[for="federal"] {
   display: inline-block;
 }
 
+input[id*="anime"]:checked ~ .styles>li:nth-child(1)::after,
 input[id*="animals"]:checked ~ .clipart>li:nth-child(1)::after,
 input[id*="styles"]:checked ~ .clipart>li:nth-child(3)::after,
 .artwork ol>li:hover::after,
@@ -185,6 +186,9 @@ div.clipart img {
   display:none;
 }
 
+
+input[id*="animals"]:checked ~ input[id*="retro"]:checked ~ div.clipart>li.animals.retro,
+input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ div.clipart>li.animals.anime,
 input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ div.clipart>img.animals.anime {
   display:inline-block;
 }

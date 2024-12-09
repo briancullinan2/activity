@@ -101,7 +101,7 @@ async function renderIndex() {
 		}
 	}
 
-	bodyTag = index.match(/<div class="clipart">/i)
+	bodyTag = index.match(/<ul class="clipart">/i)
 	offset = bodyTag.index + bodyTag[0].length
 	index = index.substring(0, offset) + images
 		+ index.substring(offset, index.length)
