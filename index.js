@@ -95,6 +95,7 @@ async function renderIndex() {
 	for(let i = 0; i < directories.length; i++) {
 		if (directories[i][0] == '.') continue
 		if (!fs.statSync(path.join(TXT2IMG, directories[i])).isDirectory()) continue
+		if(directories[i].includes('urpm') || directories[i].includes('naked') || directories[i].includes('x-rated') || directories[i].includes('nsfw')) continue
 		let imageFiles = fs.readdirSync(path.join(TXT2IMG, directories[i])).filter(i => i.includes('.png'))
 		for(let j = 0; j < imageFiles.length; j++) {
 			let uniqueTokens = (directories[i] + ' ' + imageFiles[j]).toLocaleLowerCase().split(/[^a-z0-9]/gi).sort().filter((a, i, arr) => arr.indexOf(a) == i).join(' ')
