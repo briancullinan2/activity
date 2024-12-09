@@ -97,7 +97,7 @@ async function renderIndex() {
 		if (!fs.statSync(path.join(TXT2IMG, directories[i])).isDirectory()) continue
 		let imageFiles = fs.readdirSync(path.join(TXT2IMG, directories[i])).filter(i => i.includes('.png'))
 		for(let j = 0; j < imageFiles.length; j++) {
-			let uniqueTokens = (directories[i] + ' ' + imageFiles[j]).split(/[^a-z0-9]/gi).sort().filter((a, i, arr) => arr.indexOf(a) == i).join(' ')
+			let uniqueTokens = (directories[i] + ' ' + imageFiles[j]).toLocaleLowerCase().split(/[^a-z0-9]/gi).sort().filter((a, i, arr) => arr.indexOf(a) == i).join(' ')
 			images += '<li class="' + uniqueTokens + '" style="background-image:url(https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]) + '?raw=true)"><a href="https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]) + '?raw=true"> </a></li>'
 		}
 	}

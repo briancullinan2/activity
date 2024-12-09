@@ -141,8 +141,8 @@ input[name*="brainstorm"] {
 
 input[id*="cosmic"]:checked ~ ol.cosmic,
 input[id*="cosmic"]:checked ~ h2.cosmic,
-input[id*="cosmic"]:checked ~ ol.styles,
-input[id*="cosmic"]:checked ~ h2.styles,
+input[id*="cosmic"]:checked ~ ol.pattern,
+input[id*="cosmic"]:checked ~ h2.pattern,
 input[id*="buildings"]:checked ~ ol.buildings,
 input[id*="buildings"]:checked ~ h2.buildings,
 input[id*="buildings"]:checked ~ ol.styles,
