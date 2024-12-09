@@ -80,7 +80,8 @@ label[for="federal"] {
   display: inline-block;
 }
 
-input[name*="animals"]:checked ~ li:nth-child(1)::after,
+input[id*="animals"]:checked ~ .clipart>li:nth-child(1)::after,
+input[id*="styles"]:checked ~ .clipart>li:nth-child(3)::after,
 .clipart ol>li:hover::after,
 ul.brainstorms>li:hover::after,
 ul.categories>li:hover::after,
@@ -124,12 +125,12 @@ input[name*="brainstorm"] {
   bottom: -1px;
 }
 
-input[name*="animals"]:checked ~ ol.animals,
-input[name*="animals"]:checked ~ h2.animals,
-input[name*="animals"]:checked ~ ol.styles,
-input[name*="animals"]:checked ~ h2.styles,
-input[name*="styles"]:checked ~ ol.styles,
-input[name*="styles"]:checked ~ h2.styles,
+input[id*="animals"]:checked ~ ol.animals,
+input[id*="animals"]:checked ~ h2.animals,
+input[id*="animals"]:checked ~ ol.styles,
+input[id*="animals"]:checked ~ h2.styles,
+input[id*="styles"]:checked ~ ol.styles,
+input[id*="styles"]:checked ~ h2.styles,
 input:checked+ul.bookmarks,
 input:checked+ul.brainstorm,
 input:checked+ol.bookmarks,
