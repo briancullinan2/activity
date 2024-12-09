@@ -80,10 +80,22 @@ label[for="federal"] {
   display: inline-block;
 }
 
-input[id*="retro"]:checked ~ .styles>li:nth-child(4)::after,
 input[id*="anime"]:checked ~ .styles>li:nth-child(1)::after,
+input[id*="robotic"]:checked ~ .styles>li:nth-child(2)::after,
+input[id*="steampunk"]:checked ~ .styles>li:nth-child(3)::after,
+input[id*="retro"]:checked ~ .styles>li:nth-child(4)::after,
+input[id*="fantasy"]:checked ~ .styles>li:nth-child(5)::after,
+input[id*="popart"]:checked ~ .styles>li:nth-child(6)::after,
+input[id*="gothic"]:checked ~ .styles>li:nth-child(7)::after,
+input[id*="cyberpunk"]:checked ~ .styles>li:nth-child(8)::after,
+
 input[id*="animals"]:checked ~ .things>li:nth-child(1)::after,
+input[id*="places"]:checked ~ .things>li:nth-child(2)::after,
 input[id*="styles"]:checked ~ .things>li:nth-child(3)::after,
+input[id*="holidays"]:checked ~ .things>li:nth-child(4)::after,
+input[id*="patterns"]:checked ~ .things>li:nth-child(5)::after,
+input[id*="cosmic"]:checked ~ .things>li:nth-child(6)::after,
+input[id*="buildings"]:checked ~ .things>li:nth-child(7)::after,
 .artwork ol>li:hover::after,
 ul.brainstorms>li:hover::after,
 ul.categories>li:hover::after,
@@ -127,6 +139,14 @@ input[name*="brainstorm"] {
   bottom: -1px;
 }
 
+input[id*="cosmic"]:checked ~ ol.cosmic,
+input[id*="cosmic"]:checked ~ h2.cosmic,
+input[id*="cosmic"]:checked ~ ol.styles,
+input[id*="cosmic"]:checked ~ h2.styles,
+input[id*="buildings"]:checked ~ ol.buildings,
+input[id*="buildings"]:checked ~ h2.buildings,
+input[id*="buildings"]:checked ~ ol.styles,
+input[id*="buildings"]:checked ~ h2.styles,
 input[id*="animals"]:checked ~ ol.animals,
 input[id*="animals"]:checked ~ h2.animals,
 input[id*="animals"]:checked ~ ol.styles,
@@ -191,7 +211,7 @@ ul.clipart li {
 }
 
 
-ul.clipart li {
+ul.clipart a {
   position:relative;
   height: 100%;
   width: 100%;
@@ -203,13 +223,30 @@ ul.clipart li {
   display:none;
   height: 512px;
   width: 512px;
+  visibility: hidden;
 }
 
 
+input[id*="buildings"]:checked ~ input[id*="steampunk"]:checked ~ .clipart>li.buildings.steampunk,
+input[id*="buildings"]:checked ~ input[id*="cyberpunk"]:checked ~ .clipart>li.buildings.cyberpunk,
+input[id*="buildings"]:checked ~ input[id*="gothic"]:checked ~ .clipart>li.buildings.gothic,
+input[id*="buildings"]:checked ~ input[id*="popart"]:checked ~ .clipart>li.buildings.pop,
+input[id*="buildings"]:checked ~ input[id*="fantasy"]:checked ~ .clipart>li.buildings.fantasy,
+input[id*="buildings"]:checked ~ input[id*="robotic"]:checked ~ .clipart>li.buildings.robotic,
+input[id*="buildings"]:checked ~ input[id*="retro"]:checked ~ .clipart>li.buildings.retro,
+input[id*="buildings"]:checked ~ input[id*="anime"]:checked ~ .clipart>li.buildings.anime,
+
+input[id*="animals"]:checked ~ input[id*="steampunk"]:checked ~ .clipart>li.animals.steampunk,
+input[id*="animals"]:checked ~ input[id*="cyberpunk"]:checked ~ .clipart>li.animals.cyberpunk,
+input[id*="animals"]:checked ~ input[id*="gothic"]:checked ~ .clipart>li.animals.gothic,
+input[id*="animals"]:checked ~ input[id*="popart"]:checked ~ .clipart>li.animals.pop,
+input[id*="animals"]:checked ~ input[id*="fantasy"]:checked ~ .clipart>li.animals.fantasy,
+input[id*="animals"]:checked ~ input[id*="robotic"]:checked ~ .clipart>li.animals.robotic,
 input[id*="animals"]:checked ~ input[id*="retro"]:checked ~ .clipart>li.animals.retro,
 input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ .clipart>li.animals.anime,
 input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ .clipart>img.animals.anime {
   display:inline-block;
+  visibility: visible;
 }
 
 
