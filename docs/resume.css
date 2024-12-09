@@ -80,6 +80,7 @@ label[for="federal"] {
   display: inline-block;
 }
 
+input[id*="retro"]:checked ~ .styles>li:nth-child(4)::after,
 input[id*="anime"]:checked ~ .styles>li:nth-child(1)::after,
 input[id*="animals"]:checked ~ .things>li:nth-child(1)::after,
 input[id*="styles"]:checked ~ .things>li:nth-child(3)::after,
