@@ -80,6 +80,7 @@ label[for="federal"] {
   display: inline-block;
 }
 
+input[name*="animals"]:checked ~ li:nth-child(1)::after,
 .clipart ol>li:hover::after,
 ul.brainstorms>li:hover::after,
 ul.categories>li:hover::after,
