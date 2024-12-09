@@ -160,7 +160,10 @@ input[name="federal"]:checked ~ .container.federal {
   display: block;
 }
 
-
+ol.animals,
+h2.animals,
+h2.styles,
+ol.styles,
 ul.bookmarks,
 ul.brainstorm,
 ol.bookmarks,
