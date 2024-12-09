@@ -80,6 +80,9 @@ label[for="federal"] {
   display: inline-block;
 }
 
+input[id*="clip-pattern"]:checked ~ .pattern>li:nth-child(1)::after,
+input[id*="nopattern"]:checked ~ .pattern>li:nth-child(2)::after,
+
 input[id*="anime"]:checked ~ .styles>li:nth-child(1)::after,
 input[id*="robotic"]:checked ~ .styles>li:nth-child(2)::after,
 input[id*="steampunk"]:checked ~ .styles>li:nth-child(3)::after,
@@ -190,6 +193,8 @@ input[name="federal"]:checked ~ .container.federal {
   display: block;
 }
 
+h2.pattern,
+ol.pattern,
 ol.animals,
 h2.animals,
 h2.styles,
@@ -226,6 +231,9 @@ ul.clipart a {
   visibility: hidden;
 }
 
+
+input[id*="cosmic"]:checked ~ input[id*="clip-pattern"]:checked ~ .clipart>li.cosmic.patterns,
+input[id*="cosmic"]:checked ~ input[id*="nopattern"]:checked ~ .clipart>li.cosmic.themed,
 
 input[id*="buildings"]:checked ~ input[id*="steampunk"]:checked ~ .clipart>li.buildings.steampunk,
 input[id*="buildings"]:checked ~ input[id*="cyberpunk"]:checked ~ .clipart>li.buildings.cyberpunk,
