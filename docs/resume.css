@@ -123,6 +123,12 @@ input[name*="brainstorm"] {
   bottom: -1px;
 }
 
+input[name*="animals"]:checked ~ ol.animals,
+input[name*="animals"]:checked ~ h2.animals,
+input[name*="animals"]:checked ~ ol.styles,
+input[name*="animals"]:checked ~ h2.styles,
+input[name*="styles"]:checked ~ ol.styles,
+input[name*="styles"]:checked ~ h2.styles,
 input:checked+ul.bookmarks,
 input:checked+ul.brainstorm,
 input:checked+ol.bookmarks,
