@@ -181,6 +181,11 @@ ol.brainstorm {
   display: none;
 }
 
+ul.clipart {
+  display:flex;
+  flex-wrap: wrap;
+}
+
 
 .clipart li,
 .clipart img {
@@ -238,6 +243,11 @@ div.container {
   border: 1px solid #666;
   position: relative;
   z-index: 1;
+}
+
+div.container.artwork {
+  max-height: 1000px;
+  overflow: auto;
 }
 
 div.container.federal {
