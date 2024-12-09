@@ -97,7 +97,7 @@ async function renderIndex() {
 		if (!fs.statSync(path.join(TXT2IMG, directories[i])).isDirectory()) continue
 		let imageFiles = fs.readdirSync(path.join(TXT2IMG, directories[i])).filter(i => i.includes('.png'))
 		for(let j = 0; j < imageFiles.length; j++) {
-			images += '<img class="' + directories[i] + '" src="' + directories[i] + '/' + imageFiles[j] + '" />'
+			images += '<img class="' + directories[i].replace(/[^a-z0-9]/, '') + '" src="' + directories[i] + '/' + imageFiles[j] + '" />'
 		}
 	}
 
