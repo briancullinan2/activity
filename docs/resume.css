@@ -185,6 +185,8 @@ ol.brainstorm {
 .clipart li,
 .clipart img {
   display:none;
+  height: 512px;
+  width: 512px;
 }
 
 
