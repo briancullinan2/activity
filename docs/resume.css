@@ -14,6 +14,7 @@ h3 {
   margin: 0;
 }
 
+.clipart ol,
 ul.brainstorms,
 ul.categories,
 ol.brainstorms,
@@ -27,6 +28,7 @@ ol.windows {
   max-width: 1000px;
 }
 
+.clipart ol>li,
 ul.brainstorms>li,
 ul.categories>li,
 ol.brainstorms>li,
