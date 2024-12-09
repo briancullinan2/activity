@@ -91,10 +91,19 @@ async function renderIndex() {
 
 	let directories = fs.readdirSync(TXT2IMG)
 	console.log(directories)
+	let images = ''
+	for(let i = 0; i < directories.length; i++) {
+		if (directories[i][0] == '.') continue
+		if (!fs.statSync(path.join(TXT2IMG, directories[i])).isDirectory()) continue
+		let imageFiles = fs.readdirSync(path.join(TXT2IMG, directories[i])).filter(i => i.includes('.png'))
+		for(let j = 0; j < imageFiles.length; j++) {
+			images += '<img class="' + directories[i] + '" src="' + directories[i] + '/' + imageFiles[j] + '" />'
+		}
+	}
 
 	bodyTag = index.match(/<div class="clipart">/i)
 	offset = bodyTag.index + bodyTag[0].length
-	index = index.substring(0, offset) + directories.join('')
+	index = index.substring(0, offset) + images
 		+ index.substring(offset, index.length)
 	
 
