@@ -14,7 +14,7 @@ h3 {
   margin: 0;
 }
 
-.clipart ol,
+.artwork ol,
 ul.brainstorms,
 ul.categories,
 ol.brainstorms,
@@ -28,7 +28,7 @@ ol.windows {
   max-width: 1000px;
 }
 
-.clipart ol>li,
+.artwork ol>li,
 ul.brainstorms>li,
 ul.categories>li,
 ol.brainstorms>li,
@@ -47,7 +47,7 @@ label[for="federal"] {
   text-align: left;
 }
 
-.clipart ol>li a,
+.artwork ol>li a,
 ul.brainstorms>li a,
 ul.categories>li a,
 ol.brainstorms>li a,
@@ -62,7 +62,7 @@ label[for="federal"] {
   text-align: center;
 }
 
-.clipart ol>li label,
+.artwork ol>li label,
 ul.brainstorms>li label,
 ul.categories>li label,
 ol.brainstorms>li label,
@@ -82,7 +82,7 @@ label[for="federal"] {
 
 input[id*="animals"]:checked ~ .clipart>li:nth-child(1)::after,
 input[id*="styles"]:checked ~ .clipart>li:nth-child(3)::after,
-.clipart ol>li:hover::after,
+.artwork ol>li:hover::after,
 ul.brainstorms>li:hover::after,
 ul.categories>li:hover::after,
 ol.brainstorms>li:hover::after,
@@ -113,7 +113,7 @@ ol.windows>li.active::after {
 }
 
 /* SPA with no javascript, enjoy */
-.clipart input,
+.artwork input,
 input[name*="federal"],
 input[name*="category"],
 input[name*="brainstorm"] {
