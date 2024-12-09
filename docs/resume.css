@@ -179,6 +179,16 @@ ol.brainstorm {
   display: none;
 }
 
+
+div.clipart img {
+  display:none;
+}
+
+input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ div.clipart>img.animals.anime {
+  display:inline-block;
+}
+
+
 div.livedev {
   position: relative;
   margin: 0 auto;

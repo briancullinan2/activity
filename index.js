@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 
 const { listBookmarks } = require('./bookmarks.js')
 const { listWindows } = require('./windows.js')
@@ -7,6 +8,9 @@ const { listProjects } = require('./projects.js')
 const { listCalendar } = require('./calendar.js')
 
 const INDEX = fs.readFileSync('./index.html').toString('utf-8')
+const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
+const TXT2IMG = path.join(HOMEPATH, 'stable-diffusion-webui/outputs/txt2img-images')
+
 
 async function renderIndex() {
 	let index = INDEX
@@ -83,6 +87,16 @@ async function renderIndex() {
 	index = index.substring(0, offset) + calendarStr
 		+ index.substring(offset, index.length)
 
+
+
+	let directories = fs.readdirSync(TXT2IMG)
+	console.log(directories)
+
+	bodyTag = index.match(/<div class="clipart">/i)
+	offset = bodyTag.index + bodyTag[0].length
+	index = index.substring(0, offset) + directories.join('')
+		+ index.substring(offset, index.length)
+	
 
 	fs.writeFileSync(path.join(__dirname, 'docs/index.html'), index)
 }
