@@ -79,7 +79,8 @@ function parseBookmarks() {
 // TODO: make an html page out of categories
 function listBookmarks() {
 	let bookmarks = parseBookmarks()
-	let recentlyAdded = bookmarks.filter(book => book.date.getTime() > Date.now() - 96 * 60 * 60 * 1000)
+	let recentlyAdded = bookmarks.sort((a, b) => b.date - a.date).filter((a, i) => i < 10) 
+	//.filter(book => book.date.getTime() > Date.now() - 96 * 60 * 60 * 1000)
 	let bookmarkFolders = recentlyAdded.map(book => book.folder).filter((f, i, arr) => arr.indexOf(f) == i)
 	// TODO: a little bit of read-time estimation it looks like a factor of images + words / reading speed
 	// SOURCE: https://www.startpage.com/do/search?q=how+long+does+it+take+to+read+an+article+github
