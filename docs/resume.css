@@ -282,7 +282,7 @@ input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ .clipart>img.animals
   visibility: visible;
 }
 
-
+/*
 input[id*="cosmic"]:checked ~ input[id*="clip-pattern"]:checked ~ .clipart>li.cosmic.patterns ~ .cosmic.patterns ~ .cosmic.patterns ~ .cosmic.patterns ~ .cosmic.patterns ~ .cosmic.patterns ~ .cosmic.patterns ~ li,
 input[id*="cosmic"]:checked ~ input[id*="nopattern"]:checked ~ .clipart>li.cosmic:not(.patterns) ~ .cosmic:not(.patterns) ~ .cosmic:not(.patterns) ~ .cosmic:not(.patterns) ~ .cosmic:not(.patterns) ~ .cosmic:not(.patterns) ~ li,
 
@@ -315,6 +315,7 @@ input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ .clipart>li.animals.
   display:none;
   visibility: hidden;
 }
+*/
 
 div.livedev {
   position: relative;
