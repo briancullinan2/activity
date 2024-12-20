@@ -100,7 +100,7 @@ async function renderIndex() {
 		let count = 0
 		let images = ''
 		let directoryTokens = directories[i].toLocaleLowerCase().split(/[^a-z0-9]/gi).sort().filter((a, i, arr) => arr.indexOf(a) == i).join(' ')
-		iframes += '<li class="' + directoryTokens + '"><iframe src="./' + encodeURIComponent(directories[i]) + '.html"></iframe></li>'
+		iframes += '<li class="' + directoryTokens + '"><iframe src="./clipart/' + encodeURIComponent(directories[i]) + '.html"></iframe></li>'
 		for(let j = 0; j < imageFiles.length; j++) {
 			if (imageFiles[j][0] == '.') continue
 			if (!fs.statSync(path.join(TXT2IMG, directories[i], imageFiles[j])).isFile()) continue

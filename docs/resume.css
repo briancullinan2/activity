@@ -234,7 +234,7 @@ ul.clipart li {
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  padding-top:33.33%;
+  /* padding-top:33.33%; */
 }
 
 
@@ -243,6 +243,15 @@ ul.clipart a {
   height: 100%;
   width: 100%;
   display: block;
+}
+
+.clipart iframe {
+  display:inline-block;
+  height: 800px;
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .clipart li,
