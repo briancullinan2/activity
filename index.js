@@ -91,13 +91,16 @@ async function renderIndex() {
 
 	let directories = fs.readdirSync(TXT2IMG)
 	console.log(directories)
-	let images = ''
+	let iframes = ''
 	for(let i = 0; i < directories.length; i++) {
 		if (directories[i][0] == '.') continue
 		if (!fs.statSync(path.join(TXT2IMG, directories[i])).isDirectory()) continue
 		if(directories[i].includes('urpm') || directories[i].includes('naked') || directories[i].includes('x-rated') || directories[i].includes('nsfw')) continue
 		let imageFiles = fs.readdirSync(path.join(TXT2IMG, directories[i])).filter(i => i.includes('.png'))
 		let count = 0
+		let images = ''
+		let directoryTokens = directories[i].toLocaleLowerCase().split(/[^a-z0-9]/gi).sort().filter((a, i, arr) => arr.indexOf(a) == i).join(' ')
+		iframes += '<li class="' + directoryTokens + '"><iframe src="./' + encodeURIComponent(directories[i]) + '" /></li>'
 		for(let j = 0; j < imageFiles.length; j++) {
 			if (imageFiles[j][0] == '.') continue
 			if (!fs.statSync(path.join(TXT2IMG, directories[i], imageFiles[j])).isFile()) continue
@@ -106,11 +109,12 @@ async function renderIndex() {
 			images += '<li class="' + uniqueTokens + '" style="background-image:url(https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]) + '?raw=true)"><a href="https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]) + '?raw=true"> </a></li>'
 			if(count == 6) break
 		}
+		fs.writeFileSync(path.join(__dirname, 'docs/' + directories[i] + '.html'), images)
 	}
 
 	bodyTag = index.match(/<ul class="clipart">/i)
 	offset = bodyTag.index + bodyTag[0].length
-	index = index.substring(0, offset) + images
+	index = index.substring(0, offset) + iframes
 		+ index.substring(offset, index.length)
 	
 

@@ -84,6 +84,10 @@ input[id*="clip-men"]:checked ~ .places>li:nth-child(1)::after,
 input[id*="hamsters"]:checked ~ .places>li:nth-child(2)::after,
 input[id*="angels"]:checked ~ .places>li:nth-child(3)::after,
 
+input[id*="christmas"]:checked ~ .holidays>li:nth-child(1)::after,
+input[id*="halloween"]:checked ~ .holidays>li:nth-child(2)::after,
+input[id*="newyears"]:checked ~ .holidays>li:nth-child(3)::after,
+
 input[id*="clip-pattern"]:checked ~ .pattern>li:nth-child(1)::after,
 input[id*="nopattern"]:checked ~ .pattern>li:nth-child(2)::after,
 
