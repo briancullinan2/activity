@@ -121,7 +121,7 @@ async function listCalendar() {
 		if (!fs.existsSync(fname)) {
 			return
 		}
-		let publicName = path.basename(fname).trim().replace(/_*.*?\.ics$/ig, '')
+		let publicName = path.basename(fname).trim().replace(/(_.*)?\.ics$/ig, '')
 		const events = ical.sync.parseFile(fname);
 		let eventsList = []
 		for (const event of Object.values(events)) {
@@ -131,7 +131,6 @@ async function listCalendar() {
 				event.content = publicName
 			}
 			event.name = publicName.replace(/[^a-z]/ig, '_')
-			console.log(event)
 			eventsList[eventsList.length] = event
 		}
 
