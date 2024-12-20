@@ -233,16 +233,23 @@ ul.clipart {
   list-style: none;
   display:flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  width:100%;
 }
 
 ul.clipart li {
-  flex:33.3%;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  /* padding-top:33.33%; */
+  width:100%;
 }
 
+
+html.iframe ul.clipart li {
+  flex:33.3%;
+  padding-top:33.33%;
+}
 
 ul.clipart a {
   position:relative;
@@ -297,6 +304,17 @@ input[id*="animals"]:checked ~ input[id*="robotic"]:checked ~ .clipart>li.animal
 input[id*="animals"]:checked ~ input[id*="retro"]:checked ~ .clipart>li.animals.retro,
 input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ .clipart>li.animals.anime,
 input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ .clipart>img.animals.anime {
+  display:inline-block;
+  visibility: visible;
+}
+
+.iframe .clipart li:nth-of-type(1),
+.iframe .clipart li:nth-of-type(2),
+.iframe .clipart li:nth-of-type(3),
+.iframe .clipart li:nth-of-type(4),
+.iframe .clipart li:nth-of-type(5),
+.iframe .clipart li:nth-of-type(6)
+ {
   display:inline-block;
   visibility: visible;
 }
