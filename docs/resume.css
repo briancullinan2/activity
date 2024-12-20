@@ -103,6 +103,7 @@ input[id*="holidays"]:checked ~ .things>li:nth-child(4)::after,
 input[id*="patterns"]:checked ~ .things>li:nth-child(5)::after,
 input[id*="cosmic"]:checked ~ .things>li:nth-child(6)::after,
 input[id*="buildings"]:checked ~ .things>li:nth-child(7)::after,
+input[id*="scenes"]:checked ~ .things>li:nth-child(8)::after,
 
 .artwork ol>li:hover::after,
 ul.brainstorms>li:hover::after,
@@ -226,6 +227,8 @@ ul.clipart {
 
 ul.clipart li {
   flex:33.3%;
+  background-size: contain;
+  padding-top:100%;
 }
 
 
@@ -239,7 +242,6 @@ ul.clipart a {
 .clipart li,
 .clipart img {
   display:none;
-  height: 512px;
   width: 512px;
   visibility: hidden;
 }
