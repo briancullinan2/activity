@@ -70,17 +70,19 @@ async function renderIndex() {
 		.sort((a, b) => a.start - b.start)
 		
 	let currYear2
-	let calendarStr = listAllEvents.map(item => {
+	let calendarStr = ''
+	for(let i = 0; i < listAllEvents.length; i++) {
+		let item = listAllEvents[i]
 		let yearStr = ''
 		if(!item.start) {
-			return ''
+			continue
 		}
 		if(item.start.getFullYear() !== currYear2) {
 			currYear2 = item.start.getFullYear()
 			yearStr = `<div class="history-item"><h3 class="time">${item.start.getFullYear()}</h3></div>`
 		}
-		return `${yearStr}<div class="history-item ${item.name}"><span class="time">${item.start.getMonth() + 1}/${item.start.getDate()} ${item.start.getHours() % 12}:${item.start.getMinutes() < 10 ? '0' : ''}${item.start.getMinutes()} ${item.start.getHours() >= 12 ? 'pm' : 'am'}</span><span class="content">${item.content}</span></div>`
-	}).join('\n')
+		calendarStr += `${yearStr}<div class="history-item ${item.name}"><span class="time">${item.start.getMonth() + 1}/${item.start.getDate()} ${item.start.getHours() % 12}:${item.start.getMinutes() < 10 ? '0' : ''}${item.start.getMinutes()} ${item.start.getHours() >= 12 ? 'pm' : 'am'}</span><span class="content">${item.content}</span></div>\n`
+	}
 
 	bodyTag = index.match(/<h2>Daily Activity<\/h2>/i)
 	offset = bodyTag.index + bodyTag[0].length
