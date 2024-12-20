@@ -99,6 +99,7 @@ input[id*="holidays"]:checked ~ .things>li:nth-child(4)::after,
 input[id*="patterns"]:checked ~ .things>li:nth-child(5)::after,
 input[id*="cosmic"]:checked ~ .things>li:nth-child(6)::after,
 input[id*="buildings"]:checked ~ .things>li:nth-child(7)::after,
+
 .artwork ol>li:hover::after,
 ul.brainstorms>li:hover::after,
 ul.categories>li:hover::after,
@@ -156,6 +157,8 @@ input[id*="animals"]:checked ~ ol.styles,
 input[id*="animals"]:checked ~ h2.styles,
 input[id*="styles"]:checked ~ ol.styles,
 input[id*="styles"]:checked ~ h2.styles,
+input[id*="places"]:checked ~ ol.places,
+input[id*="places"]:checked ~ h2.places,
 input:checked+ul.bookmarks,
 input:checked+ul.brainstorm,
 input:checked+ol.bookmarks,
@@ -234,6 +237,10 @@ ul.clipart a {
 
 input[id*="cosmic"]:checked ~ input[id*="clip-pattern"]:checked ~ .clipart>li.cosmic.patterns,
 input[id*="cosmic"]:checked ~ input[id*="nopattern"]:checked ~ .clipart>li.cosmic:not(.patterns),
+
+input[id*="places"]:checked ~ input[id*="clip-men"]:checked ~ .clipart>li.places.men.suits,
+input[id*="places"]:checked ~ input[id*="hamsters"]:checked ~ .clipart>li.places.hamsters,
+input[id*="places"]:checked ~ input[id*="angels"]:checked ~ .clipart>li.places.angels,
 
 input[id*="buildings"]:checked ~ input[id*="steampunk"]:checked ~ .clipart>li.buildings.steampunk,
 input[id*="buildings"]:checked ~ input[id*="cyberpunk"]:checked ~ .clipart>li.buildings.cyberpunk,
