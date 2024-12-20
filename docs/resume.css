@@ -6,6 +6,11 @@ html, body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+html.iframe,
+html.iframe body {
+  background: unset;
+}
+
 h1,
 h2,
 h3 {
