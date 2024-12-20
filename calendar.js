@@ -122,7 +122,7 @@ async function listCalendar() {
 			return
 		}
 		let publicName = path.basename(fname).trim().replace(/(_.*)?\.ics$/ig, '')
-		const events = Object.values(ical.sync.parseFile(fname)).sort((a, b) => b.start - a.start);
+		const events = Object.values(ical.sync.parseFile(fname));
 		let eventsList = []
 		for (const event of events) {
 			if(PUBLIC_CALENDARS.includes(publicName)) {
