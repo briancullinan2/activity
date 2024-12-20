@@ -100,7 +100,7 @@ async function renderIndex() {
 		let count = 0
 		let images = ''
 		let directoryTokens = directories[i].toLocaleLowerCase().split(/[^a-z0-9]/gi).sort().filter((a, i, arr) => arr.indexOf(a) == i).join(' ')
-		iframes += '<li class="' + directoryTokens + '"><iframe src="./' + encodeURIComponent(directories[i]) + '" /></li>'
+		iframes += '<li class="' + directoryTokens + '"><iframe src="./' + encodeURIComponent(directories[i]) + '"></iframe></li>'
 		for(let j = 0; j < imageFiles.length; j++) {
 			if (imageFiles[j][0] == '.') continue
 			if (!fs.statSync(path.join(TXT2IMG, directories[i], imageFiles[j])).isFile()) continue
@@ -109,7 +109,7 @@ async function renderIndex() {
 			images += '<li class="' + uniqueTokens + '" style="background-image:url(https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]) + '?raw=true)"><a href="https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]) + '?raw=true"> </a></li>'
 			if(count == 6) break
 		}
-		fs.writeFileSync(path.join(__dirname, 'docs/' + directories[i] + '.html'), images)
+		fs.writeFileSync(path.join(__dirname, 'docs/clipart/' + directories[i] + '.html'), images)
 	}
 
 	bodyTag = index.match(/<ul class="clipart">/i)
