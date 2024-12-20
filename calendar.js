@@ -125,13 +125,13 @@ async function listCalendar() {
 		const events = ical.sync.parseFile(fname);
 		let eventsList = []
 		for (const event of Object.values(events)) {
-			console.log(event)
 			if(PUBLIC_CALENDARS.includes(publicName)) {
 				event.content = (event.summary || '') + '\n' + (event.description || '')
 			} else {
 				event.content = publicName
 			}
 			event.name = publicName.replace(/[^a-z]/ig, '_')
+			console.log(event)
 			eventsList[eventsList.length] = event
 		}
 
