@@ -227,8 +227,10 @@ ul.clipart {
 
 ul.clipart li {
   flex:33.3%;
+  position: relative;
   background-size: contain;
-  padding-top:100%;
+  background-repeat: no-repeat;
+  padding-top:33.33%;
 }
 
 
@@ -281,6 +283,39 @@ input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ .clipart>img.animals
 }
 
 
+input[id*="cosmic"]:checked ~ input[id*="clip-pattern"]:checked ~ .clipart>li.cosmic.patterns ~ .cosmic.patterns ~ .cosmic.patterns ~ .cosmic.patterns ~ .cosmic.patterns ~ .cosmic.patterns ~ .cosmic.patterns ~ li,
+input[id*="cosmic"]:checked ~ input[id*="nopattern"]:checked ~ .clipart>li.cosmic:not(.patterns) ~ .cosmic:not(.patterns) ~ .cosmic:not(.patterns) ~ .cosmic:not(.patterns) ~ .cosmic:not(.patterns) ~ .cosmic:not(.patterns) ~ li,
+
+input[id*="holidays"]:checked ~ input[id*="christmas"]:checked ~ .clipart>li.christmas.patterns ~ .christmas.patterns ~ .christmas.patterns ~ .christmas.patterns ~ .christmas.patterns ~ .christmas.patterns ~ li,
+input[id*="holidays"]:checked ~ input[id*="halloween"]:checked ~ .clipart>li.halloween.patterns ~ .halloween.patterns ~ .halloween.patterns ~ .halloween.patterns ~ .halloween.patterns ~ .halloween.patterns ~ li,
+input[id*="holidays"]:checked ~ input[id*="newyears"]:checked ~ .clipart>li.new.years.patterns ~ .new.years.patterns ~ .new.years.patterns ~ .new.years.patterns ~ .new.years.patterns ~ .new.years.patterns ~ li,
+
+input[id*="places"]:checked ~ input[id*="clip-men"]:checked ~ .clipart>li.places.men.suits ~ .places.men.suits ~ .places.men.suits ~ .places.men.suits ~ .places.men.suits ~ .places.men.suits ~ li,
+input[id*="places"]:checked ~ input[id*="hamsters"]:checked ~ .clipart>li.places.hamster ~ .places.hamster ~ .places.hamster ~ .places.hamster ~ .places.hamster ~ .places.hamster ~ li,
+input[id*="places"]:checked ~ input[id*="angels"]:checked ~ .clipart>li.places.angels ~ .places.angels ~ .places.angels ~ .places.angels ~ .places.angels ~ .places.angels ~ li,
+
+input[id*="buildings"]:checked ~ input[id*="steampunk"]:checked ~ .clipart>li.buildings.steampunk ~ .buildings.steampunk ~ .buildings.steampunk ~ .buildings.steampunk ~ .buildings.steampunk ~ .buildings.steampunk ~ li,
+input[id*="buildings"]:checked ~ input[id*="cyberpunk"]:checked ~ .clipart>li.buildings.cyberpunk ~ .buildings.cyberpunk ~ .buildings.cyberpunk ~ .buildings.cyberpunk ~ .buildings.cyberpunk ~ .buildings.cyberpunk ~ li,
+input[id*="buildings"]:checked ~ input[id*="gothic"]:checked ~ .clipart>li.buildings.gothic ~ .buildings.gothic ~ .buildings.gothic ~ .buildings.gothic ~ .buildings.gothic ~ .buildings.gothic ~ li,
+input[id*="buildings"]:checked ~ input[id*="popart"]:checked ~ .clipart>li.buildings.pop ~ .buildings.pop ~ .buildings.pop ~ .buildings.pop ~ .buildings.pop ~ .buildings.pop ~ li,
+input[id*="buildings"]:checked ~ input[id*="fantasy"]:checked ~ .clipart>li.buildings.fantasy ~ .buildings.fantasy ~ .buildings.fantasy ~ .buildings.fantasy ~ .buildings.fantasy ~ .buildings.fantasy ~ li,
+input[id*="buildings"]:checked ~ input[id*="robotic"]:checked ~ .clipart>li.buildings.robotic ~ .buildings.robotic ~ .buildings.robotic ~ .buildings.robotic ~ .buildings.robotic ~ .buildings.robotic ~ li,
+input[id*="buildings"]:checked ~ input[id*="retro"]:checked ~ .clipart>li.buildings.retro ~ .buildings.retro ~ .buildings.retro ~ .buildings.retro ~ .buildings.retro ~ .buildings.retro ~ li,
+input[id*="buildings"]:checked ~ input[id*="anime"]:checked ~ .clipart>li.buildings.anime ~ .buildings.anime ~ .buildings.anime ~ .buildings.anime ~ .buildings.anime ~ .buildings.anime ~ li,
+
+input[id*="animals"]:checked ~ input[id*="steampunk"]:checked ~ .clipart>li.animals.steampunk ~ .animals.steampunk ~ .animals.steampunk ~ .animals.steampunk ~ .animals.steampunk ~ .animals.steampunk ~ li,
+input[id*="animals"]:checked ~ input[id*="cyberpunk"]:checked ~ .clipart>li.animals.cyberpunk ~ .animals.cyberpunk ~ .animals.cyberpunk ~ .animals.cyberpunk ~ .animals.cyberpunk ~ .animals.cyberpunk ~ li,
+input[id*="animals"]:checked ~ input[id*="gothic"]:checked ~ .clipart>li.animals.gothic ~ .animals.gothic ~ .animals.gothic ~ .animals.gothic ~ .animals.gothic ~ .animals.gothic ~ li,
+input[id*="animals"]:checked ~ input[id*="popart"]:checked ~ .clipart>li.animals.pop ~ .animals.pop ~ .animals.pop ~ .animals.pop ~ .animals.pop ~ .animals.pop ~ li,
+input[id*="animals"]:checked ~ input[id*="fantasy"]:checked ~ .clipart>li.animals.fantasy ~ .animals.fantasy ~ .animals.fantasy ~ .animals.fantasy ~ .animals.fantasy ~ .animals.fantasy ~ li,
+input[id*="animals"]:checked ~ input[id*="robotic"]:checked ~ .clipart>li.animals.robotic ~ .animals.robotic ~ .animals.robotic ~ .animals.robotic ~ .animals.robotic ~ .animals.robotic ~ li,
+input[id*="animals"]:checked ~ input[id*="retro"]:checked ~ .clipart>li.animals.retro ~ .animals.retro ~ .animals.retro ~ .animals.retro ~ .animals.retro ~ .animals.retro ~ li,
+input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ .clipart>li.animals.anime ~ .animals.anime ~ .animals.anime ~ .animals.anime ~ .animals.anime ~ .animals.anime ~ li
+{
+  display:none;
+  visibility: hidden;
+}
+
 div.livedev {
   position: relative;
   margin: 0 auto;
@@ -326,7 +361,7 @@ div.container {
 
 div.container.artwork {
   max-height: 1000px;
-  overflow: auto;
+  overflow: clip;
 }
 
 div.container.federal {
