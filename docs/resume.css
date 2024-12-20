@@ -225,6 +225,7 @@ ol.brainstorm {
 }
 
 ul.clipart {
+  list-style: none;
   display:flex;
   flex-wrap: wrap;
 }

@@ -109,7 +109,9 @@ async function renderIndex() {
 			images += '<li class="' + uniqueTokens + '" style="background-image:url(https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]) + '?raw=true)"><a href="https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]) + '?raw=true"> </a></li>'
 			//if(count == 6) break
 		}
-		fs.writeFileSync(path.join(__dirname, 'docs/clipart/' + directories[i] + '.html'), images)
+		fs.writeFileSync(path.join(__dirname, 'docs/clipart/' + directories[i] + '.html'), '<html><head>' +
+			'<link rel="stylesheet" href="../resume.css">'
+			+ '</head><body><ul class="clipart">' + images + '</ul></body>')
 	}
 
 	bodyTag = index.match(/<ul class="clipart">/i)
