@@ -64,7 +64,7 @@ async function renderIndex() {
 	let listAllEvents = Object.values(calendarEntries)
 		.flat(1)
 		.filter(a => a.start)
-		.sort((a, b) => b.start.getFullYear() - a.start.getFullYear())
+		.sort((a, b) => b.start.getTime() - a.start.getTime())
 		.slice(0, 1000)
 
 	let currYear2
