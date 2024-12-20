@@ -80,6 +80,10 @@ label[for="federal"] {
   display: inline-block;
 }
 
+input[id*="clip-men"]:checked ~ .places>li:nth-child(1)::after,
+input[id*="hamsters"]:checked ~ .places>li:nth-child(2)::after,
+input[id*="angels"]:checked ~ .places>li:nth-child(3)::after,
+
 input[id*="clip-pattern"]:checked ~ .pattern>li:nth-child(1)::after,
 input[id*="nopattern"]:checked ~ .pattern>li:nth-child(2)::after,
 
