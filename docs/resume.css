@@ -93,6 +93,11 @@ input[id*="christmas"]:checked ~ .holidays>li:nth-child(1)::after,
 input[id*="halloween"]:checked ~ .holidays>li:nth-child(2)::after,
 input[id*="newyears"]:checked ~ .holidays>li:nth-child(3)::after,
 
+input[id*="christmas"]:checked ~ .patterns>li:nth-child(1)::after,
+input[id*="halloween"]:checked ~ .patterns>li:nth-child(2)::after,
+input[id*="newyears"]:checked ~ .patterns>li:nth-child(3)::after,
+input[id*="cosmic"]:checked ~ .patterns>li:nth-child(4)::after,
+
 input[id*="clip-pattern"]:checked ~ .pattern>li:nth-child(1)::after,
 input[id*="nopattern"]:checked ~ .pattern>li:nth-child(2)::after,
 
@@ -157,10 +162,10 @@ input[name*="brainstorm"] {
   bottom: -1px;
 }
 
-input[id*="cosmic"]:checked ~ ol.cosmic,
-input[id*="cosmic"]:checked ~ h2.cosmic,
-input[id*="cosmic"]:checked ~ ol.pattern,
-input[id*="cosmic"]:checked ~ h2.pattern,
+input[id="cosmic"]:checked ~ ol.cosmic,
+input[id="cosmic"]:checked ~ h2.cosmic,
+input[id="cosmic"]:checked ~ ol.pattern,
+input[id="cosmic"]:checked ~ h2.pattern,
 input[id*="buildings"]:checked ~ ol.buildings,
 input[id*="buildings"]:checked ~ h2.buildings,
 input[id*="buildings"]:checked ~ ol.styles,
