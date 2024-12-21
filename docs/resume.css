@@ -103,6 +103,9 @@ input[id*="cosmic"]:checked ~ .patterns>li:nth-child(4)::after,
 input[id*="clip-pattern"]:checked ~ .pattern>li:nth-child(1)::after,
 input[id*="nopattern"]:checked ~ .pattern>li:nth-child(2)::after,
 
+input[id*="clip-enoki"]:checked ~ .other>li:nth-child(1)::after,
+input[id*="desserts"]:checked ~ .other>li:nth-child(2)::after,
+
 input[id*="anime"]:checked ~ .styles>li:nth-child(1)::after,
 input[id*="robotic"]:checked ~ .styles>li:nth-child(2)::after,
 input[id*="steampunk"]:checked ~ .styles>li:nth-child(3)::after,
@@ -120,6 +123,7 @@ input[id*="patterns"]:checked ~ .things>li:nth-child(5)::after,
 input[id*="cosmic"]:checked ~ .things>li:nth-child(6)::after,
 input[id*="buildings"]:checked ~ .things>li:nth-child(7)::after,
 input[id*="scenes"]:checked ~ .things>li:nth-child(8)::after,
+input[id*="other"]:checked ~ .things>li:nth-child(9)::after,
 
 .artwork ol>li:hover::after,
 ul.brainstorms>li:hover::after,
@@ -164,8 +168,8 @@ input[name*="brainstorm"] {
   bottom: -1px;
 }
 
-input[id="other"]:checked ~ ol.other,
-input[id="other"]:checked ~ h2.other,
+input[id*="other"]:checked ~ ol.other,
+input[id*="other"]:checked ~ h2.other,
 input[id="cosmic"]:checked ~ ol.cosmic,
 input[id="cosmic"]:checked ~ h2.cosmic,
 input[id="cosmic"]:checked ~ ol.pattern,
@@ -292,6 +296,9 @@ ul.clipart a {
 
 input[id*="cosmic"]:checked ~ input[id*="clip-pattern"]:checked ~ .clipart>li.cosmic.patterns,
 input[id*="cosmic"]:checked ~ input[id*="nopattern"]:checked ~ .clipart>li.cosmic:not(.patterns),
+
+input[id*="other"]:checked ~ input[id*="clip-enoki"]:checked ~ .clipart>li.enoki.professions,
+input[id*="other"]:checked ~ input[id*="desserts"]:checked ~ .clipart>li.manga.desserts,
 
 input[id*="holidays"]:checked ~ input[id*="clip-christmas"]:checked ~ .clipart>li.christmas.patterns,
 input[id*="holidays"]:checked ~ input[id*="halloween"]:checked ~ .clipart>li.halloween.patterns,
