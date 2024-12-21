@@ -175,6 +175,8 @@ input[id*="places"]:checked ~ ol.places,
 input[id*="places"]:checked ~ h2.places,
 input[id*="holidays"]:checked ~ ol.holidays,
 input[id*="holidays"]:checked ~ h2.holidays,
+input[id*="patterns"]:checked ~ ol.patterns,
+input[id*="patterns"]:checked ~ h2.patterns,
 input:checked+ul.bookmarks,
 input:checked+ul.brainstorm,
 input:checked+ol.bookmarks,
@@ -212,6 +214,8 @@ input[name="federal"]:checked ~ .container.federal {
   display: block;
 }
 
+h2.patterns,
+ol.patterns,
 h2.holidays,
 ol.holidays,
 h2.places,
@@ -281,6 +285,11 @@ input[id*="cosmic"]:checked ~ input[id*="nopattern"]:checked ~ .clipart>li.cosmi
 input[id*="holidays"]:checked ~ input[id*="clip-christmas"]:checked ~ .clipart>li.christmas.patterns,
 input[id*="holidays"]:checked ~ input[id*="halloween"]:checked ~ .clipart>li.halloween.patterns,
 input[id*="holidays"]:checked ~ input[id*="newyears"]:checked ~ .clipart>li.new.years.patterns,
+
+input[id*="patterns"]:checked ~ input[id*="christmas"]:checked ~ .clipart>li.christmas.patterns,
+input[id*="patterns"]:checked ~ input[id*="halloween"]:checked ~ .clipart>li.halloween.patterns,
+input[id*="patterns"]:checked ~ input[id*="newyears"]:checked ~ .clipart>li.new.years.patterns,
+input[id*="patterns"]:checked ~ input[id*="cosmic"]:checked ~ .clipart>li.cosmic.patterns,
 
 input[id*="places"]:checked ~ input[id*="clip-men"]:checked ~ .clipart>li.places.men.suits,
 input[id*="places"]:checked ~ input[id*="hamsters"]:checked ~ .clipart>li.places.hamster,
