@@ -88,6 +88,7 @@ label[for="federal"] {
 input[id*="clip-men"]:checked ~ .places>li:nth-child(1)::after,
 input[id*="hamsters"]:checked ~ .places>li:nth-child(2)::after,
 input[id*="angels"]:checked ~ .places>li:nth-child(3)::after,
+input[id*="sheep"]:checked ~ .places>li:nth-child(4)::after,
 
 input[id*="christmas"]:checked ~ .holidays>li:nth-child(1)::after,
 input[id*="halloween"]:checked ~ .holidays>li:nth-child(2)::after,
@@ -299,6 +300,7 @@ input[id*="patterns"]:checked ~ input[id*="cosmic"]:checked ~ .clipart>li.cosmic
 input[id*="places"]:checked ~ input[id*="clip-men"]:checked ~ .clipart>li.places.men.suits,
 input[id*="places"]:checked ~ input[id*="hamsters"]:checked ~ .clipart>li.places.hamster,
 input[id*="places"]:checked ~ input[id*="angels"]:checked ~ .clipart>li.places.angels,
+input[id*="places"]:checked ~ input[id*="sheep"]:checked ~ .clipart>li.places.sheep,
 
 input[id*="buildings"]:checked ~ input[id*="steampunk"]:checked ~ .clipart>li.buildings.steampunk,
 input[id*="buildings"]:checked ~ input[id*="cyberpunk"]:checked ~ .clipart>li.buildings.cyberpunk,
