@@ -299,6 +299,7 @@ input[id*="cosmic"]:checked ~ input[id*="nopattern"]:checked ~ .clipart>li.cosmi
 
 input[id*="other"]:checked ~ input[id*="clip-enoki"]:checked ~ .clipart>li.enoki.professions,
 input[id*="other"]:checked ~ input[id*="desserts"]:checked ~ .clipart>li.manga.desserts,
+input[id*="other"]:checked ~ input[id*="love"]:checked ~ .clipart>li.love.languages,
 
 input[id*="holidays"]:checked ~ input[id*="clip-christmas"]:checked ~ .clipart>li.christmas.patterns,
 input[id*="holidays"]:checked ~ input[id*="halloween"]:checked ~ .clipart>li.halloween.patterns,
