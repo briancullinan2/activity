@@ -106,6 +106,8 @@ input[id*="nopattern"]:checked ~ .pattern>li:nth-child(2)::after,
 input[id*="clip-enoki"]:checked ~ .other>li:nth-child(1)::after,
 input[id*="desserts"]:checked ~ .other>li:nth-child(2)::after,
 input[id*="love"]:checked ~ .other>li:nth-child(3)::after,
+input[id*="circuitry"]:checked ~ .other>li:nth-child(4)::after,
+input[id*="destijl"]:checked ~ .other>li:nth-child(5)::after,
 
 input[id*="anime"]:checked ~ .styles>li:nth-child(1)::after,
 input[id*="robotic"]:checked ~ .styles>li:nth-child(2)::after,
@@ -301,6 +303,8 @@ input[id*="cosmic"]:checked ~ input[id*="nopattern"]:checked ~ .clipart>li.cosmi
 input[id*="other"]:checked ~ input[id*="clip-enoki"]:checked ~ .clipart>li.enoki.professions,
 input[id*="other"]:checked ~ input[id*="desserts"]:checked ~ .clipart>li.manga.desserts,
 input[id*="other"]:checked ~ input[id*="love"]:checked ~ .clipart>li.love.languages.styles,
+input[id*="other"]:checked ~ input[id*="circuitry"]:checked ~ .clipart>li.geometric.circuitry:not(.de.stijl),
+input[id*="other"]:checked ~ input[id*="destijl"]:checked ~ .clipart>li.geometric.circuitry.de.stijl,
 
 input[id*="holidays"]:checked ~ input[id*="clip-christmas"]:checked ~ .clipart>li.christmas.patterns,
 input[id*="holidays"]:checked ~ input[id*="halloween"]:checked ~ .clipart>li.halloween.patterns,
