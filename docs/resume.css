@@ -9,6 +9,8 @@ html, body {
 html.iframe,
 html.iframe body {
   background: unset;
+  position: relative;
+  overflow: hidden;
 }
 
 h1,
@@ -72,6 +74,11 @@ label[for="federal"] {
   color: white;
   min-width: 200px;
   text-align: center;
+}
+
+.pages>li a
+{
+  min-width: 20px;
 }
 
 .pages>li label,
@@ -623,7 +630,7 @@ ul.clipart a {
 
 input[id*="mythology"]:checked ~ input[id*="clip-hair"]:checked ~ .clipart>li.jesus.multi,
 input[id*="mythology"]:checked ~ input[id*="godbot"]:checked ~ .clipart>li.robot.gods:not(.two),
-input[id*="mythology"]:checked ~ input[id*="greek"]:checked ~ .clipart>li.greek.gods.styles,
+input[id*="mythology"]:checked ~ input[id*="greek"]:checked ~ .clipart>li.greek.gods:not(.robot),
 input[id*="mythology"]:checked ~ input[id="clip-bibles"]:checked ~ .clipart>li.bible.scene:not(.short),
 input[id*="mythology"]:checked ~ input[id*="bibleshort"]:checked ~ .clipart>li.bible.scene.short,
 input[id*="mythology"]:checked ~ input[id*="acts"]:checked ~ .clipart>li.bible.acts:not(.short),
@@ -1577,5 +1584,11 @@ div.container.projects img {
   a.nowButton,
   label[for="federal"] {
     min-width: unset;
+  }
+
+  html.iframe ul.clipart li {
+    flex:50%;
+    padding-top:50%;
+    width: 512px;
   }
 }
