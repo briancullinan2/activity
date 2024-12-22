@@ -100,7 +100,7 @@ input[id*="halloween"]:checked ~ .patterns>li:nth-child(2)::after,
 input[id*="newyears"]:checked ~ .patterns>li:nth-child(3)::after,
 input[id*="cosmic"]:checked ~ .patterns>li:nth-child(4)::after,
 
-input[id*="scenes"]:checked ~ .scenes>li:nth-child(1)::after,
+input[id*="complex"]:checked ~ .scenes>li:nth-child(1)::after,
 input[id*="industry"]:checked ~ .scenes>li:nth-child(2)::after,
 input[id*="whimsical"]:checked ~ .scenes>li:nth-child(3)::after,
 input[id*="loving"]:checked ~ .scenes>li:nth-child(4)::after,
