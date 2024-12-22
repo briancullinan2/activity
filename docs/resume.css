@@ -19,6 +19,7 @@ h3 {
   margin: 0;
 }
 
+ol.pages,
 .artwork ol,
 ul.brainstorms,
 ul.categories,
@@ -33,6 +34,7 @@ ol.windows {
   max-width: 1000px;
 }
 
+.pages>li,
 .artwork ol>li,
 ul.brainstorms>li,
 ul.categories>li,
@@ -52,6 +54,7 @@ label[for="federal"] {
   text-align: left;
 }
 
+.pages>li a,
 .artwork ol>li a,
 ul.brainstorms>li a,
 ul.categories>li a,
@@ -67,6 +70,7 @@ label[for="federal"] {
   text-align: center;
 }
 
+.pages>li label,
 .artwork ol>li label,
 ul.brainstorms>li label,
 ul.things>li label,
@@ -85,6 +89,7 @@ label[for="federal"] {
   display: inline-block;
 }
 
+.iframe input[id*="clip-page"]:not(:checked) ~ .pages>li:nth-child(1)::after,
 
 input[id*="clip-hair"]:checked ~ .mythology>li:nth-child(1)::after,
 input[id*="godbot"]:checked ~ .mythology>li:nth-child(2)::after,
@@ -182,6 +187,7 @@ ol.windows>li.active::after {
 }
 
 /* SPA with no javascript, enjoy */
+.iframe input,
 .artwork input,
 input[name*="federal"],
 input[name*="category"],
@@ -302,6 +308,7 @@ ul.clipart li {
 html.iframe ul.clipart li {
   flex:33.3%;
   padding-top:33.33%;
+  width: 512px;
 }
 
 ul.clipart a {
@@ -320,17 +327,17 @@ ul.clipart a {
   margin: 0;
 }
 
+input:checked ~ .clipart>li ~ li,
 .clipart li,
 .clipart img {
   display:none;
-  width: 512px;
   visibility: hidden;
 }
 
 
 
 input[id*="mythology"]:checked ~ input[id*="clip-hair"]:checked ~ .clipart>li.jesus.multi,
-input[id*="mythology"]:checked ~ input[id*="godbot"]:checked ~ .clipart>li.robot.gods,
+input[id*="mythology"]:checked ~ input[id*="godbot"]:checked ~ .clipart>li.robot.gods:not(.two),
 input[id*="mythology"]:checked ~ input[id*="greek"]:checked ~ .clipart>li.greek.gods.styles,
 input[id*="mythology"]:checked ~ input[id="clip-bibles"]:checked ~ .clipart>li.bible.scene:not(.short),
 input[id*="mythology"]:checked ~ input[id*="bibleshort"]:checked ~ .clipart>li.bible.scene.short,
@@ -451,7 +458,7 @@ div.container {
 }
 
 div.container.artwork {
-  max-height: 1000px;
+  /* max-height: 1000px;*/
   overflow: clip;
 }
 
