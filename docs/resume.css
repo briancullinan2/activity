@@ -337,7 +337,7 @@ input[id*="places"]:checked ~ input[id*="surreal"]:checked ~ .clipart>li.places.
 input[id*="places"]:checked ~ input[id*="diamonds"]:checked ~ .clipart>li.wonders.diamonds:not(.de.stijl),
 input[id*="places"]:checked ~ input[id*="pastel"]:checked ~ .clipart>li.wonders.pastel.bauhaus,
 
-input[id*="scenes"]:checked ~ input[id*="clip-complex"]:checked ~ .clipart>li.scene.description:not(.complex),
+input[id*="scenes"]:checked ~ input[id*="clip-complex"]:checked ~ .clipart>li.scene.descriptions:not(.complex),
 input[id*="scenes"]:checked ~ input[id*="industry"]:checked ~ .clipart>li.scene.complex,
 input[id*="scenes"]:checked ~ input[id*="whimsical"]:checked ~ .clipart>li.scene.whimsical,
 input[id*="scenes"]:checked ~ input[id*="loving"]:checked ~ .clipart>li.scene.loving.embrace,
