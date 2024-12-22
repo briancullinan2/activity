@@ -34,6 +34,10 @@ ol.windows {
   max-width: 1000px;
 }
 
+ol.pages {
+  margin-bottom: 20px;
+}
+
 .pages>li,
 .artwork ol>li,
 ul.brainstorms>li,
@@ -90,6 +94,40 @@ label[for="federal"] {
 }
 
 .iframe input[id*="clip-page1"]:checked ~ .pages>li:nth-child(1)::after,
+.iframe input[id*="clip-page2"]:checked ~ .pages>li:nth-child(2)::after,
+.iframe input[id*="clip-page3"]:checked ~ .pages>li:nth-child(3)::after,
+.iframe input[id*="clip-page4"]:checked ~ .pages>li:nth-child(4)::after,
+.iframe input[id*="clip-page5"]:checked ~ .pages>li:nth-child(5)::after,
+.iframe input[id*="clip-page6"]:checked ~ .pages>li:nth-child(6)::after,
+.iframe input[id*="clip-page7"]:checked ~ .pages>li:nth-child(7)::after,
+.iframe input[id*="clip-page8"]:checked ~ .pages>li:nth-child(8)::after,
+.iframe input[id*="clip-page9"]:checked ~ .pages>li:nth-child(9)::after,
+.iframe input[id*="clip-page10"]:checked ~ .pages>li:nth-child(10)::after,
+.iframe input[id*="clip-page11"]:checked ~ .pages>li:nth-child(11)::after,
+.iframe input[id*="clip-page12"]:checked ~ .pages>li:nth-child(12)::after,
+.iframe input[id*="clip-page13"]:checked ~ .pages>li:nth-child(13)::after,
+.iframe input[id*="clip-page14"]:checked ~ .pages>li:nth-child(14)::after,
+.iframe input[id*="clip-page15"]:checked ~ .pages>li:nth-child(15)::after,
+.iframe input[id*="clip-page16"]:checked ~ .pages>li:nth-child(16)::after,
+.iframe input[id*="clip-page17"]:checked ~ .pages>li:nth-child(17)::after,
+.iframe input[id*="clip-page18"]:checked ~ .pages>li:nth-child(18)::after,
+.iframe input[id*="clip-page19"]:checked ~ .pages>li:nth-child(19)::after,
+.iframe input[id*="clip-page20"]:checked ~ .pages>li:nth-child(20)::after,
+.iframe input[id*="clip-page21"]:checked ~ .pages>li:nth-child(21)::after,
+.iframe input[id*="clip-page22"]:checked ~ .pages>li:nth-child(22)::after,
+.iframe input[id*="clip-page23"]:checked ~ .pages>li:nth-child(23)::after,
+.iframe input[id*="clip-page24"]:checked ~ .pages>li:nth-child(24)::after,
+.iframe input[id*="clip-page25"]:checked ~ .pages>li:nth-child(25)::after,
+.iframe input[id*="clip-page26"]:checked ~ .pages>li:nth-child(26)::after,
+.iframe input[id*="clip-page27"]:checked ~ .pages>li:nth-child(27)::after,
+.iframe input[id*="clip-page28"]:checked ~ .pages>li:nth-child(28)::after,
+.iframe input[id*="clip-page29"]:checked ~ .pages>li:nth-child(29)::after,
+.iframe input[id*="clip-page30"]:checked ~ .pages>li:nth-child(30)::after,
+.iframe input[id*="clip-page31"]:checked ~ .pages>li:nth-child(31)::after,
+.iframe input[id*="clip-page32"]:checked ~ .pages>li:nth-child(32)::after,
+.iframe input[id*="clip-page33"]:checked ~ .pages>li:nth-child(33)::after,
+.iframe input[id*="clip-page34"]:checked ~ .pages>li:nth-child(34)::after,
+.iframe input[id*="clip-page35"]:checked ~ .pages>li:nth-child(35)::after,
 
 input[id*="clip-hair"]:checked ~ .mythology>li:nth-child(1)::after,
 input[id*="godbot"]:checked ~ .mythology>li:nth-child(2)::after,
@@ -335,10 +373,249 @@ ul.clipart a {
   visibility: hidden;
 }
 
+.iframe input[id="clip-page30"]:checked ~ .pages>li:nth-child(31),
+.iframe input[id="clip-page30"]:checked ~ .pages>li:nth-child(30),
+.iframe input[id="clip-page30"]:checked ~ .pages>li:nth-child(29),
 
-.iframe input[id*="clip-page1"]:checked ~ .pages>li:nth-child(3),
-.iframe input[id*="clip-page1"]:checked ~ .pages>li:nth-child(2),
-.iframe input[id*="clip-page1"]:checked ~ .pages>li:nth-child(1)
+.iframe input[id="clip-page29"]:checked ~ .pages>li:nth-child(30),
+.iframe input[id="clip-page29"]:checked ~ .pages>li:nth-child(29),
+.iframe input[id="clip-page29"]:checked ~ .pages>li:nth-child(28),
+
+.iframe input[id="clip-page28"]:checked ~ .pages>li:nth-child(29),
+.iframe input[id="clip-page28"]:checked ~ .pages>li:nth-child(28),
+.iframe input[id="clip-page28"]:checked ~ .pages>li:nth-child(27),
+
+.iframe input[id="clip-page27"]:checked ~ .pages>li:nth-child(28),
+.iframe input[id="clip-page27"]:checked ~ .pages>li:nth-child(27),
+.iframe input[id="clip-page27"]:checked ~ .pages>li:nth-child(26),
+
+.iframe input[id="clip-page26"]:checked ~ .pages>li:nth-child(27),
+.iframe input[id="clip-page26"]:checked ~ .pages>li:nth-child(26),
+.iframe input[id="clip-page26"]:checked ~ .pages>li:nth-child(25),
+
+.iframe input[id="clip-page25"]:checked ~ .pages>li:nth-child(26),
+.iframe input[id="clip-page25"]:checked ~ .pages>li:nth-child(25),
+.iframe input[id="clip-page25"]:checked ~ .pages>li:nth-child(24),
+
+.iframe input[id="clip-page24"]:checked ~ .pages>li:nth-child(25),
+.iframe input[id="clip-page24"]:checked ~ .pages>li:nth-child(24),
+.iframe input[id="clip-page24"]:checked ~ .pages>li:nth-child(23),
+
+.iframe input[id="clip-page23"]:checked ~ .pages>li:nth-child(24),
+.iframe input[id="clip-page23"]:checked ~ .pages>li:nth-child(23),
+.iframe input[id="clip-page23"]:checked ~ .pages>li:nth-child(22),
+
+.iframe input[id="clip-page22"]:checked ~ .pages>li:nth-child(23),
+.iframe input[id="clip-page22"]:checked ~ .pages>li:nth-child(22),
+.iframe input[id="clip-page22"]:checked ~ .pages>li:nth-child(21),
+
+.iframe input[id="clip-page21"]:checked ~ .pages>li:nth-child(22),
+.iframe input[id="clip-page21"]:checked ~ .pages>li:nth-child(21),
+.iframe input[id="clip-page21"]:checked ~ .pages>li:nth-child(20),
+
+.iframe input[id="clip-page20"]:checked ~ .pages>li:nth-child(21),
+.iframe input[id="clip-page20"]:checked ~ .pages>li:nth-child(20),
+.iframe input[id="clip-page20"]:checked ~ .pages>li:nth-child(19),
+
+.iframe input[id="clip-page19"]:checked ~ .pages>li:nth-child(20),
+.iframe input[id="clip-page19"]:checked ~ .pages>li:nth-child(19),
+.iframe input[id="clip-page19"]:checked ~ .pages>li:nth-child(18),
+
+.iframe input[id="clip-page18"]:checked ~ .pages>li:nth-child(19),
+.iframe input[id="clip-page18"]:checked ~ .pages>li:nth-child(18),
+.iframe input[id="clip-page18"]:checked ~ .pages>li:nth-child(17),
+
+.iframe input[id="clip-page17"]:checked ~ .pages>li:nth-child(18),
+.iframe input[id="clip-page17"]:checked ~ .pages>li:nth-child(17),
+.iframe input[id="clip-page17"]:checked ~ .pages>li:nth-child(16),
+
+.iframe input[id="clip-page16"]:checked ~ .pages>li:nth-child(17),
+.iframe input[id="clip-page16"]:checked ~ .pages>li:nth-child(16),
+.iframe input[id="clip-page16"]:checked ~ .pages>li:nth-child(15),
+
+.iframe input[id="clip-page15"]:checked ~ .pages>li:nth-child(16),
+.iframe input[id="clip-page15"]:checked ~ .pages>li:nth-child(15),
+.iframe input[id="clip-page15"]:checked ~ .pages>li:nth-child(14),
+
+.iframe input[id="clip-page14"]:checked ~ .pages>li:nth-child(15),
+.iframe input[id="clip-page14"]:checked ~ .pages>li:nth-child(14),
+.iframe input[id="clip-page14"]:checked ~ .pages>li:nth-child(13),
+
+.iframe input[id="clip-page13"]:checked ~ .pages>li:nth-child(14),
+.iframe input[id="clip-page13"]:checked ~ .pages>li:nth-child(13),
+.iframe input[id="clip-page13"]:checked ~ .pages>li:nth-child(12),
+
+.iframe input[id="clip-page12"]:checked ~ .pages>li:nth-child(13),
+.iframe input[id="clip-page12"]:checked ~ .pages>li:nth-child(12),
+.iframe input[id="clip-page12"]:checked ~ .pages>li:nth-child(11),
+
+.iframe input[id="clip-page11"]:checked ~ .pages>li:nth-child(12),
+.iframe input[id="clip-page11"]:checked ~ .pages>li:nth-child(11),
+.iframe input[id="clip-page11"]:checked ~ .pages>li:nth-child(10),
+
+.iframe input[id="clip-page10"]:checked ~ .pages>li:nth-child(11),
+.iframe input[id="clip-page10"]:checked ~ .pages>li:nth-child(10),
+.iframe input[id="clip-page10"]:checked ~ .pages>li:nth-child(9),
+
+.iframe input[id="clip-page9"]:checked ~ .pages>li:nth-child(10),
+.iframe input[id="clip-page9"]:checked ~ .pages>li:nth-child(9),
+.iframe input[id="clip-page9"]:checked ~ .pages>li:nth-child(8),
+
+.iframe input[id="clip-page8"]:checked ~ .pages>li:nth-child(9),
+.iframe input[id="clip-page8"]:checked ~ .pages>li:nth-child(8),
+.iframe input[id="clip-page8"]:checked ~ .pages>li:nth-child(7),
+
+.iframe input[id="clip-page7"]:checked ~ .pages>li:nth-child(8),
+.iframe input[id="clip-page7"]:checked ~ .pages>li:nth-child(7),
+.iframe input[id="clip-page7"]:checked ~ .pages>li:nth-child(6),
+
+.iframe input[id="clip-page6"]:checked ~ .pages>li:nth-child(7),
+.iframe input[id="clip-page6"]:checked ~ .pages>li:nth-child(6),
+.iframe input[id="clip-page6"]:checked ~ .pages>li:nth-child(5),
+
+.iframe input[id="clip-page5"]:checked ~ .pages>li:nth-child(6),
+.iframe input[id="clip-page5"]:checked ~ .pages>li:nth-child(5),
+.iframe input[id="clip-page5"]:checked ~ .pages>li:nth-child(4),
+
+.iframe input[id="clip-page4"]:checked ~ .pages>li:nth-child(5),
+.iframe input[id="clip-page4"]:checked ~ .pages>li:nth-child(4),
+.iframe input[id="clip-page4"]:checked ~ .pages>li:nth-child(3),
+
+.iframe input[id="clip-page3"]:checked ~ .pages>li:nth-child(4),
+.iframe input[id="clip-page3"]:checked ~ .pages>li:nth-child(3),
+.iframe input[id="clip-page3"]:checked ~ .pages>li:nth-child(2),
+
+.iframe input[id="clip-page2"]:checked ~ .pages>li:nth-child(3),
+.iframe input[id="clip-page2"]:checked ~ .pages>li:nth-child(2),
+.iframe input[id="clip-page2"]:checked ~ .pages>li:nth-child(1),
+
+.iframe input[id="clip-page1"]:checked ~ .pages>li:nth-child(3),
+.iframe input[id="clip-page1"]:checked ~ .pages>li:nth-child(2),
+.iframe input[id="clip-page1"]:checked ~ .pages>li:nth-child(1)
+{
+  display: inline-block;
+  visibility: visible;
+}
+
+.iframe input[id="clip-page60"]:checked ~ .pages>li:nth-child(61),
+.iframe input[id="clip-page60"]:checked ~ .pages>li:nth-child(60),
+.iframe input[id="clip-page60"]:checked ~ .pages>li:nth-child(59),
+
+.iframe input[id="clip-page59"]:checked ~ .pages>li:nth-child(60),
+.iframe input[id="clip-page59"]:checked ~ .pages>li:nth-child(59),
+.iframe input[id="clip-page59"]:checked ~ .pages>li:nth-child(58),
+
+.iframe input[id="clip-page58"]:checked ~ .pages>li:nth-child(59),
+.iframe input[id="clip-page58"]:checked ~ .pages>li:nth-child(58),
+.iframe input[id="clip-page58"]:checked ~ .pages>li:nth-child(57),
+
+.iframe input[id="clip-page57"]:checked ~ .pages>li:nth-child(58),
+.iframe input[id="clip-page57"]:checked ~ .pages>li:nth-child(57),
+.iframe input[id="clip-page57"]:checked ~ .pages>li:nth-child(56),
+
+.iframe input[id="clip-page56"]:checked ~ .pages>li:nth-child(57),
+.iframe input[id="clip-page56"]:checked ~ .pages>li:nth-child(56),
+.iframe input[id="clip-page56"]:checked ~ .pages>li:nth-child(55),
+
+.iframe input[id="clip-page55"]:checked ~ .pages>li:nth-child(56),
+.iframe input[id="clip-page55"]:checked ~ .pages>li:nth-child(55),
+.iframe input[id="clip-page55"]:checked ~ .pages>li:nth-child(54),
+
+.iframe input[id="clip-page54"]:checked ~ .pages>li:nth-child(55),
+.iframe input[id="clip-page54"]:checked ~ .pages>li:nth-child(54),
+.iframe input[id="clip-page54"]:checked ~ .pages>li:nth-child(53),
+
+.iframe input[id="clip-page53"]:checked ~ .pages>li:nth-child(54),
+.iframe input[id="clip-page53"]:checked ~ .pages>li:nth-child(53),
+.iframe input[id="clip-page53"]:checked ~ .pages>li:nth-child(52),
+
+.iframe input[id="clip-page52"]:checked ~ .pages>li:nth-child(53),
+.iframe input[id="clip-page52"]:checked ~ .pages>li:nth-child(52),
+.iframe input[id="clip-page52"]:checked ~ .pages>li:nth-child(51),
+
+.iframe input[id="clip-page51"]:checked ~ .pages>li:nth-child(52),
+.iframe input[id="clip-page51"]:checked ~ .pages>li:nth-child(51),
+.iframe input[id="clip-page51"]:checked ~ .pages>li:nth-child(50),
+
+.iframe input[id="clip-page50"]:checked ~ .pages>li:nth-child(51),
+.iframe input[id="clip-page50"]:checked ~ .pages>li:nth-child(50),
+.iframe input[id="clip-page50"]:checked ~ .pages>li:nth-child(49),
+
+.iframe input[id="clip-page49"]:checked ~ .pages>li:nth-child(50),
+.iframe input[id="clip-page49"]:checked ~ .pages>li:nth-child(49),
+.iframe input[id="clip-page49"]:checked ~ .pages>li:nth-child(48),
+
+.iframe input[id="clip-page48"]:checked ~ .pages>li:nth-child(49),
+.iframe input[id="clip-page48"]:checked ~ .pages>li:nth-child(48),
+.iframe input[id="clip-page48"]:checked ~ .pages>li:nth-child(47),
+
+.iframe input[id="clip-page47"]:checked ~ .pages>li:nth-child(48),
+.iframe input[id="clip-page47"]:checked ~ .pages>li:nth-child(47),
+.iframe input[id="clip-page47"]:checked ~ .pages>li:nth-child(46),
+
+.iframe input[id="clip-page46"]:checked ~ .pages>li:nth-child(47),
+.iframe input[id="clip-page46"]:checked ~ .pages>li:nth-child(46),
+.iframe input[id="clip-page46"]:checked ~ .pages>li:nth-child(45),
+
+.iframe input[id="clip-page45"]:checked ~ .pages>li:nth-child(46),
+.iframe input[id="clip-page45"]:checked ~ .pages>li:nth-child(45),
+.iframe input[id="clip-page45"]:checked ~ .pages>li:nth-child(44),
+
+.iframe input[id="clip-page44"]:checked ~ .pages>li:nth-child(45),
+.iframe input[id="clip-page44"]:checked ~ .pages>li:nth-child(44),
+.iframe input[id="clip-page44"]:checked ~ .pages>li:nth-child(43),
+
+.iframe input[id="clip-page43"]:checked ~ .pages>li:nth-child(44),
+.iframe input[id="clip-page43"]:checked ~ .pages>li:nth-child(43),
+.iframe input[id="clip-page43"]:checked ~ .pages>li:nth-child(42),
+
+.iframe input[id="clip-page42"]:checked ~ .pages>li:nth-child(43),
+.iframe input[id="clip-page42"]:checked ~ .pages>li:nth-child(42),
+.iframe input[id="clip-page42"]:checked ~ .pages>li:nth-child(41),
+
+.iframe input[id="clip-page41"]:checked ~ .pages>li:nth-child(42),
+.iframe input[id="clip-page41"]:checked ~ .pages>li:nth-child(41),
+.iframe input[id="clip-page41"]:checked ~ .pages>li:nth-child(40),
+
+.iframe input[id="clip-page40"]:checked ~ .pages>li:nth-child(41),
+.iframe input[id="clip-page40"]:checked ~ .pages>li:nth-child(40),
+.iframe input[id="clip-page40"]:checked ~ .pages>li:nth-child(39),
+
+.iframe input[id="clip-page39"]:checked ~ .pages>li:nth-child(40),
+.iframe input[id="clip-page39"]:checked ~ .pages>li:nth-child(39),
+.iframe input[id="clip-page39"]:checked ~ .pages>li:nth-child(38),
+
+.iframe input[id="clip-page38"]:checked ~ .pages>li:nth-child(39),
+.iframe input[id="clip-page38"]:checked ~ .pages>li:nth-child(38),
+.iframe input[id="clip-page38"]:checked ~ .pages>li:nth-child(37),
+
+.iframe input[id="clip-page37"]:checked ~ .pages>li:nth-child(38),
+.iframe input[id="clip-page37"]:checked ~ .pages>li:nth-child(37),
+.iframe input[id="clip-page37"]:checked ~ .pages>li:nth-child(36),
+
+.iframe input[id="clip-page36"]:checked ~ .pages>li:nth-child(37),
+.iframe input[id="clip-page36"]:checked ~ .pages>li:nth-child(36),
+.iframe input[id="clip-page36"]:checked ~ .pages>li:nth-child(35),
+
+.iframe input[id="clip-page35"]:checked ~ .pages>li:nth-child(36),
+.iframe input[id="clip-page35"]:checked ~ .pages>li:nth-child(35),
+.iframe input[id="clip-page35"]:checked ~ .pages>li:nth-child(34),
+
+.iframe input[id="clip-page34"]:checked ~ .pages>li:nth-child(35),
+.iframe input[id="clip-page34"]:checked ~ .pages>li:nth-child(34),
+.iframe input[id="clip-page34"]:checked ~ .pages>li:nth-child(33),
+
+.iframe input[id="clip-page33"]:checked ~ .pages>li:nth-child(34),
+.iframe input[id="clip-page33"]:checked ~ .pages>li:nth-child(33),
+.iframe input[id="clip-page33"]:checked ~ .pages>li:nth-child(32),
+
+.iframe input[id="clip-page32"]:checked ~ .pages>li:nth-child(33),
+.iframe input[id="clip-page32"]:checked ~ .pages>li:nth-child(32),
+.iframe input[id="clip-page32"]:checked ~ .pages>li:nth-child(31),
+
+.iframe input[id="clip-page31"]:checked ~ .pages>li:nth-child(32),
+.iframe input[id="clip-page31"]:checked ~ .pages>li:nth-child(31),
+.iframe input[id="clip-page31"]:checked ~ .pages>li:nth-child(30)
 {
   display: inline-block;
   visibility: visible;
@@ -411,12 +688,716 @@ input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ .clipart>img.animals
   visibility: visible;
 }
 
+
+
+
+.iframe input[id="clip-page50"]:checked ~ .clipart>li:nth-of-type(295),
+.iframe input[id="clip-page50"]:checked ~ .clipart>li:nth-of-type(296),
+.iframe input[id="clip-page50"]:checked ~ .clipart>li:nth-of-type(297),
+.iframe input[id="clip-page50"]:checked ~ .clipart>li:nth-of-type(298),
+.iframe input[id="clip-page50"]:checked ~ .clipart>li:nth-of-type(299),
+.iframe input[id="clip-page50"]:checked ~ .clipart>li:nth-of-type(300),
+
+.iframe input[id="clip-page49"]:checked ~ .clipart>li:nth-of-type(289),
+.iframe input[id="clip-page49"]:checked ~ .clipart>li:nth-of-type(290),
+.iframe input[id="clip-page49"]:checked ~ .clipart>li:nth-of-type(291),
+.iframe input[id="clip-page49"]:checked ~ .clipart>li:nth-of-type(292),
+.iframe input[id="clip-page49"]:checked ~ .clipart>li:nth-of-type(293),
+.iframe input[id="clip-page49"]:checked ~ .clipart>li:nth-of-type(294),
+
+.iframe input[id="clip-page48"]:checked ~ .clipart>li:nth-of-type(283),
+.iframe input[id="clip-page48"]:checked ~ .clipart>li:nth-of-type(284),
+.iframe input[id="clip-page48"]:checked ~ .clipart>li:nth-of-type(285),
+.iframe input[id="clip-page48"]:checked ~ .clipart>li:nth-of-type(286),
+.iframe input[id="clip-page48"]:checked ~ .clipart>li:nth-of-type(287),
+.iframe input[id="clip-page48"]:checked ~ .clipart>li:nth-of-type(288),
+
+.iframe input[id="clip-page47"]:checked ~ .clipart>li:nth-of-type(277),
+.iframe input[id="clip-page47"]:checked ~ .clipart>li:nth-of-type(278),
+.iframe input[id="clip-page47"]:checked ~ .clipart>li:nth-of-type(279),
+.iframe input[id="clip-page47"]:checked ~ .clipart>li:nth-of-type(280),
+.iframe input[id="clip-page47"]:checked ~ .clipart>li:nth-of-type(281),
+.iframe input[id="clip-page47"]:checked ~ .clipart>li:nth-of-type(282),
+
+.iframe input[id="clip-page46"]:checked ~ .clipart>li:nth-of-type(271),
+.iframe input[id="clip-page46"]:checked ~ .clipart>li:nth-of-type(272),
+.iframe input[id="clip-page46"]:checked ~ .clipart>li:nth-of-type(273),
+.iframe input[id="clip-page46"]:checked ~ .clipart>li:nth-of-type(274),
+.iframe input[id="clip-page46"]:checked ~ .clipart>li:nth-of-type(275),
+.iframe input[id="clip-page46"]:checked ~ .clipart>li:nth-of-type(276),
+
+.iframe input[id="clip-page45"]:checked ~ .clipart>li:nth-of-type(265),
+.iframe input[id="clip-page45"]:checked ~ .clipart>li:nth-of-type(266),
+.iframe input[id="clip-page45"]:checked ~ .clipart>li:nth-of-type(267),
+.iframe input[id="clip-page45"]:checked ~ .clipart>li:nth-of-type(268),
+.iframe input[id="clip-page45"]:checked ~ .clipart>li:nth-of-type(269),
+.iframe input[id="clip-page45"]:checked ~ .clipart>li:nth-of-type(270),
+
+.iframe input[id="clip-page44"]:checked ~ .clipart>li:nth-of-type(259),
+.iframe input[id="clip-page44"]:checked ~ .clipart>li:nth-of-type(260),
+.iframe input[id="clip-page44"]:checked ~ .clipart>li:nth-of-type(261),
+.iframe input[id="clip-page44"]:checked ~ .clipart>li:nth-of-type(262),
+.iframe input[id="clip-page44"]:checked ~ .clipart>li:nth-of-type(263),
+.iframe input[id="clip-page44"]:checked ~ .clipart>li:nth-of-type(264),
+
+.iframe input[id="clip-page43"]:checked ~ .clipart>li:nth-of-type(253),
+.iframe input[id="clip-page43"]:checked ~ .clipart>li:nth-of-type(254),
+.iframe input[id="clip-page43"]:checked ~ .clipart>li:nth-of-type(255),
+.iframe input[id="clip-page43"]:checked ~ .clipart>li:nth-of-type(256),
+.iframe input[id="clip-page43"]:checked ~ .clipart>li:nth-of-type(257),
+.iframe input[id="clip-page43"]:checked ~ .clipart>li:nth-of-type(258),
+
+.iframe input[id="clip-page42"]:checked ~ .clipart>li:nth-of-type(247),
+.iframe input[id="clip-page42"]:checked ~ .clipart>li:nth-of-type(248),
+.iframe input[id="clip-page42"]:checked ~ .clipart>li:nth-of-type(249),
+.iframe input[id="clip-page42"]:checked ~ .clipart>li:nth-of-type(250),
+.iframe input[id="clip-page42"]:checked ~ .clipart>li:nth-of-type(251),
+.iframe input[id="clip-page42"]:checked ~ .clipart>li:nth-of-type(252),
+
+.iframe input[id="clip-page41"]:checked ~ .clipart>li:nth-of-type(241),
+.iframe input[id="clip-page41"]:checked ~ .clipart>li:nth-of-type(242),
+.iframe input[id="clip-page41"]:checked ~ .clipart>li:nth-of-type(243),
+.iframe input[id="clip-page41"]:checked ~ .clipart>li:nth-of-type(244),
+.iframe input[id="clip-page41"]:checked ~ .clipart>li:nth-of-type(245),
+.iframe input[id="clip-page41"]:checked ~ .clipart>li:nth-of-type(246),
+
+.iframe input[id="clip-page40"]:checked ~ .clipart>li:nth-of-type(235),
+.iframe input[id="clip-page40"]:checked ~ .clipart>li:nth-of-type(236),
+.iframe input[id="clip-page40"]:checked ~ .clipart>li:nth-of-type(237),
+.iframe input[id="clip-page40"]:checked ~ .clipart>li:nth-of-type(238),
+.iframe input[id="clip-page40"]:checked ~ .clipart>li:nth-of-type(239),
+.iframe input[id="clip-page40"]:checked ~ .clipart>li:nth-of-type(240),
+
+.iframe input[id="clip-page39"]:checked ~ .clipart>li:nth-of-type(229),
+.iframe input[id="clip-page39"]:checked ~ .clipart>li:nth-of-type(230),
+.iframe input[id="clip-page39"]:checked ~ .clipart>li:nth-of-type(231),
+.iframe input[id="clip-page39"]:checked ~ .clipart>li:nth-of-type(232),
+.iframe input[id="clip-page39"]:checked ~ .clipart>li:nth-of-type(233),
+.iframe input[id="clip-page39"]:checked ~ .clipart>li:nth-of-type(234),
+
+.iframe input[id="clip-page38"]:checked ~ .clipart>li:nth-of-type(223),
+.iframe input[id="clip-page38"]:checked ~ .clipart>li:nth-of-type(224),
+.iframe input[id="clip-page38"]:checked ~ .clipart>li:nth-of-type(225),
+.iframe input[id="clip-page38"]:checked ~ .clipart>li:nth-of-type(226),
+.iframe input[id="clip-page38"]:checked ~ .clipart>li:nth-of-type(227),
+.iframe input[id="clip-page38"]:checked ~ .clipart>li:nth-of-type(228),
+
+.iframe input[id="clip-page37"]:checked ~ .clipart>li:nth-of-type(217),
+.iframe input[id="clip-page37"]:checked ~ .clipart>li:nth-of-type(218),
+.iframe input[id="clip-page37"]:checked ~ .clipart>li:nth-of-type(219),
+.iframe input[id="clip-page37"]:checked ~ .clipart>li:nth-of-type(220),
+.iframe input[id="clip-page37"]:checked ~ .clipart>li:nth-of-type(221),
+.iframe input[id="clip-page37"]:checked ~ .clipart>li:nth-of-type(222),
+
+.iframe input[id="clip-page36"]:checked ~ .clipart>li:nth-of-type(211),
+.iframe input[id="clip-page36"]:checked ~ .clipart>li:nth-of-type(212),
+.iframe input[id="clip-page36"]:checked ~ .clipart>li:nth-of-type(213),
+.iframe input[id="clip-page36"]:checked ~ .clipart>li:nth-of-type(214),
+.iframe input[id="clip-page36"]:checked ~ .clipart>li:nth-of-type(215),
+.iframe input[id="clip-page36"]:checked ~ .clipart>li:nth-of-type(216),
+
+.iframe input[id="clip-page35"]:checked ~ .clipart>li:nth-of-type(205),
+.iframe input[id="clip-page35"]:checked ~ .clipart>li:nth-of-type(206),
+.iframe input[id="clip-page35"]:checked ~ .clipart>li:nth-of-type(207),
+.iframe input[id="clip-page35"]:checked ~ .clipart>li:nth-of-type(208),
+.iframe input[id="clip-page35"]:checked ~ .clipart>li:nth-of-type(209),
+.iframe input[id="clip-page35"]:checked ~ .clipart>li:nth-of-type(210),
+
+.iframe input[id="clip-page34"]:checked ~ .clipart>li:nth-of-type(199),
+.iframe input[id="clip-page34"]:checked ~ .clipart>li:nth-of-type(200),
+.iframe input[id="clip-page34"]:checked ~ .clipart>li:nth-of-type(201),
+.iframe input[id="clip-page34"]:checked ~ .clipart>li:nth-of-type(202),
+.iframe input[id="clip-page34"]:checked ~ .clipart>li:nth-of-type(203),
+.iframe input[id="clip-page34"]:checked ~ .clipart>li:nth-of-type(204),
+
+.iframe input[id="clip-page33"]:checked ~ .clipart>li:nth-of-type(193),
+.iframe input[id="clip-page33"]:checked ~ .clipart>li:nth-of-type(194),
+.iframe input[id="clip-page33"]:checked ~ .clipart>li:nth-of-type(195),
+.iframe input[id="clip-page33"]:checked ~ .clipart>li:nth-of-type(196),
+.iframe input[id="clip-page33"]:checked ~ .clipart>li:nth-of-type(197),
+.iframe input[id="clip-page33"]:checked ~ .clipart>li:nth-of-type(198),
+
+.iframe input[id="clip-page32"]:checked ~ .clipart>li:nth-of-type(187),
+.iframe input[id="clip-page32"]:checked ~ .clipart>li:nth-of-type(188),
+.iframe input[id="clip-page32"]:checked ~ .clipart>li:nth-of-type(189),
+.iframe input[id="clip-page32"]:checked ~ .clipart>li:nth-of-type(190),
+.iframe input[id="clip-page32"]:checked ~ .clipart>li:nth-of-type(191),
+.iframe input[id="clip-page32"]:checked ~ .clipart>li:nth-of-type(192),
+
+.iframe input[id="clip-page31"]:checked ~ .clipart>li:nth-of-type(181),
+.iframe input[id="clip-page31"]:checked ~ .clipart>li:nth-of-type(182),
+.iframe input[id="clip-page31"]:checked ~ .clipart>li:nth-of-type(183),
+.iframe input[id="clip-page31"]:checked ~ .clipart>li:nth-of-type(184),
+.iframe input[id="clip-page31"]:checked ~ .clipart>li:nth-of-type(185),
+.iframe input[id="clip-page31"]:checked ~ .clipart>li:nth-of-type(186),
+
+.iframe input[id="clip-page30"]:checked ~ .clipart>li:nth-of-type(175),
+.iframe input[id="clip-page30"]:checked ~ .clipart>li:nth-of-type(176),
+.iframe input[id="clip-page30"]:checked ~ .clipart>li:nth-of-type(177),
+.iframe input[id="clip-page30"]:checked ~ .clipart>li:nth-of-type(178),
+.iframe input[id="clip-page30"]:checked ~ .clipart>li:nth-of-type(179),
+.iframe input[id="clip-page30"]:checked ~ .clipart>li:nth-of-type(180),
+
+.iframe input[id="clip-page29"]:checked ~ .clipart>li:nth-of-type(169),
+.iframe input[id="clip-page29"]:checked ~ .clipart>li:nth-of-type(170),
+.iframe input[id="clip-page29"]:checked ~ .clipart>li:nth-of-type(171),
+.iframe input[id="clip-page29"]:checked ~ .clipart>li:nth-of-type(172),
+.iframe input[id="clip-page29"]:checked ~ .clipart>li:nth-of-type(173),
+.iframe input[id="clip-page29"]:checked ~ .clipart>li:nth-of-type(174),
+
+.iframe input[id="clip-page28"]:checked ~ .clipart>li:nth-of-type(163),
+.iframe input[id="clip-page28"]:checked ~ .clipart>li:nth-of-type(164),
+.iframe input[id="clip-page28"]:checked ~ .clipart>li:nth-of-type(165),
+.iframe input[id="clip-page28"]:checked ~ .clipart>li:nth-of-type(166),
+.iframe input[id="clip-page28"]:checked ~ .clipart>li:nth-of-type(167),
+.iframe input[id="clip-page28"]:checked ~ .clipart>li:nth-of-type(168),
+
+.iframe input[id="clip-page27"]:checked ~ .clipart>li:nth-of-type(157),
+.iframe input[id="clip-page27"]:checked ~ .clipart>li:nth-of-type(158),
+.iframe input[id="clip-page27"]:checked ~ .clipart>li:nth-of-type(159),
+.iframe input[id="clip-page27"]:checked ~ .clipart>li:nth-of-type(160),
+.iframe input[id="clip-page27"]:checked ~ .clipart>li:nth-of-type(161),
+.iframe input[id="clip-page27"]:checked ~ .clipart>li:nth-of-type(162),
+
+.iframe input[id="clip-page26"]:checked ~ .clipart>li:nth-of-type(151),
+.iframe input[id="clip-page26"]:checked ~ .clipart>li:nth-of-type(152),
+.iframe input[id="clip-page26"]:checked ~ .clipart>li:nth-of-type(153),
+.iframe input[id="clip-page26"]:checked ~ .clipart>li:nth-of-type(154),
+.iframe input[id="clip-page26"]:checked ~ .clipart>li:nth-of-type(155),
+.iframe input[id="clip-page26"]:checked ~ .clipart>li:nth-of-type(156),
+
+.iframe input[id="clip-page25"]:checked ~ .clipart>li:nth-of-type(145),
+.iframe input[id="clip-page25"]:checked ~ .clipart>li:nth-of-type(146),
+.iframe input[id="clip-page25"]:checked ~ .clipart>li:nth-of-type(147),
+.iframe input[id="clip-page25"]:checked ~ .clipart>li:nth-of-type(148),
+.iframe input[id="clip-page25"]:checked ~ .clipart>li:nth-of-type(149),
+.iframe input[id="clip-page25"]:checked ~ .clipart>li:nth-of-type(150),
+
+.iframe input[id="clip-page24"]:checked ~ .clipart>li:nth-of-type(139),
+.iframe input[id="clip-page24"]:checked ~ .clipart>li:nth-of-type(140),
+.iframe input[id="clip-page24"]:checked ~ .clipart>li:nth-of-type(141),
+.iframe input[id="clip-page24"]:checked ~ .clipart>li:nth-of-type(142),
+.iframe input[id="clip-page24"]:checked ~ .clipart>li:nth-of-type(143),
+.iframe input[id="clip-page24"]:checked ~ .clipart>li:nth-of-type(144),
+
+.iframe input[id="clip-page23"]:checked ~ .clipart>li:nth-of-type(133),
+.iframe input[id="clip-page23"]:checked ~ .clipart>li:nth-of-type(134),
+.iframe input[id="clip-page23"]:checked ~ .clipart>li:nth-of-type(135),
+.iframe input[id="clip-page23"]:checked ~ .clipart>li:nth-of-type(136),
+.iframe input[id="clip-page23"]:checked ~ .clipart>li:nth-of-type(137),
+.iframe input[id="clip-page23"]:checked ~ .clipart>li:nth-of-type(138),
+
+.iframe input[id="clip-page22"]:checked ~ .clipart>li:nth-of-type(127),
+.iframe input[id="clip-page22"]:checked ~ .clipart>li:nth-of-type(128),
+.iframe input[id="clip-page22"]:checked ~ .clipart>li:nth-of-type(129),
+.iframe input[id="clip-page22"]:checked ~ .clipart>li:nth-of-type(130),
+.iframe input[id="clip-page22"]:checked ~ .clipart>li:nth-of-type(131),
+.iframe input[id="clip-page22"]:checked ~ .clipart>li:nth-of-type(132),
+
+.iframe input[id="clip-page21"]:checked ~ .clipart>li:nth-of-type(121),
+.iframe input[id="clip-page21"]:checked ~ .clipart>li:nth-of-type(122),
+.iframe input[id="clip-page21"]:checked ~ .clipart>li:nth-of-type(123),
+.iframe input[id="clip-page21"]:checked ~ .clipart>li:nth-of-type(124),
+.iframe input[id="clip-page21"]:checked ~ .clipart>li:nth-of-type(125),
+.iframe input[id="clip-page21"]:checked ~ .clipart>li:nth-of-type(126),
+
+.iframe input[id="clip-page20"]:checked ~ .clipart>li:nth-of-type(115),
+.iframe input[id="clip-page20"]:checked ~ .clipart>li:nth-of-type(116),
+.iframe input[id="clip-page20"]:checked ~ .clipart>li:nth-of-type(117),
+.iframe input[id="clip-page20"]:checked ~ .clipart>li:nth-of-type(118),
+.iframe input[id="clip-page20"]:checked ~ .clipart>li:nth-of-type(119),
+.iframe input[id="clip-page20"]:checked ~ .clipart>li:nth-of-type(120),
+
+.iframe input[id="clip-page19"]:checked ~ .clipart>li:nth-of-type(109),
+.iframe input[id="clip-page19"]:checked ~ .clipart>li:nth-of-type(110),
+.iframe input[id="clip-page19"]:checked ~ .clipart>li:nth-of-type(111),
+.iframe input[id="clip-page19"]:checked ~ .clipart>li:nth-of-type(112),
+.iframe input[id="clip-page19"]:checked ~ .clipart>li:nth-of-type(113),
+.iframe input[id="clip-page19"]:checked ~ .clipart>li:nth-of-type(114),
+
+.iframe input[id="clip-page18"]:checked ~ .clipart>li:nth-of-type(103),
+.iframe input[id="clip-page18"]:checked ~ .clipart>li:nth-of-type(104),
+.iframe input[id="clip-page18"]:checked ~ .clipart>li:nth-of-type(105),
+.iframe input[id="clip-page18"]:checked ~ .clipart>li:nth-of-type(106),
+.iframe input[id="clip-page18"]:checked ~ .clipart>li:nth-of-type(107),
+.iframe input[id="clip-page18"]:checked ~ .clipart>li:nth-of-type(108),
+
+.iframe input[id="clip-page17"]:checked ~ .clipart>li:nth-of-type(97),
+.iframe input[id="clip-page17"]:checked ~ .clipart>li:nth-of-type(98),
+.iframe input[id="clip-page17"]:checked ~ .clipart>li:nth-of-type(99),
+.iframe input[id="clip-page17"]:checked ~ .clipart>li:nth-of-type(100),
+.iframe input[id="clip-page17"]:checked ~ .clipart>li:nth-of-type(101),
+.iframe input[id="clip-page17"]:checked ~ .clipart>li:nth-of-type(102),
+
+.iframe input[id="clip-page16"]:checked ~ .clipart>li:nth-of-type(91),
+.iframe input[id="clip-page16"]:checked ~ .clipart>li:nth-of-type(92),
+.iframe input[id="clip-page16"]:checked ~ .clipart>li:nth-of-type(93),
+.iframe input[id="clip-page16"]:checked ~ .clipart>li:nth-of-type(94),
+.iframe input[id="clip-page16"]:checked ~ .clipart>li:nth-of-type(95),
+.iframe input[id="clip-page16"]:checked ~ .clipart>li:nth-of-type(96),
+
+.iframe input[id="clip-page15"]:checked ~ .clipart>li:nth-of-type(85),
+.iframe input[id="clip-page15"]:checked ~ .clipart>li:nth-of-type(86),
+.iframe input[id="clip-page15"]:checked ~ .clipart>li:nth-of-type(87),
+.iframe input[id="clip-page15"]:checked ~ .clipart>li:nth-of-type(88),
+.iframe input[id="clip-page15"]:checked ~ .clipart>li:nth-of-type(89),
+.iframe input[id="clip-page15"]:checked ~ .clipart>li:nth-of-type(90),
+
+.iframe input[id="clip-page14"]:checked ~ .clipart>li:nth-of-type(79),
+.iframe input[id="clip-page14"]:checked ~ .clipart>li:nth-of-type(80),
+.iframe input[id="clip-page14"]:checked ~ .clipart>li:nth-of-type(81),
+.iframe input[id="clip-page14"]:checked ~ .clipart>li:nth-of-type(82),
+.iframe input[id="clip-page14"]:checked ~ .clipart>li:nth-of-type(83),
+.iframe input[id="clip-page14"]:checked ~ .clipart>li:nth-of-type(84),
+
+.iframe input[id="clip-page13"]:checked ~ .clipart>li:nth-of-type(73),
+.iframe input[id="clip-page13"]:checked ~ .clipart>li:nth-of-type(74),
+.iframe input[id="clip-page13"]:checked ~ .clipart>li:nth-of-type(75),
+.iframe input[id="clip-page13"]:checked ~ .clipart>li:nth-of-type(76),
+.iframe input[id="clip-page13"]:checked ~ .clipart>li:nth-of-type(77),
+.iframe input[id="clip-page13"]:checked ~ .clipart>li:nth-of-type(78),
+
+.iframe input[id="clip-page12"]:checked ~ .clipart>li:nth-of-type(67),
+.iframe input[id="clip-page12"]:checked ~ .clipart>li:nth-of-type(68),
+.iframe input[id="clip-page12"]:checked ~ .clipart>li:nth-of-type(69),
+.iframe input[id="clip-page12"]:checked ~ .clipart>li:nth-of-type(70),
+.iframe input[id="clip-page12"]:checked ~ .clipart>li:nth-of-type(71),
+.iframe input[id="clip-page12"]:checked ~ .clipart>li:nth-of-type(72),
+
+.iframe input[id="clip-page11"]:checked ~ .clipart>li:nth-of-type(61),
+.iframe input[id="clip-page11"]:checked ~ .clipart>li:nth-of-type(62),
+.iframe input[id="clip-page11"]:checked ~ .clipart>li:nth-of-type(63),
+.iframe input[id="clip-page11"]:checked ~ .clipart>li:nth-of-type(64),
+.iframe input[id="clip-page11"]:checked ~ .clipart>li:nth-of-type(65),
+.iframe input[id="clip-page11"]:checked ~ .clipart>li:nth-of-type(66),
+
+.iframe input[id="clip-page10"]:checked ~ .clipart>li:nth-of-type(55),
+.iframe input[id="clip-page10"]:checked ~ .clipart>li:nth-of-type(56),
+.iframe input[id="clip-page10"]:checked ~ .clipart>li:nth-of-type(57),
+.iframe input[id="clip-page10"]:checked ~ .clipart>li:nth-of-type(58),
+.iframe input[id="clip-page10"]:checked ~ .clipart>li:nth-of-type(59),
+.iframe input[id="clip-page10"]:checked ~ .clipart>li:nth-of-type(60),
+
+.iframe input[id="clip-page9"]:checked ~ .clipart>li:nth-of-type(49),
+.iframe input[id="clip-page9"]:checked ~ .clipart>li:nth-of-type(50),
+.iframe input[id="clip-page9"]:checked ~ .clipart>li:nth-of-type(51),
+.iframe input[id="clip-page9"]:checked ~ .clipart>li:nth-of-type(52),
+.iframe input[id="clip-page9"]:checked ~ .clipart>li:nth-of-type(53),
+.iframe input[id="clip-page9"]:checked ~ .clipart>li:nth-of-type(54),
+
+.iframe input[id="clip-page8"]:checked ~ .clipart>li:nth-of-type(43),
+.iframe input[id="clip-page8"]:checked ~ .clipart>li:nth-of-type(44),
+.iframe input[id="clip-page8"]:checked ~ .clipart>li:nth-of-type(45),
+.iframe input[id="clip-page8"]:checked ~ .clipart>li:nth-of-type(46),
+.iframe input[id="clip-page8"]:checked ~ .clipart>li:nth-of-type(47),
+.iframe input[id="clip-page8"]:checked ~ .clipart>li:nth-of-type(48),
+
+.iframe input[id="clip-page7"]:checked ~ .clipart>li:nth-of-type(37),
+.iframe input[id="clip-page7"]:checked ~ .clipart>li:nth-of-type(38),
+.iframe input[id="clip-page7"]:checked ~ .clipart>li:nth-of-type(39),
+.iframe input[id="clip-page7"]:checked ~ .clipart>li:nth-of-type(40),
+.iframe input[id="clip-page7"]:checked ~ .clipart>li:nth-of-type(41),
+.iframe input[id="clip-page7"]:checked ~ .clipart>li:nth-of-type(42),
+
+.iframe input[id="clip-page6"]:checked ~ .clipart>li:nth-of-type(31),
+.iframe input[id="clip-page6"]:checked ~ .clipart>li:nth-of-type(32),
+.iframe input[id="clip-page6"]:checked ~ .clipart>li:nth-of-type(33),
+.iframe input[id="clip-page6"]:checked ~ .clipart>li:nth-of-type(34),
+.iframe input[id="clip-page6"]:checked ~ .clipart>li:nth-of-type(35),
+.iframe input[id="clip-page6"]:checked ~ .clipart>li:nth-of-type(36),
+
+.iframe input[id="clip-page5"]:checked ~ .clipart>li:nth-of-type(25),
+.iframe input[id="clip-page5"]:checked ~ .clipart>li:nth-of-type(26),
+.iframe input[id="clip-page5"]:checked ~ .clipart>li:nth-of-type(27),
+.iframe input[id="clip-page5"]:checked ~ .clipart>li:nth-of-type(28),
+.iframe input[id="clip-page5"]:checked ~ .clipart>li:nth-of-type(29),
+.iframe input[id="clip-page5"]:checked ~ .clipart>li:nth-of-type(30),
+
+.iframe input[id="clip-page4"]:checked ~ .clipart>li:nth-of-type(19),
+.iframe input[id="clip-page4"]:checked ~ .clipart>li:nth-of-type(20),
+.iframe input[id="clip-page4"]:checked ~ .clipart>li:nth-of-type(21),
+.iframe input[id="clip-page4"]:checked ~ .clipart>li:nth-of-type(22),
+.iframe input[id="clip-page4"]:checked ~ .clipart>li:nth-of-type(23),
+.iframe input[id="clip-page4"]:checked ~ .clipart>li:nth-of-type(24),
+
+.iframe input[id="clip-page3"]:checked ~ .clipart>li:nth-of-type(13),
+.iframe input[id="clip-page3"]:checked ~ .clipart>li:nth-of-type(14),
+.iframe input[id="clip-page3"]:checked ~ .clipart>li:nth-of-type(15),
+.iframe input[id="clip-page3"]:checked ~ .clipart>li:nth-of-type(16),
+.iframe input[id="clip-page3"]:checked ~ .clipart>li:nth-of-type(17),
+.iframe input[id="clip-page3"]:checked ~ .clipart>li:nth-of-type(18),
+
+.iframe input[id="clip-page2"]:checked ~ .clipart>li:nth-of-type(7),
+.iframe input[id="clip-page2"]:checked ~ .clipart>li:nth-of-type(8),
+.iframe input[id="clip-page2"]:checked ~ .clipart>li:nth-of-type(9),
+.iframe input[id="clip-page2"]:checked ~ .clipart>li:nth-of-type(10),
+.iframe input[id="clip-page2"]:checked ~ .clipart>li:nth-of-type(11),
+.iframe input[id="clip-page2"]:checked ~ .clipart>li:nth-of-type(12),
+
 .iframe input[id="clip-page1"]:checked ~ .clipart>li:nth-of-type(1),
 .iframe input[id="clip-page1"]:checked ~ .clipart>li:nth-of-type(2),
 .iframe input[id="clip-page1"]:checked ~ .clipart>li:nth-of-type(3),
 .iframe input[id="clip-page1"]:checked ~ .clipart>li:nth-of-type(4),
 .iframe input[id="clip-page1"]:checked ~ .clipart>li:nth-of-type(5),
 .iframe input[id="clip-page1"]:checked ~ .clipart>li:nth-of-type(6)
+ {
+  display:inline-block;
+  visibility: visible;
+}
+
+
+
+
+
+.iframe input[id="clip-page100"]:checked ~ .clipart>li:nth-of-type(595),
+.iframe input[id="clip-page100"]:checked ~ .clipart>li:nth-of-type(596),
+.iframe input[id="clip-page100"]:checked ~ .clipart>li:nth-of-type(597),
+.iframe input[id="clip-page100"]:checked ~ .clipart>li:nth-of-type(598),
+.iframe input[id="clip-page100"]:checked ~ .clipart>li:nth-of-type(599),
+.iframe input[id="clip-page100"]:checked ~ .clipart>li:nth-of-type(600),
+
+.iframe input[id="clip-page99"]:checked ~ .clipart>li:nth-of-type(589),
+.iframe input[id="clip-page99"]:checked ~ .clipart>li:nth-of-type(590),
+.iframe input[id="clip-page99"]:checked ~ .clipart>li:nth-of-type(591),
+.iframe input[id="clip-page99"]:checked ~ .clipart>li:nth-of-type(592),
+.iframe input[id="clip-page99"]:checked ~ .clipart>li:nth-of-type(593),
+.iframe input[id="clip-page99"]:checked ~ .clipart>li:nth-of-type(594),
+
+.iframe input[id="clip-page98"]:checked ~ .clipart>li:nth-of-type(583),
+.iframe input[id="clip-page98"]:checked ~ .clipart>li:nth-of-type(584),
+.iframe input[id="clip-page98"]:checked ~ .clipart>li:nth-of-type(585),
+.iframe input[id="clip-page98"]:checked ~ .clipart>li:nth-of-type(586),
+.iframe input[id="clip-page98"]:checked ~ .clipart>li:nth-of-type(587),
+.iframe input[id="clip-page98"]:checked ~ .clipart>li:nth-of-type(588),
+
+.iframe input[id="clip-page97"]:checked ~ .clipart>li:nth-of-type(577),
+.iframe input[id="clip-page97"]:checked ~ .clipart>li:nth-of-type(578),
+.iframe input[id="clip-page97"]:checked ~ .clipart>li:nth-of-type(579),
+.iframe input[id="clip-page97"]:checked ~ .clipart>li:nth-of-type(580),
+.iframe input[id="clip-page97"]:checked ~ .clipart>li:nth-of-type(581),
+.iframe input[id="clip-page97"]:checked ~ .clipart>li:nth-of-type(582),
+
+.iframe input[id="clip-page96"]:checked ~ .clipart>li:nth-of-type(571),
+.iframe input[id="clip-page96"]:checked ~ .clipart>li:nth-of-type(572),
+.iframe input[id="clip-page96"]:checked ~ .clipart>li:nth-of-type(573),
+.iframe input[id="clip-page96"]:checked ~ .clipart>li:nth-of-type(574),
+.iframe input[id="clip-page96"]:checked ~ .clipart>li:nth-of-type(575),
+.iframe input[id="clip-page96"]:checked ~ .clipart>li:nth-of-type(576),
+
+.iframe input[id="clip-page95"]:checked ~ .clipart>li:nth-of-type(565),
+.iframe input[id="clip-page95"]:checked ~ .clipart>li:nth-of-type(566),
+.iframe input[id="clip-page95"]:checked ~ .clipart>li:nth-of-type(567),
+.iframe input[id="clip-page95"]:checked ~ .clipart>li:nth-of-type(568),
+.iframe input[id="clip-page95"]:checked ~ .clipart>li:nth-of-type(569),
+.iframe input[id="clip-page95"]:checked ~ .clipart>li:nth-of-type(570),
+
+.iframe input[id="clip-page94"]:checked ~ .clipart>li:nth-of-type(559),
+.iframe input[id="clip-page94"]:checked ~ .clipart>li:nth-of-type(560),
+.iframe input[id="clip-page94"]:checked ~ .clipart>li:nth-of-type(561),
+.iframe input[id="clip-page94"]:checked ~ .clipart>li:nth-of-type(562),
+.iframe input[id="clip-page94"]:checked ~ .clipart>li:nth-of-type(563),
+.iframe input[id="clip-page94"]:checked ~ .clipart>li:nth-of-type(564),
+
+.iframe input[id="clip-page93"]:checked ~ .clipart>li:nth-of-type(553),
+.iframe input[id="clip-page93"]:checked ~ .clipart>li:nth-of-type(554),
+.iframe input[id="clip-page93"]:checked ~ .clipart>li:nth-of-type(555),
+.iframe input[id="clip-page93"]:checked ~ .clipart>li:nth-of-type(556),
+.iframe input[id="clip-page93"]:checked ~ .clipart>li:nth-of-type(557),
+.iframe input[id="clip-page93"]:checked ~ .clipart>li:nth-of-type(558),
+
+.iframe input[id="clip-page92"]:checked ~ .clipart>li:nth-of-type(547),
+.iframe input[id="clip-page92"]:checked ~ .clipart>li:nth-of-type(548),
+.iframe input[id="clip-page92"]:checked ~ .clipart>li:nth-of-type(549),
+.iframe input[id="clip-page92"]:checked ~ .clipart>li:nth-of-type(550),
+.iframe input[id="clip-page92"]:checked ~ .clipart>li:nth-of-type(551),
+.iframe input[id="clip-page92"]:checked ~ .clipart>li:nth-of-type(552),
+
+.iframe input[id="clip-page91"]:checked ~ .clipart>li:nth-of-type(541),
+.iframe input[id="clip-page91"]:checked ~ .clipart>li:nth-of-type(542),
+.iframe input[id="clip-page91"]:checked ~ .clipart>li:nth-of-type(543),
+.iframe input[id="clip-page91"]:checked ~ .clipart>li:nth-of-type(544),
+.iframe input[id="clip-page91"]:checked ~ .clipart>li:nth-of-type(545),
+.iframe input[id="clip-page91"]:checked ~ .clipart>li:nth-of-type(546),
+
+.iframe input[id="clip-page90"]:checked ~ .clipart>li:nth-of-type(535),
+.iframe input[id="clip-page90"]:checked ~ .clipart>li:nth-of-type(536),
+.iframe input[id="clip-page90"]:checked ~ .clipart>li:nth-of-type(537),
+.iframe input[id="clip-page90"]:checked ~ .clipart>li:nth-of-type(538),
+.iframe input[id="clip-page90"]:checked ~ .clipart>li:nth-of-type(539),
+.iframe input[id="clip-page90"]:checked ~ .clipart>li:nth-of-type(540),
+
+.iframe input[id="clip-page89"]:checked ~ .clipart>li:nth-of-type(529),
+.iframe input[id="clip-page89"]:checked ~ .clipart>li:nth-of-type(530),
+.iframe input[id="clip-page89"]:checked ~ .clipart>li:nth-of-type(531),
+.iframe input[id="clip-page89"]:checked ~ .clipart>li:nth-of-type(532),
+.iframe input[id="clip-page89"]:checked ~ .clipart>li:nth-of-type(533),
+.iframe input[id="clip-page89"]:checked ~ .clipart>li:nth-of-type(534),
+
+.iframe input[id="clip-page88"]:checked ~ .clipart>li:nth-of-type(523),
+.iframe input[id="clip-page88"]:checked ~ .clipart>li:nth-of-type(524),
+.iframe input[id="clip-page88"]:checked ~ .clipart>li:nth-of-type(525),
+.iframe input[id="clip-page88"]:checked ~ .clipart>li:nth-of-type(526),
+.iframe input[id="clip-page88"]:checked ~ .clipart>li:nth-of-type(527),
+.iframe input[id="clip-page88"]:checked ~ .clipart>li:nth-of-type(528),
+
+.iframe input[id="clip-page87"]:checked ~ .clipart>li:nth-of-type(517),
+.iframe input[id="clip-page87"]:checked ~ .clipart>li:nth-of-type(518),
+.iframe input[id="clip-page87"]:checked ~ .clipart>li:nth-of-type(519),
+.iframe input[id="clip-page87"]:checked ~ .clipart>li:nth-of-type(520),
+.iframe input[id="clip-page87"]:checked ~ .clipart>li:nth-of-type(521),
+.iframe input[id="clip-page87"]:checked ~ .clipart>li:nth-of-type(522),
+
+.iframe input[id="clip-page86"]:checked ~ .clipart>li:nth-of-type(511),
+.iframe input[id="clip-page86"]:checked ~ .clipart>li:nth-of-type(512),
+.iframe input[id="clip-page86"]:checked ~ .clipart>li:nth-of-type(513),
+.iframe input[id="clip-page86"]:checked ~ .clipart>li:nth-of-type(514),
+.iframe input[id="clip-page86"]:checked ~ .clipart>li:nth-of-type(515),
+.iframe input[id="clip-page86"]:checked ~ .clipart>li:nth-of-type(516),
+
+.iframe input[id="clip-page85"]:checked ~ .clipart>li:nth-of-type(505),
+.iframe input[id="clip-page85"]:checked ~ .clipart>li:nth-of-type(506),
+.iframe input[id="clip-page85"]:checked ~ .clipart>li:nth-of-type(507),
+.iframe input[id="clip-page85"]:checked ~ .clipart>li:nth-of-type(508),
+.iframe input[id="clip-page85"]:checked ~ .clipart>li:nth-of-type(509),
+.iframe input[id="clip-page85"]:checked ~ .clipart>li:nth-of-type(510),
+
+.iframe input[id="clip-page84"]:checked ~ .clipart>li:nth-of-type(499),
+.iframe input[id="clip-page84"]:checked ~ .clipart>li:nth-of-type(500),
+.iframe input[id="clip-page84"]:checked ~ .clipart>li:nth-of-type(501),
+.iframe input[id="clip-page84"]:checked ~ .clipart>li:nth-of-type(502),
+.iframe input[id="clip-page84"]:checked ~ .clipart>li:nth-of-type(503),
+.iframe input[id="clip-page84"]:checked ~ .clipart>li:nth-of-type(504),
+
+.iframe input[id="clip-page83"]:checked ~ .clipart>li:nth-of-type(493),
+.iframe input[id="clip-page83"]:checked ~ .clipart>li:nth-of-type(494),
+.iframe input[id="clip-page83"]:checked ~ .clipart>li:nth-of-type(495),
+.iframe input[id="clip-page83"]:checked ~ .clipart>li:nth-of-type(496),
+.iframe input[id="clip-page83"]:checked ~ .clipart>li:nth-of-type(497),
+.iframe input[id="clip-page83"]:checked ~ .clipart>li:nth-of-type(498),
+
+.iframe input[id="clip-page82"]:checked ~ .clipart>li:nth-of-type(487),
+.iframe input[id="clip-page82"]:checked ~ .clipart>li:nth-of-type(488),
+.iframe input[id="clip-page82"]:checked ~ .clipart>li:nth-of-type(489),
+.iframe input[id="clip-page82"]:checked ~ .clipart>li:nth-of-type(490),
+.iframe input[id="clip-page82"]:checked ~ .clipart>li:nth-of-type(491),
+.iframe input[id="clip-page82"]:checked ~ .clipart>li:nth-of-type(492),
+
+.iframe input[id="clip-page81"]:checked ~ .clipart>li:nth-of-type(481),
+.iframe input[id="clip-page81"]:checked ~ .clipart>li:nth-of-type(482),
+.iframe input[id="clip-page81"]:checked ~ .clipart>li:nth-of-type(483),
+.iframe input[id="clip-page81"]:checked ~ .clipart>li:nth-of-type(484),
+.iframe input[id="clip-page81"]:checked ~ .clipart>li:nth-of-type(485),
+.iframe input[id="clip-page81"]:checked ~ .clipart>li:nth-of-type(486),
+
+.iframe input[id="clip-page80"]:checked ~ .clipart>li:nth-of-type(475),
+.iframe input[id="clip-page80"]:checked ~ .clipart>li:nth-of-type(476),
+.iframe input[id="clip-page80"]:checked ~ .clipart>li:nth-of-type(477),
+.iframe input[id="clip-page80"]:checked ~ .clipart>li:nth-of-type(478),
+.iframe input[id="clip-page80"]:checked ~ .clipart>li:nth-of-type(479),
+.iframe input[id="clip-page80"]:checked ~ .clipart>li:nth-of-type(480),
+
+.iframe input[id="clip-page79"]:checked ~ .clipart>li:nth-of-type(469),
+.iframe input[id="clip-page79"]:checked ~ .clipart>li:nth-of-type(470),
+.iframe input[id="clip-page79"]:checked ~ .clipart>li:nth-of-type(471),
+.iframe input[id="clip-page79"]:checked ~ .clipart>li:nth-of-type(472),
+.iframe input[id="clip-page79"]:checked ~ .clipart>li:nth-of-type(473),
+.iframe input[id="clip-page79"]:checked ~ .clipart>li:nth-of-type(474),
+
+.iframe input[id="clip-page78"]:checked ~ .clipart>li:nth-of-type(463),
+.iframe input[id="clip-page78"]:checked ~ .clipart>li:nth-of-type(464),
+.iframe input[id="clip-page78"]:checked ~ .clipart>li:nth-of-type(465),
+.iframe input[id="clip-page78"]:checked ~ .clipart>li:nth-of-type(466),
+.iframe input[id="clip-page78"]:checked ~ .clipart>li:nth-of-type(467),
+.iframe input[id="clip-page78"]:checked ~ .clipart>li:nth-of-type(468),
+
+.iframe input[id="clip-page77"]:checked ~ .clipart>li:nth-of-type(457),
+.iframe input[id="clip-page77"]:checked ~ .clipart>li:nth-of-type(458),
+.iframe input[id="clip-page77"]:checked ~ .clipart>li:nth-of-type(459),
+.iframe input[id="clip-page77"]:checked ~ .clipart>li:nth-of-type(460),
+.iframe input[id="clip-page77"]:checked ~ .clipart>li:nth-of-type(461),
+.iframe input[id="clip-page77"]:checked ~ .clipart>li:nth-of-type(462),
+
+.iframe input[id="clip-page76"]:checked ~ .clipart>li:nth-of-type(451),
+.iframe input[id="clip-page76"]:checked ~ .clipart>li:nth-of-type(452),
+.iframe input[id="clip-page76"]:checked ~ .clipart>li:nth-of-type(453),
+.iframe input[id="clip-page76"]:checked ~ .clipart>li:nth-of-type(454),
+.iframe input[id="clip-page76"]:checked ~ .clipart>li:nth-of-type(455),
+.iframe input[id="clip-page76"]:checked ~ .clipart>li:nth-of-type(456),
+
+.iframe input[id="clip-page75"]:checked ~ .clipart>li:nth-of-type(445),
+.iframe input[id="clip-page75"]:checked ~ .clipart>li:nth-of-type(446),
+.iframe input[id="clip-page75"]:checked ~ .clipart>li:nth-of-type(447),
+.iframe input[id="clip-page75"]:checked ~ .clipart>li:nth-of-type(448),
+.iframe input[id="clip-page75"]:checked ~ .clipart>li:nth-of-type(449),
+.iframe input[id="clip-page75"]:checked ~ .clipart>li:nth-of-type(450),
+
+.iframe input[id="clip-page74"]:checked ~ .clipart>li:nth-of-type(439),
+.iframe input[id="clip-page74"]:checked ~ .clipart>li:nth-of-type(440),
+.iframe input[id="clip-page74"]:checked ~ .clipart>li:nth-of-type(441),
+.iframe input[id="clip-page74"]:checked ~ .clipart>li:nth-of-type(442),
+.iframe input[id="clip-page74"]:checked ~ .clipart>li:nth-of-type(443),
+.iframe input[id="clip-page74"]:checked ~ .clipart>li:nth-of-type(444),
+
+.iframe input[id="clip-page73"]:checked ~ .clipart>li:nth-of-type(433),
+.iframe input[id="clip-page73"]:checked ~ .clipart>li:nth-of-type(434),
+.iframe input[id="clip-page73"]:checked ~ .clipart>li:nth-of-type(435),
+.iframe input[id="clip-page73"]:checked ~ .clipart>li:nth-of-type(436),
+.iframe input[id="clip-page73"]:checked ~ .clipart>li:nth-of-type(437),
+.iframe input[id="clip-page73"]:checked ~ .clipart>li:nth-of-type(438),
+
+.iframe input[id="clip-page72"]:checked ~ .clipart>li:nth-of-type(427),
+.iframe input[id="clip-page72"]:checked ~ .clipart>li:nth-of-type(428),
+.iframe input[id="clip-page72"]:checked ~ .clipart>li:nth-of-type(429),
+.iframe input[id="clip-page72"]:checked ~ .clipart>li:nth-of-type(430),
+.iframe input[id="clip-page72"]:checked ~ .clipart>li:nth-of-type(431),
+.iframe input[id="clip-page72"]:checked ~ .clipart>li:nth-of-type(432),
+
+.iframe input[id="clip-page71"]:checked ~ .clipart>li:nth-of-type(421),
+.iframe input[id="clip-page71"]:checked ~ .clipart>li:nth-of-type(422),
+.iframe input[id="clip-page71"]:checked ~ .clipart>li:nth-of-type(423),
+.iframe input[id="clip-page71"]:checked ~ .clipart>li:nth-of-type(424),
+.iframe input[id="clip-page71"]:checked ~ .clipart>li:nth-of-type(425),
+.iframe input[id="clip-page71"]:checked ~ .clipart>li:nth-of-type(426),
+
+.iframe input[id="clip-page70"]:checked ~ .clipart>li:nth-of-type(415),
+.iframe input[id="clip-page70"]:checked ~ .clipart>li:nth-of-type(416),
+.iframe input[id="clip-page70"]:checked ~ .clipart>li:nth-of-type(417),
+.iframe input[id="clip-page70"]:checked ~ .clipart>li:nth-of-type(418),
+.iframe input[id="clip-page70"]:checked ~ .clipart>li:nth-of-type(419),
+.iframe input[id="clip-page70"]:checked ~ .clipart>li:nth-of-type(420),
+
+.iframe input[id="clip-page69"]:checked ~ .clipart>li:nth-of-type(409),
+.iframe input[id="clip-page69"]:checked ~ .clipart>li:nth-of-type(410),
+.iframe input[id="clip-page69"]:checked ~ .clipart>li:nth-of-type(411),
+.iframe input[id="clip-page69"]:checked ~ .clipart>li:nth-of-type(412),
+.iframe input[id="clip-page69"]:checked ~ .clipart>li:nth-of-type(413),
+.iframe input[id="clip-page69"]:checked ~ .clipart>li:nth-of-type(414),
+
+.iframe input[id="clip-page68"]:checked ~ .clipart>li:nth-of-type(403),
+.iframe input[id="clip-page68"]:checked ~ .clipart>li:nth-of-type(404),
+.iframe input[id="clip-page68"]:checked ~ .clipart>li:nth-of-type(405),
+.iframe input[id="clip-page68"]:checked ~ .clipart>li:nth-of-type(406),
+.iframe input[id="clip-page68"]:checked ~ .clipart>li:nth-of-type(407),
+.iframe input[id="clip-page68"]:checked ~ .clipart>li:nth-of-type(408),
+
+.iframe input[id="clip-page67"]:checked ~ .clipart>li:nth-of-type(397),
+.iframe input[id="clip-page67"]:checked ~ .clipart>li:nth-of-type(398),
+.iframe input[id="clip-page67"]:checked ~ .clipart>li:nth-of-type(399),
+.iframe input[id="clip-page67"]:checked ~ .clipart>li:nth-of-type(400),
+.iframe input[id="clip-page67"]:checked ~ .clipart>li:nth-of-type(401),
+.iframe input[id="clip-page67"]:checked ~ .clipart>li:nth-of-type(402),
+
+.iframe input[id="clip-page66"]:checked ~ .clipart>li:nth-of-type(391),
+.iframe input[id="clip-page66"]:checked ~ .clipart>li:nth-of-type(392),
+.iframe input[id="clip-page66"]:checked ~ .clipart>li:nth-of-type(393),
+.iframe input[id="clip-page66"]:checked ~ .clipart>li:nth-of-type(394),
+.iframe input[id="clip-page66"]:checked ~ .clipart>li:nth-of-type(395),
+.iframe input[id="clip-page66"]:checked ~ .clipart>li:nth-of-type(396),
+
+.iframe input[id="clip-page65"]:checked ~ .clipart>li:nth-of-type(385),
+.iframe input[id="clip-page65"]:checked ~ .clipart>li:nth-of-type(386),
+.iframe input[id="clip-page65"]:checked ~ .clipart>li:nth-of-type(387),
+.iframe input[id="clip-page65"]:checked ~ .clipart>li:nth-of-type(388),
+.iframe input[id="clip-page65"]:checked ~ .clipart>li:nth-of-type(389),
+.iframe input[id="clip-page65"]:checked ~ .clipart>li:nth-of-type(390),
+
+.iframe input[id="clip-page64"]:checked ~ .clipart>li:nth-of-type(379),
+.iframe input[id="clip-page64"]:checked ~ .clipart>li:nth-of-type(380),
+.iframe input[id="clip-page64"]:checked ~ .clipart>li:nth-of-type(381),
+.iframe input[id="clip-page64"]:checked ~ .clipart>li:nth-of-type(382),
+.iframe input[id="clip-page64"]:checked ~ .clipart>li:nth-of-type(383),
+.iframe input[id="clip-page64"]:checked ~ .clipart>li:nth-of-type(384),
+
+.iframe input[id="clip-page63"]:checked ~ .clipart>li:nth-of-type(373),
+.iframe input[id="clip-page63"]:checked ~ .clipart>li:nth-of-type(374),
+.iframe input[id="clip-page63"]:checked ~ .clipart>li:nth-of-type(375),
+.iframe input[id="clip-page63"]:checked ~ .clipart>li:nth-of-type(376),
+.iframe input[id="clip-page63"]:checked ~ .clipart>li:nth-of-type(377),
+.iframe input[id="clip-page63"]:checked ~ .clipart>li:nth-of-type(378),
+
+.iframe input[id="clip-page62"]:checked ~ .clipart>li:nth-of-type(367),
+.iframe input[id="clip-page62"]:checked ~ .clipart>li:nth-of-type(368),
+.iframe input[id="clip-page62"]:checked ~ .clipart>li:nth-of-type(369),
+.iframe input[id="clip-page62"]:checked ~ .clipart>li:nth-of-type(370),
+.iframe input[id="clip-page62"]:checked ~ .clipart>li:nth-of-type(371),
+.iframe input[id="clip-page62"]:checked ~ .clipart>li:nth-of-type(372),
+
+.iframe input[id="clip-page61"]:checked ~ .clipart>li:nth-of-type(361),
+.iframe input[id="clip-page61"]:checked ~ .clipart>li:nth-of-type(362),
+.iframe input[id="clip-page61"]:checked ~ .clipart>li:nth-of-type(363),
+.iframe input[id="clip-page61"]:checked ~ .clipart>li:nth-of-type(364),
+.iframe input[id="clip-page61"]:checked ~ .clipart>li:nth-of-type(365),
+.iframe input[id="clip-page61"]:checked ~ .clipart>li:nth-of-type(366),
+
+.iframe input[id="clip-page60"]:checked ~ .clipart>li:nth-of-type(355),
+.iframe input[id="clip-page60"]:checked ~ .clipart>li:nth-of-type(356),
+.iframe input[id="clip-page60"]:checked ~ .clipart>li:nth-of-type(357),
+.iframe input[id="clip-page60"]:checked ~ .clipart>li:nth-of-type(358),
+.iframe input[id="clip-page60"]:checked ~ .clipart>li:nth-of-type(359),
+.iframe input[id="clip-page60"]:checked ~ .clipart>li:nth-of-type(360),
+
+.iframe input[id="clip-page59"]:checked ~ .clipart>li:nth-of-type(349),
+.iframe input[id="clip-page59"]:checked ~ .clipart>li:nth-of-type(350),
+.iframe input[id="clip-page59"]:checked ~ .clipart>li:nth-of-type(351),
+.iframe input[id="clip-page59"]:checked ~ .clipart>li:nth-of-type(352),
+.iframe input[id="clip-page59"]:checked ~ .clipart>li:nth-of-type(353),
+.iframe input[id="clip-page59"]:checked ~ .clipart>li:nth-of-type(354),
+
+.iframe input[id="clip-page58"]:checked ~ .clipart>li:nth-of-type(343),
+.iframe input[id="clip-page58"]:checked ~ .clipart>li:nth-of-type(344),
+.iframe input[id="clip-page58"]:checked ~ .clipart>li:nth-of-type(345),
+.iframe input[id="clip-page58"]:checked ~ .clipart>li:nth-of-type(346),
+.iframe input[id="clip-page58"]:checked ~ .clipart>li:nth-of-type(347),
+.iframe input[id="clip-page58"]:checked ~ .clipart>li:nth-of-type(348),
+
+.iframe input[id="clip-page57"]:checked ~ .clipart>li:nth-of-type(337),
+.iframe input[id="clip-page57"]:checked ~ .clipart>li:nth-of-type(338),
+.iframe input[id="clip-page57"]:checked ~ .clipart>li:nth-of-type(339),
+.iframe input[id="clip-page57"]:checked ~ .clipart>li:nth-of-type(340),
+.iframe input[id="clip-page57"]:checked ~ .clipart>li:nth-of-type(341),
+.iframe input[id="clip-page57"]:checked ~ .clipart>li:nth-of-type(342),
+
+.iframe input[id="clip-page56"]:checked ~ .clipart>li:nth-of-type(331),
+.iframe input[id="clip-page56"]:checked ~ .clipart>li:nth-of-type(332),
+.iframe input[id="clip-page56"]:checked ~ .clipart>li:nth-of-type(333),
+.iframe input[id="clip-page56"]:checked ~ .clipart>li:nth-of-type(334),
+.iframe input[id="clip-page56"]:checked ~ .clipart>li:nth-of-type(335),
+.iframe input[id="clip-page56"]:checked ~ .clipart>li:nth-of-type(336),
+
+.iframe input[id="clip-page55"]:checked ~ .clipart>li:nth-of-type(325),
+.iframe input[id="clip-page55"]:checked ~ .clipart>li:nth-of-type(326),
+.iframe input[id="clip-page55"]:checked ~ .clipart>li:nth-of-type(327),
+.iframe input[id="clip-page55"]:checked ~ .clipart>li:nth-of-type(328),
+.iframe input[id="clip-page55"]:checked ~ .clipart>li:nth-of-type(329),
+.iframe input[id="clip-page55"]:checked ~ .clipart>li:nth-of-type(330),
+
+.iframe input[id="clip-page54"]:checked ~ .clipart>li:nth-of-type(319),
+.iframe input[id="clip-page54"]:checked ~ .clipart>li:nth-of-type(320),
+.iframe input[id="clip-page54"]:checked ~ .clipart>li:nth-of-type(321),
+.iframe input[id="clip-page54"]:checked ~ .clipart>li:nth-of-type(322),
+.iframe input[id="clip-page54"]:checked ~ .clipart>li:nth-of-type(323),
+.iframe input[id="clip-page54"]:checked ~ .clipart>li:nth-of-type(324),
+
+.iframe input[id="clip-page53"]:checked ~ .clipart>li:nth-of-type(313),
+.iframe input[id="clip-page53"]:checked ~ .clipart>li:nth-of-type(314),
+.iframe input[id="clip-page53"]:checked ~ .clipart>li:nth-of-type(315),
+.iframe input[id="clip-page53"]:checked ~ .clipart>li:nth-of-type(316),
+.iframe input[id="clip-page53"]:checked ~ .clipart>li:nth-of-type(317),
+.iframe input[id="clip-page53"]:checked ~ .clipart>li:nth-of-type(318),
+
+.iframe input[id="clip-page52"]:checked ~ .clipart>li:nth-of-type(307),
+.iframe input[id="clip-page52"]:checked ~ .clipart>li:nth-of-type(308),
+.iframe input[id="clip-page52"]:checked ~ .clipart>li:nth-of-type(309),
+.iframe input[id="clip-page52"]:checked ~ .clipart>li:nth-of-type(310),
+.iframe input[id="clip-page52"]:checked ~ .clipart>li:nth-of-type(311),
+.iframe input[id="clip-page52"]:checked ~ .clipart>li:nth-of-type(312),
+
+.iframe input[id="clip-page51"]:checked ~ .clipart>li:nth-of-type(301),
+.iframe input[id="clip-page51"]:checked ~ .clipart>li:nth-of-type(302),
+.iframe input[id="clip-page51"]:checked ~ .clipart>li:nth-of-type(303),
+.iframe input[id="clip-page51"]:checked ~ .clipart>li:nth-of-type(304),
+.iframe input[id="clip-page51"]:checked ~ .clipart>li:nth-of-type(305),
+.iframe input[id="clip-page51"]:checked ~ .clipart>li:nth-of-type(306)
  {
   display:inline-block;
   visibility: visible;
