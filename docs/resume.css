@@ -89,6 +89,7 @@ label[for="federal"] {
   display: inline-block;
 }
 
+.iframe input[id*="clip-page1"]:checked ~ .pages>li:nth-child(1)::after,
 .iframe input[id*="clip-page"]:not(:checked) ~ .pages>li:nth-child(1)::after,
 
 input[id*="clip-hair"]:checked ~ .mythology>li:nth-child(1)::after,
@@ -327,14 +328,22 @@ ul.clipart a {
   margin: 0;
 }
 
-input:checked ~ .clipart>li ~ li,
+/*input:checked ~ .clipart>li ~ li,*/
+.pages>li,
 .clipart li,
 .clipart img {
   display:none;
   visibility: hidden;
 }
 
-
+.iframe input[id*="clip-page1"]:checked ~ .pages>li:nth-child(3),
+.iframe input[id*="clip-page1"]:checked ~ .pages>li:nth-child(2),
+.iframe input[id*="clip-page1"]:checked ~ .pages>li:nth-child(1),
+.iframe input[id*="clip-page"]:not(:checked) ~ .pages>li:nth-child(1)
+{
+  display: inline-block;
+  visibility: visible;
+}
 
 input[id*="mythology"]:checked ~ input[id*="clip-hair"]:checked ~ .clipart>li.jesus.multi,
 input[id*="mythology"]:checked ~ input[id*="godbot"]:checked ~ .clipart>li.robot.gods:not(.two),
