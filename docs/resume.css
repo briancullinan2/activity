@@ -100,6 +100,12 @@ input[id*="halloween"]:checked ~ .patterns>li:nth-child(2)::after,
 input[id*="newyears"]:checked ~ .patterns>li:nth-child(3)::after,
 input[id*="cosmic"]:checked ~ .patterns>li:nth-child(4)::after,
 
+input[id*="scenes"]:checked ~ .scenes>li:nth-child(1)::after,
+input[id*="industry"]:checked ~ .scenes>li:nth-child(2)::after,
+input[id*="whimsical"]:checked ~ .scenes>li:nth-child(3)::after,
+input[id*="loving"]:checked ~ .scenes>li:nth-child(4)::after,
+input[id*="world"]:checked ~ .scenes>li:nth-child(5)::after,
+
 input[id*="clip-pattern"]:checked ~ .pattern>li:nth-child(1)::after,
 input[id*="nopattern"]:checked ~ .pattern>li:nth-child(2)::after,
 
@@ -172,12 +178,14 @@ input[name*="brainstorm"] {
   bottom: -1px;
 }
 
+input[id*="scenes"]:checked ~ ol.scenes,
+input[id*="scenes"]:checked ~ h2.scenes,
 input[id*="other"]:checked ~ ol.other,
 input[id*="other"]:checked ~ h2.other,
-input[id="cosmic"]:checked ~ ol.cosmic,
-input[id="cosmic"]:checked ~ h2.cosmic,
-input[id="cosmic"]:checked ~ ol.pattern,
-input[id="cosmic"]:checked ~ h2.pattern,
+input[id="clip-cosmic"]:checked ~ ol.cosmic,
+input[id="clip-cosmic"]:checked ~ h2.cosmic,
+input[id="clip-cosmic"]:checked ~ ol.pattern,
+input[id="clip-cosmic"]:checked ~ h2.pattern,
 input[id*="buildings"]:checked ~ ol.buildings,
 input[id*="buildings"]:checked ~ h2.buildings,
 input[id*="buildings"]:checked ~ ol.styles,
@@ -231,6 +239,8 @@ input[name="federal"]:checked ~ .container.federal {
   display: block;
 }
 
+h2.scenes,
+ol.scenes,
 h2.other,
 ol.other,
 h2.patterns,
