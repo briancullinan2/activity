@@ -181,6 +181,8 @@ input[name*="brainstorm"] {
   bottom: -1px;
 }
 
+input[id*="mythology"]:checked ~ ol.mythology,
+input[id*="mythology"]:checked ~ h2.mythology,
 input[id*="scenes"]:checked ~ ol.scenes,
 input[id*="scenes"]:checked ~ h2.scenes,
 input[id*="other"]:checked ~ ol.other,
