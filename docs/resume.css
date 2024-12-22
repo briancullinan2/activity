@@ -136,6 +136,7 @@ input[id*="cosmic"]:checked ~ .things>li:nth-child(6)::after,
 input[id*="buildings"]:checked ~ .things>li:nth-child(7)::after,
 input[id*="scenes"]:checked ~ .things>li:nth-child(8)::after,
 input[id*="other"]:checked ~ .things>li:nth-child(9)::after,
+input[id*="mythology"]:checked ~ .things>li:nth-child(10)::after,
 
 .artwork ol>li:hover::after,
 ul.brainstorms>li:hover::after,
