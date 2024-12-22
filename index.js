@@ -101,14 +101,14 @@ async function renderIndex() {
 		let images = ''
 		let pages = ''
 		let radios = ''
-		let directoryTokens = directories[i].toLocaleLowerCase().split(/[^a-z0-9]/gi).sort().filter((a, i, arr) => arr.indexOf(a) == i).join(' ')
+		let directoryTokens = directories[i].toLocaleLowerCase().replace(/\s2$/, ' two').split(/[^a-z0-9]/gi).sort().filter((a, i, arr) => arr.indexOf(a) == i).join(' ')
 		iframes += '<li class="' + directoryTokens + '"><iframe src="./clipart/' + encodeURIComponent(directories[i]) + '.html"></iframe></li>'
 
 		for(let j = 0; j < imageFiles.length; j++) {
 			if (imageFiles[j][0] == '.') continue
 			if (!fs.statSync(path.join(TXT2IMG, directories[i], imageFiles[j])).isFile()) continue
 			//count++
-			let uniqueTokens = (directories[i] + ' ' + imageFiles[j]).toLocaleLowerCase().replace(/\s2$/, 'two').split(/[^a-z0-9]/gi).sort().filter((a, i, arr) => arr.indexOf(a) == i).join(' ')
+			let uniqueTokens = (directories[i] + ' ' + imageFiles[j]).toLocaleLowerCase().replace(/\s2$/, ' two').split(/[^a-z0-9]/gi).sort().filter((a, i, arr) => arr.indexOf(a) == i).join(' ')
 			images += '<li class="' + uniqueTokens + '" style="background-image:url(https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '?raw=true)"><a href="https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '?raw=true"> </a></li>'
 			//if(count == 6) break
 		}
