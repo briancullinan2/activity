@@ -112,9 +112,9 @@ async function renderIndex() {
 			images += '<li class="' + uniqueTokens + '" style="background-image:url(https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '?raw=true)"><a href="https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '?raw=true"> </a></li>'
 			//if(count == 6) break
 		}
-		for(let j = 1; j <= Math.ceil(imageFiles / 6); j++) {
-			radios += '<input type="radio" id="clip-page' + j + '" name="page" value="0">'
-			pages += '<li class="tens-' + Math.floor(j / 10) + '"><label for="clip-page' + j + '">' + j + '</label></li>'
+		for(let j = 1; j <= Math.ceil(imageFiles.length / 6); j++) {
+			radios += '<input type="radio" id="clip-page' + j + '" name="page" value="0" />'
+			pages += '<li class="tens-' + Math.floor(j / 10) + '"><a href="#clip-page' + j + '"><label for="clip-page' + j + '">' + j + '</label></a></li>'
 		}
 		fs.writeFileSync(path.join(__dirname, 'docs/clipart/' + directories[i] + '.html'), '<html class="iframe"><head>' +
 			'<link rel="stylesheet" href="../resume.css">'
