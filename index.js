@@ -113,7 +113,7 @@ async function renderIndex() {
 			//if(count == 6) break
 		}
 		for(let j = 1; j <= Math.ceil(imageFiles.length / 6); j++) {
-			radios += '<input type="radio" id="clip-page' + j + '" name="page" value="0" />'
+			radios += '<input type="radio" id="clip-page' + j + '" name="page" value="0" ' + (j == 0 ? 'checked="checked"' : '') + ' />'
 			pages += '<li class="tens-' + Math.floor(j / 10) + '"><a href="#clip-page' + j + '"><label for="clip-page' + j + '">' + j + '</label></a></li>'
 		}
 		fs.writeFileSync(path.join(__dirname, 'docs/clipart/' + directories[i] + '.html'), '<html class="iframe"><head>' +
