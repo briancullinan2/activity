@@ -118,7 +118,7 @@ async function renderIndex() {
 		}
 		fs.writeFileSync(path.join(__dirname, 'docs/clipart/' + directories[i] + '.html'), '<html class="iframe"><head>' +
 			'<link rel="stylesheet" href="../resume.css">'
-			+ '</head><body>' + radios + '<h2 class="pages">Pages</h2><ol class="pages">' + pages + '</ol><ul class="clipart">' + images + '</ul></body>')
+			+ '</head><body>' + radios + '<h3>Pages</h3><ol class="pages">' + pages + '</ol><ul class="clipart">' + images + '</ul></body>')
 	}
 
 	bodyTag = index.match(/<ul class="clipart">/i)
