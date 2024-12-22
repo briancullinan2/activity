@@ -99,8 +99,11 @@ async function renderIndex() {
 		let imageFiles = fs.readdirSync(path.join(TXT2IMG, directories[i])).filter(i => i.includes('.png'))
 		let count = 0
 		let images = ''
+		let pages = ''
+		let radios = ''
 		let directoryTokens = directories[i].toLocaleLowerCase().split(/[^a-z0-9]/gi).sort().filter((a, i, arr) => arr.indexOf(a) == i).join(' ')
 		iframes += '<li class="' + directoryTokens + '"><iframe src="./clipart/' + encodeURIComponent(directories[i]) + '.html"></iframe></li>'
+
 		for(let j = 0; j < imageFiles.length; j++) {
 			if (imageFiles[j][0] == '.') continue
 			if (!fs.statSync(path.join(TXT2IMG, directories[i], imageFiles[j])).isFile()) continue
@@ -109,9 +112,13 @@ async function renderIndex() {
 			images += '<li class="' + uniqueTokens + '" style="background-image:url(https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '?raw=true)"><a href="https://raw.githubusercontent.com/briancullinan2/clipart/main/' + encodeURIComponent(directories[i]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '/' + encodeURIComponent(imageFiles[j]).replace(/\(/gi, '%28').replace(/\)/gi, '%29') + '?raw=true"> </a></li>'
 			//if(count == 6) break
 		}
+		for(let j = 1; j <= Math.ceil(imageFiles / 6); j++) {
+			radios += '<input type="radio" id="clip-page' + j + '" name="page" value="0">'
+			pages += '<li class="tens-' + Math.floor(j / 10) + '"><label for="clip-page' + j + '">' + j + '</label></li>'
+		}
 		fs.writeFileSync(path.join(__dirname, 'docs/clipart/' + directories[i] + '.html'), '<html class="iframe"><head>' +
 			'<link rel="stylesheet" href="../resume.css">'
-			+ '</head><body><ul class="clipart">' + images + '</ul></body>')
+			+ '</head><body>' + radios + '<ol class="pages">' + pages + '</ol><ul class="clipart">' + images + '</ul></body>')
 	}
 
 	bodyTag = index.match(/<ul class="clipart">/i)
