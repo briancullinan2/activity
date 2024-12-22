@@ -86,31 +86,17 @@ label[for="federal"] {
 }
 
 
-<input type="radio" id="clip-hair" name="mythology" value="0">
-<input type="radio" id="clip-godbot" name="mythology" value="0">
-<input type="radio" id="clip-greek" name="mythology" value="0">
-<input type="radio" id="clip-bibles" name="mythology" value="0">
-<input type="radio" id="clip-bibleshort" name="mythology" value="0">
-<input type="radio" id="clip-acts" name="mythology" value="0">
-<input type="radio" id="clip-shortact" name="mythology" value="0">
-<input type="radio" id="clip-saints" name="mythology" value="0">
-<input type="radio" id="clip-shortsaint" name="mythology" value="0">
-<input type="radio" id="clip-cross" name="mythology" value="0">
-<input type="radio" id="clip-numbers" name="mythology" value="0">
-
-
-
-input[id*="clip-hair"]:checked ~ .places>li:nth-child(1)::after,
-input[id*="godbot"]:checked ~ .places>li:nth-child(2)::after,
-input[id*="greek"]:checked ~ .places>li:nth-child(3)::after,
-input[id*="bibles"]:checked ~ .places>li:nth-child(4)::after,
-input[id*="bibleshort"]:checked ~ .places>li:nth-child(5)::after,
-input[id*="acts"]:checked ~ .places>li:nth-child(6)::after,
-input[id*="shortact"]:checked ~ .places>li:nth-child(7)::after,
-input[id*="saints"]:checked ~ .places>li:nth-child(8)::after,
-input[id*="shortsaint"]:checked ~ .places>li:nth-child(9)::after,
-input[id*="cross"]:checked ~ .places>li:nth-child(10)::after,
-input[id*="numbers"]:checked ~ .places>li:nth-child(11)::after,
+input[id*="clip-hair"]:checked ~ .mythology>li:nth-child(1)::after,
+input[id*="godbot"]:checked ~ .mythology>li:nth-child(2)::after,
+input[id*="greek"]:checked ~ .mythology>li:nth-child(3)::after,
+input[id="clip-bibles"]:checked ~ .mythology>li:nth-child(4)::after,
+input[id*="bibleshort"]:checked ~ .mythology>li:nth-child(5)::after,
+input[id*="acts"]:checked ~ .mythology>li:nth-child(6)::after,
+input[id*="shortact"]:checked ~ .mythology>li:nth-child(7)::after,
+input[id="clip-saints"]:checked ~ .mythology>li:nth-child(8)::after,
+input[id*="shortsaint"]:checked ~ .mythology>li:nth-child(9)::after,
+input[id*="cross"]:checked ~ .mythology>li:nth-child(10)::after,
+input[id*="numbers"]:checked ~ .mythology>li:nth-child(11)::after,
 
 input[id*="clip-men"]:checked ~ .places>li:nth-child(1)::after,
 input[id*="hamsters"]:checked ~ .places>li:nth-child(2)::after,
@@ -341,6 +327,19 @@ ul.clipart a {
   visibility: hidden;
 }
 
+
+
+input[id*="mythology"]:checked ~ input[id*="clip-hair"]:checked ~ .clipart>li.jesus.multi,
+input[id*="mythology"]:checked ~ input[id*="godbot"]:checked ~ .clipart>li.robot.gods,
+input[id*="mythology"]:checked ~ input[id*="greek"]:checked ~ .clipart>li.greek.gods.styles,
+input[id*="mythology"]:checked ~ input[id="clip-bibles"]:checked ~ .clipart>li.bible.scene:not(.short),
+input[id*="mythology"]:checked ~ input[id*="bibleshort"]:checked ~ .clipart>li.bible.scene.short,
+input[id*="mythology"]:checked ~ input[id*="acts"]:checked ~ .clipart>li.bible.acts:not(.short),
+input[id*="mythology"]:checked ~ input[id*="shortact"]:checked ~ .clipart>li.bible.acts.short,
+input[id*="mythology"]:checked ~ input[id="clip-saints"]:checked ~ .clipart>li.bible.saints:not(.short),
+input[id*="mythology"]:checked ~ input[id*="shortsaint"]:checked ~ .clipart>li.bible.saints.short,
+input[id*="mythology"]:checked ~ input[id*="cross"]:checked ~ .clipart>li.bible.stations.cross,
+input[id*="mythology"]:checked ~ input[id*="numbers"]:checked ~ .clipart>li.bible.numbers,
 
 input[id*="cosmic"]:checked ~ input[id*="clip-pattern"]:checked ~ .clipart>li.cosmic.patterns,
 input[id*="cosmic"]:checked ~ input[id*="nopattern"]:checked ~ .clipart>li.cosmic:not(.patterns),
