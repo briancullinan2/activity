@@ -93,21 +93,24 @@ const PROJECT_DIRS = {
   'Live Resume': __dirname,
   'Multigame': path.join(__dirname, '/../multigame'), // i guess it doesn't really matter if history is recorded correctly
   'Quake3e': path.join(__dirname, '/../Quake3e'), // i guess it doesn't really matter if history is recorded correctly
+}
+
+const PAST_PROJECT_DIRS = {
   'Elastic Game Server': path.join(__dirname, '/../elastic-game-server'),
   'Morpheus Consulting': path.join(__dirname, '/../morpheus'),
   'Planet Quake': path.join(__dirname, '/../planet_quake'),
-  'Study Sauce': '/Volumes/External-Bakup/Personal/Projects/studysauce3',
+  'Study Sauce': '/Volumes/External/Personal/Projects/studysauce3',
 }
 
 
-function listProjects() {
-  return Object.keys(PROJECT_DIRS).map(name => {
-    if (!fs.existsSync(PROJECT_DIRS[name])) {
+function listProjects(past = false) {
+  return Object.keys(past ? PAST_PROJECT_DIRS : PROJECT_DIRS).map(name => {
+    if (!fs.existsSync(past ? PAST_PROJECT_DIRS[name] : PROJECT_DIRS[name])) {
       return ''
     }
     let svgOutput = path.join(__dirname, '/docs/' + name + '.svg')
     //if(!fs.existsSync(svgOutput)) {
-      let svgData = projectHeatmap(PROJECT_DIRS[name])
+      let svgData = projectHeatmap(past ? PAST_PROJECT_DIRS[name] : PROJECT_DIRS[name])
       fs.writeFileSync(svgOutput, svgData)
     //}
     return `<h3>${name}</h3><img src="${name}.svg" />`

@@ -18,8 +18,13 @@ async function renderIndex() {
 	let bodyTag = index.match(/<ol class="heatmaps"[\n\r.^>]*?>/i)
 	let offset = bodyTag.index
 	index = index.substring(0, offset)
-		+ listProjects() + index.substring(offset + bodyTag[0].length, index.length)
+		+ listProjects(false) + index.substring(offset + bodyTag[0].length, index.length)
 
+	bodyTag = index.match(/<ol class="heatmaps2"[\n\r.^>]*?>/i)
+	offset = bodyTag.index
+	index = index.substring(0, offset)
+		+ listProjects(true /* past projects */) + index.substring(offset + bodyTag[0].length, index.length)
+	
 	bodyTag = index.match(/<ol class="categories"[\n\r.^>]*?>/i)
 	offset = bodyTag.index
 	index = index.substring(0, offset)
