@@ -61,7 +61,7 @@ function workingEvents(path, past = false) {
     if (typeof workingHours[day] == 'undefined') {
       workingHours[day] = 0
     }
-    workingHours[day] += fileList.length / WRITING_RATE
+    workingHours[day] += fileList.length / WRITING_RATE / 60
 
     revision++
   }
