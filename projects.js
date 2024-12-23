@@ -12,7 +12,7 @@ function workingEvents(path) {
   const CURRENT_YEAR = (new Date).getFullYear()
 
   // TODO: use a combination of git commands to detect when work is done
-  let datesOut = spawnSync('git', ['log', '--pretty=format:\'%ci\'', '--author="megamindbrian"'], {
+  let datesOut = spawnSync('git', ['log', '--all', '--pretty=format:\'%ci\'', '--author="megamindbrian"'], {
     stdio: 'pipe',
     cwd: path,
     shell: true,
