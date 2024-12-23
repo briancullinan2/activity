@@ -35,6 +35,8 @@ function workingEvents(path, past = false) {
     if (!past && parsedDate.getFullYear() != CURRENT_YEAR) {
       revision++
       continue
+    } else if (past) {
+      parsedDate = new Date(parsedDate.getMonth() + '/' + parsedDate.getDate() + '/' + CURRENT_YEAR)
     }
 
     let filesOut = spawnSync('git', ['diff-tree', `HEAD~${revision}..HEAD~${revision + 1}`], {
