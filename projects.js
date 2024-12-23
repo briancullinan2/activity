@@ -91,6 +91,7 @@ function projectHeatmap(path) {
 
 const PROJECT_DIRS = {
   'Live Resume': __dirname,
+  'Multigame': path.join(__dirname, '/../multigame'), // i guess it doesn't really matter if history is recorded correctly
   'Quake3e': path.join(__dirname, '/../Quake3e'), // i guess it doesn't really matter if history is recorded correctly
   'Elastic Game Server': path.join(__dirname, '/../elastic-game-server'),
   'Morpheus Consulting': path.join(__dirname, '/../morpheus'),
