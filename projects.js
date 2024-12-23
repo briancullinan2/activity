@@ -2,6 +2,7 @@
 // TODO: collect stats from github like the color bar but more accurate for local work
 
 // TODO: list open windows and update using master-server design.
+const process = require('process')
 const path = require('path')
 const fs = require('fs')
 const { spawnSync } = require('child_process')
@@ -60,7 +61,7 @@ function workingEvents(path, past = false) {
     if (typeof workingHours[day] == 'undefined') {
       workingHours[day] = 0
     }
-    workingHours[day] += fileList.length
+    workingHours[day] += fileList.length / WRITING_RATE
 
     revision++
   }
