@@ -111,10 +111,10 @@ function listProjects(past = false) {
       return ''
     }
     let svgOutput = path.join(__dirname, '/docs/' + name + '.svg')
-    //if(!fs.existsSync(svgOutput)) {
+    if(!fs.existsSync(svgOutput)) {
       let svgData = projectHeatmap(past ? PAST_PROJECT_DIRS[name] : PROJECT_DIRS[name], past)
       fs.writeFileSync(svgOutput, svgData)
-    //}
+    }
     return `<h3>${name}</h3><img src="${name}.svg" />`
   }).join('\n')
 }
