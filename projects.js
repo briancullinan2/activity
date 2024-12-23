@@ -26,7 +26,7 @@ function workingEvents(path, past = false) {
   // git ls-tree --name-only -r @{18}
   let workingHours = {}
   let revision = 1
-  while (revision <= fileDates.length) {
+  while (revision <= Math.min(fileDates.length, 1000)) {
     /* let filesOut = spawnSync('git', ['ls-tree', '--name-only', '-r', '@{' + revision + '}'], {
       stdio: 'pipe'
     }) */
@@ -60,7 +60,7 @@ function workingEvents(path, past = false) {
     if (typeof workingHours[day] == 'undefined') {
       workingHours[day] = 0
     }
-    workingHours[day] += fileList.length / WRITING_RATE / 60
+    workingHours[day] += fileList.length
 
     revision++
   }
@@ -111,7 +111,7 @@ function listProjects(past = false) {
       return ''
     }
     let svgOutput = path.join(__dirname, '/docs/' + name + '.svg')
-    if(!fs.existsSync(svgOutput)) {
+    if(!past || !fs.existsSync(svgOutput)) {
       let svgData = projectHeatmap(past ? PAST_PROJECT_DIRS[name] : PROJECT_DIRS[name], past)
       fs.writeFileSync(svgOutput, svgData)
     }
