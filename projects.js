@@ -37,7 +37,7 @@ function workingEvents(path) {
       continue
     }
 
-    let filesOut = spawnSync('git', ['diff', `HEAD~${revision}..HEAD~${revision + 1}`], {
+    let filesOut = spawnSync('git', ['diff-tree', `HEAD~${revision}..HEAD~${revision + 1}`], {
       stdio: 'pipe',
       cwd: path,
       shell: true,
@@ -106,10 +106,10 @@ function listProjects() {
       return ''
     }
     let svgOutput = path.join(__dirname, '/docs/' + name + '.svg')
-    if(!fs.existsSync(svgOutput)) {
+    //if(!fs.existsSync(svgOutput)) {
       let svgData = projectHeatmap(PROJECT_DIRS[name])
       fs.writeFileSync(svgOutput, svgData)
-    }
+    //}
     return `<h3>${name}</h3><img src="${name}.svg" />`
   }).join('\n')
 }
