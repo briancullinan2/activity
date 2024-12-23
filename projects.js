@@ -7,7 +7,7 @@ const fs = require('fs')
 const { spawnSync } = require('child_process')
 const d3Heatmap = require('./heatmap.js')
 
-function workingEvents(path) {
+function workingEvents(path, past = false) {
   const WRITING_RATE = 100 // words per minute
   const CURRENT_YEAR = (new Date).getFullYear()
 
@@ -32,7 +32,7 @@ function workingEvents(path) {
     }) */
     // simple word count from commit diffs
     let parsedDate = new Date(fileDates[revision - 1])
-    if (parsedDate.getFullYear() != CURRENT_YEAR) {
+    if (!past && parsedDate.getFullYear() != CURRENT_YEAR) {
       revision++
       continue
     }
@@ -79,8 +79,8 @@ function workingEvents(path) {
 }
 
 
-function projectHeatmap(path) {
-  let events = workingEvents(path)
+function projectHeatmap(path, past = false) {
+  let events = workingEvents(path, past)
   if (events.length == 0) {
     return ''
   }
@@ -99,7 +99,7 @@ const PAST_PROJECT_DIRS = {
   'Elastic Game Server': path.join(__dirname, '/../elastic-game-server'),
   'Morpheus Consulting': path.join(__dirname, '/../morpheus'),
   'Planet Quake': path.join(__dirname, '/../planet_quake'),
-  'Study Sauce': '/Volumes/External/Personal/Projects/studysauce3',
+  'Study Sauce': path.join(__dirname, '/../studysauce3'),
 }
 
 
@@ -110,7 +110,7 @@ function listProjects(past = false) {
     }
     let svgOutput = path.join(__dirname, '/docs/' + name + '.svg')
     //if(!fs.existsSync(svgOutput)) {
-      let svgData = projectHeatmap(past ? PAST_PROJECT_DIRS[name] : PROJECT_DIRS[name])
+      let svgData = projectHeatmap(past ? PAST_PROJECT_DIRS[name] : PROJECT_DIRS[name], past)
       fs.writeFileSync(svgOutput, svgData)
     //}
     return `<h3>${name}</h3><img src="${name}.svg" />`
