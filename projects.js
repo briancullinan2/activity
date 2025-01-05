@@ -8,6 +8,7 @@ const fs = require('fs')
 const { spawnSync } = require('child_process')
 const d3Heatmap = require('./heatmap.js')
 
+
 function workingEvents(path, past = false) {
   const WRITING_RATE = 100 // words per minute
   const CURRENT_YEAR = (new Date).getFullYear()
@@ -36,9 +37,11 @@ function workingEvents(path, past = false) {
     if (!past && parsedDate.getFullYear() != CURRENT_YEAR) {
       revision++
       continue
-    } else if (past) {
+    } /* else 
+    // i guess it doesn't really matter if history is recorded correctly
+    if (past) {
       parsedDate = new Date(parsedDate.getMonth() + '/' + parsedDate.getDate() + '/' + CURRENT_YEAR)
-    }
+    } */
 
     let filesOut = spawnSync('git', ['diff-tree', `HEAD~${revision}..HEAD~${revision + 1}`], {
       stdio: 'pipe',
@@ -97,7 +100,6 @@ const PROJECT_DIRS = {
   'Jupyter Ops': path.join(__dirname, '/../jupyter_ops'),
   'Multigame': path.join(__dirname, '/../multigame'),
   'Quake3e': path.join(__dirname, '/../Quake3e'), 
-  // i guess it doesn't really matter if history is recorded correctly
 }
 
 const PAST_PROJECT_DIRS = {
