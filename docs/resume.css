@@ -306,6 +306,7 @@ input[name="federal"]:checked ~ .container:not(.federal):not(.flex) {
 
 input[name="federal"]:checked ~ .container.federal {
   display: block;
+  width: 21cm;
 }
 
 h2.mythology,
@@ -1442,7 +1443,7 @@ header {
 }
 
 div.container {
-  width: 21cm;
+  width: auto;
   padding: 20mm 16mm;
   background: #222;
   box-shadow: rgb(0 0 0 / 50%) 2px 3px 10px;
