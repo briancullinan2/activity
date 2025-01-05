@@ -18,7 +18,7 @@ function d3Heatmap(data) {
 		sizeByYear = (height - margin.top - margin.bottom), // / years.length,
 		sizeByDay = d3.min([
 			// divide by 8, 7 days in a week and 1 row for label
-			sizeByYear / 8,
+			//sizeByYear / 8,
 			// 54 weeks because every year has a partial week on both ends
 			(width - margin.left - margin.right) / 54]),
 		day = (d) => (d.getDay() + 6) % 7,
