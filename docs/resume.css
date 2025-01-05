@@ -1477,6 +1477,12 @@ nav {
   width: 240px;
 }
 
+nav > label:last-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 div.container.artwork {
   /* max-height: 1000px;*/
   overflow: clip;
