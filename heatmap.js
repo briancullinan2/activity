@@ -48,7 +48,7 @@ function d3Heatmap(data) {
 		.enter().append('g')
 		.attr('class', 'year')
 		.attr('font-size', 'smaller')
-		.attr('transform', (d, i) => 'translate(30,' + i * sizeByYear + ')');
+		.attr('transform', (d, i) => 'translate(30,' + i * 160 + ')');
 
 	year.append('text')
 		.text((d) => d)
