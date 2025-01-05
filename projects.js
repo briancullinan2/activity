@@ -105,6 +105,7 @@ const PROJECT_DIRS = {
 }
 
 const PAST_PROJECT_DIRS = {
+  //'Current Activity': path.join(__dirname, '/../activity'),
   'Elastic Game Server': path.join(__dirname, '/../elastic-game-server'),
   'Morpheus Consulting': path.join(__dirname, '/../morpheus'),
   'Planet Quake': path.join(__dirname, '/../planet_quake'),
