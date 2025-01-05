@@ -1477,12 +1477,6 @@ nav {
   width: 240px;
 }
 
-nav > label:last-of-type {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 div.container.artwork {
   /* max-height: 1000px;*/
   overflow: clip;
@@ -1603,6 +1597,13 @@ div.container.projects img {
   div.container {
     width: auto;
     margin: 20px 20px;
+  }
+
+  nav > label:last-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
   }
 
 }
