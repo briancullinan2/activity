@@ -40,6 +40,11 @@ ol.pages {
   margin-bottom: 20px;
 }
 
+.buttonStyle {
+  list-style: none;
+}
+
+
 .pages>li,
 .artwork ol>li,
 ul.brainstorms>li,
