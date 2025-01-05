@@ -48,6 +48,7 @@ ol.brainstorms>li,
 ol.categories>li,
 ol.windows>li,
 a.nowButton,
+nav>label[for],
 label[for="federal"] {
   border: 5px solid transparent;
   border-radius: 10px;
@@ -68,6 +69,7 @@ ol.brainstorms>li a,
 ol.categories>li a,
 ol.windows>li a,
 a.nowButton,
+nav>label[for],
 label[for="federal"] {
   display: block;
   text-decoration: none;
@@ -89,6 +91,7 @@ ol.brainstorms>li label,
 ol.categories>li label,
 ol.windows>li label,
 a.nowButton,
+nav>label[for],
 label[for="federal"] {
   display: block;
   cursor: pointer;
@@ -96,6 +99,7 @@ label[for="federal"] {
 }
 
 a.nowButton,
+nav>label[for],
 label[for="federal"] {
   display: inline-block;
 }
@@ -234,7 +238,7 @@ ol.windows>li.active::after {
 /* SPA with no javascript, enjoy */
 .iframe input,
 .artwork input,
-input[name*="federal"],
+input[name*="selected-tab"],
 input[name*="category"],
 input[name*="brainstorm"] {
   opacity: 0;
@@ -294,17 +298,18 @@ ul.bookmarks a:hover {
   text-decoration: underline;
 }
 
-
-input[name="federal"]:checked ~ * label[for="federal"] {
+/*
+input[id="federal"]:checked ~ * label[for="federal"] {
   color: #226;
   background-color: white;
 }
+*/
 
-input[name="federal"]:checked ~ .container:not(.federal):not(.flex) {
+input[id="federal"]:checked ~ .container:not(.federal):not(.flex) {
   display: none;
 }
 
-input[name="federal"]:checked ~ .container.federal {
+input[id="federal"]:checked ~ .container.federal {
   display: block;
   width: 21cm;
 }
@@ -1447,11 +1452,18 @@ div.container {
   padding: 20mm 16mm;
   background: #222;
   box-shadow: rgb(0 0 0 / 50%) 2px 3px 10px;
-  margin: 20px auto;
+  margin: 20px auto 20px 240px;
   border-radius: 2px;
   border: 1px solid #666;
   position: relative;
   z-index: 1;
+}
+
+nav {
+  position:absolute;
+  height: 100%;
+  overflow-y: auto;
+  width: 240px;
 }
 
 div.container.artwork {
