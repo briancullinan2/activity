@@ -1458,6 +1458,7 @@ div.container {
   border: 1px solid #666;
   position: relative;
   z-index: 1;
+  display: none;
 }
 
 nav {
@@ -1476,7 +1477,12 @@ div.container.federal {
   display: none;
 }
 
-div.container.flex {
+input[id*="clipart"]:checked ~ div.container:nth-of-type(2),
+input[id*="projects"]:checked ~ div.container:nth-of-type(3) {
+  display: block;
+}
+
+input[id*="home"]:checked ~ div.container.flex {
   display: flex;
   flex-wrap: wrap;
 }
@@ -1605,5 +1611,17 @@ div.container.projects img {
     flex:50%;
     padding-top:50%;
     width: 512px;
+  }
+}
+
+@media print {
+  nav {
+    display:none;
+  }
+
+  div.container {
+    margin-left: auto;
+    box-shadow: none;
+    border: none;
   }
 }
