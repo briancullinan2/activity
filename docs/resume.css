@@ -1445,6 +1445,7 @@ div.livedev iframe {
 header {
   background: rgba(0, 0, 0, 0.8);
   display: block;
+  width: 100%;
 }
 
 div.container {
@@ -1477,6 +1478,7 @@ div.container.federal {
 
 div.container.flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 div.container.timeline {
