@@ -1443,7 +1443,7 @@ div.livedev iframe {
 }
 
 header {
-  background: rgba(0, 0, 0, 0.8);
+  /*background: rgba(0, 0, 0, 0.8);*/
   display: block;
   width: 100%;
 }
@@ -1477,6 +1477,10 @@ div.container.federal {
   display: none;
 }
 
+input[id*="home"]:checked ~ div.container:nth-of-type(7),
+input[id*="home"]:checked ~ div.container:nth-of-type(6),
+input[id*="home"]:checked ~ div.container:nth-of-type(5),
+input[id*="home"]:checked ~ div.container:nth-of-type(4),
 input[id*="clipart"]:checked ~ div.container:nth-of-type(2),
 input[id*="projects"]:checked ~ div.container:nth-of-type(3) {
   display: block;
