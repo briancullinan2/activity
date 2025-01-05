@@ -118,17 +118,17 @@ function listProjects(past = false) {
       return ''
     }
     let svgOutput = path.join(__dirname, '/docs/' + name + '.svg')
-    if(!past || !fs.existsSync(svgOutput)) {
+    //if(!past || !fs.existsSync(svgOutput)) {
       let svgData = projectHeatmap(past ? PAST_PROJECT_DIRS[name] : PROJECT_DIRS[name], past)
       fs.writeFileSync(svgOutput, svgData)
-    }
+    //}
     return `<h3>${name}</h3><img src="${name}.svg" />`
   }).join('\n')
 
   let svgOutput = path.join(__dirname, '/docs/ALL.svg')
   let svgData = d3Heatmap(allEvents)
   fs.writeFileSync(svgOutput, svgData)
-  return `<h3>All of Time</h3><img src="ALL.svg" />${projects}`
+  return past ? `<h3>All of Time</h3><img src="ALL.svg" />${projects}` : projects
 }
 
 module.exports = {
