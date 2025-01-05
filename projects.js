@@ -94,8 +94,10 @@ function projectHeatmap(path, past = false) {
 
 const PROJECT_DIRS = {
   'Live Resume': __dirname,
-  'Multigame': path.join(__dirname, '/../multigame'), // i guess it doesn't really matter if history is recorded correctly
-  'Quake3e': path.join(__dirname, '/../Quake3e'), // i guess it doesn't really matter if history is recorded correctly
+  'Jupyter Ops': path.join(__dirname, '/../jupyter_ops'),
+  'Multigame': path.join(__dirname, '/../multigame'),
+  'Quake3e': path.join(__dirname, '/../Quake3e'), 
+  // i guess it doesn't really matter if history is recorded correctly
 }
 
 const PAST_PROJECT_DIRS = {
