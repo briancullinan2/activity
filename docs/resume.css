@@ -48,6 +48,7 @@ ol.brainstorms>li,
 ol.categories>li,
 ol.windows>li,
 a.nowButton,
+.buttonStyle label[for],
 nav>label[for],
 label[for="federal"] {
   border: 5px solid transparent;
@@ -69,6 +70,7 @@ ol.brainstorms>li a,
 ol.categories>li a,
 ol.windows>li a,
 a.nowButton,
+.buttonStyle label[for],
 nav>label[for],
 label[for="federal"] {
   display: block;
@@ -91,6 +93,7 @@ ol.brainstorms>li label,
 ol.categories>li label,
 ol.windows>li label,
 a.nowButton,
+.buttonStyle label[for],
 nav>label[for],
 label[for="federal"] {
   display: block;
@@ -99,6 +102,7 @@ label[for="federal"] {
 }
 
 a.nowButton,
+.buttonStyle label[for],
 nav>label[for],
 label[for="federal"] {
   display: inline-block;
@@ -1477,6 +1481,7 @@ div.container.federal {
   display: none;
 }
 
+input[id*="writing"]:checked ~ div.container:nth-of-type(9),
 input[id*="home"]:checked ~ div.container:nth-of-type(7),
 input[id*="home"]:checked ~ div.container:nth-of-type(6),
 input[id*="home"]:checked ~ div.container:nth-of-type(5),
@@ -1486,7 +1491,8 @@ input[id*="projects"]:checked ~ div.container:nth-of-type(3) {
   display: block;
 }
 
-input[id*="home"]:checked ~ div.container.flex {
+input[id*="writing"]:checked ~ div.container:nth-of-type(8),
+input[id*="home"]:checked ~ div.container:nth-of-type(1) {
   display: flex;
   flex-wrap: wrap;
 }
