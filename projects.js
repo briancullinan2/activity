@@ -8,7 +8,6 @@ const fs = require('fs')
 const { spawnSync } = require('child_process')
 const d3Heatmap = require('./heatmap.js')
 
-
 function workingEvents(path, past = false) {
   const WRITING_RATE = 100 // words per minute
   const CURRENT_YEAR = (new Date).getFullYear()
@@ -84,9 +83,12 @@ function workingEvents(path, past = false) {
   })
 }
 
+let allEvents = []
+
 
 function projectHeatmap(path, past = false) {
   let events = workingEvents(path, past)
+  allEvents = allEvents.concat(events)
   if (events.length == 0) {
     return ''
   }
@@ -111,7 +113,7 @@ const PAST_PROJECT_DIRS = {
 
 
 function listProjects(past = false) {
-  return Object.keys(past ? PAST_PROJECT_DIRS : PROJECT_DIRS).map(name => {
+  let projects = Object.keys(past ? PAST_PROJECT_DIRS : PROJECT_DIRS).map(name => {
     if (!fs.existsSync(past ? PAST_PROJECT_DIRS[name] : PROJECT_DIRS[name])) {
       return ''
     }
@@ -122,6 +124,11 @@ function listProjects(past = false) {
     }
     return `<h3>${name}</h3><img src="${name}.svg" />`
   }).join('\n')
+
+  let svgOutput = path.join(__dirname, '/docs/ALL.svg')
+  let svgData = d3Heatmap(allEvents)
+  fs.writeFileSync(svgOutput, svgData)
+  return `<h3>All of Time</h3><img src="ALL.svg" />${projects}`
 }
 
 module.exports = {
