@@ -3,7 +3,7 @@ var D3Node = require('d3-node');
 function d3Heatmap(data) {
 	var d3n = new D3Node();
 	var d3 = d3n.d3;
-	var margin = { top: 20, right: 20, bottom: 20, left: 20 };
+	var margin = { top: 20, right: 40, bottom: 20, left: 20 };
 
 	// input vars for getter setters
 	// TODO: turn these in to options
