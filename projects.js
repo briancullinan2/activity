@@ -34,10 +34,10 @@ function workingEvents(path, past = false) {
     }) */
     // simple word count from commit diffs
     let parsedDate = new Date(fileDates[revision - 1])
-    if (!past && parsedDate.getFullYear() != CURRENT_YEAR) {
+    /* if (!past && parsedDate.getFullYear() != CURRENT_YEAR) {
       revision++
       continue
-    } /* else 
+    } else 
     // i guess it doesn't really matter if history is recorded correctly
     if (past) {
       parsedDate = new Date(parsedDate.getMonth() + '/' + parsedDate.getDate() + '/' + CURRENT_YEAR)
