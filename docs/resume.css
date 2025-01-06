@@ -10,7 +10,7 @@ html.iframe,
 html.iframe body {
   background: unset;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 h1,
