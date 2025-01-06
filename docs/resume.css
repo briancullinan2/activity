@@ -254,8 +254,8 @@ input[name*="brainstorm"] {
   height: 1px;
   width: 1px;
   position: absolute;
-  right: -1px;
-  bottom: -1px;
+  right: 1px;
+  bottom: 1px;
 }
 
 input[id*="mythology"]:checked ~ ol.mythology,
@@ -1480,6 +1480,11 @@ nav {
 div.container.artwork {
   /* max-height: 1000px;*/
   overflow: clip;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
 }
 
 div.container.federal {
@@ -1599,13 +1604,31 @@ div.container.projects img {
     margin: 20px 20px;
   }
 
-  nav > label:last-of-type {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  nav {
+    position: initial;
   }
 
+  nav br {
+    display:none;
+  }
+
+  nav > a.nowButton,
+  nav > label[for] {
+    display:none;
+  }
+
+  nav > label:last-of-type {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: inline-block;
+  }
+
+  input[id*="navigate"]:checked ~ nav > a.nowButton,
+  input[id*="navigate"]:checked ~ nav > label[for] {
+    display: inline-block;
+  }
 }
 
 @media all and (max-width: 600px) {
