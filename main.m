@@ -7,7 +7,6 @@ static NSUInteger count;
 extern "C" {
 #endif
 
-
 __attribute__((visibility("default")))
 int enumWindows()
 {
@@ -37,10 +36,6 @@ const char* getTitle(i) {
 	return (char *)[res UTF8String];
 }
 
-#if __cplusplus
-}
-#endif
-
 
 int main(int argc, char *argv[])
 {
@@ -49,3 +44,7 @@ int main(int argc, char *argv[])
 			printf("%s\n", getTitle(i));
 		}
 }
+
+#if __cplusplus
+}
+#endif
