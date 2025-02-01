@@ -4,7 +4,7 @@ CLANG := clang
 
 LINK    = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang 
 
-ARCH    = x86_64 -arch arm64 
+ARCH    = arm64 
 MIN_VERSION = 10.8
 
 DEBUG_PATH  = bin/debug
