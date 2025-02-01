@@ -1428,8 +1428,13 @@ input[id*="animals"]:checked ~ input[id*="anime"]:checked ~ .clipart>img.animals
 div.livedev {
   position: relative;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 800px;
   max-height: 460px;
+  display:flex;
+}
+
+div.livedev img {
+  width: 33.3%;
 }
 
 div.livedev p {
