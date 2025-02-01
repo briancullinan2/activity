@@ -308,7 +308,16 @@
       document.addEventListener('DOMContentLoaded', (evt) => {
         document.querySelector('.livedev').addEventListener('click', (evt) => {
           debugger
-          
+          fetch('https://1328141471840206899.discordsays.com/.proxy/click', {
+            method: 'POST',
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              x: evt.layerX / evt.currentTarget.clientWidth,
+              y: evt.layerY / evt.currentTarget.clientHeight
+            })
+          })
         })
       })
     </script>
@@ -1348,8 +1357,8 @@
 <div class="history-item"><span class="time">2/1 4:36 pm</span><span class="content">Editing Syntax · octalmage/robotjs Wiki  <a target="_blank" href="https://github.com/octalmage/robotjs/wiki/Syntax/_edit">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 4:36 pm</span><span class="content">History for Syntax · octalmage/robotjs Wiki  <a target="_blank" href="https://github.com/octalmage/robotjs/wiki/Syntax/_history">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 4:36 pm</span><span class="content">Syntax · octalmage/robotjs Wiki  <a target="_blank" href="https://github.com/octalmage/robotjs/wiki/Syntax/cff36f5b47e10cfde9ec0c9eb1a29fc49204d54e">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/1 4:38 pm</span><span class="content">Brian Cullinan's Live Resume  <a target="_blank" href="http://127.0.0.1:8080/">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 4:39 pm</span><span class="content">2 (2560×1440)  <a target="_blank" href="https://1328141471840206899.discordsays.com/.proxy/monitors/2">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/1 4:43 pm</span><span class="content">Brian Cullinan's Live Resume  <a target="_blank" href="http://127.0.0.1:8080/">link &nearr;</a></span></div>
 
   </div>
 

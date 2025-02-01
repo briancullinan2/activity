@@ -276,7 +276,16 @@
       document.addEventListener('DOMContentLoaded', (evt) => {
         document.querySelector('.livedev').addEventListener('click', (evt) => {
           debugger
-          
+          fetch('https://1328141471840206899.discordsays.com/.proxy/click', {
+            method: 'POST',
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              x: evt.layerX / evt.currentTarget.clientWidth,
+              y: evt.layerY / evt.currentTarget.clientHeight
+            })
+          })
         })
       })
     </script>
