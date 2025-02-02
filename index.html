@@ -273,26 +273,19 @@
     <h2>Live Development</h2>
     <ol class="windows"></ol>
     <script type="application/javascript">
-      document.addEventListener('DOMContentLoaded', (evt) => {
-        document.querySelector('.livedev').addEventListener('click', (evt) => {
-          debugger
-          fetch('https://1328141471840206899.discordsays.com/.proxy/click', {
-            method: 'POST',
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              x: evt.layerX / evt.currentTarget.clientWidth,
-              y: evt.layerY / evt.currentTarget.clientHeight
-            })
-          })
-        })
-      })
+      setInterval(() => {
+        // TODO: refresh images
+        let images = document.querySelectorAll('.livedev > img')
+        for(let i = 0; i < images.length; i++) {
+          images[i].src += images[i].src.replace(/\?.*/, '') + '?t=' + Date.now()
+          images[i].style.backgroundImage = "url('" + encodeURI(images[i].src) + "')"
+        }
+      }, 5000)
     </script>
     <div class="livedev">
-      <img src="https://1328141471840206899.discordsays.com/.proxy/monitors/0" />
-      <img src="https://1328141471840206899.discordsays.com/.proxy/monitors/1" />
-      <img src="https://1328141471840206899.discordsays.com/.proxy/monitors/2" />
+      <img src="https://1335491680630997034.discordsays.com/.proxy/monitors/0" />
+      <img src="https://1335491680630997034.discordsays.com/.proxy/monitors/1" />
+      <img src="https://1335491680630997034.discordsays.com/.proxy/monitors/2" />
       <!--<p>
         <script>
           document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)

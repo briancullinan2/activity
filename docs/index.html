@@ -279,49 +279,48 @@
   <li class=""><a href="#Activity Monitor">
 		<label for="win-Activity Monitor">Activity Monitor</a></label>
 		</li>
+<li class=""><a href="#Fork">
+		<label for="win-Fork">Fork</a></label>
+		</li>
+<li class=""><a href="#Calculator">
+		<label for="win-Calculator">Calculator</a></label>
+		</li>
 <li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
+		</li>
+<li class=""><a href="#Code">
+		<label for="win-Code">Code</a></label>
 		</li>
 <li class=""><a href="#Discord">
 		<label for="win-Discord">Discord</a></label>
 		</li>
-<li class=""><a href="#Fork">
-		<label for="win-Fork">Fork</a></label>
-		</li>
-<li class=""><a href="#Google Chrome">
+<li class="active"><a href="#Google Chrome">
 		<label for="win-Google Chrome">Google Chrome</a></label>
-		</li>
-<li class="active"><a href="#Code">
-		<label for="win-Code">Code</a></label>
 		</li>
 <li class=""><a href="#Terminal">
 		<label for="win-Terminal">Terminal</a></label>
+		</li>
+<li class=""><a href="#System Settings">
+		<label for="win-System Settings">System Settings</a></label>
 		</li>
 <li class=""><a href="#Parallels Toolbox">
 		<label for="win-Parallels Toolbox">Parallels Toolbox</a></label>
 		</li>
   </ol></ol>
     <script type="application/javascript">
-      document.addEventListener('DOMContentLoaded', (evt) => {
-        document.querySelector('.livedev').addEventListener('click', (evt) => {
-          debugger
-          fetch('https://1328141471840206899.discordsays.com/.proxy/click', {
-            method: 'POST',
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              x: evt.layerX / evt.currentTarget.clientWidth,
-              y: evt.layerY / evt.currentTarget.clientHeight
-            })
-          })
-        })
-      })
+      setInterval(() => {
+        // TODO: refresh images
+        let images = document.querySelectorAll('.livedev > img')
+        for(let i = 0; i < images.length; i++) {
+          images[i].src += images[i].src.replace(/\?.*/, '') + '?t=' + Date.now()
+          images[i].style.backgroundImage = "url('" + encodeURI(images[i].src) + "')"
+        }
+      }, 5000)
     </script>
     <div class="livedev">
-      <img src="https://1328141471840206899.discordsays.com/.proxy/monitors/0" />
-      <img src="https://1328141471840206899.discordsays.com/.proxy/monitors/1" />
-      <img src="https://1328141471840206899.discordsays.com/.proxy/monitors/2" />
+      <img src="https://1335491680630997034.discordsays.com/.proxy/monitors/0" />
+      <img src="https://1335491680630997034.discordsays.com/.proxy/monitors/1" />
+      <img src="https://1335491680630997034.discordsays.com/.proxy/monitors/2" />
       <!--<p>
         <script>
           document.write(`<iframe width="560" height="315" allow="autoplay" modestbranding="true" src="https://www.youtube.com/embed/live_stream?channel=UCPaZDuwY1sJOb5l-QHm9mDw&origin=${window.location.origin}&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`)
@@ -930,25 +929,7 @@
   </div>
 
   <div class="container timeline">
-    <h2>Browsing Activity</h2><div class="history-item"><h3 class="time">2025</h3></div><div class="history-item"><span class="time">1/31 9:13 am</span><span class="content">11mlabs/indri-0.1-124m-tts-GGUF · Hugging Face  <a target="_blank" href="https://huggingface.co/11mlabs/indri-0.1-124m-tts-GGUF">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:21 am</span><span class="content">Messages  <a target="_blank" href="https://messages.google.com/web/conversations">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:30 am</span><span class="content">blender extend based on greyscale - Google Search  <a target="_blank" href="https://www.google.com/search?q=blender+extend+based+on+greyscale&oq=blender+extend+based+on+greyscale&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEwMDg5ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:30 am</span><span class="content">blender extrude using grayscale image - Google Search  <a target="_blank" href="https://www.google.com/search?q=blender+extrude+using+grayscale+image&sca_esv=bbddf6f6e47022e4&sxsrf=AHTn8zq2WqWV0cioox02M3kgcOQ9OFbubw%3A1738340188742&ei=XPecZ4z9LO6x0PEPu7rs0Ak&ved=0ahUKEwiMm8vrraCLAxXuGDQIHTsdG5oQ4dUDCBA&uact=5&oq=blender+extrude+using+grayscale+image&gs_lp=Egxnd3Mtd2l6LXNlcnAiJWJsZW5kZXIgZXh0cnVkZSB1c2luZyBncmF5c2NhbGUgaW1hZ2UyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKsCSOw9UOkGWN88cAV4AJABAJgBgwGgAf4bqgEFMTAuMjS4AQPIAQD4AQGYAiagArYbwgIKEAAYsAMY1gQYR8ICBBAjGCfCAgsQABiABBiRAhiKBcICEBAuGIAEGLEDGNEDGMcBGArCAgoQABiABBhDGIoFwgIFEAAYgATCAgcQABiABBgKwgIGEAAYFhgewgIFECEYnwXCAgsQABiABBiGAxiKBcICCBAAGIAEGKIEwgIFEAAY7wWYAwCIBgGQBgKSBwUxNS4yM6AH9qkB&sclient=gws-wiz-serp">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:34 am</span><span class="content">Blend-Exchange  <a target="_blank" href="https://blend-exchange.giantcowfilms.com/b/1148/">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:34 am</span><span class="content">Blend-Exchange  <a target="_blank" href="https://blend-exchange.com/b/AxQewNlb">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:34 am</span><span class="content">Blend-Exchange  <a target="_blank" href="https://blend-exchange.com/b/1148/">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:35 am</span><span class="content">Messages  <a target="_blank" href="https://messages.google.com/web/conversations/0682eae9180db8816eecfe2c38c51675">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:35 am</span><span class="content">Messages  <a target="_blank" href="https://messages.google.com/web/conversations/6898f12b3921f58b4044443dd91fa978">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:35 am</span><span class="content">Messages  <a target="_blank" href="https://messages.google.com/web/conversations/30fbaadda75c4e45409bdfb1267e9c41">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:35 am</span><span class="content">Messages  <a target="_blank" href="https://messages.google.com/web/conversations/9cf5df23d1ad75e6373b641bb4daf2ca">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:35 am</span><span class="content">Messages  <a target="_blank" href="https://messages.google.com/web/conversations/64a84dea9d115b22e2f571114327d123">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:52 am</span><span class="content">jupyter - Google Search  <a target="_blank" href="https://www.google.com/search?q=jupyter&oq=jupyter+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhBMgYIAhBFGEHSAQgyNDA3ajBqN6gCD7ACAQ&client=ms-android-google&sourceid=chrome-mobile&ie=UTF-8">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:52 am</span><span class="content">Project Jupyter | Home  <a target="_blank" href="https://jupyter.org/">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:56 am</span><span class="content">bind9 github - Google Search  <a target="_blank" href="https://www.google.com/search?q=bind9+github&oq=bind9+github&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE4OTVqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 9:56 am</span><span class="content">isc-projects/bind9: Mirror of https://gitlab.isc.org/isc-projects/bind9, please submit issues and PR  <a target="_blank" href="https://github.com/isc-projects/bind9">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 10:05 am</span><span class="content">qxWrA.png (1150×656)  <a target="_blank" href="https://i.sstatic.net/qxWrA.png">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 10:05 am</span><span class="content">3d printing - Extrude the outside of a cylinder using a grayscale image - Blender Stack Exchange  <a target="_blank" href="https://blender.stackexchange.com/questions/49629/extrude-the-outside-of-a-cylinder-using-a-grayscale-image">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">1/31 10:45 am</span><span class="content">discord integration point and click - Google Search  <a target="_blank" href="https://www.google.com/search?q=discord+integration+point+and+click&oq=discord+integration+point+and+click&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEwNjg4ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
+    <h2>Browsing Activity</h2><div class="history-item"><h3 class="time">2025</h3></div><div class="history-item"><span class="time">1/31 10:45 am</span><span class="content">discord integration point and click - Google Search  <a target="_blank" href="https://www.google.com/search?q=discord+integration+point+and+click&oq=discord+integration+point+and+click&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEwNjg4ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">1/31 10:46 am</span><span class="content">Remote play support built inside discord as a new activity/feature : r/discordapp  <a target="_blank" href="https://www.reddit.com/r/discordapp/comments/12su344/remote_play_support_built_inside_discord_as_a_new/">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">1/31 10:46 am</span><span class="content">discord integration remote play - Google Search  <a target="_blank" href="https://www.google.com/search?q=discord+integration+remote+play&sca_esv=46569ed30a7cac77&sxsrf=AHTn8zqiJlbAJQUhJYOpj4ckE7DfNgJF5g%3A1738345136476&ei=sAqdZ63bHPK90PEP88mjmQ8&ved=0ahUKEwit8-yiwKCLAxXyHjQIHfPkKPMQ4dUDCBA&uact=5&oq=discord+integration+remote+play&gs_lp=Egxnd3Mtd2l6LXNlcnAiH2Rpc2NvcmQgaW50ZWdyYXRpb24gcmVtb3RlIHBsYXkyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKsCMgUQIRirAjIFECEYqwJI0CRQ2xNY-SBwAngBkAEAmAG2AaABpwuqAQQxLjEwuAEDyAEA-AEBmAINoALCC8ICChAAGLADGNYEGEfCAgUQABiABMICBhAAGBYYHsICCxAAGIAEGIYDGIoFwgIIEAAYgAQYogTCAgUQABjvBcICBRAhGJ8FmAMAiAYBkAYIkgcEMy4xMKAH500&sclient=gws-wiz-serp">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">1/31 10:47 am</span><span class="content">Use Stream Webhooks To Build a Discord Bot  <a target="_blank" href="https://www.speckle.systems/tutorials/webhooks-discord-tutorial">link &nearr;</a></span></div>
@@ -1119,8 +1100,6 @@
 <div class="history-item"><span class="time">2/1 10:46 am</span><span class="content">Discord  <a target="_blank" href="https://support.discord.com/hc/en-us">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 10:46 am</span><span class="content">discord/embedded-app-sdk: 🚀 The Discord Embedded App SDK lets you build rich, multiplayer experienc  <a target="_blank" href="https://github.com/discord/embedded-app-sdk/tree/main">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 10:46 am</span><span class="content">embedded-app-sdk/src/utils at main · discord/embedded-app-sdk  <a target="_blank" href="https://github.com/discord/embedded-app-sdk/tree/main/src/utils">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/1 10:46 am</span><span class="content">embedded-app-sdk/src at main · discord/embedded-app-sdk  <a target="_blank" href="https://github.com/discord/embedded-app-sdk/tree/main/src">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/1 10:46 am</span><span class="content">embedded-app-sdk/src/commands at main · discord/embedded-app-sdk  <a target="_blank" href="https://github.com/discord/embedded-app-sdk/tree/main/src/commands">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 10:49 am</span><span class="content">Create a locally-managed tunnel (CLI) · Cloudflare Zero Trust docs  <a target="_blank" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-local-tunnel/">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 11:14 am</span><span class="content">Discord Developer Portal — My Applications  <a target="_blank" href="https://discord.com/developers/applications/1328141471840206899/embedded/url-mappings">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 11:14 am</span><span class="content">Discord Developer Portal — Documentation — Development Guides  <a target="_blank" href="https://discord.com/developers/docs/activities/development-guides#url-mapping">link &nearr;</a></span></div>
@@ -1217,7 +1196,6 @@
 <div class="history-item"><span class="time">2/1 3:05 pm</span><span class="content">noVNC  <a target="_blank" href="https://1328141471840206899.discordsays.com/.proxy/brians-macbook-m1.local:6080/vnc.html?host=1328141471840206899.discordsays.com/.proxy/brians-macbook-m1.local:6080&port=80">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 3:06 pm</span><span class="content">noVNC  <a target="_blank" href="https://1328141471840206899.discordsays.com/.proxy/brians-macbook-m1.local:6080/vnc.html?host=brians-macbook-m1.local:6080&port=80">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 3:12 pm</span><span class="content">noVNC  <a target="_blank" href="https://1328141471840206899.discordsays.com/.proxy/brians-macbook-m1.local:6080/vnc.html?host=Brians-MacBook-M1.local&port=6080">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/1 3:15 pm</span><span class="content">embedded-app-sdk/src/schema/responses.ts at main · discord/embedded-app-sdk  <a target="_blank" href="https://github.com/discord/embedded-app-sdk/blob/main/src/schema/responses.ts#L109">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 3:27 pm</span><span class="content">Discord Developer Portal — Documentation — Development Guides  <a target="_blank" href="https://discord.com/developers/docs/activities/development-guides">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 3:28 pm</span><span class="content">Discord Developer Portal — Documentation — Development Guides  <a target="_blank" href="https://discord.com/developers/docs/activities/development-guides#launch-your-application-from-the-discord-client">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 3:29 pm</span><span class="content">Brian Cullinan's Live Resume  <a target="_blank" href="https://briancullinan.com/#SSMenuAgent">link &nearr;</a></span></div>
@@ -1275,14 +1253,12 @@
 <div class="history-item"><span class="time">2/1 5:38 pm</span><span class="content">I created a simple node script to move your mouse around : r/webdev  <a target="_blank" href="https://www.reddit.com/r/webdev/comments/znknem/i_created_a_simple_node_script_to_move_your_mouse/">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 5:38 pm</span><span class="content">mouse-position - npm  <a target="_blank" href="https://www.npmjs.com/package/mouse-position">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 5:38 pm</span><span class="content">nodejs control mouse position - Google Search  <a target="_blank" href="https://www.google.com/search?q=nodejs+control+mouse+position&oq=nodejs+contro&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBggCEEUYQNIBCDI0ODZqMGo0qAIAsAIA&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/1 5:44 pm</span><span class="content">andstor/mouse-controller: :mouse: Node.js C++ Addon for emulating mouse behavior  <a target="_blank" href="https://github.com/andstor/mouse-controller">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 6:02 pm</span><span class="content">mouse-controller/cppsrc/main.cpp at master · andstor/mouse-controller  <a target="_blank" href="https://github.com/andstor/mouse-controller/blob/master/cppsrc/main.cpp">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 6:03 pm</span><span class="content">mouse-controller/cppsrc/mouse_wrap.h at master · andstor/mouse-controller  <a target="_blank" href="https://github.com/andstor/mouse-controller/blob/master/cppsrc/mouse_wrap.h">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 6:03 pm</span><span class="content">mouse-controller/cppsrc/mouse_wrap.cpp at master · andstor/mouse-controller  <a target="_blank" href="https://github.com/andstor/mouse-controller/blob/master/cppsrc/mouse_wrap.cpp">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 6:03 pm</span><span class="content">mouse-controller/cppsrc/macos/mouse.cpp at master · andstor/mouse-controller  <a target="_blank" href="https://github.com/andstor/mouse-controller/blob/master/cppsrc/macos/mouse.cpp">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 6:08 pm</span><span class="content">mouse-controller/cppsrc/macos at master · andstor/mouse-controller  <a target="_blank" href="https://github.com/andstor/mouse-controller/tree/master/cppsrc/macos">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 6:08 pm</span><span class="content">mouse-controller/cppsrc at master · andstor/mouse-controller  <a target="_blank" href="https://github.com/andstor/mouse-controller/tree/master/cppsrc">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/1 6:08 pm</span><span class="content">mouse-controller/cppsrc/mouse.h at master · andstor/mouse-controller  <a target="_blank" href="https://github.com/andstor/mouse-controller/blob/master/cppsrc/mouse.h">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 6:23 pm</span><span class="content">ffi-rs - Google Search  <a target="_blank" href="https://www.google.com/search?q=ffi-rs&oq=ffi-rs&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDI5MDNqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 6:23 pm</span><span class="content">ffi-rs - npm  <a target="_blank" href="https://www.npmjs.com/package/ffi-rs">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 6:26 pm</span><span class="content">mac permission for moving mouse automatically - Google Search  <a target="_blank" href="https://www.google.com/search?q=mac+permission+for+moving+mouse+automatically&oq=mac+permission+for+moving+mouse+automatically&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTg0NDdqMGoxNagCCLACAQ&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
@@ -1375,7 +1351,6 @@
 <div class="history-item"><span class="time">2/1 11:25 pm</span><span class="content">Discord Developer Portal — Documentation — Application Commands  <a target="_blank" href="https://discord.com/developers/docs/interactions/application-commands#entry-point-handlers">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 11:25 pm</span><span class="content">Discord Developer Portal — Documentation — Application Commands  <a target="_blank" href="https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-types">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 11:26 pm</span><span class="content">Discord Developer Portal — My Applications  <a target="_blank" href="https://discord.com/developers/applications/1335491680630997034/embedded/url-mappings">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/1 11:27 pm</span><span class="content">Discord Developer Portal — My Applications  <a target="_blank" href="https://discord.com/developers/applications/1335491680630997034/embedded/settings">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 11:47 pm</span><span class="content">I have this publicly accessible folder which I want to beautify, what's the most painless way to tac  <a target="_blank" href="https://www.reddit.com/r/webdev/comments/z7ud2y/i_have_this_publicly_accessible_folder_which_i/">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 11:47 pm</span><span class="content">I have this publicly accessible folder which I want to beautify, what's the most painless way to tac  <a target="_blank" href="https://www.reddit.com/r/webdev/comments/z7ud2y/i_have_this_publicly_accessible_folder_which_i/?rdt=42678">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/1 11:47 pm</span><span class="content">nodejs beautiful html directory listing - Google Search  <a target="_blank" href="https://www.google.com/search?q=nodejs+beautiful+html+directory+listing&oq=nodejs+beautiful+html+directory+listing&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTIxNDY3ajBqN6gCD7ACAQ&client=ms-android-google&sourceid=chrome-mobile&ie=UTF-8">link &nearr;</a></span></div>
@@ -1400,7 +1375,28 @@
 <div class="history-item"><span class="time">2/2 8:57 am</span><span class="content">javascript - Refresh image with a new one at the same url - Stack Overflow  <a target="_blank" href="https://stackoverflow.com/questions/1077041/refresh-image-with-a-new-one-at-the-same-url">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/2 8:58 am</span><span class="content">nashaofu/node-screenshots: Zero-dependent. A native nodejs screenshots library for Mac、Windows、Linux  <a target="_blank" href="https://github.com/nashaofu/node-screenshots">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/2 9:02 am</span><span class="content">javascript css baground image - Google Search  <a target="_blank" href="https://www.google.com/search?q=javascript+css+baground+image&oq=javascript+css+baground+image&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDYyNDhqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/2 9:08 am</span><span class="content">1335491680630997034.discordsays.com/.proxy/  <a target="_blank" href="https://1335491680630997034.discordsays.com/.proxy/">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 9:28 am</span><span class="content">mouse-controller/cppsrc/mouse.h at master · andstor/mouse-controller  <a target="_blank" href="https://github.com/andstor/mouse-controller/blob/master/cppsrc/mouse.h">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 9:28 am</span><span class="content">andstor/mouse-controller: :mouse: Node.js C++ Addon for emulating mouse behavior  <a target="_blank" href="https://github.com/andstor/mouse-controller">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 9:35 am</span><span class="content">embedded-app-sdk/src/schema/responses.ts at main · discord/embedded-app-sdk  <a target="_blank" href="https://github.com/discord/embedded-app-sdk/blob/main/src/schema/responses.ts#L109">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 9:35 am</span><span class="content">embedded-app-sdk/src at main · discord/embedded-app-sdk  <a target="_blank" href="https://github.com/discord/embedded-app-sdk/tree/main/src">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 9:35 am</span><span class="content">embedded-app-sdk/src/commands/setOrientationLockState.ts at main · discord/embedded-app-sdk  <a target="_blank" href="https://github.com/discord/embedded-app-sdk/blob/main/src/commands/setOrientationLockState.ts">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 9:36 am</span><span class="content">embedded-app-sdk/src/commands at main · discord/embedded-app-sdk  <a target="_blank" href="https://github.com/discord/embedded-app-sdk/tree/main/src/commands">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 9:36 am</span><span class="content">discord activity allow rotation - Google Search  <a target="_blank" href="https://www.google.com/search?q=discord+activity+allow+rotation&oq=discord+activity+allow+rotation&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDk4MjRqMGo0qAIAsAIA&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 9:36 am</span><span class="content">Discord Developer Portal — My Applications  <a target="_blank" href="https://discord.com/developers/applications/1335491680630997034/embedded/settings">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 9:57 am</span><span class="content">javascript missing image border - Google Search  <a target="_blank" href="https://www.google.com/search?q=javascript+missing+image+border&oq=javascript+missing+image+border&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDQzNDVqMGo5qAIAsAIB&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 9:57 am</span><span class="content">jquery - Remove image border using javascript - Stack Overflow  <a target="_blank" href="https://stackoverflow.com/questions/21860589/remove-image-border-using-javascript">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:07 am</span><span class="content">blank transparent png image - Google Search  <a target="_blank" href="https://www.google.com/search?q=blank+transparent+png+image&oq=blank+transparent+png+image&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDc3NjVqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:07 am</span><span class="content">blank transparent png image - Google Search  <a target="_blank" href="https://www.google.com/search?q=blank+transparent+png+image&oq=blank+transparent+png+image&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDc3NjVqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8#vhid=38zN52Hhu5PJWM&vssid=_uKSfZ5bmDcrQkPIP9oyiqAM_76">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:07 am</span><span class="content">blank transparent png image - Google Search  <a target="_blank" href="https://www.google.com/search?sca_esv=7c3ad310126f4d50&sxsrf=AHTn8zom1LrnO0Bk-OJUU1m3MWo6ulYuXA:1738515640231&q=blank+transparent+png+image&udm=2&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBtmuEdhfywyzhendkLDnhcq4Fx59GJo42IHin57PCNq1BCLfVKQIWPymDGFj2PR-DSz9AKdvScPNG1zf5KhAmiXA2AihCAO4o-7j1F8q-hjKxPAAHZun3MN3MT8s6xwh-G2N4jwUKA426uqWUvtCstjt-MshT_MrRx1l7bLbMoTh5ehWSQ&sa=X&ved=2ahUKEwiWorC5u6WLAxVKKEQIHXaGCDUQtKgLegQIERAB&biw=1707&bih=823&dpr=1.5">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:08 am</span><span class="content">blank transparent png image - Google Search  <a target="_blank" href="https://www.google.com/search?sca_esv=7c3ad310126f4d50&sxsrf=AHTn8zom1LrnO0Bk-OJUU1m3MWo6ulYuXA:1738515640231&q=blank+transparent+png+image&udm=2&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBtmuEdhfywyzhendkLDnhcq4Fx59GJo42IHin57PCNq1BCLfVKQIWPymDGFj2PR-DSz9AKdvScPNG1zf5KhAmiXA2AihCAO4o-7j1F8q-hjKxPAAHZun3MN3MT8s6xwh-G2N4jwUKA426uqWUvtCstjt-MshT_MrRx1l7bLbMoTh5ehWSQ&sa=X&ved=2ahUKEwiWorC5u6WLAxVKKEQIHXaGCDUQtKgLegQIERAB&biw=1707&bih=823&dpr=1.5#vhid=lxS8xVdSRTc4tM&vssid=mosaic">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:09 am</span><span class="content">blank transparent png image 1x1 - Google Search  <a target="_blank" href="https://www.google.com/search?q=blank+transparent+png+image+1x1&sca_esv=7c3ad310126f4d50&udm=2&biw=1707&bih=823&sxsrf=AHTn8zptSizvdUv_FsuqVwRFyD9s6WHTDA%3A1738515651679&ei=w6SfZ8WWKbTPkPIPo-PAyQg&ved=0ahUKEwiFhOu-u6WLAxW0J0QIHaMxMIkQ4dUDCBE&uact=5&oq=blank+transparent+png+image+1x1&gs_lp=EgNpbWciH2JsYW5rIHRyYW5zcGFyZW50IHBuZyBpbWFnZSAxeDFIjBdQjgpYpRRwAXgAkAEAmAF1oAGwA6oBAzEuM7gBA8gBAPgBAZgCAqACW8ICBRAAGIAEwgIEEAAYHpgDAIgGAZIHATKgB9oB&sclient=img">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:09 am</span><span class="content">blank transparent png image 1x1 - Google Search  <a target="_blank" href="https://www.google.com/search?q=blank+transparent+png+image+1x1&sca_esv=7c3ad310126f4d50&udm=2&biw=1707&bih=823&sxsrf=AHTn8zptSizvdUv_FsuqVwRFyD9s6WHTDA%3A1738515651679&ei=w6SfZ8WWKbTPkPIPo-PAyQg&ved=0ahUKEwiFhOu-u6WLAxW0J0QIHaMxMIkQ4dUDCBE&uact=5&oq=blank+transparent+png+image+1x1&gs_lp=EgNpbWciH2JsYW5rIHRyYW5zcGFyZW50IHBuZyBpbWFnZSAxeDFIjBdQjgpYpRRwAXgAkAEAmAF1oAGwA6oBAzEuM7gBA8gBAPgBAZgCAqACW8ICBRAAGIAEwgIEEAAYHpgDAIgGAZIHATKgB9oB&sclient=img#vhid=gsAdbnYjNiXeqM&vssid=mosaic">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:10 am</span><span class="content">convert image to data uri - Google Search  <a target="_blank" href="https://www.google.com/search?q=convert+image+to+data+uri&oq=convert+image+to+data+uri&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDM4MzBqMGo5qAIAsAIB&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:10 am</span><span class="content">Image to data URI converter  <a target="_blank" href="https://ezgif.com/image-to-datauri">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:10 am</span><span class="content">PAk+vE.png - Image to data URI converter  <a target="_blank" href="https://ezgif.com/image-to-datauri/ezgif-4a8088f6c8175.png">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:10 am</span><span class="content">1335491680630997034.discordsays.com/.proxy/  <a target="_blank" href="https://1335491680630997034.discordsays.com/.proxy/">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:12 am</span><span class="content">nodejs image magick - Google Search  <a target="_blank" href="https://www.google.com/search?q=nodejs+image+magick&oq=nodejs+image+magick&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDMyNzBqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/2 10:12 am</span><span class="content">imagemagick - npm  <a target="_blank" href="https://www.npmjs.com/package/imagemagick">link &nearr;</a></span></div>
 
   </div>
 
