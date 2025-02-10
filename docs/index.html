@@ -297,11 +297,11 @@
 <li class=""><a href="#Fork">
 		<label for="win-Fork">Fork</a></label>
 		</li>
-<li class=""><a href="#Code">
-		<label for="win-Code">Code</a></label>
-		</li>
 <li class=""><a href="#Finder">
 		<label for="win-Finder">Finder</a></label>
+		</li>
+<li class=""><a href="#Code">
+		<label for="win-Code">Code</a></label>
 		</li>
 <li class="active"><a href="#Google Chrome">
 		<label for="win-Google Chrome">Google Chrome</a></label>
@@ -1412,7 +1412,7 @@
 <div class="history-item"><span class="time">2/9 7:26 pm</span><span class="content">display flex fill height - Google Search  <a target="_blank" href="https://www.google.com/search?q=display+flex+fill+height&sca_esv=c57b83b6bb29b91f&sxsrf=AHTn8zqb5rxcht7VU6fM3bPyKhl_0XUuXA%3A1739153036220&ei=jF6pZ7qRDbTz0PEPi_rsqAQ&ved=0ahUKEwi6h7z3gbiLAxW0OTQIHQs9G0UQ4dUDCBA&uact=5&oq=display+flex+fill+height&gs_lp=Egxnd3Mtd2l6LXNlcnAiGGRpc3BsYXkgZmxleCBmaWxsIGhlaWdodDIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeMgsQABiABBiGAxiKBTILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIESNXIKFCxsChY38YocAR4AZABAJgBqAGgAdYUqgEENC4yMLgBA8gBAPgBAZgCHKACnxXCAgoQABiwAxjWBBhHwgILEAAYgAQYkQIYigXCAgsQABiABBixAxiDAcICDhAuGIAEGLEDGNEDGMcBwgIIEAAYgAQYsQPCAgsQLhiABBjRAxjHAcICDhAAGIAEGLEDGIMBGIoFwgIIEC4YgAQYsQPCAgoQABiABBhDGIoFwgIQEAAYgAQYsQMYQxiDARiKBcICChAjGIAEGCcYigXCAgQQIxgnwgILEAAYgAQYsQMYyQPCAggQABiABBiSA8ICDhAuGIAEGJIDGMcBGK8BwgITEC4YgAQYsQMY0QMYQxjHARiKBcICChAAGIAEGLEDGArCAgcQABiABBgKwgIKEAAYgAQYFBiHAsICBRAAGO8FmAMAiAYBkAYIkgcENi4yMqAHl6MB&sclient=gws-wiz-serp">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/9 7:26 pm</span><span class="content">css - How can I make Flexbox children 100% height of their parent? - Stack Overflow  <a target="_blank" href="https://stackoverflow.com/questions/15381172/how-can-i-make-flexbox-children-100-height-of-their-parent">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/9 7:36 pm</span><span class="content">javascript check for enter keypress - Google Search  <a target="_blank" href="https://www.google.com/search?q=javascript+check+for+enter+keypress&oq=javascript+check+for+enter+keypress&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDU5NjBqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/9 7:42 pm</span><span class="content">Brian Cullinan's Live Resume  <a target="_blank" href="http://127.0.0.1:8080/">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/9 7:43 pm</span><span class="content">Brian Cullinan's Live Resume  <a target="_blank" href="http://127.0.0.1:8080/">link &nearr;</a></span></div>
 
   </div>
 
@@ -4304,9 +4304,10 @@ In summary, matter that falls into a black hole is essentially lost from our obs
 
   <script>
     async function sendHandler(evt) {
-      let messageHistory = document.querySelector('#messages')
-      let chatBox = document.querySelector('#chat-program textarea')
       if (event.key === 'Enter') {
+        let session = localStorage.getItem('brian-chat-session')
+        let messageHistory = document.querySelector('#messages')
+        let chatBox = document.querySelector('#chat-program textarea')
         messageHistory.innerHTML += '<p>User: ' + chatBox.value + '</p>'
         let messagePost = {
           method: 'POST',

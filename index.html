@@ -1536,9 +1536,10 @@
 
   <script>
     async function sendHandler(evt) {
-      let messageHistory = document.querySelector('#messages')
-      let chatBox = document.querySelector('#chat-program textarea')
       if (event.key === 'Enter') {
+        let session = localStorage.getItem('brian-chat-session')
+        let messageHistory = document.querySelector('#messages')
+        let chatBox = document.querySelector('#chat-program textarea')
         messageHistory.innerHTML += '<p>User: ' + chatBox.value + '</p>'
         let messagePost = {
           method: 'POST',
