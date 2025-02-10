@@ -1536,6 +1536,8 @@
 
   <script>
     async function sendHandler(evt) {
+      let messageHistory = document.querySelector('#messages')
+      let chatBox = document.querySelector('#chat-program textarea')
       if (event.key === 'Enter') {
         messageHistory.innerHTML += '<p>User: ' + chatBox.value + '</p>'
         let messagePost = {
@@ -1562,8 +1564,6 @@
       document.querySelector('#chat-program').innerHTML = await result.text()
 
       setTimeout(() => {
-        let messageHistory = document.querySelector('#messages')
-        let chatBox = document.querySelector('#chat-program textarea')
         document.querySelector('#chat-program textarea').addEventListener('keypress', sendHandler)
         document.querySelector('#chat-program button').addEventListener('click', sendHandler)
       }, 100)
