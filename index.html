@@ -1535,6 +1535,18 @@
   </div>
 
   <script>
+    async function sendHandler(evt) {
+      if (event.key === 'Enter') {
+        messageHistory.innerHTML += '<p>User: ' + chatBox.value + '</p>'
+        let messagePost = {
+          method: 'POST',
+          body: JSON.stringify(chatBox.value)
+        }
+        chatBox.value = ''
+        let result = await fetch('https://brian-chat.pryor.games/?session=' + session + '&t=' + Date.now(), messagePost)
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', async (event) => {
       let session = localStorage.getItem('brian-chat-session')
       if(!session) {
@@ -1552,17 +1564,8 @@
       setTimeout(() => {
         let messageHistory = document.querySelector('#messages')
         let chatBox = document.querySelector('#chat-program textarea')
-        document.querySelector('#chat-program button').addEventListener('keypress', async evt => {
-          if (event.key === 'Enter') {
-            messageHistory.innerHTML += '<p>User: ' + chatBox.value + '</p>'
-            let messagePost = {
-              method: 'POST',
-              body: JSON.stringify(chatBox.value)
-            }
-            chatBox.value = ''
-            let result = await fetch('https://brian-chat.pryor.games/?session=' + session + '&t=' + Date.now(), messagePost)
-          }
-        })
+        document.querySelector('#chat-program textarea').addEventListener('keypress', sendHandler)
+        document.querySelector('#chat-program button').addEventListener('click', sendHandler)
       }, 100)
     })
   </script>
