@@ -1544,7 +1544,7 @@
         messageHistory.innerHTML += '<p>User: ' + chatBox.value + '</p>'
         let messagePost = {
           method: 'POST',
-          body: JSON.stringify(chatBox.value)
+          body: JSON.stringify({content: chatBox.value})
         }
         chatBox.value = ''
         setTimeout(async () => {
