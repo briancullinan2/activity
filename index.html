@@ -1535,8 +1535,14 @@
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", async (event) => {
-      let result = await fetch('https://brian-chat.pryor.games/', {
+    document.addEventListener('DOMContentLoaded', async (event) => {
+      let session = localStorage.getItem('brian-chat-session')
+      if(!session) {
+        localStorage.setItem('brian-chat-session', (session = crypto.randomBytes(16).toString('hex')));
+      }
+
+
+      let result = await fetch('https://brian-chat.pryor.games/?session=' + session, {
         method: 'GET'
       })
       document.querySelector('#chat-program').innerHTML = await result.text()
