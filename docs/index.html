@@ -327,10 +327,20 @@
         // TODO: refresh images
         let images = document.querySelectorAll('.livedev > img')
         for(let i = 0; i < images.length; i++) {
-          images[i].src += images[i].src.replace(/\?.*/, '') + '?t=' + Date.now()
-          images[i].style.backgroundImage = "url('" + encodeURI(images[i].src) + "')"
+          if(images[i].src && !images[i].getAttribute('original-src')) {
+            images[i].setAttribute('original-src', images[i].src)
+          }
+          let originalImage = images[i].getAttribute('original-src')
+          let newImage = originalImage.replace(/\?.*/, '') + '?t=' + Date.now()
+          // set background to previous image
+          if(images[i].src) {
+            images[i].style.backgroundImage = "url('" + encodeURI(images[i].src) + "')"
+          }
+          setTimeout(() => {
+            images[i].src = newImage
+          }, 100)
         }
-      }, 5000)
+      }, 1000)
     </script>
     <div class="livedev">
       <img src="https://1335491680630997034.discordsays.com/.proxy/monitors/0" />
@@ -944,10 +954,7 @@
   </div>
 
   <div class="container timeline">
-    <h2>Browsing Activity</h2><div class="history-item"><h3 class="time">2025</h3></div><div class="history-item"><span class="time">2/7 6:21 pm</span><span class="content">error: no matching function for call to 'alignTo' - Google Search  <a target="_blank" href="https://www.google.com/search?q=error%3A+no+matching+function+for+call+to+%27alignTo%27&sca_esv=6842d0e1526f3b6d&sxsrf=AHTn8zogg1issrrm0hppn2AotACSXi2M0g%3A1738977205827&ei=ta-mZ4eSMpaw0PEP3sPQiAk&ved=0ahUKEwjHwID18rKLAxUWGDQIHd4hFJEQ4dUDCBA&uact=5&oq=error%3A+no+matching+function+for+call+to+%27alignTo%27&gs_lp=Egxnd3Mtd2l6LXNlcnAiMWVycm9yOiBubyBtYXRjaGluZyBmdW5jdGlvbiBmb3IgY2FsbCB0byAnYWxpZ25UbycyBxAhGKABGAoyBxAhGKABGAoyBxAhGKABGAoyBxAhGKABGApI1A9QvQNY9wpwAngBkAEAmAGRAaABlAKqAQMwLjK4AQPIAQD4AQL4AQGYAgSgAqICwgIKEAAYsAMY1gQYR8ICBRAhGKsCmAMAiAYBkAYIkgcDMi4yoAf7Dg&sclient=gws-wiz-serp">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/7 6:22 pm</span><span class="content">isatty on mac - Google Search  <a target="_blank" href="https://www.google.com/search?q=isatty+on+mac&sca_esv=6842d0e1526f3b6d&sxsrf=AHTn8zpCv91fL96yvkWrJe2mSwrddVZMhg%3A1738977274357&ei=-q-mZ9eJFaKv0PEP4ai9gAc&ved=0ahUKEwjX7taV87KLAxWiFzQIHWFUD3AQ4dUDCBA&uact=5&oq=isatty+on+mac&gs_lp=Egxnd3Mtd2l6LXNlcnAiDWlzYXR0eSBvbiBtYWMyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRirAkjLG1CKA1ikGnACeACQAQCYAXugAdEHqgEDMC45uAEDyAEA-AEC-AEBmAILoALuB8ICDhAAGIAEGLADGIYDGIoFwgIIEAAYsAMY7wXCAgsQABiABBiwAxiiBMICBRAAGIAEwgIEEAAYHsICBhAAGAoYHsICBhAAGBYYHsICCxAAGIAEGIYDGIoFwgIIEAAYgAQYogTCAgUQABjvBcICBRAhGJ8FmAMAiAYBkAYGkgcDMi45oAeQIw&sclient=gws-wiz-serp">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/7 6:22 pm</span><span class="content">Mac OS X Manual Page For isatty(3)  <a target="_blank" href="https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/isatty.3.html">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/7 6:33 pm</span><span class="content">error: cast from pointer to smaller type 'uint32_t' (aka 'unsigned int') loses information - Google   <a target="_blank" href="https://www.google.com/search?q=error%3A+cast+from+pointer+to+smaller+type+%27uint32_t%27+(aka+%27unsigned+int%27)+loses+information&oq=error%3A+cast+from+pointer+to+smaller+type+%27uint32_t%27+(aka+%27unsigned+int%27)+loses+information&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEHODI3ajBqNKgCALACAQ&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
+    <h2>Browsing Activity</h2><div class="history-item"><h3 class="time">2025</h3></div><div class="history-item"><span class="time">2/7 6:33 pm</span><span class="content">error: cast from pointer to smaller type 'uint32_t' (aka 'unsigned int') loses information - Google   <a target="_blank" href="https://www.google.com/search?q=error%3A+cast+from+pointer+to+smaller+type+%27uint32_t%27+(aka+%27unsigned+int%27)+loses+information&oq=error%3A+cast+from+pointer+to+smaller+type+%27uint32_t%27+(aka+%27unsigned+int%27)+loses+information&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEHODI3ajBqNKgCALACAQ&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/7 6:35 pm</span><span class="content">www.linuxquestions.org | 502: Bad gateway  <a target="_blank" href="https://www.linuxquestions.org/questions/programming-9/error-unknown-register-name-%27eax%27-in-%27asm%27-868680/">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/7 6:35 pm</span><span class="content">error: unknown register name 'eax' in asm - Google Search  <a target="_blank" href="https://www.google.com/search?q=error%3A+unknown+register+name+%27eax%27+in+asm&sca_esv=6842d0e1526f3b6d&sxsrf=AHTn8zpoNW1YXongQ4aZebQnnKrerzyeNw%3A1738978005329&ei=1bKmZ5LJE7qw0PEPjJSfqAw&ved=0ahUKEwjSh57y9bKLAxU6GDQIHQzKB8UQ4dUDCBA&uact=5&oq=error%3A+unknown+register+name+%27eax%27+in+asm&gs_lp=Egxnd3Mtd2l6LXNlcnAiKWVycm9yOiB1bmtub3duIHJlZ2lzdGVyIG5hbWUgJ2VheCcgaW4gYXNtMgUQABjvBTIFEAAY7wUyBRAAGO8FSKIuUP8DWKErcAN4AZABAJgBkQGgAZAEqgEDMC40uAEDyAEA-AEC-AEBmAIHoAKhBMICChAAGLADGNYEGEfCAgcQIRigARgKmAMAiAYBkAYEkgcDMy40oAfKFg&sclient=gws-wiz-serp">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/7 6:35 pm</span><span class="content">assembly - Fix "error: unknown register name ‘r0’ in ‘asm’" - Stack Overflow  <a target="_blank" href="https://stackoverflow.com/questions/26345720/fix-error-unknown-register-name-r0-in-asm">link &nearr;</a></span></div>
@@ -1382,7 +1389,9 @@
 <div class="history-item"><span class="time">2/9 5:42 pm</span><span class="content">jumping-tigers-remote-desktop - Cloudflare One  <a target="_blank" href="https://one.dash.cloudflare.com/51a701b0edca78ec03514485ae2f9800/networks/tunnels/cfd_tunnel/64d274ab-b0a4-4ef0-9636-e623dd02ac5c/edit?tab=publicHostname">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/9 6:02 pm</span><span class="content">Brian Cullinan's Live Resume  <a target="_blank" href="https://briancullinan.com/">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">2/9 6:12 pm</span><span class="content">mini javascript chat program - Google Search  <a target="_blank" href="https://www.google.com/search?q=mini+javascript+chat+program&oq=mini+javascript+chat+program&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDUwMjNqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
-<div class="history-item"><span class="time">2/9 6:19 pm</span><span class="content">Brian Cullinan's Live Resume  <a target="_blank" href="http://127.0.0.1:8080/">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/9 6:23 pm</span><span class="content">Brian Cullinan's Live Resume  <a target="_blank" href="http://127.0.0.1:8080/">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/9 6:24 pm</span><span class="content">iframe don't load until shown - Google Search  <a target="_blank" href="https://www.google.com/search?q=iframe+don%27t+load+until+shown&oq=iframe+don%27t+load+until+shown&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDY4NzNqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">2/9 6:24 pm</span><span class="content">javascript - Is it possible to not load an iframe in a hidden div, until the div is displayed? - Sta  <a target="_blank" href="https://stackoverflow.com/questions/13437091/is-it-possible-to-not-load-an-iframe-in-a-hidden-div-until-the-div-is-displayed">link &nearr;</a></span></div>
 
   </div>
 

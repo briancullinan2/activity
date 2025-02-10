@@ -286,10 +286,20 @@
         // TODO: refresh images
         let images = document.querySelectorAll('.livedev > img')
         for(let i = 0; i < images.length; i++) {
-          images[i].src += images[i].src.replace(/\?.*/, '') + '?t=' + Date.now()
-          images[i].style.backgroundImage = "url('" + encodeURI(images[i].src) + "')"
+          if(images[i].src && !images[i].getAttribute('original-src')) {
+            images[i].setAttribute('original-src', images[i].src)
+          }
+          let originalImage = images[i].getAttribute('original-src')
+          let newImage = originalImage.replace(/\?.*/, '') + '?t=' + Date.now()
+          // set background to previous image
+          if(images[i].src) {
+            images[i].style.backgroundImage = "url('" + encodeURI(images[i].src) + "')"
+          }
+          setTimeout(() => {
+            images[i].src = newImage
+          }, 100)
         }
-      }, 5000)
+      }, 1000)
     </script>
     <div class="livedev">
       <img src="https://1335491680630997034.discordsays.com/.proxy/monitors/0" />
