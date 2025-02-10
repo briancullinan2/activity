@@ -380,6 +380,29 @@ ul.clipart a {
   visibility: hidden;
 }
 
+#chat-program {
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+#chat-inner {
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 100%;
+}
+
+#chat-inner #messages {
+  height: 100%;
+  display:flex;
+}
+
+#chat-inner #messages textarea {
+  width: 100%;
+}
+
 .iframe input[id="clip-page30"]:checked ~ .pages>li:nth-child(31),
 .iframe input[id="clip-page30"]:checked ~ .pages>li:nth-child(30),
 .iframe input[id="clip-page30"]:checked ~ .pages>li:nth-child(29),
