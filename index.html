@@ -1540,9 +1540,7 @@
       if(!session) {
         const array = new Uint8Array(16)
         window.crypto.getRandomValues(array)
-        debugger
-        
-        localStorage.setItem('brian-chat-session', (session = array.map(byte => byte.toString(16).padStart(2, '0')).join('')));
+        localStorage.setItem('brian-chat-session', (session = Array.from(array).map(byte => byte.toString(16).padStart(2, '0')).join('')));
       }
 
 
