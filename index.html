@@ -1546,6 +1546,8 @@
         }
         chatBox.value = ''
         let result = await fetch('https://brian-chat.pryor.games/?session=' + session + '&t=' + Date.now(), messagePost)
+        evt.preventDefault()
+        return false
       }
     }
 
