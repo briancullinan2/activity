@@ -1541,10 +1541,18 @@
         let session = localStorage.getItem('brian-chat-session')
         let messageHistory = document.querySelector('#messages')
         let chatBox = document.querySelector('#chat-program textarea')
+        let otr = document.querySelector('#chat-program input')
         messageHistory.innerHTML += '<p>User: ' + chatBox.value + '</p>'
         let messagePost = {
           method: 'POST',
-          body: JSON.stringify({session: session, content: chatBox.value})
+          body: JSON.stringify({otr: otr.checked, session: session, content: chatBox.value}),
+          headers: {
+            "Content-Type": "application/json",
+          }
+        }
+        if(chatBox.value.trim() == '') {
+          chatBox.value = ''
+          return
         }
         chatBox.value = ''
         setTimeout(async () => {
