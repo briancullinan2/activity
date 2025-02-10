@@ -1556,10 +1556,11 @@
         }
         chatBox.value = ''
         setTimeout(async () => {
+          messageHistory.scrollTop = messageHistory.scrollTop + 10000
           let result = await fetch('https://brian-chat.pryor.games/?session=' + session + '&t=' + Date.now(), messagePost)
           messageHistory.innerHTML += '<p>AI: ' + await result.text() + '</p>'
           messageHistory.scrollTop = messageHistory.scrollTop + 10000
-        })
+        }, 100)
         return false
       }
     }
