@@ -1519,11 +1519,19 @@
 
   </div>
 
-  <div class="container">
+  <div class="container" id="chat-program">
 
-    
+
   </div>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", async (event) => {
+      let result = await fetch({
+        url: 'https://brian-chat.pryor.games/'
+      })
+      document.querySelector('#chat-program').innerHTML = await result.text()
+    })
+  </script>
 </body>
 
 </html>
