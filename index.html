@@ -1565,7 +1565,7 @@
       }
 
 
-      let result = await fetch('https://brian-chat.pryor.games/?session=' + session + '&t=' + Date.now(), {
+      let result = await fetch('https://brian-chat.pryor.games/embed?session=' + session + '&t=' + Date.now(), {
         method: 'GET'
       })
       document.querySelector('#chat-program').innerHTML = await result.text()

@@ -417,6 +417,7 @@ ul.clipart a {
   min-height: 3em;
   max-height: 30em;
   font-size: 18px;
+  outline:none;
 }
 
 #chat-inner #text-entry button {
