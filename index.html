@@ -1548,6 +1548,22 @@
         method: 'GET'
       })
       document.querySelector('#chat-program').innerHTML = await result.text()
+
+      setTimeout(() => {
+        let messageHistory = document.querySelector('#messages')
+        let chatBox = document.querySelector('#chat-program textarea')
+        document.querySelector('#chat-program button').addEventListener('keypress', async evt => {
+          if (event.key === 'Enter') {
+            messageHistory.innerHTML += '<p>User: ' + chatBox.value + '</p>'
+            let messagePost = {
+              method: 'POST',
+              body: JSON.stringify(chatBox.value)
+            }
+            chatBox.value = ''
+            let result = await fetch('https://brian-chat.pryor.games/?session=' + session + '&t=' + Date.now(), messagePost)
+          }
+        })
+      }, 100)
     })
   </script>
 </body>

@@ -396,11 +396,32 @@ ul.clipart a {
 
 #chat-inner #messages {
   height: 100%;
-  display:flex;
 }
 
-#chat-inner #messages textarea {
+#chat-inner #text-entry {
+  display:flex;
+  border: 2px solid #CCC;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+#chat-inner #text-entry textarea {
   width: 100%;
+  border: none;
+  background-color: #222;
+  color: #EEE;
+  padding: 3px;
+  min-height: 3em;
+  max-height: 30em;
+  font-size: 18px;
+}
+
+#chat-inner #text-entry button {
+  background-color: #222;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .iframe input[id="clip-page30"]:checked ~ .pages>li:nth-child(31),
