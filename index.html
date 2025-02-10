@@ -1535,8 +1535,9 @@
   </div>
 
   <script>
-    async function sendHandler(evt) {
+    function sendHandler(evt) {
       if (event.key === 'Enter') {
+        evt.preventDefault()
         let session = localStorage.getItem('brian-chat-session')
         let messageHistory = document.querySelector('#messages')
         let chatBox = document.querySelector('#chat-program textarea')
@@ -1546,8 +1547,10 @@
           body: JSON.stringify(chatBox.value)
         }
         chatBox.value = ''
-        let result = await fetch('https://brian-chat.pryor.games/?session=' + session + '&t=' + Date.now(), messagePost)
-        evt.preventDefault()
+        setTimeout(async () => {
+          let result = await fetch('https://brian-chat.pryor.games/?session=' + session + '&t=' + Date.now(), messagePost)
+          messageHistory.innerHTML += '<p>AI: ' + await result.text() + '</p>'
+        })
         return false
       }
     }
