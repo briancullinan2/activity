@@ -1485,6 +1485,7 @@ input[id="federal"]:checked ~ .container.federal {
   width: 21cm;
 }
 
+input[id="chat"]:checked ~ div.container:nth-of-type(12),
 input[id="federal"]:checked ~ .container.federal,
 input[id*="previous"]:checked ~ div.container:nth-of-type(10),
 input[id*="writing"]:checked ~ div.container:nth-of-type(9),
