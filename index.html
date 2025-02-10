@@ -1526,8 +1526,8 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", async (event) => {
-      let result = await fetch({
-        url: 'https://brian-chat.pryor.games/'
+      let result = await fetch('https://brian-chat.pryor.games/', {
+        method: 'GET'
       })
       document.querySelector('#chat-program').innerHTML = await result.text()
     })
