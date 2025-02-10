@@ -307,21 +307,6 @@ ul.bookmarks a:hover {
   text-decoration: underline;
 }
 
-/*
-input[id="federal"]:checked ~ * label[for="federal"] {
-  color: #226;
-  background-color: white;
-}
-*/
-
-input[id="federal"]:checked ~ .container:not(.federal):not(.flex) {
-  display: none;
-}
-
-input[id="federal"]:checked ~ .container.federal {
-  display: block;
-  width: 21cm;
-}
 
 h2.mythology,
 ol.mythology,
@@ -1496,6 +1481,12 @@ div.container.federal {
   display: none;
 }
 
+input[id="federal"]:checked ~ .container.federal {
+  width: 21cm;
+}
+
+input[id="federal"]:checked ~ .container.federal,
+input[id*="previous"]:checked ~ div.container:nth-of-type(10),
 input[id*="writing"]:checked ~ div.container:nth-of-type(9),
 input[id*="home"]:checked ~ div.container:nth-of-type(7),
 input[id*="home"]:checked ~ div.container:nth-of-type(6),
