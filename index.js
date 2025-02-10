@@ -93,7 +93,7 @@ async function renderIndex() {
 		+ index.substring(offset, index.length)
 
 
-
+/*
 	let directories = fs.readdirSync(TXT2IMG)
 	console.log(directories)
 	let iframes = ''
@@ -130,7 +130,7 @@ async function renderIndex() {
 	offset = bodyTag.index + bodyTag[0].length
 	index = index.substring(0, offset) + iframes
 		+ index.substring(offset, index.length)
-	
+*/
 
 	fs.writeFileSync(path.join(__dirname, 'docs/index.html'), index)
 }
