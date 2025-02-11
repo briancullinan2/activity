@@ -1535,39 +1535,88 @@
   </div>
 
   <script>
+    let historyIndex = 0
+    let currentValue = ''
     function sendHandler(evt) {
+      let chatBox = document.querySelector('#chat-program textarea')
       if (event.key === 'Enter') {
         evt.preventDefault()
         let session = localStorage.getItem('brian-chat-session')
         let messageHistory = document.querySelector('#messages')
-        let chatBox = document.querySelector('#chat-program textarea')
         let otr = document.querySelector('#chat-program input')
-        messageHistory.innerHTML += '<p>User: ' + chatBox.value + '</p>'
+        messageHistory.innerHTML += '<div class="user"><p>User: ' + chatBox.value + '</p></div>'
         let messagePost = {
           method: 'POST',
-          body: JSON.stringify({otr: otr.checked, session: session, content: chatBox.value}),
+          body: JSON.stringify({ otr: otr.checked, session: session, content: chatBox.value }),
           headers: {
             "Content-Type": "application/json",
           }
         }
-        if(chatBox.value.trim() == '') {
+        if (chatBox.value.trim() == '') {
           chatBox.value = ''
           return
         }
         chatBox.value = ''
+        historyIndex = 0
         setTimeout(async () => {
           messageHistory.scrollTop = messageHistory.scrollTop + 10000
           let result = await fetch('https://brian-chat.pryor.games/?session=' + session + '&t=' + Date.now(), messagePost)
-          messageHistory.innerHTML += '<p>AI: ' + await result.text() + '</p>'
+          if (result.ok) {
+            messageHistory.innerHTML += '<div class="ai">AI: ' + await result.text() + '</div>'
+          }
           messageHistory.scrollTop = messageHistory.scrollTop + 10000
         }, 100)
         return false
+      }
+      if (event.key === 'ArrowUp' && chatBox.scrollTop < 10) {
+        if (historyIndex === 0) {
+          currentValue = chatBox.value
+        }
+        let messageHistory = document.querySelector('#messages')
+        // TODO: adjust according to messages loaded, don't count too high
+        let count = 0
+        let i
+        for (i = messageHistory.childNodes.length - 1; i >= 0 && count < (historyIndex + 1); i--) {
+          if (!messageHistory.childNodes[i].innerText) {
+            continue
+          }
+          if (messageHistory.childNodes[i].innerText.startsWith('User:')) {
+            count++
+          }
+        }
+        if (i > 0) {
+          historyIndex++
+          chatBox.value = messageHistory.childNodes[i + 1].innerText.substring(6)
+        }
+      }
+      if (event.key === 'ArrowDown' && historyIndex > 0) {
+        let messageHistory = document.querySelector('#messages')
+        if (historyIndex === 1) {
+          historyIndex--
+          chatBox.value = currentValue
+        } else {
+          let count = 0
+          let i
+          for (i = messageHistory.childNodes.length - 1; i >= 0 && count < (historyIndex - 1); i--) {
+            if (!messageHistory.childNodes[i].innerText) {
+              continue
+            }
+            if (messageHistory.childNodes[i].innerText.startsWith('User:')) {
+              count++
+            }
+          }
+          if (i > 0) {
+            historyIndex--
+            chatBox.value = messageHistory.childNodes[i + 1].innerText.substring(6)
+          }
+        }
       }
     }
 
     document.addEventListener('DOMContentLoaded', async (event) => {
       let session = localStorage.getItem('brian-chat-session')
-      if(!session) {
+
+      if (!session) {
         const array = new Uint8Array(16)
         window.crypto.getRandomValues(array)
         localStorage.setItem('brian-chat-session', (session = Array.from(array).map(byte => byte.toString(16).padStart(2, '0')).join('')));
@@ -1580,9 +1629,43 @@
       document.querySelector('#chat-program').innerHTML = await result.text()
 
       setTimeout(() => {
-        document.querySelector('#chat-program textarea').addEventListener('keypress', sendHandler)
+        let messageHistory = document.querySelector('#messages')
+        messageHistory.scrollTop = messageHistory.scrollTop + 10000
+        document.querySelector('#chat-program textarea').addEventListener('keyup', sendHandler)
         document.querySelector('#chat-program button').addEventListener('click', sendHandler)
+        // TODO:
+        //document.querySelector('#chat-program #messages').addEventListener('scroll')
       }, 100)
+
+      // in case it takes too long to respond and it errors out in 30 seconds
+      setInterval(async () => {
+        let messageHistory = document.querySelector('#messages')
+        let messagesWithIds = document.querySelectorAll('#messages > *[id]')
+        let messagesWithoutIds = document.querySelectorAll('#messages > *:not([id])')
+        if(messageHistory.scrollTop + messageHistory.clientHeight == messageHistory.scrollHeight) {
+          messageHistory.scrollTop = messageHistory.scrollTop + 10000
+        }
+        if(!messagesWithIds[messagesWithIds.length - 1]) {
+          return
+        }
+        let from = parseInt(messagesWithIds[messagesWithIds.length - 1].id.replace('id-', ''))
+        let result = await fetch('https://brian-chat.pryor.games/embed?session=' + session + '&from=' + (from + 1) + '&t=' + Date.now(), {
+          method: 'GET'
+        })
+        let newMessages = (/<div id="messages">([\s\S]*?)<\/div>\n<\/div>/gi).exec(await result.text())
+        for(let i = 0; i < messagesWithoutIds.length; i++) {
+          messagesWithoutIds[i].remove()
+        }
+        if(newMessages) {
+          messageHistory.innerHTML += newMessages[1]
+        }
+        setTimeout(() => {
+          if(messageHistory.scrollTop + messageHistory.clientHeight == messageHistory.scrollHeight) {
+            messageHistory.scrollTop = messageHistory.scrollTop + 10000
+          }
+        }, 100)
+      }, 5000)
+
     })
   </script>
 </body>
