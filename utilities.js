@@ -7,8 +7,8 @@ const fs = require('fs')
 const path = require('path')
 
 const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
-const PASSWORD = process.env.ENCRYPTION_SALT 
-    || fs.readFileSync(path.join(HOMEPATH, '.credentials\/bookmarks.txt'))
+//const PASSWORD = process.env.ENCRYPTION_SALT 
+//    || fs.readFileSync(path.join(HOMEPATH, '.credentials\/bookmarks.txt'))
 
 // SOURCE: https://stackoverflow.com/questions/18279141/javascript-string-encryption-and-decryption
 
