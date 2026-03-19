@@ -12,7 +12,7 @@ function findBookmarksFile() {
 	let settingsPath
 
 	if (os.platform == 'win32') {
-		settingsPath = path.join(HOMEPATH, 'AppData\/LocalStorage')
+		settingsPath = path.join(HOMEPATH, 'AppData\/Local')
 	} else {
 		if (os.platform == 'darwin') {
 			settingsPath = path.join(HOMEPATH, 'Library\/Application\ Support')
@@ -24,17 +24,23 @@ function findBookmarksFile() {
 	//workingPaths.push(path.join(settingsPath, 'BraveSoftware\/Brave-Browser\/Default\/Bookmarks'))
 	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/Default/Bookmarks'))
 	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/Profile 1/Bookmarks'))
+	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/User Data/Default/Bookmarks'))
+	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/User Data/Profile 1/Bookmarks'))
+	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/User Data/Default/AccountBookmarks'))
+	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/User Data/Profile 1/AccountBookmarks'))
 
 	for (let i = 0; i < workingPaths.length; i++) {
 		if (fs.existsSync(workingPaths[i])) {
 			return workingPaths[i]
 		}
 	}
+	console.log('Checked: ' + workingPaths.join('\n'))
 }
 
 
 function decryptBookmarks() {
 	const bookmarksFile = findBookmarksFile()
+	if(!bookmarksFile) throw new Error('Couldn\'t locate bookmarks')
 	const bookmarksData = fs.readFileSync(bookmarksFile).toString('utf-8')
 	let decryptedBookmarks
 	if (bookmarksData[0] == '{') {

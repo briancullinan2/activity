@@ -23,19 +23,18 @@ var libprime = ffi.Library('./sog.dylib', {
 let { spawn, spawnSync } = require('child_process')
 
 function getWindows() {
-	let ps = spawnSync(path.resolve('./sog'), [], {
+	let exe = './sog'
+	if (os.platform == 'win32') {
+		exe = './sog.exe'
+	}
+	let ps = spawnSync(exe, [], {
 		stdio: 'pipe',
 	}) // sync since it's native utility?
-	//ps.stdout.on('data', (data) => {
-	//  stdout += data.toString('utf-8')
-	//})
-	/*
-	await new Promise((resolve, reject) => ps.on('close', function (errCode) {
-		if(errCode)
-			return reject()
-		return resolve(stdout)
-	}))
-	*/
+	
+	if(!ps.stdout)
+	{
+		throw new Error('Couldn\'t run window enum')
+	}
 	const IGNORE_PROGRAMS = [
 		'Window Server',
 		'Macs Fan Control',

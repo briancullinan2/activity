@@ -3,7 +3,7 @@
 // TODO: train a model based on sections to categorically sort new history based on content from bookmarks
 const fs = require('fs')
 const path = require('path')
-const sqlite3 = require('better-sqlite3');
+const { createClient } = require('@libsql/client');
 
 // TODO: import from History database or from export
 
@@ -18,7 +18,7 @@ function findHistoryFile() {
 	let settingsPath
 
 	if (os.platform == 'win32') {
-		settingsPath = path.join(HOMEPATH, 'AppData\/LocalStorage')
+		settingsPath = path.join(HOMEPATH, 'AppData\/Local')
 	} else {
 		if (os.platform == 'darwin') {
 			settingsPath = path.join(HOMEPATH, 'Library\/Application\ Support')
@@ -29,6 +29,8 @@ function findHistoryFile() {
 
 	//workingPaths.push(path.join(settingsPath, 'BraveSoftware\/Brave-Browser\/Default\/History'))
 	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/Default/History'))
+	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/User Data/Default/History'))
+	workingPaths.push(path.join(settingsPath, 'BraveSoftware/Brave-Browser/Default/History'))
 
 	for (let i = 0; i < workingPaths.length; i++) {
 		if (fs.existsSync(workingPaths[i])) {
@@ -37,26 +39,40 @@ function findHistoryFile() {
 	}
 }
 
-function getHistory() {
+async function getHistory() {
 	const HISTORY_FILE = findHistoryFile()
-	if(fs.existsSync(HISTORY_FILE + '.backup')) {
-		fs.unlinkSync(HISTORY_FILE + '.backup')
+	if(!HISTORY_FILE)
+	{
+		throw new Error('Couldn\'t find Chrome history.')
 	}
-	fs.copyFileSync(HISTORY_FILE, HISTORY_FILE + '.backup')
-	const db = new sqlite3(HISTORY_FILE + '.backup', {
-		readonly: true,
-		fileMustExist: true,
-	})
+	const backupFile = HISTORY_FILE + '.backup';
+	if(fs.existsSync(backupFile)) {
+		fs.unlinkSync(backupFile)
+	}
+	fs.copyFileSync(HISTORY_FILE, backupFile)
+	const client = createClient({
+        url: `file:${backupFile}`,
+		intMode: "bigint"
+    });
 
-	// reverse of chromeDtToDate
-	const todayOffset = (Date.now() - BASE_DATE.getTime()) * 1000 - (60 * 60 * 2 * 24 * 1000000)
-	const results = db.prepare('SELECT * FROM urls WHERE last_visit_time > ?').all(todayOffset)
-	//console.log(results)
-	return results
+    const todayOffset = (Date.now() - BASE_DATE.getTime()) * 1000 - (60 * 60 * 2 * 24 * 1000000);
+    
+    try {
+        const rs = await client.execute({
+            sql: 'SELECT * FROM urls WHERE last_visit_time > ?',
+            args: [todayOffset]
+        });
+        
+        // libsql returns rows as an array of objects
+        return rs.rows;
+    } finally {
+        // We close the client but keep the backup for the map function to finish
+        client.close();
+    }
 }
 
-function listHistory() {
-	let history = getHistory()
+async function listHistory() {
+	let history = await getHistory()
 	// nice side-effect, this will make the listings a little more interesting anyways
 	const EXCLUDED_HISTORY = [
 		/accounts\.google/gi,
@@ -65,9 +81,10 @@ function listHistory() {
 		/mail\.google/gi, // not quite ready for people to read my emails
 	]
 
-	let filteredHistory = history.filter(entry => EXCLUDED_HISTORY
-			.filter(expr => entry.url.match(expr)).length == 0
-				&& entry.title.trim().length > 0)
+	const filteredHistory = history.filter(entry => 
+        !EXCLUDED_HISTORY.some(expr => entry.url.match(expr)) && 
+        entry.title && entry.title.trim().length > 0
+    );
 			
 //"start": "2022-09-07T13:19:14.428Z"
 //"start": "2022-09-07T06:44:13.579Z"
@@ -76,10 +93,13 @@ function listHistory() {
 			let match = (/\?q=([^&]*)/gi).exec(entry.url)
 			entry.title = 'Search: ' + (match ? match[1].replace(/\+/g, ' ') : '')
 		}
+		const msSince1601 = Number(entry.last_visit_time / 1000n); 
+    	const startTime = new Date(msSince1601 + BASE_DATE.getTime() + TIME_ZONE);
+
 		return { 
 			id: entry.id, 
 			content: entry.title.substring(0, 100) + `  <a target="_blank" href="${entry.url}">link &nearr;</a>`, 
-			start: new Date((entry.last_visit_time / 1000 + BASE_DATE.getTime() + TIME_ZONE))
+			start: startTime
 		}
 	})
 }

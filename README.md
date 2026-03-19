@@ -19,6 +19,10 @@ A resume / poll style list of what I am currently working on.
 make
 ```
 
+```
+cl /EHsc main.cpp /Fe:sog.exe user32.lib
+```
+
 
 ## Install:
 

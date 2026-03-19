@@ -19,7 +19,7 @@
   "license": "Unlicense",
   "readmeFilename": "README.md",
   "dependencies": {
-    "better-sqlite3": "^11.3.0",
+    "@libsql/client": "^0.17.0",
     "cors": "^2.8.5",
     "d3-node": "^3.0.0",
     "googleapis": "^108.0.0",
