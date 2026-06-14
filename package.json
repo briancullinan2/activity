@@ -9,7 +9,8 @@
     "update": "git add -A && git commit -m \"auto-update\" && git push",
     "upload": "gsutil cp -r ./docs/* gs://brians-site/",
     "start": "live-server ./docs",
-    "build": "node-gyp rebuild"
+    "build": "node-gyp rebuild",
+    "history": "node history.js"
   },
   "repository": {
     "type": "git",
