@@ -126,11 +126,15 @@ ${bookmarkFolders.map(folder => {
 </ol>
 
 ${bookmarkFolders.map((folder, i) => {
+		// Find bookmarks in this folder to locate the newest timestamp for the folder attribute
+		let folderBooks = recentlyAdded.filter(book => book.folder == folder);
+		let folderDateStr = folderBooks.length > 0 ? folderBooks[0].date.toISOString() : '';
+
 		return `
-<input type="radio" id="cat-${path.basename(folder)}" name="category" value="${i}" />
+<input type="radio" id="cat-${path.basename(folder)}" name="category" value="${i}" data-date="${folderDateStr}" />
 <ol class="bookmarks">
-${recentlyAdded.filter(book => book.folder == folder).map(book => {
-			return `<li><a href="${book.url}">${book.name}</a></li>`
+${folderBooks.map(book => {
+			return `<li data-date="${book.date.toISOString()}"><a href="${book.url}">${book.name}</a></li>`
 		}).join('\n')}
 </ol>
 `}).join('\n')}`
