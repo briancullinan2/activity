@@ -28,7 +28,7 @@ async function renderIndex() {
 	bodyTag = index.match(/<ol class="categories"[\n\r.^>]*?>/i)
 	offset = bodyTag.index
 	index = index.substring(0, offset)
-		+ listBookmarks() + index.substring(offset + bodyTag[0].length, index.length)
+		+ listBookmarks()?.html + index.substring(offset + bodyTag[0].length, index.length)
 
 	bodyTag = index.match(/<ol class="windows"[\n\r.^>]*?>/i)
 	offset = bodyTag.index
