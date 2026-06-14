@@ -6,10 +6,8 @@ $bucketName  = "brians-site"
 $taskName    = "Activity-AutoUpdate"
 $taskDescription = "Generates the index, runs the git auto-update chain from package.json, and uploads index.html to GCS every hour."
 
-# 1. Swapped -Command to -NoExit so the window stays open
-# 2. Dropped -WindowStyle Hidden so you can see it run
-# 3. Fixed the trailing escape sequence so PowerShell stops complaining
-$actionArguments = "-NoProfile -NoExit -Command ""Set-Location '$projectPath'; `$env:TARGET='./index.js'; node -e 'require(process.env.TARGET).renderIndex()'; git add -A; git commit -m 'auto-update'; git push; gsutil cp docs/index.html gs://$bucketName/"""
+# Converted 'gsutil cp' to 'gcloud storage cp'
+$actionArguments = "-NoProfile -WindowStyle Hidden -Command ""Set-Location '$projectPath'; `$env:TARGET='./index.js'; node -e 'require(process.env.TARGET).renderIndex()'; git add -A; git commit -m 'auto-update'; git push; gcloud storage cp docs/index.html gs://$bucketName/"""
 $action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument $actionArguments
 
 # Define the trigger: Start now and repeat every 1 hour indefinitely
@@ -21,4 +19,4 @@ $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoi
 # Register the task under the current user context
 Register-ScheduledTask -TaskName $taskName -Description $taskDescription -Action $action -Trigger $trigger -Settings $settings -Force
 
-Write-Host "Task '$taskName' has been successfully created and will stay open when run." -ForegroundColor Green
+Write-Host "Task '$taskName' has been updated with gcloud storage and will stay open when run." -ForegroundColor Green

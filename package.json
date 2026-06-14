@@ -10,7 +10,8 @@
     "upload": "gsutil cp -r ./docs/* gs://brians-site/",
     "start": "live-server ./docs",
     "build": "node-gyp rebuild",
-    "history": "node history.js"
+    "history": "node history.js",
+    "bookmarks": "node bookmarks.js"
   },
   "repository": {
     "type": "git",

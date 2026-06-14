@@ -1,6 +1,6 @@
-
 const fs = require('fs')
 const path = require('path')
+const os = require('os') // Imported missing os module
 const { decryptFile, chromeDtToDate } = require('./utilities.js')
 
 // TODO: import from bookmarks.html or from database, copy code from jupyter_ops
@@ -11,36 +11,35 @@ function findBookmarksFile() {
 	let workingPaths = []
 	let settingsPath
 
-	if (os.platform == 'win32') {
-		settingsPath = path.join(HOMEPATH, 'AppData\/Local')
+	if (os.platform() === 'win32') { // Fixed method execution syntax error
+		settingsPath = path.join(HOMEPATH, 'AppData/Local')
 	} else {
-		if (os.platform == 'darwin') {
-			settingsPath = path.join(HOMEPATH, 'Library\/Application\ Support')
+		if (os.platform() === 'darwin') {
+			settingsPath = path.join(HOMEPATH, 'Library/Application Support')
 		} else {
 			settingsPath = path.join(HOMEPATH, '.config')
 		}
 	}
 
-	//workingPaths.push(path.join(settingsPath, 'BraveSoftware\/Brave-Browser\/Default\/Bookmarks'))
-	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/Default/Bookmarks'))
-	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/Profile 1/Bookmarks'))
-	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/User Data/Default/Bookmarks'))
-	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/User Data/Profile 1/Bookmarks'))
-	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/User Data/Default/AccountBookmarks'))
-	workingPaths.push(path.join(settingsPath, 'Google\/Chrome\/User Data/Profile 1/AccountBookmarks'))
+	workingPaths.push(path.join(settingsPath, 'Google/Chrome/Default/Bookmarks'))
+	workingPaths.push(path.join(settingsPath, 'Google/Chrome/Profile 1/Bookmarks'))
+	workingPaths.push(path.join(settingsPath, 'Google/Chrome/User Data/Default/Bookmarks'))
+	workingPaths.push(path.join(settingsPath, 'Google/Chrome/User Data/Profile 1/Bookmarks'))
+	workingPaths.push(path.join(settingsPath, 'Google/Chrome/User Data/Default/AccountBookmarks'))
+	workingPaths.push(path.join(settingsPath, 'Google/Chrome/User Data/Profile 1/AccountBookmarks'))
+	workingPaths.push(path.join(settingsPath, 'BraveSoftware/Brave-Browser/Default/Bookmarks'))
 
 	for (let i = 0; i < workingPaths.length; i++) {
 		if (fs.existsSync(workingPaths[i])) {
 			return workingPaths[i]
 		}
 	}
-	console.log('Checked: ' + workingPaths.join('\n'))
+	console.log('Checked:\n' + workingPaths.join('\n'))
 }
-
 
 function decryptBookmarks() {
 	const bookmarksFile = findBookmarksFile()
-	if(!bookmarksFile) throw new Error('Couldn\'t locate bookmarks')
+	if (!bookmarksFile) throw new Error('Couldn\'t locate bookmarks')
 	const bookmarksData = fs.readFileSync(bookmarksFile).toString('utf-8')
 	let decryptedBookmarks
 	if (bookmarksData[0] == '{') {
@@ -52,24 +51,27 @@ function decryptBookmarks() {
 	return decryptedBookmarks
 }
 
-
 function parseBookmarks() {
 	let decryptedBookmarks = JSON.parse(decryptBookmarks()).roots
 	let root = decryptedBookmarks.bookmark_bar.children
-	//console.log(decryptedBookmarks)
-	//if(root.length == 0) {
-	root = root.concat(decryptedBookmarks.other.children)
-	//}
 
-	// from this verified structure, list newest additions
+	if (decryptedBookmarks.other && decryptedBookmarks.other.children) {
+		root = root.concat(decryptedBookmarks.other.children)
+	}
+	if (decryptedBookmarks.synced && decryptedBookmarks.synced.children) {
+		root = root.concat(decryptedBookmarks.synced.children)
+	}
+
 	let bookmarks = root.reduce((function recursiveGroup(root, list, book) {
 		let folder = root
-		if(folder.includes('Other Bookmarks')) {
+		if (folder.includes('Other Bookmarks')) {
 			folder = ''
 		}
-		if(book.type == 'folder') {
+		if (book.type == 'folder') {
 			folder += (folder && folder.length > 0 ? '/' : '') + book.name
-			book.children.forEach(recursiveGroup.bind(null, folder, list))
+			if (book.children) {
+				book.children.forEach(recursiveGroup.bind(null, folder, list))
+			}
 		} else {
 			book.folder = folder
 			book.time_usec = parseInt(book.date_added + '')
@@ -83,24 +85,29 @@ function parseBookmarks() {
 	return bookmarks
 }
 
-// TODO: make an html page out of categories
-function listBookmarks() {
+
+
+
+function listBookmarks(startDate = null, endDate = null) {
 	let bookmarks = parseBookmarks()
-	let recentlyAdded = bookmarks.sort((a, b) => b.date - a.date).filter((a, i) => i < 100) 
-	//.filter(book => book.date.getTime() > Date.now() - 96 * 60 * 60 * 1000)
+
+	// 1. Filter elements by date window parameters
+	let filteredBookmarks = bookmarks.filter(book => {
+		if (startDate && book.date < startDate) return false;
+		if (endDate && book.date > endDate) return false;
+		return true;
+	});
+
+	// 2. Sort chronologically (newest first)
+	let recentlyAdded = filteredBookmarks.sort((a, b) => b.date - a.date);
+
+	// 3. Slice the top 100 ONLY if both start and end dates are omitted
+	if (!startDate && !endDate) {
+		recentlyAdded = recentlyAdded.slice(0, 100);
+	}
+
 	let bookmarkFolders = recentlyAdded.map(book => book.folder).filter((f, i, arr) => arr.indexOf(f) == i)
-	// TODO: a little bit of read-time estimation it looks like a factor of images + words / reading speed
-	// SOURCE: https://www.startpage.com/do/search?q=how+long+does+it+take+to+read+an+article+github
-	// 200 words per minute average
-	// ^^^ road-block because of PDF integration
 
-
-
-	// TODO: cache page to PDF like my bookmark downloader, wkhtml2pdf should be good enough
-	// search existing bookmark collections of PDFs to reduce work
-
-	// TODO: display HTML boxes with percent of workday spent reading other people's research, 
-	//   versus implementation from github logging
 	let html = `
 <ol class="categories">
 ${bookmarkFolders.map(folder => {
@@ -118,7 +125,6 @@ ${bookmarkFolders.map(folder => {
 	}).join('\n')}
 </ol>
 
-
 ${bookmarkFolders.map((folder, i) => {
 		return `
 <input type="radio" id="cat-${path.basename(folder)}" name="category" value="${i}" />
@@ -129,13 +135,58 @@ ${recentlyAdded.filter(book => book.folder == folder).map(book => {
 </ol>
 `}).join('\n')}`
 
-	// next level share-point with employee monitoring integration?
-
-	// ABCs of programming
-	return html
+	return {
+		html: html,
+		raw: recentlyAdded
+	}
 }
 
-// TODO: commit to a seperate branch using GitHub Actions CI
+// ====================================================================
+// CLI INTERFACE EXECUTION BLOCK
+// ====================================================================
+if (require.main === module) {
+	(async () => {
+		const getArg = (flag) => {
+			const index = process.argv.indexOf(flag);
+			return (index !== -1 && process.argv[index + 1]) ? process.argv[index + 1] : null;
+		};
+
+		const startStr = getArg('--start');
+		const endStr = getArg('--end');
+
+		let startDate = startStr ? new Date(startStr) : null;
+		let endDate = endStr ? new Date(endStr) : null;
+
+		if (startStr && isNaN(startDate.getTime())) {
+			console.error(`Invalid start date format: "${startStr}". Use YYYY-MM-DD.`);
+			process.exit(1);
+		}
+		if (endStr && isNaN(endDate.getTime())) {
+			console.error(`Invalid end date format: "${endStr}". Use YYYY-MM-DD.`);
+			process.exit(1);
+		}
+
+		try {
+			console.log(`Querying bookmarks added: [${startDate ? startDate.toISOString() : 'Earliest'}] to [${endDate ? endDate.toISOString() : 'Latest'}]...`);
+			const results = listBookmarks(startDate, endDate);
+
+			if (results.raw.length === 0) {
+				console.log("No bookmark records located inside that target date range.");
+				return;
+			}
+
+			// Print pristine terminal stdout tracking logs
+			results.raw.forEach(item => {
+				const timestamp = item.date.toLocaleString();
+				const folderPrefix = item.folder ? `[${item.folder}] ` : '';
+				console.log(`[${timestamp}] ${folderPrefix}${item.name} -> ${item.url}`);
+			});
+		} catch (err) {
+			console.error("Execution Error:", err.message);
+			process.exit(1);
+		}
+	})();
+}
 
 module.exports = {
 	listBookmarks
