@@ -30,9 +30,8 @@ function getWindows() {
 	let ps = spawnSync(exe, [], {
 		stdio: 'pipe',
 	}) // sync since it's native utility?
-	
-	if(!ps.stdout)
-	{
+
+	if (!ps.stdout) {
 		throw new Error('Couldn\'t run window enum')
 	}
 	const IGNORE_PROGRAMS = [
@@ -43,7 +42,7 @@ function getWindows() {
 		'Dock',
 	]
 	let windows = ps.stdout.toString('utf-8').trim().split('\n').map(window => window.split(/:\s/g))
-	if(!windows || windows.length == 0 || windows[0][0].length == 0) {
+	if (!windows || windows.length == 0 || windows[0][0].length == 0) {
 		return []
 	}
 
@@ -52,11 +51,11 @@ function getWindows() {
 	let windowsFiltered = windows
 		.filter((w, i, arr) => windowsNames.indexOf(w[1]) == i && IGNORE_PROGRAMS.indexOf(w[1]) == -1)
 		.map(win => win[1].replace(/\.app$/gi, ''))
-	if(windowsFiltered.length > 0) {
+	if (windowsFiltered.length > 0) {
 		windowsFiltered[0] = '*' + windowsFiltered[0]
 	}
 	windowsFiltered.sort((a, b) => (a.startsWith('*') ? a.substring(1) : a).localeCompare(
-		- (b.startsWith('*') ? b.substring(1) : b), 'en', {sensitivity: 'base'}))
+		- (b.startsWith('*') ? b.substring(1) : b), 'en', { sensitivity: 'base' }))
 	return windowsFiltered
 }
 
@@ -67,7 +66,7 @@ function listWindows() {
   ${windowsFiltered.map(window => {
 		let category
 		let active = window.startsWith('*')
-		if(active) 
+		if (active)
 			window = window.substring(1)
 		category = `<li class="${active ? 'active' : ''}"><a href="#${window}">
 		<label for="win-${window}">${window}</a></label>
@@ -79,13 +78,13 @@ function listWindows() {
 	// TODO: something like show download link, or remotely switch to window like a cheap streaming remote desktop?
 
 	// TODO: something like taking periodic snapshots and show a scrolling list of window states
-
+	//console.log(html)
 	// TODO: calendar entries might be a slight vulnerability
-  return html
+	return html
 }
 
 module.exports = {
-  getWindows,
-  listWindows,
+	getWindows,
+	listWindows,
 
 }

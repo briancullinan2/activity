@@ -277,7 +277,7 @@
     <h3>Live Resume</h3><img src="Live Resume.svg" />
 <h3>Jupyter Ops</h3><img src="Jupyter Ops.svg" />
 
-<h3>Quake3e</h3><img src="Quake3e.svg" /></ol>
+<h3>Quake3e</h3><img src="Quake3e.svg" />
     <p><a class="nowButton" href="#Previous%20Projects">Previous Projects</a></p>
   </div>
 
@@ -286,27 +286,7 @@
     
   <ol class="windows">
   
-  </ol></ol>
-    <script type="application/javascript">
-      setInterval(() => {
-        // TODO: refresh images
-        let images = document.querySelectorAll('.livedev > img')
-        for(let i = 0; i < images.length; i++) {
-          if(images[i].src && !images[i].getAttribute('original-src')) {
-            images[i].setAttribute('original-src', images[i].src)
-          }
-          let originalImage = images[i].getAttribute('original-src')
-          let newImage = originalImage.replace(/\?.*/, '') + '?t=' + Date.now()
-          // set background to previous image
-          if(images[i].src) {
-            images[i].style.backgroundImage = "url('" + encodeURI(images[i].src) + "')"
-          }
-          setTimeout(() => {
-            images[i].src = newImage
-          }, 100)
-        }
-      }, 5000)
-    </script>
+  </ol>
     <div class="livedev">
       <img src="https://brian-chat.pryor.games/monitors/0" />
       <img src="https://brian-chat.pryor.games/monitors/1" />
@@ -320,6 +300,18 @@
 
     <p><a class="nowButton" target="_blank" href="https://www.youtube.com/channel/UCPaZDuwY1sJOb5l-QHm9mDw">
         My YouTube Channel</a></p>
+
+    <div class="timeline">
+    <div class="dashboard-overlay">
+        <h2>Timeline Route Hub</h2>
+        <div class="subtitle">Embedded Environment Diagnostics</div>
+        <div class="metric-row"><span>Log Duration</span><span>Past 30 Days</span></div>
+        <div class="metric-row"><span>Waypoints Loaded</span><span>55</span></div>
+        <div class="metric-row"><span>Trace Pathways</span><span>0</span></div>
+    </div>
+
+    <div id="map" data-timeline="{&quot;places&quot;:[{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.1993899,&quot;lng&quot;:-111.5749598,&quot;time&quot;:&quot;7/25/2026, 9:18:06 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;7/25/2026, 11:10:04 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;7/25/2026, 5:54:42 PM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;7/27/2026, 12:19:32 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.1816287,&quot;lng&quot;:-111.6609098,&quot;time&quot;:&quot;7/27/2026, 8:24:53 PM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;7/27/2026, 8:57:46 PM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;7/28/2026, 5:29:01 PM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;7/29/2026, 8:53:39 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;7/29/2026, 1:55:59 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.1993899,&quot;lng&quot;:-111.5749598,&quot;time&quot;:&quot;8/2/2026, 10:31:10 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/2/2026, 12:03:27 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.1888549,&quot;lng&quot;:-111.6632769,&quot;time&quot;:&quot;8/4/2026, 7:39:07 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.187399,&quot;lng&quot;:-111.663418,&quot;time&quot;:&quot;8/4/2026, 7:39:07 PM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/4/2026, 8:55:46 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:34.9032998,&quot;lng&quot;:-111.7276623,&quot;time&quot;:&quot;8/6/2026, 2:10:18 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:34.9101702,&quot;lng&quot;:-111.7287493,&quot;time&quot;:&quot;8/6/2026, 3:00:30 PM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/6/2026, 3:57:37 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.19083,&quot;lng&quot;:-111.66356,&quot;time&quot;:&quot;8/7/2026, 11:26:47 AM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.1907864,&quot;lng&quot;:-111.6602435,&quot;time&quot;:&quot;8/7/2026, 12:11:12 PM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/7/2026, 1:01:25 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.2227924,&quot;lng&quot;:-111.6537507,&quot;time&quot;:&quot;8/7/2026, 2:54:20 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.1842096,&quot;lng&quot;:-111.5918654,&quot;time&quot;:&quot;8/7/2026, 3:24:17 PM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/7/2026, 3:37:09 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.2227924,&quot;lng&quot;:-111.6537507,&quot;time&quot;:&quot;8/11/2026, 11:09:20 AM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.2143388,&quot;lng&quot;:-111.6131169,&quot;time&quot;:&quot;8/11/2026, 11:43:18 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/11/2026, 12:00:30 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.2227924,&quot;lng&quot;:-111.6537507,&quot;time&quot;:&quot;8/13/2026, 8:05:51 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/13/2026, 8:31:00 AM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.2227924,&quot;lng&quot;:-111.6537507,&quot;time&quot;:&quot;8/13/2026, 11:28:16 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/13/2026, 11:51:48 AM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.2227924,&quot;lng&quot;:-111.6537507,&quot;time&quot;:&quot;8/14/2026, 7:23:27 AM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.1841153,&quot;lng&quot;:-111.6594008,&quot;time&quot;:&quot;8/14/2026, 7:56:09 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/14/2026, 9:01:48 AM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:33.8736959,&quot;lng&quot;:-112.1496088,&quot;time&quot;:&quot;8/14/2026, 4:42:50 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:33.8742259,&quot;lng&quot;:-112.1487904,&quot;time&quot;:&quot;8/14/2026, 4:49:50 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:33.8746031,&quot;lng&quot;:-112.1488981,&quot;time&quot;:&quot;8/14/2026, 5:02:52 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:33.6790387,&quot;lng&quot;:-111.9585102,&quot;time&quot;:&quot;8/14/2026, 5:59:47 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:33.502748,&quot;lng&quot;:-111.9293407,&quot;time&quot;:&quot;8/14/2026, 6:51:06 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:33.5035064,&quot;lng&quot;:-111.9290708,&quot;time&quot;:&quot;8/14/2026, 6:51:06 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:33.6790387,&quot;lng&quot;:-111.9585102,&quot;time&quot;:&quot;8/14/2026, 9:30:07 PM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/15/2026, 12:26:14 AM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:34.575645,&quot;lng&quot;:-111.883734,&quot;time&quot;:&quot;8/16/2026, 2:28:38 PM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/16/2026, 3:37:54 PM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.2227924,&quot;lng&quot;:-111.6537507,&quot;time&quot;:&quot;8/18/2026, 7:39:50 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/18/2026, 8:20:00 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/18/2026, 10:46:41 AM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.2227924,&quot;lng&quot;:-111.6537507,&quot;time&quot;:&quot;8/19/2026, 7:45:06 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/19/2026, 8:11:17 AM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.2227924,&quot;lng&quot;:-111.6537507,&quot;time&quot;:&quot;8/20/2026, 7:59:44 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/20/2026, 8:24:11 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/20/2026, 10:10:09 AM&quot;},{&quot;name&quot;:&quot;SEARCHED_ADDRESS&quot;,&quot;lat&quot;:35.2223185,&quot;lng&quot;:-111.6546222,&quot;time&quot;:&quot;8/21/2026, 7:45:27 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/21/2026, 8:13:14 AM&quot;},{&quot;name&quot;:&quot;UNKNOWN&quot;,&quot;lat&quot;:35.2227924,&quot;lng&quot;:-111.6537507,&quot;time&quot;:&quot;8/21/2026, 11:25:05 AM&quot;},{&quot;name&quot;:&quot;INFERRED_HOME&quot;,&quot;lat&quot;:35.2095658,&quot;lng&quot;:-111.5850151,&quot;time&quot;:&quot;8/21/2026, 12:03:20 PM&quot;}],&quot;lines&quot;:[]}"></div>
+    </div>
   </div>
 
   <div class="container">
@@ -539,7 +531,7 @@
 <ol class="bookmarks">
 <li data-date="2026-07-07T09:02:46.459Z"><a href="https://www.backmarket.com/en-us/p/macbook-pro-2024-16-inch-m4-max-16-core-and-40-core-gpu-64gb-ram-ssd-1000gb/6e71a840-9a47-4b60-bd7b-e49eca68a9fc?utm_source=google&utm_medium=cpc&utm_campaign=US_SA_SHOP_G_GEN_MacBook_RSC&gclid=CjwKCAjwpK3SBhASEiwAtV1SPNM-356S8qdozYxZ12uZFsDYpNTAYisGBvlveeJPekDWYZ8SjJdnpBoCQbQQAvD_BwE&gad_source=1&gad_campaignid=21902103981&gbraid=0AAAAADDwbvQ4hrslpZHSP-7HY-RankOuv&l=12">MacBook Pro (2024) 16-inch - Apple M4 Max 16-core and 40-core GPU - 64GB RAM - SSD 1000GB - Standard display | Back Market</a></li>
 </ol>
-</ol>
+
   </div>
 
   <div class="container">
@@ -1049,6 +1041,32 @@
 <div class="history-item"><span class="time">8/23 3:51 pm</span><span class="content">jupyter_ops/Selenium/google timeline.ipynb at 50cb7fd7d6d9f357f393e7465b12463f20414e0f · briancullin  <a target="_blank" href="https://github.com/briancullinan2/jupyter_ops/blob/50cb7fd7d6d9f357f393e7465b12463f20414e0f/Selenium/google%20timeline.ipynb#L7">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">8/23 3:51 pm</span><span class="content">Code search results  <a target="_blank" href="https://github.com/search?q=repo%3Abriancullinan2%2Fjupyter_ops+timeline&type=code&p=1">link &nearr;</a></span></div>
 <div class="history-item"><span class="time">8/23 3:51 pm</span><span class="content">jupyter_ops/Frontends/timeline map.ipynb at 50cb7fd7d6d9f357f393e7465b12463f20414e0f · briancullinan  <a target="_blank" href="https://github.com/briancullinan2/jupyter_ops/blob/50cb7fd7d6d9f357f393e7465b12463f20414e0f/Frontends/timeline%20map.ipynb#L8">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 3:59 pm</span><span class="content">Brian Cullinan's Live Resume  <a target="_blank" href="http://127.0.0.1:8080/">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 3:59 pm</span><span class="content">GitHub  <a target="_blank" href="https://github.com/">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 3:59 pm</span><span class="content">GitHub  <a target="_blank" href="https://github.com/?q=a">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 3:59 pm</span><span class="content">GitHub  <a target="_blank" href="https://github.com/?q=ac">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 3:59 pm</span><span class="content">GitHub  <a target="_blank" href="https://github.com/?q=act">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 3:59 pm</span><span class="content">GitHub  <a target="_blank" href="https://github.com/?q=acti">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 3:59 pm</span><span class="content">briancullinan2/activity: A resume / poll style list of what I am currently working on.  <a target="_blank" href="https://github.com/briancullinan2/activity">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 3:59 pm</span><span class="content">General  <a target="_blank" href="https://github.com/briancullinan2/activity/settings">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:00 pm</span><span class="content">Pages  <a target="_blank" href="https://github.com/briancullinan2/activity/settings/pages">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:05 pm</span><span class="content">Google Cloud console  <a target="_blank" href="https://console.cloud.google.com/">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:05 pm</span><span class="content">illustrious – Google Cloud console  <a target="_blank" href="https://console.cloud.google.com/welcome?project=illustrious-499422">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:05 pm</span><span class="content">Websites – Google Cloud console  <a target="_blank" href="https://console.cloud.google.com/welcome?project=websites-454915">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:05 pm</span><span class="content">Websites – Google Cloud console  <a target="_blank" href="https://console.cloud.google.com/net-services/cdn/list?project=websites-454915">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:05 pm</span><span class="content">Cloud CDN – Network Services – Websites – Google Cloud console  <a target="_blank" href="https://console.cloud.google.com/net-services/cdn/list/origins?project=websites-454915">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:05 pm</span><span class="content">brians-bucket – Origin details – Network Services – Websites – Google Cloud console  <a target="_blank" href="https://console.cloud.google.com/net-services/cdn/backendBucket/details/brians-bucket?project=websites-454915">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:06 pm</span><span class="content">Logging – Google Cloud console  <a target="_blank" href="https://console.cloud.google.com/logs/query;query=protoPayload.resourceName%3D%22projects%2Fwebsites-454915%2Fglobal%2FbackendBuckets%2Fbrians-bucket%22%0AlogName%3D%22projects%2Fwebsites-454915%2Flogs%2Fcloudaudit.googleapis.com%252Factivity%22?project=websites-454915">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:06 pm</span><span class="content">Logging – Google Cloud console  <a target="_blank" href="https://console.cloud.google.com/logs/query;query=protoPayload.resourceName%3D%22projects%2Fwebsites-454915%2Fglobal%2FbackendBuckets%2Fbrians-bucket%22%0AlogName%3D%22projects%2Fwebsites-454915%2Flogs%2Fcloudaudit.googleapis.com%252Factivity%22;duration=PT5M?project=websites-454915">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:06 pm</span><span class="content">brians-bucket – Origin details – Network Services – Websites – Google Cloud console  <a target="_blank" href="https://console.cloud.google.com/net-services/cdn/backendBucket/details/brians-bucket?project=websites-454915&cloudshell=true">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:10 pm</span><span class="content">𝗥𝗲𝗖𝗼𝗹𝗹𝗲𝗰𝘁𝟲𝟰 𝗕𝗹𝗼𝗴: 𝗡𝗲𝘄𝘀 / 𝗥𝗲𝘃𝗶𝗲𝘄𝘀 / 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 / 𝗠𝗲𝗺𝗼𝗿𝗶𝗲  <a target="_blank" href="https://defaultdnb.github.io/ReCollect64/blog.html">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:17 pm</span><span class="content">Brian Cullinan's Live Resume  <a target="_blank" href="https://briancullinan.com/">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:46 pm</span><span class="content">Brian Cullinan's Live Resume  <a target="_blank" href="http://localhost:8080/">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:48 pm</span><span class="content">Download - MEGA 13%  <a target="_blank" href="https://mega.nz/file/YhQFAb7J#IZeCOO6OeVp7StfpeUZ09gDaxQEUbuIJJhW2fE5OjYY">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:49 pm</span><span class="content">Download - MEGA  <a target="_blank" href="https://mega.nz/file/Mlgh2DDS">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:49 pm</span><span class="content">Download - MEGA  <a target="_blank" href="https://mega.nz/file/Mlgh2DDS#ru6HyFTlMxFUZngfts-SCCbKAyQlA8JruT1nlSBx36I">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:50 pm</span><span class="content">Download - MEGA  <a target="_blank" href="https://mega.nz/file/x5ZxjAKT">link &nearr;</a></span></div>
+<div class="history-item"><span class="time">8/23 4:50 pm</span><span class="content">Download - MEGA  <a target="_blank" href="https://mega.nz/file/x5ZxjAKT#F1HeSlzmRix1imTEFMFxlhmdRd38q8Jhbt8ODPjbhZw">link &nearr;</a></span></div>
 
   </div>
 
@@ -3755,7 +3773,7 @@ Teachers made a big deal about every holiday, St Patrick's Day treats on the des
     <h3>All of Time</h3><img src="ALL.svg" />
 <h3>Morpheus Consulting</h3><img src="Morpheus Consulting.svg" />
 
-</ol>
+
     <p><a class="nowButton" href="#Current%20Projects">Current Projects</a></p>
   </div>
 
@@ -4431,140 +4449,10 @@ Teachers made a big deal about every holiday, St Patrick's Day treats on the des
 
   </div>
 
-  <script>
-    let historyIndex = 0
-    let currentValue = ''
-    function sendHandler(evt) {
-      let chatBox = document.querySelector('#chat-program textarea')
-      if (event.key === 'Enter') {
-        evt.preventDefault()
-        let session = localStorage.getItem('brian-chat-session')
-        let messageHistory = document.querySelector('#messages')
-        let otr = document.querySelector('#chat-program input')
-        messageHistory.innerHTML += '<div class="user"><p>User: ' + chatBox.value + '</p></div>'
-        let messagePost = {
-          method: 'POST',
-          body: JSON.stringify({ otr: otr.checked, session: session, content: chatBox.value }),
-          headers: {
-            "Content-Type": "application/json",
-          }
-        }
-        if (chatBox.value.trim() == '') {
-          chatBox.value = ''
-          return
-        }
-        chatBox.value = ''
-        historyIndex = 0
-        setTimeout(async () => {
-          messageHistory.scrollTop = messageHistory.scrollTop + 10000
-          let result = await fetch('https://brian-chat.pryor.games/?session=' + session + '&t=' + Date.now(), messagePost)
-          if (result.ok) {
-            messageHistory.innerHTML += '<div class="ai">AI: ' + await result.text() + '</div>'
-          }
-          messageHistory.scrollTop = messageHistory.scrollTop + 10000
-        }, 100)
-        return false
-      }
-      if (event.key === 'ArrowUp' && chatBox.scrollTop < 10) {
-        if (historyIndex === 0) {
-          currentValue = chatBox.value
-        }
-        let messageHistory = document.querySelector('#messages')
-        // TODO: adjust according to messages loaded, don't count too high
-        let count = 0
-        let i
-        for (i = messageHistory.childNodes.length - 1; i >= 0 && count < (historyIndex + 1); i--) {
-          if (!messageHistory.childNodes[i].innerText) {
-            continue
-          }
-          if (messageHistory.childNodes[i].innerText.startsWith('User:')) {
-            count++
-          }
-        }
-        if (i > 0) {
-          historyIndex++
-          chatBox.value = messageHistory.childNodes[i + 1].innerText.substring(6)
-        }
-      }
-      if (event.key === 'ArrowDown' && historyIndex > 0) {
-        let messageHistory = document.querySelector('#messages')
-        if (historyIndex === 1) {
-          historyIndex--
-          chatBox.value = currentValue
-        } else {
-          let count = 0
-          let i
-          for (i = messageHistory.childNodes.length - 1; i >= 0 && count < (historyIndex - 1); i--) {
-            if (!messageHistory.childNodes[i].innerText) {
-              continue
-            }
-            if (messageHistory.childNodes[i].innerText.startsWith('User:')) {
-              count++
-            }
-          }
-          if (i > 0) {
-            historyIndex--
-            chatBox.value = messageHistory.childNodes[i + 1].innerText.substring(6)
-          }
-        }
-      }
-    }
 
-    document.addEventListener('DOMContentLoaded', async (event) => {
-      let session = localStorage.getItem('brian-chat-session')
+  <script src="./leaflet.js"></script>
+  <script type="application/javascript" src="./live.js"></script>
 
-      if (!session) {
-        const array = new Uint8Array(16)
-        window.crypto.getRandomValues(array)
-        localStorage.setItem('brian-chat-session', (session = Array.from(array).map(byte => byte.toString(16).padStart(2, '0')).join('')));
-      }
-
-
-      let result = await fetch('https://brian-chat.pryor.games/embed?session=' + session + '&t=' + Date.now(), {
-        method: 'GET'
-      })
-      document.querySelector('#chat-program').innerHTML = await result.text()
-
-      setTimeout(() => {
-        let messageHistory = document.querySelector('#messages')
-        messageHistory.scrollTop = messageHistory.scrollTop + 10000
-        document.querySelector('#chat-program textarea').addEventListener('keyup', sendHandler)
-        document.querySelector('#chat-program button').addEventListener('click', sendHandler)
-        // TODO:
-        //document.querySelector('#chat-program #messages').addEventListener('scroll')
-      }, 100)
-
-      // in case it takes too long to respond and it errors out in 30 seconds
-      setInterval(async () => {
-        let messageHistory = document.querySelector('#messages')
-        let messagesWithIds = document.querySelectorAll('#messages > *[id]')
-        let messagesWithoutIds = document.querySelectorAll('#messages > *:not([id])')
-        if(messageHistory.scrollTop + messageHistory.clientHeight == messageHistory.scrollHeight) {
-          messageHistory.scrollTop = messageHistory.scrollTop + 10000
-        }
-        if(!messagesWithIds[messagesWithIds.length - 1]) {
-          return
-        }
-        let from = parseInt(messagesWithIds[messagesWithIds.length - 1].id.replace('id-', ''))
-        let result = await fetch('https://brian-chat.pryor.games/embed?session=' + session + '&from=' + (from + 1) + '&t=' + Date.now(), {
-          method: 'GET'
-        })
-        let newMessages = (/<div id="messages">([\s\S]*?)<\/div>\n<\/div>/gi).exec(await result.text())
-        for(let i = 0; i < messagesWithoutIds.length; i++) {
-          messagesWithoutIds[i].remove()
-        }
-        if(newMessages) {
-          messageHistory.innerHTML += newMessages[1]
-        }
-        setTimeout(() => {
-          if(messageHistory.scrollTop + messageHistory.clientHeight == messageHistory.scrollHeight) {
-            messageHistory.scrollTop = messageHistory.scrollTop + 10000
-          }
-        }, 100)
-      }, 5000)
-
-    })
-  </script>
 </body>
 
 </html>
