@@ -150,16 +150,15 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     }, 5000)
 
 });
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const mapElement = document.getElementById('map');
     if (!mapElement) return;
 
-    const rawAttribute = mapElement.getAttribute('data-timeline');
-    if (!rawAttribute) return;
+    const base64Attribute = mapElement.getAttribute('data-timeline');
+    if (!base64Attribute) return;
 
-    const mapData = JSON.parse(rawAttribute);
+    // Safely decode Base64 JSON payload
+    const mapData = JSON.parse(atob(base64Attribute));
     const map = L.map('map', { zoomSnap: 0.5 }).setView([0, 0], 2);
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
@@ -169,13 +168,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const bounds = [];
 
-    // Draw paths with directional navigation arrows
+    // 1. Draw every raw GPS point as a discrete circle marker
+    if (Array.isArray(mapData.pings)) {
+        mapData.pings.forEach(ping => {
+            L.circleMarker(ping, {
+                radius: 3,
+                fillColor: '#00f2fe',
+                color: '#00f2fe',
+                weight: 0,
+                fillOpacity: 0.6
+            }).addTo(map);
+            bounds.push(ping);
+        });
+    }
+
+    // 2. Fetch OSRM matched routes for road-snapped navigation polylines
+    async function fetchRoadRoute(coords) {
+        if (coords.length < 2) return null;
+
+        // Downsample sequence if points exceed OSRM request caps (max ~100 points per call)
+        let sampled = coords;
+        if (coords.length > 80) {
+            const step = Math.ceil(coords.length / 80);
+            sampled = coords.filter((_, idx) => idx % step === 0);
+            if (sampled[sampled.length - 1] !== coords[coords.length - 1]) {
+                sampled.push(coords[coords.length - 1]);
+            }
+        }
+
+        // Format: lng,lat;lng,lat
+        const coordString = sampled.map(c => `${c[1]},${c[0]}`).join(';');
+        const url = `https://router.project-osrm.org/route/v1/driving/${coordString}?overview=full&geometries=geojson`;
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) return null;
+            const data = await response.json();
+            if (data.routes && data.routes.length > 0) {
+                // Convert GeoJSON [lng, lat] back to Leaflet [lat, lng]
+                return data.routes[0].geometry.coordinates.map(c => [c[1], c[0]]);
+            }
+        } catch (err) {
+            console.warn("OSRM routing unavailable, falling back to direct line:", err);
+        }
+        return null;
+    }
+
+    // 3. Process lines with road routing + directional arrows
     if (Array.isArray(mapData.lines)) {
-        mapData.lines.forEach(line => {
+        mapData.lines.forEach(async (line) => {
             if (line.length < 2) return;
 
-            // Render polyline path
-            L.polyline(line, {
+            // Try fetching road-snapped geometry; fallback to raw coordinates
+            const roadGeometry = await fetchRoadRoute(line) || line;
+
+            // Draw polyline
+            L.polyline(roadGeometry, {
                 color: '#00f2fe',
                 weight: 4,
                 opacity: 0.85,
@@ -183,21 +231,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 lineJoin: 'round'
             }).addTo(map);
 
-            line.forEach(c => bounds.push(c));
-
-            // Render directional markers every N points along the route
-            const step = Math.max(1, Math.floor(line.length / 10));
-            for (let i = 0; i < line.length - 1; i += step) {
-                const p1 = line[i];
-                const p2 = line[i + 1];
+            // Draw direction arrows along the route
+            const step = Math.max(1, Math.floor(roadGeometry.length / 8));
+            for (let i = 0; i < roadGeometry.length - 1; i += step) {
+                const p1 = roadGeometry[i];
+                const p2 = roadGeometry[i + 1];
 
                 const dy = p2[0] - p1[0];
                 const dx = Math.cos(Math.PI / 180 * p1[0]) * (p2[1] - p1[1]);
                 const angle = Math.atan2(dy, dx) * 180 / Math.PI;
 
+                // Inline SVG icon guarantees rendering on all devices without font dependencies
+                const arrowSvg = `
+        <svg width="14" height="14" viewBox="0 0 24 24" style="transform: rotate(${90 - angle}deg); display: block;">
+            <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" fill="#00f2fe" stroke="#000000" stroke-width="1.5"/>
+        </svg>
+    `;
+
                 const arrowIcon = L.divIcon({
-                    className: 'direction-arrow',
-                    html: `<div style="transform: rotate(${90 - angle}deg); color: #00f2fe; font-size: 14px; text-shadow: 0 0 3px #000;">➤</div>`,
+                    className: 'direction-arrow-icon',
+                    html: arrowSvg,
                     iconSize: [14, 14],
                     iconAnchor: [7, 7]
                 });
@@ -207,12 +260,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Draw visited places
+    // 4. Draw visited places
     if (Array.isArray(mapData.places)) {
         mapData.places.forEach(place => {
             if (place.lat && place.lng) {
                 L.circleMarker([place.lat, place.lng], {
-                    radius: 5,
+                    radius: 6,
                     fillColor: '#ff0055',
                     color: '#ffffff',
                     weight: 1.5,
@@ -224,11 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Adjust view bounds to fit data
     if (bounds.length > 0) {
         map.fitBounds(bounds, { padding: [30, 30] });
     }
-
-
 
     setTimeout(() => {
         map.invalidateSize();
@@ -237,7 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 200);
 
-    // Keep map sized during panel or window resizes
     window.addEventListener('resize', () => {
         map.invalidateSize();
     });

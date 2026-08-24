@@ -7,7 +7,7 @@
     "generate:projects": "node -e \"require('./projects.js').projectHeatmap()\"",
     "encrypt:bookmarks": "node -e \"require('./bookmarks.js').encryptBookmarks()\"",
     "update": "git add -A && git commit -m \"auto-update\" && git push",
-    "upload": "gsutil -m rsync -r ./docs gs://brians-site; gcloud compute url-maps invalidate-cdn-cache brianssite --project=websites-454915 --path=\"/\" --host=\"briancullinan.com\"",
+    "upload": "gsutil -m rsync -r ./docs gs://brians-site && gcloud compute url-maps invalidate-cdn-cache brianssite --project=websites-454915 --path=\"/*\" --host=\"briancullinan.com\"",
     "start": "live-server ./docs",
     "build": "node-gyp rebuild",
     "history": "node history.js",
