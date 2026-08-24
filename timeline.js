@@ -38,85 +38,126 @@ function findLatestTimelineFile() {
 }
 
 /**
- * 2. PARSE AND EXTRACT THE LAST 30 DAYS OF VISITS & PATHS
+ * 2. RECURSIVELY EXTRACT ALL RAW PINGS & VISITS FROM LAST 30 DAYS
  */
 function parseTimelineData(filePath) {
-    console.log(`[+] Parsing: ${filePath}`);
+    console.log(`[+] Parsing file: ${filePath}`);
     const rawData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
     const now = new Date();
     const oneMonthAgo = new Date();
-    oneMonthAgo.setMonth(now.getMonth() - 1);
+    oneMonthAgo.setDate(now.getDate() - 30);
 
     const mapData = {
         places: [],
         lines: []
     };
 
-    // Fallback array check based on different Google export paradigms
-    const segments = rawData.semanticSegments || rawData.locations || [];
+    const allPings = [];
 
-    segments.forEach(segment => {
-        // Extract timestamps safely
-        const startTimeStr = segment.startTime || segment.timestamp || (segment.visit && segment.visit.startTime);
-        if (!startTimeStr) return;
+    // Helper to safely parse any timestamp variant
+    function parseDate(val) {
+        if (!val) return null;
+        const d = new Date(val);
+        return isNaN(d.getTime()) ? null : d;
+    }
 
-        const segmentTime = new Date(startTimeStr);
-        if (segmentTime < oneMonthAgo) return;
+    // Recursive function to walk every node in the export JSON
+    function walk(node) {
+        if (!node || typeof node !== 'object') return;
 
-        // Process places/visits
-        if (segment.visit) {
-            const topCandidate = segment.visit.topCandidate;
-            if (topCandidate && topCandidate.placeLocation && topCandidate.placeLocation.latLng) {
-                // Handle text formatted latLng string matching e.g., "35.19828°, -111.65130°"
-                const match = topCandidate.placeLocation.latLng.match(/(-?\d+\.\d+)/g);
+        // Extract explicit place visits
+        if (node.visit && node.visit.topCandidate && node.visit.topCandidate.placeLocation) {
+            const time = parseDate(node.startTime || node.visit.startTime);
+            if (time && time >= oneMonthAgo) {
+                const match = (node.visit.topCandidate.placeLocation.latLng || '').match(/(-?\d+\.\d+)/g);
                 if (match && match.length >= 2) {
                     mapData.places.push({
-                        name: topCandidate.semanticType || topCandidate.name || "Visited Place",
+                        name: node.visit.topCandidate.semanticType || node.visit.topCandidate.name || "Visited Place",
                         lat: parseFloat(match[0]),
                         lng: parseFloat(match[1]),
-                        time: segmentTime.toLocaleString()
+                        time: time.toLocaleString()
                     });
                 }
             }
         }
 
-        // Process pathways / paths
-        if (segment.timelinePath && segment.timelinePath.length > 0) {
-            const currentLineCoordinates = [];
-            segment.timelinePath.forEach(p => {
-                if (p.point && p.point.startsWith('geo:')) {
-                    const coords = p.point.replace('geo:', '').split(',');
-                    if (coords.length >= 2) {
-                        currentLineCoordinates.push([parseFloat(coords[0]), parseFloat(coords[1])]);
-                    }
-                }
-            });
-            if (currentLineCoordinates.length > 1) {
-                mapData.lines.push(currentLineCoordinates);
+        // Check for coordinates on current node
+        let lat = null, lng = null;
+        if (node.latitudeE7 && node.longitudeE7) {
+            lat = node.latitudeE7 / 1e7;
+            lng = node.longitudeE7 / 1e7;
+        } else if (node.position && typeof node.position.lat === 'number') {
+            lat = node.position.lat;
+            lng = node.position.lng;
+        } else if (typeof node.point === 'string' && node.point.startsWith('geo:')) {
+            const parts = node.point.replace('geo:', '').split(',');
+            if (parts.length >= 2) {
+                lat = parseFloat(parts[0]);
+                lng = parseFloat(parts[1]);
             }
         }
 
-        // Alternative standard location historical logs check (E7 formatting parsing fallback)
-        if (segment.latitudeE7 && segment.longitudeE7) {
-            const lat = segment.latitudeE7 / 10000000;
-            const lng = segment.longitudeE7 / 10000000;
-            mapData.places.push({
-                name: "Location Ping",
-                lat: lat,
-                lng: lng,
-                time: segmentTime.toLocaleString()
-            });
+        if (lat !== null && lng !== null) {
+            const time = parseDate(node.timestamp || node.startTime || node.time);
+            if (time && time >= oneMonthAgo) {
+                allPings.push({ lat, lng, time });
+            }
         }
-    });
+
+        // Traverse arrays and child objects
+        if (Array.isArray(node)) {
+            for (let i = 0; i < node.length; i++) walk(node[i]);
+        } else {
+            for (const key in node) {
+                if (Object.prototype.hasOwnProperty.call(node, key)) {
+                    walk(node[key]);
+                }
+            }
+        }
+    }
+
+    walk(rawData);
+
+    // Sort all extracted pings chronologically
+    allPings.sort((a, b) => a.time - b.time);
+
+    // Group sequential pings into continuous travel paths (break if gap > 45 mins)
+    let currentSegment = [];
+    for (let i = 0; i < allPings.length; i++) {
+        const ping = allPings[i];
+        if (currentSegment.length === 0) {
+            currentSegment.push([ping.lat, ping.lng]);
+            continue;
+        }
+
+        const prevPing = allPings[i - 1];
+        const gapMinutes = (ping.time - prevPing.time) / (1000 * 60);
+
+        if (gapMinutes > 45) {
+            if (currentSegment.length > 1) {
+                mapData.lines.push(currentSegment);
+            }
+            currentSegment = [[ping.lat, ping.lng]];
+        } else {
+            // Deduplicate identical sequential coordinates
+            const lastCoord = currentSegment[currentSegment.length - 1];
+            if (lastCoord[0] !== ping.lat || lastCoord[1] !== ping.lng) {
+                currentSegment.push([ping.lat, ping.lng]);
+            }
+        }
+    }
+    if (currentSegment.length > 1) {
+        mapData.lines.push(currentSegment);
+    }
+
+    console.log(`[+] Total raw waypoints extracted: ${allPings.length}`);
+    console.log(`[+] Continuous path segments generated: ${mapData.lines.length}`);
 
     return mapData;
 }
-/**
- * 3. GENERATE UNIFIED SPA VIEW TEMPLATE HTML (CSP Compliant)
- */
+
 function generateTimeline(mapData) {
-    // Encodes quotes and special characters to safely embed inside a data attribute
     const serializedData = JSON.stringify(mapData)
         .replace(/&/g, '&amp;')
         .replace(/"/g, '&quot;')
@@ -141,30 +182,4 @@ module.exports = {
     generateTimeline,
     parseTimelineData,
     findLatestTimelineFile
-}
-
-/**
- * 4. SYSTEM ENTRY & LIFECYCLE
- */
-function main() {
-    const timelinePath = findLatestTimelineFile();
-
-    if (!timelinePath) {
-        console.error("[-] Error: No matching Timeline JSON target located inside your Downloads folder.");
-        process.exit(1);
-    }
-
-    const payload = parseTimelineData(timelinePath);
-    const htmlOutput = generateHTML(payload);
-
-    const server = http.createServer((req, res) => {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.end(htmlOutput);
-    });
-
-    server.listen(PORT, () => {
-        console.log(`[+] Dashboard online & pipeline active.`);
-        console.log(`[+] Navigate to: http://localhost:${PORT}`);
-        console.log(`[!] Press Ctrl+C to stop local engine hosting.`);
-    });
 }

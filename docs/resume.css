@@ -7,6 +7,14 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html.iframe,
 html.iframe body {
   background: unset;
@@ -1762,4 +1770,13 @@ div.container.projects img {
   position: relative;
   padding-bottom: 75%;
   overflow: hidden;
+}
+
+.direction-arrow {
+  background: transparent !important;
+  border: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
 }

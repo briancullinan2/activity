@@ -149,7 +149,8 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         }, 100)
     }, 5000)
 
-})
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const mapElement = document.getElementById('map');
@@ -158,78 +159,76 @@ document.addEventListener('DOMContentLoaded', () => {
     const rawAttribute = mapElement.getAttribute('data-timeline');
     if (!rawAttribute) return;
 
-    let mapData;
-    try {
-        mapData = JSON.parse(rawAttribute);
-    } catch (err) {
-        console.error('Failed to parse timeline data attribute:', err);
-        return;
-    }
-
-    // Initialize Leaflet map
+    const mapData = JSON.parse(rawAttribute);
     const map = L.map('map', { zoomSnap: 0.5 }).setView([0, 0], 2);
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
         crossOrigin: 'anonymous'
     }).addTo(map);
 
     const bounds = [];
 
-    // Plot traces
+    // Draw paths with directional navigation arrows
     if (Array.isArray(mapData.lines)) {
         mapData.lines.forEach(line => {
+            if (line.length < 2) return;
+
+            // Render polyline path
             L.polyline(line, {
                 color: '#00f2fe',
-                weight: 3,
-                opacity: 0.65,
+                weight: 4,
+                opacity: 0.85,
+                lineCap: 'round',
                 lineJoin: 'round'
             }).addTo(map);
-            line.forEach(coord => bounds.push(coord));
+
+            line.forEach(c => bounds.push(c));
+
+            // Render directional markers every N points along the route
+            const step = Math.max(1, Math.floor(line.length / 10));
+            for (let i = 0; i < line.length - 1; i += step) {
+                const p1 = line[i];
+                const p2 = line[i + 1];
+
+                const dy = p2[0] - p1[0];
+                const dx = Math.cos(Math.PI / 180 * p1[0]) * (p2[1] - p1[1]);
+                const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+
+                const arrowIcon = L.divIcon({
+                    className: 'direction-arrow',
+                    html: `<div style="transform: rotate(${90 - angle}deg); color: #00f2fe; font-size: 14px; text-shadow: 0 0 3px #000;">➤</div>`,
+                    iconSize: [14, 14],
+                    iconAnchor: [7, 7]
+                });
+
+                L.marker([p1[0], p1[1]], { icon: arrowIcon, interactive: false }).addTo(map);
+            }
         });
     }
 
-    // Plot points
+    // Draw visited places
     if (Array.isArray(mapData.places)) {
         mapData.places.forEach(place => {
             if (place.lat && place.lng) {
-                const marker = L.circleMarker([place.lat, place.lng], {
+                L.circleMarker([place.lat, place.lng], {
                     radius: 5,
-                    fillColor: '#4facfe',
-                    color: '#fff',
-                    weight: 1,
+                    fillColor: '#ff0055',
+                    color: '#ffffff',
+                    weight: 1.5,
                     opacity: 1,
-                    fillOpacity: 0.8
-                });
-
-                const popupContent = document.createElement('div');
-                const titleEl = document.createElement('b');
-                titleEl.textContent = place.name || 'Visited Location';
-
-                const timeEl = document.createElement('span');
-                timeEl.style.fontSize = '11px';
-                timeEl.style.color = '#666';
-                timeEl.style.display = 'block';
-                timeEl.textContent = place.time || '';
-
-                popupContent.appendChild(titleEl);
-                popupContent.appendChild(document.createElement('br'));
-                popupContent.appendChild(timeEl);
-
-                marker.bindPopup(popupContent);
-                marker.addTo(map);
-
+                    fillOpacity: 0.9
+                }).bindPopup(`<b>${place.name}</b><br>${place.time}`).addTo(map);
                 bounds.push([place.lat, place.lng]);
             }
         });
     }
 
-    // Recalculate camera bounds
     if (bounds.length > 0) {
-        map.fitBounds(bounds, { padding: [40, 40] });
-    } else {
-        map.setView([35.198, -111.651], 11);
+        map.fitBounds(bounds, { padding: [30, 30] });
     }
+
+
 
     setTimeout(() => {
         map.invalidateSize();
