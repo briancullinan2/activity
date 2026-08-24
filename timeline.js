@@ -165,11 +165,57 @@ let GOOGLE_API_KEY = process.env.GOOGLE_PLACES_API_KEY || null;
 if (fs.existsSync(path.join(USER_HOME, '.credentials', 'places.txt'))) {
     GOOGLE_API_KEY = fs.readFileSync(path.join(USER_HOME, '.credentials', 'places.txt'));
 }
+// Dual-purpose JS file saved inside /docs/
+const DOCS_DIR = path.join(__dirname, 'docs');
+const DATA_JS_FILE = path.join(DOCS_DIR, 'timeline-data.js');
+
+if (!fs.existsSync(DOCS_DIR)) {
+    fs.mkdirSync(DOCS_DIR, { recursive: true });
+}
 
 /**
- * OpenStreetMap Overpass API Lookup
+ * Loads existing TIMELINE_DATA from docs/timeline-data.js using self/global globalThis binding
  */
-function lookupBusinessOSM(lat, lng, radiusMeters = 35) {
+function loadExistingData() {
+    if (!fs.existsSync(DATA_JS_FILE)) return null;
+
+    try {
+        // Define 'self' in Node context so requiring the script sets globalThis.TIMELINE_DATA
+        global.self = global;
+        delete require.cache[require.resolve(DATA_JS_FILE)];
+        require(DATA_JS_FILE);
+        return global.TIMELINE_DATA || null;
+    } catch (_) {
+        return null;
+    }
+}
+
+/**
+ * Persists updated payload directly as self.TIMELINE_DATA = {...}
+ */
+function saveDataJS(mapData) {
+    const fileContent = `self.TIMELINE_DATA = ${JSON.stringify(mapData, null, 2)};\n`;
+    fs.writeFileSync(DATA_JS_FILE, fileContent, 'utf8');
+}
+
+/**
+ * Checks existing places in memory before firing API calls (within 50m radius)
+ */
+function findInExistingPlaces(lat, lng, existingPlaces, radiusMeters = 50) {
+    if (!existingPlaces) return null;
+    const radiusKm = radiusMeters / 1000;
+
+    for (const place of existingPlaces) {
+        if (place.lat && place.lng && place.name) {
+            const dist = getDistanceKm(lat, lng, place.lat, place.lng);
+            if (dist <= radiusKm && !place.name.startsWith('Stopped (')) {
+                return place.name;
+            }
+        }
+    }
+    return null;
+}
+function lookupBusinessOSM(lat, lng, radiusMeters = 50) {
     return new Promise((resolve) => {
         const query = `[out:json][timeout:5];(node(around:${radiusMeters},${lat},${lng})["name"];way(around:${radiusMeters},${lat},${lng})["name"];);out center 1;`;
         const url = `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`;
@@ -194,10 +240,7 @@ function lookupBusinessOSM(lat, lng, radiusMeters = 35) {
     });
 }
 
-/**
- * Google Places API (Nearby Search / New Places API) Fallback
- */
-function lookupBusinessGoogle(lat, lng, radiusMeters = 35) {
+function lookupBusinessGoogle(lat, lng, radiusMeters = 50) {
     return new Promise((resolve) => {
         if (!GOOGLE_API_KEY) return resolve(null);
 
@@ -222,45 +265,63 @@ function lookupBusinessGoogle(lat, lng, radiusMeters = 35) {
     });
 }
 
-/**
- * Dual lookup: Attempts OSM first; falls back to Google Places API
- */
-async function resolveBusinessName(lat, lng) {
+async function resolveBusinessName(lat, lng, existingPlaces) {
+    // 1. Check existing TIMELINE_DATA places for matching coordinates
+    const cachedName = findInExistingPlaces(lat, lng, existingPlaces);
+    if (cachedName) return cachedName;
+
+    // 2. Query OSM
     let name = await lookupBusinessOSM(lat, lng);
+
+    // 3. Query Google Places API fallback
     if (!name && GOOGLE_API_KEY) {
         name = await lookupBusinessGoogle(lat, lng);
     }
+
     return name;
 }
-
 /**
- * Cluster GPS pings to identify stationary stops (> minStopMinutes)
+ * Sliding Centroid Stop Detection
  */
-function findStops(allPings, minStopMinutes = 10, maxRadiusKm = 0.05) {
+function findStops(allPings, minStopMinutes = 5, maxRadiusKm = 0.08) {
     const stops = [];
     if (!allPings || allPings.length === 0) return stops;
 
-    let cluster = [allPings[0]];
+    let i = 0;
+    while (i < allPings.length) {
+        let j = i + 1;
+        let sumLat = allPings[i].lat;
+        let sumLng = allPings[i].lng;
+        let count = 1;
 
-    for (let i = 1; i < allPings.length; i++) {
-        const ping = allPings[i];
-        const center = cluster[0];
+        while (j < allPings.length) {
+            const currentCenterLat = sumLat / count;
+            const currentCenterLng = sumLng / count;
 
-        const dist = getDistanceKm(center.lat, center.lng, ping.lat, ping.lng);
+            const dist = getDistanceKm(currentCenterLat, currentCenterLng, allPings[j].lat, allPings[j].lng);
 
-        if (dist <= maxRadiusKm) {
-            cluster.push(ping);
-        } else {
-            const durationMins = (cluster[cluster.length - 1].time - cluster[0].time) / (1000 * 60);
-            if (durationMins >= minStopMinutes) {
-                stops.push({
-                    lat: center.lat,
-                    lng: center.lng,
-                    durationMins: Math.round(durationMins),
-                    startTime: cluster[0].time
-                });
+            if (dist <= maxRadiusKm) {
+                sumLat += allPings[j].lat;
+                sumLng += allPings[j].lng;
+                count++;
+                j++;
+            } else {
+                break;
             }
-            cluster = [ping];
+        }
+
+        const durationMins = (allPings[j - 1].time - allPings[i].time) / (1000 * 60);
+
+        if (durationMins >= minStopMinutes) {
+            stops.push({
+                lat: sumLat / count,
+                lng: sumLng / count,
+                durationMins: Math.round(durationMins),
+                startTime: allPings[i].time
+            });
+            i = j;
+        } else {
+            i++;
         }
     }
     return stops;
@@ -271,28 +332,23 @@ function getDistanceKm(lat1, lon1, lat2, lon2) {
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
     const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLon / 2) * Math.sin(dLon / 2);
     return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-/**
- * Core async parsing pipeline with 1% progress throttled logging
- */
 async function parseTimelineDataAsync(filePath) {
-    console.log(`[+] Parsing file: ${filePath}`);
     const rawData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    
+    // Load existing timeline data from /docs/timeline-data.js
+    const existingData = loadExistingData();
+    const existingPlaces = existingData ? existingData.places : [];
 
     const now = new Date();
     const oneMonthAgo = new Date();
     oneMonthAgo.setDate(now.getDate() - 30);
 
-    const mapData = {
-        places: [],
-        lines: [],
-        pings: []
-    };
-
+    const mapData = { places: [], lines: [], pings: [] };
     const allPings = [];
 
     function parseDate(val) {
@@ -324,7 +380,6 @@ async function parseTimelineDataAsync(filePath) {
         if (typeof latVal === 'number' && typeof lngVal === 'number') {
             return { lat: latVal, lng: lngVal };
         }
-
         return null;
     }
 
@@ -358,9 +413,7 @@ async function parseTimelineDataAsync(filePath) {
             for (let i = 0; i < node.length; i++) walk(node[i]);
         } else {
             for (const key in node) {
-                if (Object.prototype.hasOwnProperty.call(node, key)) {
-                    walk(node[key]);
-                }
+                if (Object.prototype.hasOwnProperty.call(node, key)) walk(node[key]);
             }
         }
     }
@@ -370,7 +423,7 @@ async function parseTimelineDataAsync(filePath) {
     allPings.sort((a, b) => a.time - b.time);
     mapData.pings = allPings.map(p => [p.lat, p.lng]);
 
-    // Generate line segments
+    // Build routes
     let currentSegment = [];
     for (let i = 0; i < allPings.length; i++) {
         const ping = allPings[i];
@@ -394,20 +447,18 @@ async function parseTimelineDataAsync(filePath) {
     }
     if (currentSegment.length > 1) mapData.lines.push(currentSegment);
 
-    // Identify stationary stops
-    const detectedStops = findStops(allPings, 10);
+    // Identify stops using sliding centroid
+    const detectedStops = findStops(allPings, 5, 0.08);
     const totalStops = detectedStops.length;
 
     console.log(`[+] Total pings loaded: ${allPings.length}`);
-    console.log(`[+] Found ${totalStops} stationary stops (>10 min). Resolving business names...`);
+    console.log(`[+] Found ${totalStops} stationary stops. Resolving business names...`);
 
     let lastLoggedPercent = -1;
 
     for (let i = 0; i < totalStops; i++) {
         const stop = detectedStops[i];
-
-        // Reverse lookups
-        const businessName = await resolveBusinessName(stop.lat, stop.lng);
+        const businessName = await resolveBusinessName(stop.lat, stop.lng, existingPlaces);
 
         mapData.places.push({
             name: businessName ? `Visited: ${businessName}` : `Stopped (${stop.durationMins} mins)`,
@@ -416,7 +467,6 @@ async function parseTimelineDataAsync(filePath) {
             time: stop.startTime.toLocaleString()
         });
 
-        // Throttle console output to at most every 1% step
         const currentPercent = Math.floor(((i + 1) / totalStops) * 100);
         if (currentPercent > lastLoggedPercent) {
             console.log(`[+] Business Resolution Progress: ${currentPercent}% (${i + 1}/${totalStops})`);
@@ -424,9 +474,12 @@ async function parseTimelineDataAsync(filePath) {
         }
     }
 
+    // Persist as single file
+    saveDataJS(mapData);
+    console.log(`[+] Persisted unified payload to: ${DATA_JS_FILE}`);
+
     return mapData;
 }
-
 
 function generateTimeline(mapData) {
     // Encode safely via Base64 to prevent HTML attribute string corruption
@@ -435,7 +488,6 @@ function generateTimeline(mapData) {
     return `
     <div class="dashboard-overlay">
         <h2>Timeline Route Hub</h2>
-        <div class="subtitle">Embedded Environment Diagnostics</div>
         <div class="metric-row"><span>Log Duration</span><span>Past 30 Days</span></div>
         <div class="metric-row"><span>Waypoints Loaded</span><span>${mapData.pings.length}</span></div>
         <div class="metric-row"><span>Trace Pathways</span><span>${mapData.lines.length}</span></div>

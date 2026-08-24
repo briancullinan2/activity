@@ -159,7 +159,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const base64Attribute = mapElement.getAttribute('data-timeline');
     if (!base64Attribute) return;
 
-    const mapData = JSON.parse(atob(base64Attribute));
+    let mapData = JSON.parse(atob(base64Attribute));
+    if (!mapData) {
+        mapData = self.TIMELINE_DATA;
+    }
+    if (!mapData) return;
     const map = L.map('map', { zoomSnap: 0.5 }).setView([0, 0], 2);
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
