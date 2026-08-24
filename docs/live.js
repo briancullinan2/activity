@@ -150,6 +150,8 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     }, 5000)
 
 });
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const mapElement = document.getElementById('map');
     if (!mapElement) return;
@@ -157,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const base64Attribute = mapElement.getAttribute('data-timeline');
     if (!base64Attribute) return;
 
-    // Safely decode Base64 JSON payload
     const mapData = JSON.parse(atob(base64Attribute));
     const map = L.map('map', { zoomSnap: 0.5 }).setView([0, 0], 2);
 
@@ -168,25 +169,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const bounds = [];
 
-    // 1. Draw every raw GPS point as a discrete circle marker
+    /**
+     * Generates a consistent, bright HSL color for any string (business name)
+     */
+    function getColorForPlace(name) {
+        let hash = 0;
+        const str = name || 'Unknown Place';
+        for (let i = 0; i < str.length; i++) {
+            hash = str.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        // Keep saturation high (80%) and lightness vibrant (60%) for dark map contrast
+        const hue = Math.abs(hash) % 360;
+        return `hsl(${hue}, 85%, 60%)`;
+    }
+
+    // 1. Draw raw GPS breadcrumbs
     if (Array.isArray(mapData.pings)) {
         mapData.pings.forEach(ping => {
             L.circleMarker(ping, {
-                radius: 3,
+                radius: 2,
                 fillColor: '#00f2fe',
                 color: '#00f2fe',
                 weight: 0,
-                fillOpacity: 0.6
+                fillOpacity: 0.4,
+                interactive: false
             }).addTo(map);
             bounds.push(ping);
         });
     }
 
-    // 2. Fetch OSRM matched routes for road-snapped navigation polylines
+    // 2. Fetch OSRM matched routes
     async function fetchRoadRoute(coords) {
         if (coords.length < 2) return null;
 
-        // Downsample sequence if points exceed OSRM request caps (max ~100 points per call)
         let sampled = coords;
         if (coords.length > 80) {
             const step = Math.ceil(coords.length / 80);
@@ -196,7 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Format: lng,lat;lng,lat
         const coordString = sampled.map(c => `${c[1]},${c[0]}`).join(';');
         const url = `https://router.project-osrm.org/route/v1/driving/${coordString}?overview=full&geometries=geojson`;
 
@@ -205,7 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) return null;
             const data = await response.json();
             if (data.routes && data.routes.length > 0) {
-                // Convert GeoJSON [lng, lat] back to Leaflet [lat, lng]
                 return data.routes[0].geometry.coordinates.map(c => [c[1], c[0]]);
             }
         } catch (err) {
@@ -214,24 +227,22 @@ document.addEventListener('DOMContentLoaded', () => {
         return null;
     }
 
-    // 3. Process lines with road routing + directional arrows
+    // 3. Process lines with road routing + directional navigation arrows
     if (Array.isArray(mapData.lines)) {
         mapData.lines.forEach(async (line) => {
             if (line.length < 2) return;
 
-            // Try fetching road-snapped geometry; fallback to raw coordinates
             const roadGeometry = await fetchRoadRoute(line) || line;
 
-            // Draw polyline
             L.polyline(roadGeometry, {
                 color: '#00f2fe',
-                weight: 4,
-                opacity: 0.85,
+                weight: 3.5,
+                opacity: 0.75,
                 lineCap: 'round',
-                lineJoin: 'round'
+                lineJoin: 'round',
+                interactive: false
             }).addTo(map);
 
-            // Draw direction arrows along the route
             const step = Math.max(1, Math.floor(roadGeometry.length / 8));
             for (let i = 0; i < roadGeometry.length - 1; i += step) {
                 const p1 = roadGeometry[i];
@@ -241,12 +252,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dx = Math.cos(Math.PI / 180 * p1[0]) * (p2[1] - p1[1]);
                 const angle = Math.atan2(dy, dx) * 180 / Math.PI;
 
-                // Inline SVG icon guarantees rendering on all devices without font dependencies
                 const arrowSvg = `
-        <svg width="14" height="14" viewBox="0 0 24 24" style="transform: rotate(${90 - angle}deg); display: block;">
-            <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" fill="#00f2fe" stroke="#000000" stroke-width="1.5"/>
-        </svg>
-    `;
+                    <svg width="14" height="14" viewBox="0 0 24 24" style="transform: rotate(${90 - angle}deg); display: block;">
+                        <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" fill="#00f2fe" stroke="#000000" stroke-width="1.5"/>
+                    </svg>
+                `;
 
                 const arrowIcon = L.divIcon({
                     className: 'direction-arrow-icon',
@@ -260,24 +270,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Draw visited places
+    // 4. Draw visited places with custom colors, hover pulses, and popups
     if (Array.isArray(mapData.places)) {
         mapData.places.forEach(place => {
             if (place.lat && place.lng) {
-                L.circleMarker([place.lat, place.lng], {
-                    radius: 6,
-                    fillColor: '#ff0055',
+                const placeColor = getColorForPlace(place.name);
+
+                const marker = L.circleMarker([place.lat, place.lng], {
+                    radius: 7,
+                    fillColor: placeColor,
                     color: '#ffffff',
-                    weight: 1.5,
+                    weight: 2,
                     opacity: 1,
-                    fillOpacity: 0.9
-                }).bindPopup(`<b>${place.name}</b><br>${place.time}`).addTo(map);
+                    fillOpacity: 0.95
+                });
+
+                // Interactive popups with custom HTML formatting
+                marker.bindPopup(`
+                    <div style="font-family: sans-serif; padding: 2px;">
+                        <div style="font-weight: bold; font-size: 14px; color: ${placeColor};">${place.name}</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 4px;">${place.time}</div>
+                    </div>
+                `);
+
+                // Enlarge radius on mouseover for interactive feedback
+                marker.on('mouseover', function () {
+                    this.setRadius(10);
+                    this.bringToFront();
+                });
+                marker.on('mouseout', function () {
+                    this.setRadius(7);
+                });
+
+                marker.addTo(map);
                 bounds.push([place.lat, place.lng]);
             }
         });
     }
 
-    // Adjust view bounds to fit data
+    // Bounds fitting
     if (bounds.length > 0) {
         map.fitBounds(bounds, { padding: [30, 30] });
     }
@@ -293,4 +324,3 @@ document.addEventListener('DOMContentLoaded', () => {
         map.invalidateSize();
     });
 });
-

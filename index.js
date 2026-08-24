@@ -6,7 +6,7 @@ const { listWindows } = require('./windows.js')
 const { listHistory } = require('./history.js')
 const { listProjects } = require('./projects.js')
 const { listCalendar } = require('./calendar.js')
-const { generateTimeline, parseTimelineData, findLatestTimelineFile } = require('./timeline.js')
+const { generateTimeline, parseTimelineData, findLatestTimelineFile, parseTimelineDataAsync } = require('./timeline.js')
 
 const INDEX = fs.readFileSync('./index.html').toString('utf-8')
 const HOMEPATH = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE
@@ -39,7 +39,7 @@ async function renderIndex() {
 	bodyTag = index.match(/<div class="timeline"[ \/\n\r.^>]*?>/i)
 	offset = bodyTag.index
 	index = index.substring(0, offset + bodyTag[0].length)
-		+ generateTimeline(parseTimelineData(findLatestTimelineFile())) + index.substring(offset + bodyTag[0].length, index.length)
+		+ generateTimeline(await parseTimelineDataAsync(findLatestTimelineFile())) + index.substring(offset + bodyTag[0].length, index.length)
 
 	let history = await listHistory()
 	let currYear
