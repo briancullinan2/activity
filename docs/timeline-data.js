@@ -1,79 +1,79 @@
 self.TIMELINE_DATA = {
   "places": [
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
-      "lat": 35.20961189343679,
-      "lng": -111.58503010381857,
-      "time": "8/16/2026, 3:37:54 PM"
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
+      "lat": 35.2096120868675,
+      "lng": -111.58502940240956,
+      "time": "8/16/2026, 3:46:24 PM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 2216-2220 US-180",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 2216-2220 US-180",
       "lat": 35.22303413846154,
       "lng": -111.65412646923076,
       "time": "8/18/2026, 7:41:00 AM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
       "lat": 35.20961341785714,
       "lng": -111.5850383464286,
       "time": "8/18/2026, 8:20:00 AM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
       "lat": 35.20962460544217,
       "lng": -111.58502339909288,
       "time": "8/18/2026, 10:46:41 AM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 2216-2220 US-180",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 2216-2220 US-180",
       "lat": 35.22311642857143,
       "lng": -111.65425151428569,
       "time": "8/19/2026, 7:45:48 AM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
       "lat": 35.2096277214285,
       "lng": -111.58502930617773,
       "time": "8/19/2026, 8:11:17 AM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 2216-2220 US-180",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 2216-2220 US-180",
       "lat": 35.22262005,
       "lng": -111.65359205,
       "time": "8/20/2026, 8:00:26 AM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
       "lat": 35.2095953263158,
       "lng": -111.58502243157895,
       "time": "8/20/2026, 8:24:11 AM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
       "lat": 35.20960571367925,
       "lng": -111.58500602169808,
       "time": "8/20/2026, 10:11:47 AM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 2216-2220 US-180",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 2216-2220 US-180",
       "lat": 35.2232647875,
       "lng": -111.6545537375,
       "time": "8/21/2026, 7:45:27 AM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
       "lat": 35.209598535185194,
       "lng": -111.5850268055555,
       "time": "8/21/2026, 8:13:14 AM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 2216-2220 US-180",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 2216-2220 US-180",
       "lat": 35.22290581111112,
       "lng": -111.65395231111111,
       "time": "8/21/2026, 11:25:36 AM"
     },
     {
-      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
+      "name": "Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: Visited: 3932-3972 N Tam O'Shanter Dr",
       "lat": 35.20959709098126,
       "lng": -111.58500336422213,
       "time": "8/21/2026, 12:03:20 PM"
@@ -81,338 +81,6 @@ self.TIMELINE_DATA = {
   ],
   "lines": [
     [
-      [
-        34.5759938,
-        -111.8835378
-      ],
-      [
-        34.57524,
-        -111.8832293
-      ],
-      [
-        34.575441,
-        -111.8834548
-      ],
-      [
-        34.5757058,
-        -111.883394
-      ],
-      [
-        34.5759656,
-        -111.8835476
-      ],
-      [
-        34.5749692,
-        -111.8824542
-      ],
-      [
-        34.5774524,
-        -111.8824935
-      ],
-      [
-        34.5868211,
-        -111.8791715
-      ],
-      [
-        34.5989436,
-        -111.8726741
-      ],
-      [
-        34.6102877,
-        -111.8638479
-      ],
-      [
-        34.6159635,
-        -111.8483912
-      ],
-      [
-        34.6264075,
-        -111.8363438
-      ],
-      [
-        34.6361918,
-        -111.8240584
-      ],
-      [
-        34.6424818,
-        -111.8086634
-      ],
-      [
-        34.6529514,
-        -111.7962018
-      ],
-      [
-        34.6634206,
-        -111.7850859
-      ],
-      [
-        34.6730429,
-        -111.7730301
-      ],
-      [
-        34.6774683,
-        -111.7569217
-      ],
-      [
-        34.6866411,
-        -111.7445704
-      ],
-      [
-        34.699653,
-        -111.7431882
-      ],
-      [
-        34.7089225,
-        -111.7313682
-      ],
-      [
-        34.7185513,
-        -111.7215701
-      ],
-      [
-        34.7269579,
-        -111.7098978
-      ],
-      [
-        34.7355466,
-        -111.6967595
-      ],
-      [
-        34.7443989,
-        -111.6847281
-      ],
-      [
-        34.7536827,
-        -111.671177
-      ],
-      [
-        34.7630899,
-        -111.6576367
-      ],
-      [
-        34.7683302,
-        -111.6430256
-      ],
-      [
-        34.7755474,
-        -111.6295697
-      ],
-      [
-        34.781635,
-        -111.614164
-      ],
-      [
-        34.7857476,
-        -111.5976536
-      ],
-      [
-        34.7965994,
-        -111.589897
-      ],
-      [
-        34.8064884,
-        -111.5988743
-      ],
-      [
-        34.8155354,
-        -111.6112277
-      ],
-      [
-        34.8284599,
-        -111.60754
-      ],
-      [
-        34.8416062,
-        -111.6037185
-      ],
-      [
-        34.854424,
-        -111.6076569
-      ],
-      [
-        34.8636001,
-        -111.6203899
-      ],
-      [
-        34.872699,
-        -111.6330417
-      ],
-      [
-        34.8853801,
-        -111.6408548
-      ],
-      [
-        34.8999677,
-        -111.6415244
-      ],
-      [
-        34.9144453,
-        -111.6412198
-      ],
-      [
-        34.9274744,
-        -111.6471989
-      ],
-      [
-        34.9401353,
-        -111.6511483
-      ],
-      [
-        34.9487426,
-        -111.6634588
-      ],
-      [
-        34.9568063,
-        -111.6768238
-      ],
-      [
-        34.9689955,
-        -111.6831714
-      ],
-      [
-        34.9823675,
-        -111.6859969
-      ],
-      [
-        34.9956454,
-        -111.6865899
-      ],
-      [
-        35.0092926,
-        -111.6851813
-      ],
-      [
-        35.0232799,
-        -111.6855503
-      ],
-      [
-        35.0370674,
-        -111.6843041
-      ],
-      [
-        35.0501402,
-        -111.6830116
-      ],
-      [
-        35.0628452,
-        -111.6853788
-      ],
-      [
-        35.0753254,
-        -111.684063
-      ],
-      [
-        35.0878692,
-        -111.6866086
-      ],
-      [
-        35.1015662,
-        -111.6819773
-      ],
-      [
-        35.1153674,
-        -111.6808001
-      ],
-      [
-        35.1290601,
-        -111.6844831
-      ],
-      [
-        35.1426007,
-        -111.6842153
-      ],
-      [
-        35.156301,
-        -111.6787866
-      ],
-      [
-        35.1674116,
-        -111.6681512
-      ],
-      [
-        35.1709578,
-        -111.6554384
-      ],
-      [
-        35.1759811,
-        -111.6426028
-      ],
-      [
-        35.1845067,
-        -111.632535
-      ],
-      [
-        35.1908062,
-        -111.6214905
-      ],
-      [
-        35.1927344,
-        -111.6158286
-      ],
-      [
-        35.1944864,
-        -111.6074877
-      ],
-      [
-        35.1951968,
-        -111.5996136
-      ],
-      [
-        35.1966624,
-        -111.5981683
-      ],
-      [
-        35.1948058,
-        -111.5951405
-      ],
-      [
-        35.1984449,
-        -111.5914527
-      ],
-      [
-        35.2015036,
-        -111.5880517
-      ],
-      [
-        35.2036156,
-        -111.5859286
-      ],
-      [
-        35.2073692,
-        -111.5861624
-      ],
-      [
-        35.2093988,
-        -111.5854512
-      ],
-      [
-        35.209601,
-        -111.5850588
-      ],
-      [
-        35.2095575,
-        -111.5850362
-      ],
-      [
-        35.2095865,
-        -111.5850438
-      ],
-      [
-        35.2096452,
-        -111.5850327
-      ],
-      [
-        35.2096205,
-        -111.5851148
-      ],
-      [
-        35.2096643,
-        -111.5850399
-      ],
-      [
-        35.2096608,
-        -111.5850456
-      ],
       [
         35.2096277,
         -111.5850069
@@ -9368,338 +9036,6 @@ self.TIMELINE_DATA = {
     ]
   ],
   "pings": [
-    [
-      34.5759938,
-      -111.8835378
-    ],
-    [
-      34.57524,
-      -111.8832293
-    ],
-    [
-      34.575441,
-      -111.8834548
-    ],
-    [
-      34.5757058,
-      -111.883394
-    ],
-    [
-      34.5759656,
-      -111.8835476
-    ],
-    [
-      34.5749692,
-      -111.8824542
-    ],
-    [
-      34.5774524,
-      -111.8824935
-    ],
-    [
-      34.5868211,
-      -111.8791715
-    ],
-    [
-      34.5989436,
-      -111.8726741
-    ],
-    [
-      34.6102877,
-      -111.8638479
-    ],
-    [
-      34.6159635,
-      -111.8483912
-    ],
-    [
-      34.6264075,
-      -111.8363438
-    ],
-    [
-      34.6361918,
-      -111.8240584
-    ],
-    [
-      34.6424818,
-      -111.8086634
-    ],
-    [
-      34.6529514,
-      -111.7962018
-    ],
-    [
-      34.6634206,
-      -111.7850859
-    ],
-    [
-      34.6730429,
-      -111.7730301
-    ],
-    [
-      34.6774683,
-      -111.7569217
-    ],
-    [
-      34.6866411,
-      -111.7445704
-    ],
-    [
-      34.699653,
-      -111.7431882
-    ],
-    [
-      34.7089225,
-      -111.7313682
-    ],
-    [
-      34.7185513,
-      -111.7215701
-    ],
-    [
-      34.7269579,
-      -111.7098978
-    ],
-    [
-      34.7355466,
-      -111.6967595
-    ],
-    [
-      34.7443989,
-      -111.6847281
-    ],
-    [
-      34.7536827,
-      -111.671177
-    ],
-    [
-      34.7630899,
-      -111.6576367
-    ],
-    [
-      34.7683302,
-      -111.6430256
-    ],
-    [
-      34.7755474,
-      -111.6295697
-    ],
-    [
-      34.781635,
-      -111.614164
-    ],
-    [
-      34.7857476,
-      -111.5976536
-    ],
-    [
-      34.7965994,
-      -111.589897
-    ],
-    [
-      34.8064884,
-      -111.5988743
-    ],
-    [
-      34.8155354,
-      -111.6112277
-    ],
-    [
-      34.8284599,
-      -111.60754
-    ],
-    [
-      34.8416062,
-      -111.6037185
-    ],
-    [
-      34.854424,
-      -111.6076569
-    ],
-    [
-      34.8636001,
-      -111.6203899
-    ],
-    [
-      34.872699,
-      -111.6330417
-    ],
-    [
-      34.8853801,
-      -111.6408548
-    ],
-    [
-      34.8999677,
-      -111.6415244
-    ],
-    [
-      34.9144453,
-      -111.6412198
-    ],
-    [
-      34.9274744,
-      -111.6471989
-    ],
-    [
-      34.9401353,
-      -111.6511483
-    ],
-    [
-      34.9487426,
-      -111.6634588
-    ],
-    [
-      34.9568063,
-      -111.6768238
-    ],
-    [
-      34.9689955,
-      -111.6831714
-    ],
-    [
-      34.9823675,
-      -111.6859969
-    ],
-    [
-      34.9956454,
-      -111.6865899
-    ],
-    [
-      35.0092926,
-      -111.6851813
-    ],
-    [
-      35.0232799,
-      -111.6855503
-    ],
-    [
-      35.0370674,
-      -111.6843041
-    ],
-    [
-      35.0501402,
-      -111.6830116
-    ],
-    [
-      35.0628452,
-      -111.6853788
-    ],
-    [
-      35.0753254,
-      -111.684063
-    ],
-    [
-      35.0878692,
-      -111.6866086
-    ],
-    [
-      35.1015662,
-      -111.6819773
-    ],
-    [
-      35.1153674,
-      -111.6808001
-    ],
-    [
-      35.1290601,
-      -111.6844831
-    ],
-    [
-      35.1426007,
-      -111.6842153
-    ],
-    [
-      35.156301,
-      -111.6787866
-    ],
-    [
-      35.1674116,
-      -111.6681512
-    ],
-    [
-      35.1709578,
-      -111.6554384
-    ],
-    [
-      35.1759811,
-      -111.6426028
-    ],
-    [
-      35.1845067,
-      -111.632535
-    ],
-    [
-      35.1908062,
-      -111.6214905
-    ],
-    [
-      35.1927344,
-      -111.6158286
-    ],
-    [
-      35.1944864,
-      -111.6074877
-    ],
-    [
-      35.1951968,
-      -111.5996136
-    ],
-    [
-      35.1966624,
-      -111.5981683
-    ],
-    [
-      35.1948058,
-      -111.5951405
-    ],
-    [
-      35.1984449,
-      -111.5914527
-    ],
-    [
-      35.2015036,
-      -111.5880517
-    ],
-    [
-      35.2036156,
-      -111.5859286
-    ],
-    [
-      35.2073692,
-      -111.5861624
-    ],
-    [
-      35.2093988,
-      -111.5854512
-    ],
-    [
-      35.209601,
-      -111.5850588
-    ],
-    [
-      35.2095575,
-      -111.5850362
-    ],
-    [
-      35.2095865,
-      -111.5850438
-    ],
-    [
-      35.2096452,
-      -111.5850327
-    ],
-    [
-      35.2096205,
-      -111.5851148
-    ],
-    [
-      35.2096643,
-      -111.5850399
-    ],
-    [
-      35.2096608,
-      -111.5850456
-    ],
     [
       35.2096277,
       -111.5850069
